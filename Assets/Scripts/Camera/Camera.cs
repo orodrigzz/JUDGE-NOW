@@ -38,13 +38,13 @@ public class Camera : MonoBehaviour
             targetDistance = minDistance;
         }
 
-        rotationX += Input.GetAxis("Mouse Y");
+        /*rotationX += Input.GetAxis("Mouse Y");
         rotationY += Input.GetAxis("Mouse X");
 
         rotationX = Mathf.Clamp(rotationX, minRotation, maxRotation);
 
         transform.eulerAngles = new Vector3(rotationX, rotationY, 0);
-
+        */
 
     }
 }

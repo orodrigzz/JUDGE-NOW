@@ -1,0 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class InputManager : MonoBehaviour
+{
+    
+    public static InputManager _INPUT_MANAGER;
+    private Input_Manager input_Manager;
+    public Vector2 leftCameraAxis = Vector2.zero;
+  
+
+    private void Awake()
+    {
+        if(_INPUT_MANAGER != null && _INPUT_MANAGER != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            input_Manager = new Input_Manager();
+            input_Manager.Player.Enable();
+            input_Manager.Player.CameraMovement.performed += LeftAxisValue;
+                        
+            _INPUT_MANAGER = this;
+            DontDestroyOnLoad(this);
+        }
+    }
+   void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        InputSystem.Update();
+    }
+   public void LeftAxisValue(InputAction.CallbackContext context)
+   {
+        leftCameraAxis = context.ReadValue<Vector2>();
+        Debug.Log("Magnitude:" + leftCameraAxis.magnitude);
+        Debug.Log("Normalized: " + leftCameraAxis.normalized);
+
+    }
+    
+}
