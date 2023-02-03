@@ -5,11 +5,16 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    
+    #region Manager
     public static InputManager _INPUT_MANAGER;
     private Input_Manager input_Manager;
+    #endregion
+    #region Camera
     public Vector2 leftCameraAxis = Vector2.zero;
-  
+    #endregion
+    #region Arm
+    public Vector2 mousePos = Vector2.zero;
+    #endregion
 
     private void Awake()
     {
@@ -43,6 +48,12 @@ public class InputManager : MonoBehaviour
         Debug.Log("Magnitude:" + leftCameraAxis.magnitude);
         Debug.Log("Normalized: " + leftCameraAxis.normalized);
 
-    }
+   }
+   public void MousePositionValue(InputAction.CallbackContext context)
+   {
+        mousePos = context.ReadValue<Vector2>();
+        Debug.Log("Magnitude: " + mousePos.magnitude);
+        Debug.Log("Normalized: " + mousePos.normalized);
+   }
     
 }
