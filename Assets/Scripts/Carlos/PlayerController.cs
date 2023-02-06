@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     #region Camera
     public GameObject player;
-
+    public Camera cam;
     float h;
     float v;
 
@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     #endregion
     #region Arm
     public Transform armPos;
+    public float speed;
+    Vector3 pos;
     #endregion
 
     void Start()
@@ -34,9 +36,11 @@ public class PlayerController : MonoBehaviour
         transform.rotation = TO_DELETE_V2_Version_Buena;
         #endregion
         #region ArmMovement
-        /*Vector3 newArmPos = Input.mousePosition;
-        armPos.position = newArmPos;
-        */
+
+        pos = Input.mousePosition;
+        pos.z = 1f;
+        armPos.position = Camera.main.ScreenToWorldPoint(pos);
+
         #endregion
 
 

@@ -49,7 +49,7 @@ public class InputManager : MonoBehaviour
         Debug.Log("Normalized: " + leftCameraAxis.normalized);
 
    }
-   public void MousePositionValue(InputAction.CallbackContext context)
+   public void MousePositionValue(InputAction.CallbackContext  context)
    {
         mousePos = context.ReadValue<Vector2>();
         Debug.Log("Magnitude: " + mousePos.magnitude);
