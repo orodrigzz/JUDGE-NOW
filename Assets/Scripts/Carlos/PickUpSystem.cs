@@ -15,21 +15,20 @@ public class PickUpSystem : MonoBehaviour
             {
                 Ray ray = new Ray(transform.position + origin, transform.forward);
                 RaycastHit hit;
-            if(Physics.Raycast(ray, out hit,10f, layer))
-            {
-                if (Input.GetMouseButtonDown(0))
+                if(Physics.Raycast(ray, out hit,10f, layer))
                 {
-                    itemPicked = hit.rigidbody;
-                    itemPicked.transform.SetParent(parent.transform);
-                    itemPicked.transform.localScale = Vector3.one;
-
-
-                    
-                    if (itemPicked != null)
+                    if (Input.GetMouseButtonDown(0))
                     {
-                        itemPicked.useGravity = false;
+                        itemPicked = hit.rigidbody;
+                        itemPicked.transform.localScale = transform.parent.localScale;
+                        itemPicked.transform.rotation = transform.parent.rotation;
+                        //itemPicked.transform.localScale = new Vector3(1,1,1);
+                         itemPicked.transform.SetParent(parent.transform);                                        
+                        if (itemPicked != null)
+                        {   
+                            itemPicked.useGravity = false;
+                        }
                     }
-                }
             }
             else
             {
@@ -41,7 +40,7 @@ public class PickUpSystem : MonoBehaviour
                         itemPicked.transform.SetParent(null);
                         itemPicked.useGravity = true;
                     }
-                    itemPicked = null;
+                        itemPicked = null;
                 }
             }
            
