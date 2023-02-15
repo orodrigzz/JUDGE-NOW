@@ -944,6 +944,7 @@ MonoBehaviour:
     m_Bits: 128
   parent: {fileID: 1024464377}
   itemPicked: {fileID: 0}
+  isPicked: 0
 --- !u!1 &165458195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,7 +4356,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &567339149
 SphereCollider:
@@ -7411,8 +7412,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902818824}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.026893767, y: 1.1569976, z: -0.020000186}
-  m_LocalScale: {x: 1.5500002, y: 0.24999993, z: 0.31249997}
+  m_LocalPosition: {x: 0.028524252, y: 1.1295079, z: -0.020000184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 126217594}
@@ -8385,7 +8386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024464377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: 0.003, z: -2.53}
+  m_LocalPosition: {x: 0.16, y: 0, z: -2.944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

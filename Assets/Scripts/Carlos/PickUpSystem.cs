@@ -8,6 +8,7 @@ public class PickUpSystem : MonoBehaviour
     public LayerMask layer;
     public GameObject parent;
     public Rigidbody itemPicked;
+    public bool isPicked = false;
 
     private void Update()
     {
@@ -17,7 +18,8 @@ public class PickUpSystem : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(ray, out hit,10f, layer))
                 {
-                    if (Input.GetMouseButtonDown(0))
+                    
+                    if (Input.GetMouseButtonDown(0) && !isPicked)
                     {
                         itemPicked = hit.rigidbody;
                         itemPicked.transform.localScale = transform.parent.localScale;
@@ -27,7 +29,9 @@ public class PickUpSystem : MonoBehaviour
                         if (itemPicked != null)
                         {   
                             itemPicked.useGravity = false;
+                            isPicked = true;
                         }
+
                     }
             }
             else
@@ -41,6 +45,7 @@ public class PickUpSystem : MonoBehaviour
                         itemPicked.useGravity = true;
                     }
                         itemPicked = null;
+                        isPicked = false;
                 }
             }
            
