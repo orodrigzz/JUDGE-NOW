@@ -1,16 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Reputation : MonoBehaviour
+public class REPUTATION_MANAGER : MonoBehaviour
 {
+    public static REPUTATION_MANAGER _REPUTATION_MANAGER;
+
     [SerializeField] private float courtReputation;
     [SerializeField] private float townReputation;
     [SerializeField] private Image courtReputationImg;
     [SerializeField] private Image townReputationImg;
     [SerializeField] private Image defCourtReputation;
     [SerializeField] private Image defTownReputation;
+
+    private void Awake()
+    {
+        if (_REPUTATION_MANAGER != null && _REPUTATION_MANAGER != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _REPUTATION_MANAGER = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,46 +41,56 @@ public class Reputation : MonoBehaviour
         courtReputationImg.fillAmount = courtReputation;
         townReputationImg.fillAmount = townReputation;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if ( townReputation < 0.25 || townReputation > 0.75)
         {
-            goodCase();
-            Debug.Log("goodCase");
+            SceneManager.LoadScene("Fired");
         }
 
-        if (Input.GetKeyDown(KeyCode.B))
+        if (courtReputation < 0.25 || courtReputation > 0.75)
         {
-            badCase();
+            SceneManager.LoadScene("Fired");
         }
 
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            firstBribe();   
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    goodCase();
+        //    Debug.Log("goodCase");
+        //}
 
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            secondBribe();
-        }
+        //if (Input.GetKeyDown(KeyCode.B))
+        //{
+        //    badCase();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.F3))
-        {
-            thirdBribe();
-        }
+        //if (Input.GetKeyDown(KeyCode.F1))
+        //{
+        //    firstBribe();   
+        //}
 
-        if (Input.GetKeyDown(KeyCode.F4))
-        {
-            fourthBribe();
-        }
+        //if (Input.GetKeyDown(KeyCode.F2))
+        //{
+        //    secondBribe();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.F5))
-        {
-            fiveBribe();
-        }
+        //if (Input.GetKeyDown(KeyCode.F3))
+        //{
+        //    thirdBribe();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Order();
-        }
+        //if (Input.GetKeyDown(KeyCode.F4))
+        //{
+        //    fourthBribe();
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.F5))
+        //{
+        //    fiveBribe();
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    Order();
+        //}
     }
 
     public void goodCase()

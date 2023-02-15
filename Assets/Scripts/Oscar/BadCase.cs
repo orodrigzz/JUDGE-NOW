@@ -1,0 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BadCase : MonoBehaviour
+{
+    private void OnMouseDown()
+    {
+        REPUTATION_MANAGER._REPUTATION_MANAGER.badCase();
+    }
+}
