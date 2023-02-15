@@ -101,21 +101,21 @@ public class REPUTATION_MANAGER : MonoBehaviour
 
     public void badCase()
     {
-        courtReputation = courtReputation - 0.03f;
-        townReputation = townReputation - 0.03f;
+        courtReputation = courtReputation - 0.01f;
+        townReputation = townReputation - 0.01f; ;
     }
 
     //Sobornos
     public void firstBribe()
     {
-        courtReputation = courtReputation + 0.03f;
-        townReputation = townReputation - 0.03f;
+        courtReputation = courtReputation + 0.01f;
+        townReputation = townReputation - 0.01f;
     }
 
     public void secondBribe()
     {
         courtReputation = courtReputation + 0.03f;
-        townReputation = townReputation - 0.05f;
+        townReputation = townReputation - 0.03f;
     }
 
     public void thirdBribe()
