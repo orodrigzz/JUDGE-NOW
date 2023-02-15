@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Reputation : MonoBehaviour
 {
-    [SerializeField] private float courtReputation = 0.5f;
-    [SerializeField] private float townReputation = 0.5f;
+    [SerializeField] private float courtReputation;
+    [SerializeField] private float townReputation;
     [SerializeField] private Image courtReputationImg;
     [SerializeField] private Image townReputationImg;
     [SerializeField] private Image defCourtReputation;
@@ -22,9 +22,13 @@ public class Reputation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        courtReputationImg.fillAmount = courtReputation;
+        townReputationImg.fillAmount = townReputation;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             goodCase();
+            Debug.Log("goodCase");
         }
 
         if (Input.GetKeyDown(KeyCode.B))
@@ -65,14 +69,14 @@ public class Reputation : MonoBehaviour
 
     public void goodCase()
     {
-        courtReputation = courtReputation + 0.03f;
-        townReputation = townReputation + 0.03f;
+        courtReputation = courtReputation + 0.01f;
+        townReputation = townReputation + 0.01f;
     }
 
     public void badCase()
     {
-        courtReputation = courtReputation - 0.05f;
-        townReputation = townReputation - 0.05f;
+        courtReputation = courtReputation - 0.03f;
+        townReputation = townReputation - 0.03f;
     }
 
     //Sobornos
