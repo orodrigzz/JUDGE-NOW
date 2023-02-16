@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         h += InputManager._INPUT_MANAGER.leftCameraAxis.y * hSpeed * Time.deltaTime;
         h = Mathf.Clamp(h, -60f, 60f);
         v += InputManager._INPUT_MANAGER.leftCameraAxis.x * vSpeed * Time.deltaTime;
+        v = Mathf.Clamp(v, -60f, 60f);
         Quaternion TO_DELETE_V2_Version_Buena = Quaternion.Euler(-h, -v, 0f);
         transform.rotation = TO_DELETE_V2_Version_Buena;
         #endregion

@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
     public Vector2 leftCameraAxis = Vector2.zero;
     #endregion
     #region Arm
-    public Vector2 mousePos = Vector2.zero;
+    public Vector2 mouseDelta = Vector2.zero;
     #endregion
 
     private void Awake()
@@ -27,6 +27,7 @@ public class InputManager : MonoBehaviour
             input_Manager = new Input_Manager();
             input_Manager.Player.Enable();
             input_Manager.Player.CameraMovement.performed += LeftAxisValue;
+            input_Manager.Player.MousePosition.performed += MouseDelta;
                         
             _INPUT_MANAGER = this;
             DontDestroyOnLoad(this);
@@ -49,11 +50,14 @@ public class InputManager : MonoBehaviour
         //Debug.Log("Normalized: " + leftCameraAxis.normalized);
 
    }
-   public void MousePositionValue(InputAction.CallbackContext  context)
+   public void MouseDelta(InputAction.CallbackContext  context)
    {
-        mousePos = context.ReadValue<Vector2>();
-        //Debug.Log("Magnitude: " + mousePos.magnitude);
-        //Debug.Log("Normalized: " + mousePos.normalized);
+        mouseDelta = context.ReadValue<Vector2>();               
    }
+
+    public Vector2 GetDeltaMouse()
+    {
+        return this.mouseDelta;
+    }
     
 }

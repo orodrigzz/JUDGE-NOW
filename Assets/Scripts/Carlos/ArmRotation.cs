@@ -5,6 +5,10 @@ using UnityEngine;
 public class ArmRotation : MonoBehaviour
 {
     public float rotationSpeed = 5f;
+    float rotationX;
+    float rotationY;
+    public GameObject root;
+    Vector2 mouseDelta;
     void Start()
     {
         
@@ -12,12 +16,21 @@ public class ArmRotation : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 viewportPos = Camera.main.ScreenToViewportPoint(mousePos);
-        Vector2 direction = new Vector2(viewportPos.x - 0.5f, viewportPos.y - 0.5f);
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(-90, angle, 0));
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+    {       
+        mouseDelta =  InputManager._INPUT_MANAGER.GetDeltaMouse();       
+        rotationX += mouseDelta.y;
+        rotationY += mouseDelta.x;
+        rotationY = Mathf.Clamp(rotationY, 1, 160f);
+        rotationX = Mathf.Clamp(rotationX, -89f, 89f);
+        if(mouseDelta.x != 0 ||  mouseDelta.y != 0)
+        {
+            root.transform.rotation = Quaternion.identity;
+            Quaternion rot = Quaternion.Euler(0, rotationY, -rotationX);
+            root.transform.rotation = rot;
+        }
+
+       
+
+
     }
 }
