@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     #region Camera
     public GameObject player;
+    public GameObject cameraTarget;
     public Camera cam;
     float h;
     float v;
@@ -17,22 +18,24 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         #region CameraMovement
-        player.transform.rotation = Quaternion.identity;
-        h += InputManager._INPUT_MANAGER.leftCameraAxis.y * hSpeed * Time.deltaTime;
-        h = Mathf.Clamp(h, -60f, 60f);
-        v += InputManager._INPUT_MANAGER.leftCameraAxis.x * vSpeed * Time.deltaTime;
-        v = Mathf.Clamp(v, -60f, 60f);
-        Quaternion TO_DELETE_V2_Version_Buena = Quaternion.Euler(-h, -v, 0f);
-        transform.rotation = TO_DELETE_V2_Version_Buena;
+        /* player.transform.rotation = Quaternion.identity;
+         h += InputManager._INPUT_MANAGER.leftCameraAxis.y * hSpeed * Time.deltaTime;
+         h = Mathf.Clamp(h, -60f, 60f);
+         v += InputManager._INPUT_MANAGER.leftCameraAxis.x * vSpeed * Time.deltaTime;
+         v = Mathf.Clamp(v, -60f, 60f);
+         Quaternion TO_DELETE_V2_Version_Buena = Quaternion.Euler(-h, -v, 0f);
+         transform.rotation = TO_DELETE_V2_Version_Buena;*/
+
+        this.transform.LookAt(cameraTarget.transform);
         #endregion
-       
+
 
 
 
