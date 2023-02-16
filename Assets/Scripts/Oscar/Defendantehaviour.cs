@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Defendantehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject UI;
     void Start()
     {
-        
+        UI.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        UI.SetActive(true);
     }
 }

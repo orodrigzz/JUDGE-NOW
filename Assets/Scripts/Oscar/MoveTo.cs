@@ -2,10 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class MoveTo : MonoBehaviour
 {
     public Vector3 targetPos;
-    public float speed;
+    public GameObject target;
+    public float speed = 0.2f;
+
+    private void Awake()
+    {
+        if ( target != null)
+        {
+            targetPos = target.transform.position;
+        }
+    }
 
     void Update()
     {
