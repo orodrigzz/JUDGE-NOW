@@ -6,6 +6,6 @@ public class Order : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        REPUTATION_MANAGER._REPUTATION_MANAGER.Order();
+        GAME_MANAGER._GAME_MANAGER.Order();
     }
 }

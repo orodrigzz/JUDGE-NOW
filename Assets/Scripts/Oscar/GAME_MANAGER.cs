@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class REPUTATION_MANAGER : MonoBehaviour
+public class GAME_MANAGER : MonoBehaviour
 {
-    public static REPUTATION_MANAGER _REPUTATION_MANAGER;
+    public static GAME_MANAGER _GAME_MANAGER;
 
     [SerializeField] private float courtReputation;
     [SerializeField] private float townReputation;
@@ -17,27 +17,27 @@ public class REPUTATION_MANAGER : MonoBehaviour
 
     private void Awake()
     {
-        if (_REPUTATION_MANAGER != null && _REPUTATION_MANAGER != this)
+        if (_GAME_MANAGER != null && _GAME_MANAGER != this)
         {
             Destroy(this.gameObject);
         }
         else
         {
-            _REPUTATION_MANAGER = this;
+            _GAME_MANAGER = this;
             DontDestroyOnLoad(gameObject);
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
+        //Reputation Bars
         courtReputationImg.fillAmount = courtReputation;
         townReputationImg.fillAmount = townReputation;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //Reputation
         courtReputationImg.fillAmount = courtReputation;
         townReputationImg.fillAmount = townReputation;
 
@@ -51,48 +51,10 @@ public class REPUTATION_MANAGER : MonoBehaviour
             SceneManager.LoadScene("Fired");
         }
 
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    goodCase();
-        //    Debug.Log("goodCase");
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.B))
-        //{
-        //    badCase();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.F1))
-        //{
-        //    firstBribe();   
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.F2))
-        //{
-        //    secondBribe();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.F3))
-        //{
-        //    thirdBribe();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.F4))
-        //{
-        //    fourthBribe();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.F5))
-        //{
-        //    fiveBribe();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.O))
-        //{
-        //    Order();
-        //}
+     
     }
 
+    //Reputation
     public void goodCase()
     {
         courtReputation = courtReputation + 0.01f;

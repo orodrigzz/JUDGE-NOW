@@ -6,6 +6,6 @@ public class BadCase : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        REPUTATION_MANAGER._REPUTATION_MANAGER.badCase();
+        GAME_MANAGER._GAME_MANAGER.badCase();
     }
 }
