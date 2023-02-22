@@ -23,12 +23,12 @@ public class PickUpSystem : MonoBehaviour
                     {
                         itemPicked = hit.rigidbody;
                         itemPicked.transform.localScale = transform.parent.localScale;
-                        itemPicked.transform.rotation = transform.parent.rotation;
-                        //itemPicked.transform.localScale = new Vector3(1,1,1);
-                         itemPicked.transform.SetParent(parent.transform);                                        
+                        itemPicked.transform.rotation = transform.parent.rotation;                        
+                        itemPicked.transform.SetParent(parent.transform);                                        
                         if (itemPicked != null)
-                        {   
+                        {
                             itemPicked.useGravity = false;
+                            itemPicked.constraints = RigidbodyConstraints.FreezeAll;
                             isPicked = true;
                         }
 
@@ -38,11 +38,12 @@ public class PickUpSystem : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(1))
                 {
-                    Debug.Log("Adoptado");
+                    
                     if(itemPicked != null)
                     {
                         itemPicked.transform.SetParent(null);
                         itemPicked.useGravity = true;
+                        itemPicked.constraints = RigidbodyConstraints.None;
                     }
                         itemPicked = null;
                         isPicked = false;
