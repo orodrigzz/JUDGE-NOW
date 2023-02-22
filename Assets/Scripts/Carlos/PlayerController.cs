@@ -24,8 +24,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        #region CameraMovement       
-        this.transform.LookAt(cameraTarget.transform);
+        #region CameraMovement   
+        if (GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
+        {
+            this.transform.LookAt(cameraTarget.transform);
+        }      
         #endregion
 
 

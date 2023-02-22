@@ -7,13 +7,17 @@ using UnityEngine.UI;
 public class GAME_MANAGER : MonoBehaviour
 {
     public static GAME_MANAGER _GAME_MANAGER;
-
+    #region Reputation
     [SerializeField] private float courtReputation;
     [SerializeField] private float townReputation;
     [SerializeField] private Image courtReputationImg;
     [SerializeField] private Image townReputationImg;
     [SerializeField] private Image defCourtReputation;
     [SerializeField] private Image defTownReputation;
+    #endregion
+    #region GameBasics
+    public bool isGamePaused;
+    #endregion
 
     private void Awake()
     {
@@ -31,15 +35,22 @@ public class GAME_MANAGER : MonoBehaviour
     void Start()
     {
         //Reputation Bars
-        courtReputationImg.fillAmount = courtReputation;
-        townReputationImg.fillAmount = townReputation;
+       
+        if(courtReputationImg != null && townReputationImg != null)
+        {
+            courtReputationImg.fillAmount = courtReputation;
+            townReputationImg.fillAmount = townReputation;
+        }
     }
 
     void Update()
     {
         //Reputation
-        courtReputationImg.fillAmount = courtReputation;
-        townReputationImg.fillAmount = townReputation;
+        if (courtReputationImg != null && townReputationImg != null)
+        {
+            courtReputationImg.fillAmount = courtReputation;
+            townReputationImg.fillAmount = townReputation;
+        }
 
         if ( townReputation < 0.25 || townReputation > 0.75)
         {
