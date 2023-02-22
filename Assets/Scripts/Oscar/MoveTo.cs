@@ -19,5 +19,10 @@ public class MoveTo : MonoBehaviour
     void Update()
     {
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPos, Time.deltaTime * speed);
+    
+        if (transform.localPosition == targetPos)
+        {
+            speed = 0f;
+        }
     }
 }
