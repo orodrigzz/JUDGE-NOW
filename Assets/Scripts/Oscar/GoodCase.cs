@@ -6,6 +6,6 @@ public class GoodCase : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        REPUTATION_MANAGER._REPUTATION_MANAGER.goodCase();
+        GAME_MANAGER._GAME_MANAGER.goodCase();
     }
 }
