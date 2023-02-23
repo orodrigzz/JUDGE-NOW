@@ -17,6 +17,7 @@ public class GAME_MANAGER : MonoBehaviour
     #endregion
     #region GameBasics
     public bool isGamePaused;
+    public bool isPicked;
     #endregion
 
     private void Awake()
@@ -34,9 +35,10 @@ public class GAME_MANAGER : MonoBehaviour
 
     void Start()
     {
+        isGamePaused = false;
         //Reputation Bars
-       
-        if(courtReputationImg != null && townReputationImg != null)
+
+        if (courtReputationImg != null && townReputationImg != null)
         {
             courtReputationImg.fillAmount = courtReputation;
             townReputationImg.fillAmount = townReputation;

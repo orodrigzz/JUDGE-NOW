@@ -52,6 +52,7 @@ public class PickUpSystem : MonoBehaviour
                             itemPicked.useGravity = false;
                             itemPicked.constraints = RigidbodyConstraints.FreezeAll;
                             isPicked = true;
+                            GAME_MANAGER._GAME_MANAGER.isPicked = true;
                         }
 
                     }
@@ -69,6 +70,7 @@ public class PickUpSystem : MonoBehaviour
                     }
                         itemPicked = null;
                         isPicked = false;
+                        GAME_MANAGER._GAME_MANAGER.isPicked = false;
                 }
             }
            

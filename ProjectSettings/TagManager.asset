@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Seleccionable
   - NPC
+  - Hammer
+  - Order
+  - Innocent
+  - Guilty
   layers:
   - Default
   - TransparentFX
@@ -16,7 +20,7 @@ TagManager:
   - Raycast Detect
   - PickUp
   - Decoration
-  - 
+  - HammerActions
   - 
   - 
   - 
