@@ -4,63 +4,85 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DialogueSystem : MonoBehaviour
 {
-    [SerializeField] GameObject Dialogue;
-    [SerializeField] Text nameBox;
-    [SerializeField] Text textBox;
-    [SerializeField] string name;
-    [SerializeField] string[] dialogueLines;
-    [SerializeField] int countLines;
-    [SerializeField] bool isDialogueActivated;
-    void Start()
-    {
-        Dialogue.SetActive(false);
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            
-            DialogueOn();
-            countLines++;
-            if (countLines <= dialogueLines.Length - 1)
-            {
-                Dialogue.SetActive(false);
-                countLines = 0;
-                isDialogueActivated = false;
 
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.C))
+    public Text[] sentences;
+    public Text nameText;
+    public GameObject dialogueBox;
+
+    public string[] dialogueLines;
+    public string characterName;
+
+    public int count = -1;
+    public int deactivateCount;
+
+    public bool dialogueOn;
+
+    private void Awake()
+    {
+        dialogueBox.SetActive(false);
+        dialogueOn = false;
+        foreach (var sentence in sentences)
         {
-           
+            sentence.enabled = false;
         }
     }
 
-    public void DialogueOn()
+    private void Update()
     {
-        Dialogue.SetActive(true);
-        nameBox.text += name;
-        isDialogueActivated = true;
-        if(countLines == 0)
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            textBox.text += dialogueLines[0];
+            NextSentences();
         }
-        else
+        if (dialogueOn)
         {
-            textBox.text += dialogueLines[countLines];
+            nameText.text = null;
+            nameText.text += characterName;
+        }
+        if (!dialogueOn)
+        {
+            nameText.text = null;
         }
     }
 
-    public void ActivateDialogue()
+
+    public void NextSentences()
     {
-        if(countLines == 0)
-        {
-            DialogueOn();
-        }
-        else if(countLines == 0 && isDialogueActivated)
-        {
-            countLines++;
-        }
         
+        if (count == sentences.Length - 1)
+        {
+            dialogueOn = false;
+            dialogueBox.SetActive(false);
+            count = -1;
+            deactivateCount = 0;
+            
+            foreach (var sentence in sentences)
+            {
+                sentence.enabled = false;
+            }
+            
+            return;
+        }
+
+        if (count < sentences.Length)
+        {
+            dialogueBox.SetActive(true);
+            dialogueOn = true;
+            count++;
+            sentences[count].enabled = true;
+            sentences[count].text += dialogueLines[count];
+        }
+        if (count > 0)
+        {
+            deactivateCount = count - 1;
+            sentences[deactivateCount].enabled = false;
+            dialogueLines[0] = null;
+            dialogueLines[deactivateCount+1] = null;
+            
+        }
+
+
+
+
+
     }
 }

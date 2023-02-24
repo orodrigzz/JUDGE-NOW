@@ -17,7 +17,7 @@ public class GAME_MANAGER : MonoBehaviour
     #endregion
     #region GameBasics
     public bool isGamePaused;
-    public bool isPicked;
+    public bool isPicked; 
     #endregion
 
     private void Awake()
