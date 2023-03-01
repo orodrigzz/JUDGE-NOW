@@ -10,6 +10,7 @@ TagManager:
   - Order
   - Innocent
   - Guilty
+  - DialogueStarter
   layers:
   - Default
   - TransparentFX
