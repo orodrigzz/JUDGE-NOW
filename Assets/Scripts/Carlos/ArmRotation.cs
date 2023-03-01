@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ArmRotation : MonoBehaviour
 {
-    public float rotationSpeed = 5f;
     float rotationX;
     float rotationY;
     public GameObject root;
