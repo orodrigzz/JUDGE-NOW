@@ -1311,6 +1311,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230719495}
   m_CullTransparentMesh: 1
+--- !u!1 &1253726358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1253726359}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1253726359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253726358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255455768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,6 +1787,8 @@ MonoBehaviour:
     - {fileID: 317785843}
     nameText: {fileID: 1441358495}
     textBox: {fileID: 277376155}
+    evidence: {fileID: 2771163110444557666, guid: fdd0acece0f9c384c9ef62974d13273b, type: 3}
+    spawnPoint: {fileID: 1253726358}
     dialogueLines:
     - popo
     - pipi
@@ -1773,6 +1806,8 @@ MonoBehaviour:
     - {fileID: 427172510}
     nameText: {fileID: 1012055241}
     textBox: {fileID: 1702725695}
+    evidence: {fileID: 0}
+    spawnPoint: {fileID: 0}
     dialogueLines:
     - uyuyu
     - wwww
@@ -1788,6 +1823,8 @@ MonoBehaviour:
     - {fileID: 565545418}
     nameText: {fileID: 1163440154}
     textBox: {fileID: 1688368135}
+    evidence: {fileID: 0}
+    spawnPoint: {fileID: 0}
     dialogueLines:
     - adsadsd
     - ooooooo

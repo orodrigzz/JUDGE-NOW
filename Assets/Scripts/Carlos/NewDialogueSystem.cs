@@ -11,6 +11,8 @@ public class NewDialogueSystem : MonoBehaviour
         public Text[] sentences;
         public Text nameText;
         public GameObject textBox;
+        public GameObject evidence;
+        public GameObject spawnPoint;
 
         public string[] dialogueLines;
         public string characterName;
@@ -69,7 +71,11 @@ public class NewDialogueSystem : MonoBehaviour
                 //Comprobamos si a acabado el dialogo actual y si es asi pasamos al siguiente
                 if (dialogues[dialoguesIndex].sentenceIndex >= dialogues[dialoguesIndex].sentences.Length-1)
                 {
-                    dialogues[dialoguesIndex].currentDialogueEnded = true;
+                    if (dialogues[dialoguesIndex].spawnPoint != null && dialogues[dialoguesIndex].evidence != null)
+                    {
+                        Instantiate(dialogues[dialoguesIndex].evidence, dialogues[dialoguesIndex].spawnPoint.transform);
+                    }
+                    dialogues[dialoguesIndex].currentDialogueEnded = true;                   
                     dialoguesIndex++;
                     dialogues[dialoguesIndex-1].textBox.SetActive(false);
                 }
@@ -118,7 +124,7 @@ public class NewDialogueSystem : MonoBehaviour
             {
                 dialogues[dialoguesIndex].diactivateCount = dialogues[dialoguesIndex].sentenceIndex - 1;
                 dialogues[dialoguesIndex].sentences[dialogues[dialoguesIndex].diactivateCount].enabled = false;
-           }
+            }
         
             
                
