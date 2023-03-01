@@ -33,7 +33,7 @@ public class HammerBehaviour : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 Debug.Log("GUILTY!!");
-                //GAME_MANAGER._GAME_MANAGER.Order();
+                GAME_MANAGER._GAME_MANAGER.goodCase();
             }
 
         }
@@ -42,7 +42,7 @@ public class HammerBehaviour : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 Debug.Log("INNOCENT!!");
-                //GAME_MANAGER._GAME_MANAGER.Order();
+                GAME_MANAGER._GAME_MANAGER.badCase();
             }
 
         }

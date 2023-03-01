@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class ComplainantBehaviour : MonoBehaviour
 {
-    public GameObject UI;
+    //public GameObject UI;
 
-    void Start()
-    {
-        UI.SetActive(false);
-    }
+    //void Start()
+    //{
+    //    UI.SetActive(false);
+    //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        UI.SetActive(true);
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    UI.SetActive(true);
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
