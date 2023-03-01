@@ -8,10 +8,8 @@ public class ArmRotation : MonoBehaviour
     float rotationY;
     public GameObject root;
     Vector2 mouseDelta;
-    void Start()
-    {
-        
-    }
+    [SerializeField] private bool fixy = false;
+    [SerializeField] private float rotationxmax = 89;
 
     // Update is called once per frame
     void Update()
@@ -19,10 +17,22 @@ public class ArmRotation : MonoBehaviour
         if (GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
         {
             mouseDelta = InputManager._INPUT_MANAGER.GetDeltaMouse();
-            rotationX += mouseDelta.y;
+            if (!fixy)
+            {
+                rotationX += mouseDelta.y;
+                rotationX = Mathf.Clamp(rotationX, -rotationxmax, rotationxmax);
+            }
+            else
+            {
+                if (mouseDelta.y > 0)
+                {
+                    rotationX += mouseDelta.y;
+                    rotationX = Mathf.Clamp(rotationX, -rotationxmax, rotationxmax);
+                }
+            }
             rotationY += mouseDelta.x;
             rotationY = Mathf.Clamp(rotationY, 1, 160f);
-            rotationX = Mathf.Clamp(rotationX, -89f, 89f);
+            
             if (mouseDelta.x != 0 || mouseDelta.y != 0)
             {
                 root.transform.rotation = Quaternion.identity;
@@ -31,5 +41,17 @@ public class ArmRotation : MonoBehaviour
             }
         }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        fixy = true;
+        Debug.LogError("Enter");
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        fixy = false;
+        Debug.LogError("Exit");
     }
 }
