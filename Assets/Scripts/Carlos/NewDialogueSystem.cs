@@ -28,6 +28,8 @@ public class NewDialogueSystem : MonoBehaviour
 
     public bool dialogueOn;
     public int dialoguesIndex = -1;
+    public GameObject innocentButton;
+    public GameObject guiltyButton;
    
 
     private void Awake()
@@ -41,7 +43,8 @@ public class NewDialogueSystem : MonoBehaviour
     }
     void Start()
     {
-        
+        innocentButton.SetActive(false);
+        guiltyButton.SetActive(false);
     }
 
  
@@ -73,7 +76,7 @@ public class NewDialogueSystem : MonoBehaviour
                 {
                     if (dialogues[dialoguesIndex].spawnPoint != null && dialogues[dialoguesIndex].evidence != null)
                     {
-                        Instantiate(dialogues[dialoguesIndex].evidence, dialogues[dialoguesIndex].spawnPoint.transform, true);
+                        Instantiate(dialogues[dialoguesIndex].evidence, dialogues[dialoguesIndex].spawnPoint.transform, false);
                     }
                     dialogues[dialoguesIndex].currentDialogueEnded = true;                   
                     dialoguesIndex++;
@@ -88,6 +91,8 @@ public class NewDialogueSystem : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.endDialogue = true;
                 GAME_MANAGER._GAME_MANAGER.initDialogue = false;
+                innocentButton.SetActive(true);
+                guiltyButton.SetActive(true);
                 for (int i = 0; i < dialogues.Length; i++)
                 {
                     dialogues[i].textBox.SetActive(false);
