@@ -22,6 +22,10 @@ public class MoveTo : MonoBehaviour
     
         if (transform.localPosition == targetPos)
         {
+            if (GAME_MANAGER._GAME_MANAGER.endDialogue == false)
+            {
+                GAME_MANAGER._GAME_MANAGER.initDialogue = true;
+            }
             speed = 0f;
         }
     }
