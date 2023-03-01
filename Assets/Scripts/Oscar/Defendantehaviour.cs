@@ -10,10 +10,10 @@ public class Defendantehaviour : MonoBehaviour
     //    UI.SetActive(false);
     //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        GAME_MANAGER._GAME_MANAGER.initDialogue = true;
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    UI.SetActive(true);
+    //}
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "NPC")

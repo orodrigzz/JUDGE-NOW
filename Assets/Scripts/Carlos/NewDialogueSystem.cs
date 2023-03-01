@@ -48,13 +48,13 @@ public class NewDialogueSystem : MonoBehaviour
     void Update()
     {
 
-        if (GAME_MANAGER._GAME_MANAGER.initDialogue && !dialogueOn)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             //Funcion que da inicio al primer dialogo
             //Ira vinculada al collaider
             CurrentDialogue();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             //Funcion que ira vinculada al input una vez iniciado el dialogo
             if (dialogueOn)
@@ -86,20 +86,16 @@ public class NewDialogueSystem : MonoBehaviour
             //comprobamos si quedan mas dialogos 
             if (dialoguesIndex > dialogues.Length-1)
             {
-                GAME_MANAGER._GAME_MANAGER.endDialogue = true;
-                GAME_MANAGER._GAME_MANAGER.initDialogue = false;
-                dialogueOn = false;
                 for (int i = 0; i < dialogues.Length; i++)
                 {
                     dialogues[i].textBox.SetActive(false);
                     dialogues[i].currentDialogueEnded = false;
                 }
-               
-                
+                dialogueOn = false;
             }
 
         }
-
+        
         
     }
     public void CurrentDialogue()
@@ -109,7 +105,6 @@ public class NewDialogueSystem : MonoBehaviour
             dialoguesIndex++;
         }
         dialogueOn = true;
-        GAME_MANAGER._GAME_MANAGER.initDialogue = false;
         OnDialogue();   
     }
     public void OnDialogue()
