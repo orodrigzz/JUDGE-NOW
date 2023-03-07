@@ -6,7 +6,9 @@ public class MoveTo : MonoBehaviour
 {
     public Vector3 targetPos;
     public GameObject target;
-    public float speed = 0.2f;
+    public float speed = 0.6f;
+
+    public int secs;
 
     private void Awake()
     {
@@ -14,12 +16,20 @@ public class MoveTo : MonoBehaviour
         {
             targetPos = target.transform.position;
         }
+
+
     }
 
     void Update()
     {
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(secs);
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPos, Time.deltaTime * speed);
-    
+
         if (transform.localPosition == targetPos)
         {
             if (GAME_MANAGER._GAME_MANAGER.endDialogue == false)
