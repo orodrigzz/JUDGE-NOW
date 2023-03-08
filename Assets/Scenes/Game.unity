@@ -389,6 +389,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95995713}
   m_CullTransparentMesh: 1
+--- !u!1 &142918538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142918539}
+  m_Layer: 0
+  m_Name: HammerSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142918539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142918538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1.0000001}
+  m_LocalPosition: {x: 0.749375, y: -0.79923147, z: -3.287334}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160010899
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +848,7 @@ GameObject:
   - component: {fileID: 455347049}
   m_Layer: 0
   m_Name: HighGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1197,6 +1228,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906637853}
   m_CullTransparentMesh: 1
+--- !u!114 &934536755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9102186034073184414, guid: f4c77d25e4ca1af42a6d0d853eaf835b, type: 3}
+  m_PrefabInstance: {fileID: 201381383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963476742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,7 +1885,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+<<<<<<< Updated upstream
 --- !u!114 &1257816372 stripped
+=======
+--- !u!114 &1263737147 stripped
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8042392923745278050, guid: f4c77d25e4ca1af42a6d0d853eaf835b, type: 3}
   m_PrefabInstance: {fileID: 201381383}
@@ -1912,7 +1958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.2541791, b: 0.1745283, a: 0.78431374}
+  m_Color: {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1995,7 +2041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.7169812, b: 0.06466893, a: 0.78431374}
+  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2301,17 +2347,28 @@ MonoBehaviour:
     - {fileID: 1466900415}
     - {fileID: 95995715}
     - {fileID: 1657113568}
+    - {fileID: 1657113568}
     nameText: {fileID: 1651456451}
     textBox: {fileID: 1297240262}
     evidence: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
     spawnPoint: {fileID: 548557559}
     dialogueLines:
-    - sadasd
-    - asdasdasdas
-    - adasdasdsad
-    - asdsad
+    - Good morning sir I want to complaint this guy. Here is the complaint
+    - "COMPLAINT TO THE INSTRUCTION COURT of Ekagate  Mr.Arna\xF6 Figuerjas, in his
+      own name with address in Ekagate and ID 44312862A, I appear before the Ekagate
+      Court and, as best proceeds by law, I SAY:  That by means of this document
+      I file a complaint based on the following  "
+    - "FACTS FIRST.- The accused is Rojger Zarzg\xF6za with address in Ekagate and
+      ID 33442163R  SECOND.- On July 18, 2033, he committed the following acts: Singing
+      very loud for a few hours preventing me from sleeping."
+    - 'Consequently, and given that I consider myself a victim of a crime, I inform
+      the Court so that it can agree on what is pertinent for the verification and
+      investigation of the facts and their authors.  In Ekagate on July 19, 2033. '
+    - I also bring the following tests. Is a recording of my mobile phone where you
+      can listen the complainant singing very loud from my house. I hope you can
+      make justice
     - 
-    characterName: "Arna\xF6 Figuerjas"
+    characterName: "Arna\xF6 Figuerjas - ID: 44312862A"
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
@@ -2319,19 +2376,15 @@ MonoBehaviour:
     - {fileID: 906637855}
     - {fileID: 1602102122}
     - {fileID: 1201029129}
-    - {fileID: 279177581}
-    - {fileID: 1122332447}
     nameText: {fileID: 963476744}
     textBox: {fileID: 1276023892}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - khkjhkghkjhk
-    - ghjghjghj
+    - That's false!!
+    - As you can see I singed in a proper hour!
     - ghjgjghj
-    - jhgjj
-    - 
-    characterName: "Rojger Zarzg\xF6za"
+    characterName: "Rojger Zarzg\xF6za - ID: 33442163R"
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
@@ -3096,7 +3149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1255905995445815756, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.67770004
+      value: -0.675
       objectReference: {fileID: 0}
     - target: {fileID: 1255905995445815756, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3130,6 +3183,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -13.609
       objectReference: {fileID: 0}
+    - target: {fileID: 1650400643134373754, guid: c5009729f4086e748b0eff21472df403, type: 3}
+      propertyPath: hammer
+      value: 
+      objectReference: {fileID: 1884210492833305462, guid: c5009729f4086e748b0eff21472df403, type: 3}
+    - target: {fileID: 1650400643134373754, guid: c5009729f4086e748b0eff21472df403, type: 3}
+      propertyPath: spawnPos
+      value: 
+      objectReference: {fileID: 142918538}
+    - target: {fileID: 1650400643134373754, guid: c5009729f4086e748b0eff21472df403, type: 3}
+      propertyPath: spwanPos
+      value: 
+      objectReference: {fileID: 142918538}
     - target: {fileID: 1884210492833305462, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_Name
       value: MazaJuez
@@ -3474,11 +3539,19 @@ PrefabInstance:
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: noiseImg
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 1257816372}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: defNoiseImg
       value: 
       objectReference: {fileID: 254380634}
+=======
+      objectReference: {fileID: 1263737147}
+    - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
+      propertyPath: defNoiseImg
+      value: 
+      objectReference: {fileID: 934536755}
+>>>>>>> Stashed changes
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: defTownReputation
       value: 
