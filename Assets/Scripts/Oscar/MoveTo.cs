@@ -16,8 +16,6 @@ public class MoveTo : MonoBehaviour
         {
             targetPos = target.transform.position;
         }
-
-
     }
 
     void Update()

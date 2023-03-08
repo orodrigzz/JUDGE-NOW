@@ -30,7 +30,8 @@ public class NewDialogueSystem : MonoBehaviour
     public int dialoguesIndex = -1;
     public GameObject innocentButton;
     public GameObject guiltyButton;
-   
+
+    public float secsTilNextDialogue;
 
     private void Awake()
     {
@@ -41,36 +42,32 @@ public class NewDialogueSystem : MonoBehaviour
         }
         dialogueOn = false;
     }
+
     void Start()
     {
         innocentButton.SetActive(false);
         guiltyButton.SetActive(false);
     }
 
- 
     void Update()
     {
-
         if (GAME_MANAGER._GAME_MANAGER.initDialogue && !dialogueOn)
         {
             //Funcion que da inicio al primer dialogo
             //Ira vinculada al collaider
             CurrentDialogue();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+
+        //Funcion que ira vinculada al input una vez iniciado el dialogo
+        if (dialogueOn)
         {
-            //Funcion que ira vinculada al input una vez iniciado el dialogo
-            if (dialogueOn)
-            {
-                OnDialogue();
-            }
-           
+            StartCoroutine(DialogueBeahviour());
         }
+
         if(dialoguesIndex >= 0)
         {
             if (dialogueOn)
             {
-               
                 //Comprobamos si a acabado el dialogo actual y si es asi pasamos al siguiente
                 if (dialogues[dialoguesIndex].sentenceIndex >= dialogues[dialoguesIndex].sentences.Length-1)
                 {
@@ -82,9 +79,7 @@ public class NewDialogueSystem : MonoBehaviour
                     dialoguesIndex++;
                     dialogues[dialoguesIndex-1].textBox.SetActive(false);
                 }
-
             }
-
 
             //comprobamos si quedan mas dialogos 
             if (dialoguesIndex > dialogues.Length-1)
@@ -100,11 +95,15 @@ public class NewDialogueSystem : MonoBehaviour
                 }
                 dialogueOn = false;
             }
-
         }
-        
-        
     }
+
+    IEnumerator DialogueBeahviour()
+    {
+        yield return new WaitForSeconds(secsTilNextDialogue);
+        OnDialogue();
+    }
+
     public void CurrentDialogue()
     {
         if(dialoguesIndex <= 0)
@@ -114,6 +113,7 @@ public class NewDialogueSystem : MonoBehaviour
         dialogueOn = true;
         OnDialogue();   
     }
+
     public void OnDialogue()
     {
             dialogues[dialoguesIndex].nameText.text = null;
@@ -131,9 +131,6 @@ public class NewDialogueSystem : MonoBehaviour
             {
                 dialogues[dialoguesIndex].diactivateCount = dialogues[dialoguesIndex].sentenceIndex - 1;
                 dialogues[dialoguesIndex].sentences[dialogues[dialoguesIndex].diactivateCount].enabled = false;
-            }
-        
-            
-               
+            }  
     }
 }

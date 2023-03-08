@@ -33,16 +33,18 @@ public class InputManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
     }
-   void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+   void Start()
+   {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+   }
+
+   void Update()
+   {
         InputSystem.Update();
-    }
+   }
+
    public void LeftAxisValue(InputAction.CallbackContext context)
    {
         leftCameraAxis = context.ReadValue<Vector2>();
@@ -50,14 +52,14 @@ public class InputManager : MonoBehaviour
         //Debug.Log("Normalized: " + leftCameraAxis.normalized);
 
    }
+
    public void MouseDelta(InputAction.CallbackContext  context)
    {
         mouseDelta = context.ReadValue<Vector2>();               
    }
 
-    public Vector2 GetDeltaMouse()
-    {
-        return this.mouseDelta;
-    }
-    
+   public Vector2 GetDeltaMouse()
+   {
+       return this.mouseDelta;
+   }
 }
