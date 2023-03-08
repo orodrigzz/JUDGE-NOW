@@ -2073,7 +2073,6 @@ MonoBehaviour:
   dialoguesIndex: -1
   innocentButton: {fileID: 919132148116991930}
   guiltyButton: {fileID: 919132148602970048}
-  secsTilNextDialogue: 5
 --- !u!1 &1602102120
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,7 +2984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8399490831688050962, guid: df97b4e9a9039124a8c4bfb9d931bd6b, type: 3}
       propertyPath: secs
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8399490831688050962, guid: df97b4e9a9039124a8c4bfb9d931bd6b, type: 3}
       propertyPath: target
