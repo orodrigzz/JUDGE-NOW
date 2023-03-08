@@ -59,7 +59,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else
             {
-                if (Input.GetMouseButtonDown(1))
+                if (Input.GetMouseButtonDown(1) && isInspecting == false)
                 {
                     
                     if(itemPicked != null)

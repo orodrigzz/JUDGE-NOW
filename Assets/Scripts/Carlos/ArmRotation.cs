@@ -76,13 +76,20 @@ public class ArmRotation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        fixy = true;
-        Debug.LogError("Enter");
+        if (other.gameObject.layer != 7)
+        {
+            fixy = true;
+            Debug.LogError("Enter");
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        fixy = false;
-        Debug.LogError("Exit");
+        if (other.gameObject.layer != 7)
+        {
+            fixy = false;
+            Debug.LogError("Enter");
+        }
     }
 }

@@ -10,6 +10,7 @@ public class NewDialogueSystem : MonoBehaviour
    {
         public Text[] sentences;
         public Text nameText;
+        public Button nextButton;
         public GameObject textBox;
         public GameObject evidence;
         public GameObject spawnPoint;
@@ -57,16 +58,16 @@ public class NewDialogueSystem : MonoBehaviour
             //Ira vinculada al collaider
             CurrentDialogue();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             //Funcion que ira vinculada al input una vez iniciado el dialogo
             if (dialogueOn)
             {
                 OnDialogue();
             }
-           
+
         }
-        if(dialoguesIndex >= 0)
+        if (dialoguesIndex >= 0)
         {
             if (dialogueOn)
             {
@@ -136,4 +137,6 @@ public class NewDialogueSystem : MonoBehaviour
             
                
     }
+
+  
 }
