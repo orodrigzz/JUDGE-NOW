@@ -10,11 +10,19 @@ public class GAME_MANAGER : MonoBehaviour
     #region Reputation
     [SerializeField] private float courtReputation;
     [SerializeField] private float townReputation;
+    [SerializeField] private float noise;
+
     [SerializeField] private Image courtReputationImg;
     [SerializeField] private Image townReputationImg;
     [SerializeField] private Image defCourtReputation;
     [SerializeField] private Image defTownReputation;
+
+    [SerializeField] private Image defNoiseImg;
+    [SerializeField] private Image noiseImg;
+
+    [SerializeField] private AudioSource noiseAudio;
     #endregion
+
     #region GameBasics
     public bool isGamePaused;
     public bool isPicked;
@@ -45,6 +53,11 @@ public class GAME_MANAGER : MonoBehaviour
             courtReputationImg.fillAmount = courtReputation;
             townReputationImg.fillAmount = townReputation;
         }
+
+        if (noiseImg != null)
+        {
+            noiseImg.fillAmount = noise;
+        }
     }
 
     void Update()
@@ -54,6 +67,11 @@ public class GAME_MANAGER : MonoBehaviour
         {
             courtReputationImg.fillAmount = courtReputation;
             townReputationImg.fillAmount = townReputation;
+        }
+
+        if (noiseImg != null)
+        {
+            noiseImg.fillAmount = noise;
         }
 
         if ( townReputation < 0.20 || townReputation > 0.70)
@@ -66,7 +84,9 @@ public class GAME_MANAGER : MonoBehaviour
             SceneManager.LoadScene("Fired");
         }
 
-     
+        noise = noise + 0.00003f;
+        noiseAudio.pitch = noiseAudio.pitch + 0.00003f;
+
     }
 
     //Reputation
@@ -120,8 +140,9 @@ public class GAME_MANAGER : MonoBehaviour
     //Callar sala
     public void Order()
     {
-        courtReputation = courtReputation + 0.04f;
-        townReputation = townReputation - 0.04f;
+        courtReputation = courtReputation + 0.02f;
+        townReputation = townReputation - 0.02f;
+        noise = noise - 0.05f;
     }
 
 }
