@@ -56,12 +56,12 @@ public class GAME_MANAGER : MonoBehaviour
             townReputationImg.fillAmount = townReputation;
         }
 
-        if ( townReputation < 0.25 || townReputation > 0.75)
+        if ( townReputation < 0.20 || townReputation > 0.70)
         {
             SceneManager.LoadScene("Fired");
         }
 
-        if (courtReputation < 0.25 || courtReputation > 0.75)
+        if (courtReputation < 0.20 || courtReputation > 0.70)
         {
             SceneManager.LoadScene("Fired");
         }
@@ -72,14 +72,14 @@ public class GAME_MANAGER : MonoBehaviour
     //Reputation
     public void goodCase()
     {
-        courtReputation = courtReputation + 0.01f;
-        townReputation = townReputation + 0.01f;
+        courtReputation = courtReputation + 0.1f;
+        townReputation = townReputation + 0.1f;
     }
 
     public void badCase()
     {
-        courtReputation = courtReputation - 0.01f;
-        townReputation = townReputation - 0.01f; ;
+        courtReputation = courtReputation - 0.1f;
+        townReputation = townReputation - 0.1f;
     }
 
     //Sobornos
@@ -120,8 +120,8 @@ public class GAME_MANAGER : MonoBehaviour
     //Callar sala
     public void Order()
     {
-        courtReputation = courtReputation + 0.02f;
-        townReputation = townReputation - 0.02f;
+        courtReputation = courtReputation + 0.04f;
+        townReputation = townReputation - 0.04f;
     }
 
 }
