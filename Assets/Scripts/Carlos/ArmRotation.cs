@@ -11,6 +11,25 @@ public class ArmRotation : MonoBehaviour
     [SerializeField] private bool fixy = false;
     [SerializeField] private float rotationxmax = 89;
 
+    [SerializeField] Rigidbody rbPivot;
+    [SerializeField] float minX;
+    [SerializeField] float maxX;
+    [SerializeField] float maxZ;
+    [SerializeField] float minZ;
+
+    [SerializeField] float sensibility;
+
+    [SerializeField]
+    private string horizontalInputName = "Horizontal";
+
+    [SerializeField]
+    private string verticalInputName = "Vertical";
+
+    private float horizontalInputValue;
+    private float verticalInputValue;
+
+
+
     // Update is called once per frame
     void Update()
     {
@@ -19,18 +38,18 @@ public class ArmRotation : MonoBehaviour
             mouseDelta = InputManager._INPUT_MANAGER.GetDeltaMouse();
             if (!fixy)
             {
-                rotationX += mouseDelta.y;
+                rotationX += mouseDelta.y * sensibility;
                 rotationX = Mathf.Clamp(rotationX, -rotationxmax, rotationxmax);
             }
             else
             {
                 if (mouseDelta.y > 0)
                 {
-                    rotationX += mouseDelta.y;
+                    rotationX += mouseDelta.y * sensibility;
                     rotationX = Mathf.Clamp(rotationX, -rotationxmax, rotationxmax);
                 }
             }
-            rotationY += mouseDelta.x;
+            rotationY += mouseDelta.x * sensibility;
             rotationY = Mathf.Clamp(rotationY, 1, 160f);
             
             if (mouseDelta.x != 0 || mouseDelta.y != 0)
@@ -40,7 +59,19 @@ public class ArmRotation : MonoBehaviour
                 root.transform.rotation = rot;
             }
         }
-        
+
+        Vector3 currentPosition =rbPivot.transform.position;
+        horizontalInputValue = Input.GetAxis(horizontalInputName);
+        verticalInputValue = Input.GetAxis(verticalInputName);
+
+        float newX = currentPosition.x + horizontalInputValue;
+        float newZ = currentPosition.z + verticalInputValue;
+
+        newX = Mathf.Clamp(newX, minX, maxX);
+        newZ = Mathf.Clamp(newZ, minZ, maxZ);
+
+        Vector3 newPosition = new Vector3(newX, currentPosition.y, newZ);
+        rbPivot.MovePosition(newPosition);
     }
 
     private void OnTriggerEnter(Collider other)
