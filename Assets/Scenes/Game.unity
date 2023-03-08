@@ -601,6 +601,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &254380634 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9102186034073184414, guid: f4c77d25e4ca1af42a6d0d853eaf835b, type: 3}
+  m_PrefabInstance: {fileID: 201381383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &279177579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1843,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1257816372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8042392923745278050, guid: f4c77d25e4ca1af42a6d0d853eaf835b, type: 3}
+  m_PrefabInstance: {fileID: 201381383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276023892
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,7 +2302,6 @@ MonoBehaviour:
     - {fileID: 95995715}
     - {fileID: 1657113568}
     nameText: {fileID: 1651456451}
-    nextButton: {fileID: 0}
     textBox: {fileID: 1297240262}
     evidence: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
     spawnPoint: {fileID: 548557559}
@@ -2301,7 +2322,6 @@ MonoBehaviour:
     - {fileID: 279177581}
     - {fileID: 1122332447}
     nameText: {fileID: 963476744}
-    nextButton: {fileID: 0}
     textBox: {fileID: 1276023892}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
@@ -2317,8 +2337,9 @@ MonoBehaviour:
     currentDialogueEnded: 0
   dialogueOn: 0
   dialoguesIndex: -1
-  innocentButton: {fileID: 919132148116991930}
-  guiltyButton: {fileID: 919132148602970048}
+  guiltyBut: {fileID: 919132148116991930}
+  innocentBut: {fileID: 919132148602970048}
+  isRevealed: 0
 --- !u!1 &1602102120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,6 +3471,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
+      propertyPath: noiseImg
+      value: 
+      objectReference: {fileID: 1257816372}
+    - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
+      propertyPath: defNoiseImg
+      value: 
+      objectReference: {fileID: 254380634}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: defTownReputation
       value: 

@@ -85,7 +85,11 @@ public class GAME_MANAGER : MonoBehaviour
         }
 
         noise = noise + 0.00003f;
-        noiseAudio.pitch = noiseAudio.pitch + 0.00003f;
+        if(noiseAudio != null)
+        {
+            noiseAudio.pitch = noiseAudio.pitch + 0.00003f;
+        }
+        
 
     }
 

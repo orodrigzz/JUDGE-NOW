@@ -10,7 +10,7 @@ public class NewDialogueSystem : MonoBehaviour
    {
         public Text[] sentences;
         public Text nameText;
-        public Button nextButton;
+        
         public GameObject textBox;
         public GameObject evidence;
         public GameObject spawnPoint;
@@ -29,10 +29,10 @@ public class NewDialogueSystem : MonoBehaviour
 
     public bool dialogueOn;
     public int dialoguesIndex = -1;
-    public GameObject innocentButton;
-    public GameObject guiltyButton;
-   
 
+    public GameObject guiltyBut;
+    public GameObject innocentBut;
+    public bool isRevealed;
     private void Awake()
     {
         for(int i = 0; i < dialogues.Length; i++)
@@ -44,8 +44,8 @@ public class NewDialogueSystem : MonoBehaviour
     }
     void Start()
     {
-        innocentButton.SetActive(false);
-        guiltyButton.SetActive(false);
+        innocentBut.SetActive(false);
+        guiltyBut.SetActive(false);
     }
 
  
@@ -66,6 +66,23 @@ public class NewDialogueSystem : MonoBehaviour
                 OnDialogue();
             }
 
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (!isRevealed)
+            {
+
+                innocentBut.SetActive(true);
+                guiltyBut.SetActive(true);
+                isRevealed = true;
+            }
+            else
+            {
+
+                innocentBut.SetActive(false);
+                guiltyBut.SetActive(false);
+                isRevealed = false;
+            }
         }
         if (dialoguesIndex >= 0)
         {
@@ -92,8 +109,6 @@ public class NewDialogueSystem : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.endDialogue = true;
                 GAME_MANAGER._GAME_MANAGER.initDialogue = false;
-                innocentButton.SetActive(true);
-                guiltyButton.SetActive(true);
                 for (int i = 0; i < dialogues.Length; i++)
                 {
                     dialogues[i].textBox.SetActive(false);
@@ -138,5 +153,8 @@ public class NewDialogueSystem : MonoBehaviour
                
     }
 
-  
+  public void MakeDecision()
+  {
+        
+  }
 }
