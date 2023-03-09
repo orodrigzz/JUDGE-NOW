@@ -3339,6 +3339,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4570388741818049478, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: hammerBehaviour
+      value: 
+      objectReference: {fileID: 100773760}
     - target: {fileID: 4570388741818049479, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6791

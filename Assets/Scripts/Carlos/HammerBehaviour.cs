@@ -6,6 +6,12 @@ public class HammerBehaviour : MonoBehaviour
 {
 
     [SerializeField] public bool mazazo = false;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] Vector3 direction;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -40,7 +46,10 @@ public class HammerBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Table")
         {
-            mazazo = true;
+            if (GAME_MANAGER._GAME_MANAGER.isPicked)
+            {
+                mazazo = true;
+            }
         }
 
         if (collision.gameObject.tag == "Ground")
@@ -48,5 +57,10 @@ public class HammerBehaviour : MonoBehaviour
             mazazo = true; 
             Destroy(this.gameObject);
         }
+    }
+
+    public void ThrowHammer()
+    {
+        rb.AddForce(direction, ForceMode.Impulse);
     }
 }

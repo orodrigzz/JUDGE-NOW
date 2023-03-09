@@ -27,6 +27,11 @@ public class PickUpSystem : MonoBehaviour
 
     #endregion
 
+    #region ThrowHammerMechanic
+    [SerializeField] HammerBehaviour hammerBehaviour;
+    #endregion
+
+
     private void Start()
     {
         startedCameraPosition = camera.transform.position;
@@ -34,6 +39,7 @@ public class PickUpSystem : MonoBehaviour
     }
     private void Update()
     {
+            //hammerBehaviour =
             foreach (Vector3 origin in rayOrigins)
             {
                 Ray ray = new Ray(transform.position + origin, transform.forward);
@@ -71,6 +77,19 @@ public class PickUpSystem : MonoBehaviour
                         isPicked = false;
                         GAME_MANAGER._GAME_MANAGER.isPicked = false;
                 }
+                if(Input.GetKeyDown(KeyCode.Space) && isInspecting == false)
+                {
+                    if (itemPicked != null)
+                    {
+                        itemPicked.transform.SetParent(null);
+                        itemPicked.useGravity = true;
+                        itemPicked.constraints = RigidbodyConstraints.None;
+                    }
+                    itemPicked = null;
+                    isPicked = false;
+                    GAME_MANAGER._GAME_MANAGER.isPicked = false;
+                    hammerBehaviour.ThrowHammer();
+                }
             }
            
                 Debug.DrawRay(transform.position + origin, transform.forward * 100, Color.green);
@@ -80,7 +99,7 @@ public class PickUpSystem : MonoBehaviour
         {
             EnterInspectionMode();
         }
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.E) && isInspecting)
         {
             ExitInspectionMode();
         }
