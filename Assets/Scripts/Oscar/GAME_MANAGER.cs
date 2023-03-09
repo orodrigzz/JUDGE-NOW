@@ -8,8 +8,8 @@ public class GAME_MANAGER : MonoBehaviour
 {
     public static GAME_MANAGER _GAME_MANAGER;
     #region Reputation
-    [SerializeField] private float courtReputation;
-    [SerializeField] private float townReputation;
+    [SerializeField] public float courtReputation;
+    [SerializeField] public float townReputation;
     [SerializeField] public float noise;
 
     [SerializeField] private Image courtReputationImg;
@@ -85,7 +85,7 @@ public class GAME_MANAGER : MonoBehaviour
             SceneManager.LoadScene("Fired");
         }
 
-        noise = noise + 0.00002f;
+        noise = noise + 0.0002f;
         if(noiseAudio != null)
         {
             noiseAudio.volume = noiseAudio.volume + 0.00002f;
