@@ -11,6 +11,7 @@ public class PickUpSystem : MonoBehaviour
     public Rigidbody itemPicked;
     public bool isPicked = false;
     #endregion
+
     #region InspectObject
     [SerializeField] GameObject arm;
     [SerializeField] Camera camera;
@@ -22,10 +23,9 @@ public class PickUpSystem : MonoBehaviour
     [SerializeField] Vector3 startedCameraRotation;
     [SerializeField] float rotationSpeed;
     [SerializeField] float offset;
-    public bool isInspecting;
+    public bool isInspecting = false;
 
     #endregion
-
 
     private void Start()
     {
@@ -61,7 +61,6 @@ public class PickUpSystem : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(1) && isInspecting == false)
                 {
-                    
                     if(itemPicked != null)
                     {
                         itemPicked.transform.SetParent(null);

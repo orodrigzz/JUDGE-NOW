@@ -11,6 +11,7 @@ TagManager:
   - Innocent
   - Guilty
   - Ground
+  - Table
   layers:
   - Default
   - TransparentFX

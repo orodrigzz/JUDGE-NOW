@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class HammerBehaviour : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] public bool mazazo = false;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -22,34 +13,40 @@ public class HammerBehaviour : MonoBehaviour
         {
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
-                Debug.Log("ORDERR!!");
+                mazazo = true;
                 GAME_MANAGER._GAME_MANAGER.Order();
-                
             }
-
         }
+
         if (collision.gameObject.tag == "Guilty")
         {
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
+                mazazo = true;
                 Debug.Log("GUILTY!!");
                 GAME_MANAGER._GAME_MANAGER.goodCase();
             }
-
         }
+
         if (collision.gameObject.tag == "Innocent")
         {
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
+                mazazo = true;
                 Debug.Log("INNOCENT!!");
                 GAME_MANAGER._GAME_MANAGER.badCase();
             }
-
         }
+
+        if (collision.gameObject.tag == "Table")
+        {
+            mazazo = true;
+        }
+
         if (collision.gameObject.tag == "Ground")
         {
+            mazazo = true; 
             Destroy(this.gameObject);
-
         }
     }
 }

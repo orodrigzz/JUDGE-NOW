@@ -479,7 +479,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -494,6 +494,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95995713}
   m_CullTransparentMesh: 1
+--- !u!114 &100773760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1650400643134373754, guid: c5009729f4086e748b0eff21472df403, type: 3}
+  m_PrefabInstance: {fileID: 1650400644295351714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525f2d1a306d85f4c80277500983b0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &160010899
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +793,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1024,8 +1035,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548557560}
+  - component: {fileID: 548557561}
+  - component: {fileID: 548557563}
+  - component: {fileID: 548557562}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Spawner Pruebas & Audio Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,6 +1060,214 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &548557561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548557559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861e71f04004b9446ab576093d8eedf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUp: {fileID: 1746837138}
+  hammerBehaviour: {fileID: 100773760}
+  AudioMobil: {fileID: 548557563}
+  AudioMazo: {fileID: 548557562}
+--- !u!82 &548557562
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548557559}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4089728600c859749b6a57855294b152, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &548557563
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548557559}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d0333d2ff8ac83e488a0a9715ade38cf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &565080186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1333,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1336,7 +1558,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1752,7 +1974,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1865,7 +2087,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2457,7 +2679,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2631,12 +2853,21 @@ MonoBehaviour:
     evidence: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
     spawnPoint: {fileID: 548557559}
     dialogueLines:
-    - sadasd
-    - asdasdasdas
-    - adasdasdsad
-    - asdsad
+    - Good morning Sir I want to complaint my neighbour because this night I can't
+      sleep because he was singing very loud. Here is the complait.
+    - "COMPLAINT TO THE INSTRUCTION COURT of Ekagate  Mr.Arna\xF6 Figuerjas, in his
+      own name with address in Ekagate and ID 44312862A, I appear before the Ekagate
+      Court and, as best proceeds by law, I SAY: "
+    - "That by means of this document I file a complaint based on the following 
+      FACTS FIRST.- The accused is Rojger Zarzg\xF6za with address in Ekagate and
+      ID 33442163R  SECOND.- On July 18, 2033, he committed the following acts: Singing
+      very loud for a few hours preventing me from sleeping I also bring the following
+      tests. "
+    - 'Consequently, and given that I consider myself a victim of a crime, I inform
+      the Court so that it can agree on what is pertinent for the verification and
+      investigation of the facts and their authors.  In Ekagate on July 19, 2033.  '
     - 
-    characterName: "Arna\xF6 Figuerjas"
+    characterName: "Arna\xF6 Figuerjas - 44312862A"
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
@@ -2651,12 +2882,12 @@ MonoBehaviour:
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - khkjhkghkjhk
-    - ghjghjghj
-    - ghjgjghj
-    - jhgjj
+    - That's false!!!!
+    - You want me to go to jail because I'm more handsome than you
+    - FUCKING LOSER!!!
+    - Judge you can't permit this
     - 
-    characterName: "Rojger Zarzg\xF6za"
+    characterName: "Rojger Zarzg\xF6za - 33442163R"
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
@@ -2730,7 +2961,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2968,7 +3199,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3247,6 +3478,17 @@ PrefabInstance:
     - {fileID: 337596222, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
     - {fileID: 3431143354151240309, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+--- !u!114 &1746837138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4570388741818049478, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+  m_PrefabInstance: {fileID: 1746837137}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8750ee93c9dc9b4d960988e817ee302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1870372144
 GameObject:
   m_ObjectHideFlags: 0
@@ -3312,7 +3554,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3454,6 +3696,22 @@ PrefabInstance:
     - target: {fileID: 1255905995445815756, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -13.609
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650400643134373756, guid: c5009729f4086e748b0eff21472df403, type: 3}
+      propertyPath: m_Size.y
+      value: 0.14159387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650400643134373756, guid: c5009729f4086e748b0eff21472df403, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0000003641754
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650400643134373756, guid: c5009729f4086e748b0eff21472df403, type: 3}
+      propertyPath: m_Center.y
+      value: 0.30849776
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650400643134373756, guid: c5009729f4086e748b0eff21472df403, type: 3}
+      propertyPath: m_Center.z
+      value: 0.00000018122653
       objectReference: {fileID: 0}
     - target: {fileID: 1884210492833305462, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_Name
