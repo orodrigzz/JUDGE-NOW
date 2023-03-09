@@ -10,7 +10,7 @@ public class GAME_MANAGER : MonoBehaviour
     #region Reputation
     [SerializeField] private float courtReputation;
     [SerializeField] private float townReputation;
-    [SerializeField] private float noise;
+    [SerializeField] public float noise;
 
     [SerializeField] private Image courtReputationImg;
     [SerializeField] private Image townReputationImg;
