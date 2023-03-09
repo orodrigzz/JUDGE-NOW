@@ -47,7 +47,7 @@ public class GAME_MANAGER : MonoBehaviour
     {
         isGamePaused = false;
         //Reputation Bars
-
+        noiseAudio.volume = 0;
         if (courtReputationImg != null && townReputationImg != null)
         {
             courtReputationImg.fillAmount = courtReputation;
@@ -84,10 +84,10 @@ public class GAME_MANAGER : MonoBehaviour
             SceneManager.LoadScene("Fired");
         }
 
-        noise = noise + 0.00003f;
+        noise = noise + 0.0001f;
         if(noiseAudio != null)
         {
-            noiseAudio.pitch = noiseAudio.pitch + 0.00003f;
+            noiseAudio.volume = noiseAudio.volume + 0.0001f;
         }
         
 
@@ -146,7 +146,14 @@ public class GAME_MANAGER : MonoBehaviour
     {
         courtReputation = courtReputation + 0.02f;
         townReputation = townReputation - 0.02f;
+        
         noise = noise - 0.05f;
+        noiseAudio.volume = noiseAudio.volume - 0.05f;
+        if(noise < 0 || noiseAudio.volume < 0)
+        {
+            noise = 0;
+            noiseAudio.volume = 0;
+        }
     }
 
 }

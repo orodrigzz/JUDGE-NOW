@@ -46,5 +46,10 @@ public class HammerBehaviour : MonoBehaviour
             }
 
         }
+        if (collision.gameObject.tag == "Ground")
+        {
+            Destroy(this.gameObject);
+
+        }
     }
 }
