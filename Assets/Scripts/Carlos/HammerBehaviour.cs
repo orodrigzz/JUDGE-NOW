@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class HammerBehaviour : MonoBehaviour
 {
-
-    [SerializeField] private float hammerHealth = 10;
-    [SerializeField] private GameObject hammer;
-    [SerializeField] private GameObject spawnPos;
-
-    private void Update()
+    
+    void Start()
     {
-        if (hammerHealth < 0)
-        {
-            Destroy(gameObject);
-        }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -25,42 +24,27 @@ public class HammerBehaviour : MonoBehaviour
             {
                 Debug.Log("ORDERR!!");
                 GAME_MANAGER._GAME_MANAGER.Order();
-                hammerHealth--;
+                
             }
-            hammerHealth--;
-        }
 
+        }
         if (collision.gameObject.tag == "Guilty")
         {
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 Debug.Log("GUILTY!!");
                 GAME_MANAGER._GAME_MANAGER.goodCase();
-                hammerHealth--;
             }
-            hammerHealth--;
-        }
 
+        }
         if (collision.gameObject.tag == "Innocent")
         {
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 Debug.Log("INNOCENT!!");
                 GAME_MANAGER._GAME_MANAGER.badCase();
-                hammerHealth--;
             }
-            hammerHealth--;
-        }
 
-        if (collision.gameObject.tag == "Table")
-        {
-            hammerHealth--;
-        }
-
-        if (collision.gameObject.tag == "Ground")
-        {
-            Instantiate(hammer, spawnPos.transform);
-            //Destroy(this.gameObject);
         }
     }
 }

@@ -127,6 +127,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525f2d1a306d85f4c80277500983b0f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hammerHealth: 10
-  hammer: {fileID: 0}
-  spwanPos: {fileID: 0}

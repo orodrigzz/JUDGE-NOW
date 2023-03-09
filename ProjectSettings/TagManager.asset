@@ -10,8 +10,6 @@ TagManager:
   - Order
   - Innocent
   - Guilty
-  - Table
-  - Ground
   layers:
   - Default
   - TransparentFX
