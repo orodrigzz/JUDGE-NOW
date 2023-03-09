@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MoveTo : MonoBehaviour
 {
-    public Vector3 targetPos;
-    public GameObject target;
-    public float speed = 0.6f;
+    [SerializeField] private Vector3 targetPos;
+    [SerializeField] private GameObject target;
+    [SerializeField] private float speed = 0.6f;
 
-    public int secs;
+    [SerializeField] private int secs;
 
     private void Awake()
     {

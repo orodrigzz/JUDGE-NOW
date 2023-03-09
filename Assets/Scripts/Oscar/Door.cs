@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public bool openDoor = false;
+    private bool openDoor = false;
 
-    public float speed = 0.5f;
-    public float openAngle = 90f;
-    public float closeAngle = 0f;
+    [SerializeField] private float speed = 0.5f;
+    [SerializeField] private float openAngle = 90f;
+    [SerializeField] private float closeAngle = 0f;
 
     //public AudioClip openDoor;
     //public AudioClip closeDoor;
