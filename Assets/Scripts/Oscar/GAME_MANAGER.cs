@@ -85,7 +85,7 @@ public class GAME_MANAGER : MonoBehaviour
             SceneManager.LoadScene("Fired");
         }
 
-        noise = noise + 0.0002f;
+        noise = noise + 0.00002f;
         if(noiseAudio != null)
         {
             noiseAudio.volume = noiseAudio.volume + 0.00002f;

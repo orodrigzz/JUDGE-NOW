@@ -105,7 +105,7 @@ public class PickUpSystem : MonoBehaviour
         {
             EnterInspectionMode();
         }
-        if (Input.GetKeyDown(KeyCode.E) && isInspecting)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ExitInspectionMode();
         }

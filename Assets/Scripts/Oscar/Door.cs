@@ -15,7 +15,11 @@ public class Door : MonoBehaviour
 
     private void Start()
     {
-        doorOpening.Play();
+        if(doorOpening != null)
+        {
+            doorOpening.Play();
+        }
+        
     }
 
     void Update()
