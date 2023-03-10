@@ -10,8 +10,13 @@ public class Door : MonoBehaviour
     [SerializeField] private float openAngle = 90f;
     [SerializeField] private float closeAngle = 0f;
 
-    //public AudioClip openDoor;
+    public AudioSource doorOpening;
     //public AudioClip closeDoor;
+
+    private void Start()
+    {
+        doorOpening.Play();
+    }
 
     void Update()
     {
