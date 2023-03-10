@@ -9,10 +9,7 @@ public class HammerBehaviour : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] Rigidbody rb;
     [SerializeField] Vector3 direction;
-    private void Start()
-    {
-        
-    }
+
     private void Update()
     {
         rb = GetComponent<Rigidbody>();
@@ -23,18 +20,18 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.tag == "Order")
         {
+            mazazo = true;
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
-                mazazo = true;
                 GAME_MANAGER._GAME_MANAGER.Order();
             }
         }
 
         if (collision.gameObject.tag == "Guilty")
         {
+            mazazo = true;
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
-                mazazo = true;
                 Debug.Log("GUILTY!!");
                 GAME_MANAGER._GAME_MANAGER.goodCase();
             }
@@ -42,9 +39,9 @@ public class HammerBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Innocent")
         {
+            mazazo = true;
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
-                mazazo = true;
                 Debug.Log("INNOCENT!!");
                 GAME_MANAGER._GAME_MANAGER.badCase();
             }
@@ -52,10 +49,12 @@ public class HammerBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Table")
         {
-            if (GAME_MANAGER._GAME_MANAGER.isPicked)
-            {
-                mazazo = true;
-            }
+            mazazo = true;
+        }
+
+        if (collision.gameObject.name == "LightBtnn")
+        {
+            mazazo = true;
         }
 
         if (collision.gameObject.tag == "Ground")
@@ -71,6 +70,5 @@ public class HammerBehaviour : MonoBehaviour
         {
             rb.AddForce(direction * speed);
         }
-        
     }
 }
