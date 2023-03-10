@@ -30,6 +30,15 @@ public class GAME_MANAGER : MonoBehaviour
     public bool endDialogue = false;
     #endregion
 
+    #region SaveInfo
+    public string complaintResume;
+    public string denunciantName;
+    public string denunciantID;
+    public string accusedName;
+    public string accusedID;
+    public string decisionCase;
+    #endregion
+
     private void Awake()
     {
         if (_GAME_MANAGER != null && _GAME_MANAGER != this)
@@ -99,12 +108,14 @@ public class GAME_MANAGER : MonoBehaviour
     {
         courtReputation = courtReputation + 0.1f;
         townReputation = townReputation + 0.1f;
+        decisionCase = "GUILTY";
     }
 
     public void badCase()
     {
         courtReputation = courtReputation - 0.1f;
         townReputation = townReputation - 0.1f;
+        decisionCase = "INNOCENT";
     }
 
     //Sobornos

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HammerBehaviour : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class HammerBehaviour : MonoBehaviour
             {
                 Debug.Log("GUILTY!!");
                 GAME_MANAGER._GAME_MANAGER.goodCase();
+                SceneManager.LoadScene("CaseOver");
             }
         }
 
@@ -44,6 +46,7 @@ public class HammerBehaviour : MonoBehaviour
             {
                 Debug.Log("INNOCENT!!");
                 GAME_MANAGER._GAME_MANAGER.badCase();
+                SceneManager.LoadScene("CaseOver");
             }
         }
 

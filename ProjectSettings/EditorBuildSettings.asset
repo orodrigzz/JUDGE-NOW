@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Welcome.unity
     guid: 4d6cc8235ec3dff4ab783da97a5887e5
+  - enabled: 1
+    path: Assets/Scenes/CaseOver.unity
+    guid: 9eedf1353d4d6b94aa0553aab35e23ff
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 5ec88cde038dc314185dbd334c53512d, type: 2}

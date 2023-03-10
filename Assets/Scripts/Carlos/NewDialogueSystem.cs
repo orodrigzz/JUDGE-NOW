@@ -10,6 +10,7 @@ public class NewDialogueSystem : MonoBehaviour
    {
         public Text[] sentences;
         public Text nameText;
+        public Text idText;
         
         public GameObject textBox;
         public GameObject evidence;
@@ -17,6 +18,7 @@ public class NewDialogueSystem : MonoBehaviour
 
         public string[] dialogueLines;
         public string characterName;
+        public string characterID;
 
         public int sentenceIndex;
         public int diactivateCount;
@@ -26,7 +28,7 @@ public class NewDialogueSystem : MonoBehaviour
     [NonReorderable]
 
     public Dialogues[] dialogues;
-
+    public string caseResume;
     public bool dialogueOn;
     public int dialoguesIndex = -1;
 
@@ -41,6 +43,12 @@ public class NewDialogueSystem : MonoBehaviour
             dialogues[i].currentDialogueEnded = false;
         }
         dialogueOn = false;
+
+        GAME_MANAGER._GAME_MANAGER.denunciantName = dialogues[0].characterName;
+        GAME_MANAGER._GAME_MANAGER.denunciantID = dialogues[0].characterID;
+        GAME_MANAGER._GAME_MANAGER.accusedID = dialogues[1].characterID;
+        GAME_MANAGER._GAME_MANAGER.accusedName = dialogues[1].characterName;
+        GAME_MANAGER._GAME_MANAGER.complaintResume = caseResume;
     }
     void Start()
     {
@@ -89,7 +97,7 @@ public class NewDialogueSystem : MonoBehaviour
             if (dialogueOn)
             {
                
-                //Comprobamos si a acabado el dialogo actual y si es asi pasamos al siguiente
+                //Comprobamos si ha acabado el dialogo actual y si es asi pasamos al siguiente
                 if (dialogues[dialoguesIndex].sentenceIndex >= dialogues[dialoguesIndex].sentences.Length-1)
                 {
                     if (dialogues[dialoguesIndex].spawnPoint != null && dialogues[dialoguesIndex].evidence != null)
@@ -133,8 +141,10 @@ public class NewDialogueSystem : MonoBehaviour
     public void OnDialogue()
     {
             dialogues[dialoguesIndex].nameText.text = null;
+            dialogues[dialoguesIndex].idText.text = null;
             dialogues[dialoguesIndex].nameText.text += dialogues[dialoguesIndex].characterName;
-
+            dialogues[dialoguesIndex].idText.text += dialogues[dialoguesIndex].characterID;
+            
             if (dialogues[dialoguesIndex].sentenceIndex < dialogues[dialoguesIndex].sentences.Length)
             {
                 dialogues[dialoguesIndex].textBox.SetActive(true);
@@ -153,8 +163,5 @@ public class NewDialogueSystem : MonoBehaviour
                
     }
 
-  public void MakeDecision()
-  {
-        
-  }
+ 
 }
