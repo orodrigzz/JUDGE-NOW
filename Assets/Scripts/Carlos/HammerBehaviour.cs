@@ -6,11 +6,17 @@ public class HammerBehaviour : MonoBehaviour
 {
 
     [SerializeField] public bool mazazo = false;
+    [SerializeField] float speed;
     [SerializeField] Rigidbody rb;
     [SerializeField] Vector3 direction;
     private void Start()
     {
+        
+    }
+    private void Update()
+    {
         rb = GetComponent<Rigidbody>();
+        direction = this.transform.position;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -61,6 +67,6 @@ public class HammerBehaviour : MonoBehaviour
 
     public void ThrowHammer()
     {
-        rb.AddForce(direction, ForceMode.Impulse);
+        rb.AddForce(direction*speed);
     }
 }

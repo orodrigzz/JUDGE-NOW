@@ -90,6 +90,8 @@ public class GAME_MANAGER : MonoBehaviour
         {
             noiseAudio.volume = noiseAudio.volume + 0.00002f;
         }
+
+       
     }
 
     //Reputation

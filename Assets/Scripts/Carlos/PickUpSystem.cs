@@ -39,7 +39,12 @@ public class PickUpSystem : MonoBehaviour
     }
     private void Update()
     {
-            //hammerBehaviour =
+        if(itemPicked != null)
+        {
+            hammerBehaviour = itemPicked.GetComponent<HammerBehaviour>();
+        }
+        
+        
             foreach (Vector3 origin in rayOrigins)
             {
                 Ray ray = new Ray(transform.position + origin, transform.forward);
@@ -79,6 +84,7 @@ public class PickUpSystem : MonoBehaviour
                 }
                 if(Input.GetKeyDown(KeyCode.Space) && isInspecting == false)
                 {
+                    hammerBehaviour.ThrowHammer();
                     if (itemPicked != null)
                     {
                         itemPicked.transform.SetParent(null);
@@ -88,7 +94,7 @@ public class PickUpSystem : MonoBehaviour
                     itemPicked = null;
                     isPicked = false;
                     GAME_MANAGER._GAME_MANAGER.isPicked = false;
-                    hammerBehaviour.ThrowHammer();
+                    
                 }
             }
            
