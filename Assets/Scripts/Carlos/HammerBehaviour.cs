@@ -21,9 +21,9 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.tag == "Order")
         {
+            mazazo = true; 
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
-                mazazo = true;
                 GAME_MANAGER._GAME_MANAGER.Order();
             }
         }
@@ -60,7 +60,7 @@ public class HammerBehaviour : MonoBehaviour
             mazazo = true;
         }
 
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door")
         {
             mazazo = true; 
             Destroy(this.gameObject);

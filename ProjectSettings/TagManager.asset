@@ -13,6 +13,7 @@ TagManager:
   - Ground
   - Table
   - Mobile
+  - Door
   layers:
   - Default
   - TransparentFX

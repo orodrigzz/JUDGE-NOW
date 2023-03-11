@@ -14,25 +14,31 @@ public class LightBehaviour : MonoBehaviour
         lightOn = true;
     }
 
+    private void Update()
+    {
+        if (lightOn == true)
+        {
+            Light.GetComponent<Light>().range = 6;
+        }
+
+        if (lightOn == false)
+        {
+            Light.GetComponent<Light>().range = 0;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Hammer")
         {
-            if (lightOn)
+            if (lightOn == true)
             {
-                if (Light != null)
-                {
-                    Light.GetComponent<Light>().range = 0;
-                }
+                lightOn = false;
             }
             else
             {
-                if (Light != null)
-                {
-                    Light.GetComponent<Light>().range = 6;
-                }
+                lightOn = true;
             }
-
         }
     }
 }

@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 7220330548067219878}
   m_Layer: 0
   m_Name: LefDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,8 +374,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6244583, y: 0.6654552, z: 0.52656555}
-  m_Center: {x: -0.004047394, y: -0.021043718, z: -0.037590027}
+  m_Size: {x: 0.4, y: 0.44, z: 0.12}
+  m_Center: {x: 0, y: 0, z: 0.02}
 --- !u!114 &4221006184474575520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Light: {fileID: 0}
+  lightOn: 0
 --- !u!1 &5115287115837947255
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +533,6 @@ GameObject:
   - component: {fileID: 5543780418844727127}
   - component: {fileID: 558213565135316186}
   - component: {fileID: 2152306422272688266}
-  - component: {fileID: 6771405800491083235}
   m_Layer: 0
   m_Name: Light1
   m_TagString: Untagged
@@ -605,19 +605,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6771405800491083235
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5853701941678273425}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6485971398350761812
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +616,6 @@ GameObject:
   - component: {fileID: 785258757100791243}
   - component: {fileID: 1579545590976348542}
   - component: {fileID: 291099424274477973}
-  - component: {fileID: 1905758109524548390}
   m_Layer: 0
   m_Name: Light2
   m_TagString: Untagged
@@ -702,19 +688,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1905758109524548390
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6485971398350761812}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6600086244123919273
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +799,7 @@ GameObject:
   - component: {fileID: 955679941085161583}
   m_Layer: 0
   m_Name: RightDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
