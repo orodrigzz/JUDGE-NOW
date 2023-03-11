@@ -1555,9 +1555,9 @@ MonoBehaviour:
   Shooter_L: {fileID: 1473796128}
   Proyectile: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
   rightShooterTargetTime: 0
-  rightShooterTime: 3
+  rightShooterTime: 10
   leftShooterTargetTime: 0
-  leftShooterTime: 3
+  leftShooterTime: 10
 --- !u!4 &732082205
 Transform:
   m_ObjectHideFlags: 0
@@ -1575,6 +1575,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &838547896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7298249326843104338, guid: 78ed865e2868c5e42ab2f2ebf1c12d3e, type: 3}
+  m_PrefabInstance: {fileID: 2919751904075122304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &864261917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,6 +1833,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 4221006184474575520, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+      propertyPath: Light
+      value: 
+      objectReference: {fileID: 838547896}
     - target: {fileID: 5115287115837947250, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1979,6 +1988,10 @@ PrefabInstance:
     - target: {fileID: 7042653414343347737, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049464489024507327, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
@@ -3877,6 +3890,10 @@ PrefabInstance:
     - target: {fileID: 1255905995445815756, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -13.609
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650400643134373754, guid: c5009729f4086e748b0eff21472df403, type: 3}
+      propertyPath: speed
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 1650400643134373756, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_Size.y

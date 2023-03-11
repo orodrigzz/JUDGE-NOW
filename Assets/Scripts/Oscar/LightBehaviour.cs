@@ -5,12 +5,34 @@ using UnityEngine;
 
 public class LightBehaviour : MonoBehaviour
 {
+    public GameObject Light;
+
+    public bool lightOn;
+
+    private void Start()
+    {
+        lightOn = true;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Hammer")
         {
-            Debug.LogWarning("aaa");
-            this.gameObject.GetComponent<Light>().range = 0;
+            if (lightOn)
+            {
+                if (Light != null)
+                {
+                    Light.GetComponent<Light>().range = 0;
+                }
+            }
+            else
+            {
+                if (Light != null)
+                {
+                    Light.GetComponent<Light>().range = 6;
+                }
+            }
+
         }
     }
 }
