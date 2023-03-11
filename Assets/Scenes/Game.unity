@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 548557560}
   - component: {fileID: 548557561}
   - component: {fileID: 548557563}
-  - component: {fileID: 548557562}
+  - component: {fileID: 548557564}
   m_Layer: 0
   m_Name: Spawner Pruebas & Audio Manager
   m_TagString: Untagged
@@ -1155,8 +1155,8 @@ MonoBehaviour:
   pickUp: {fileID: 1746837138}
   hammerBehaviour: {fileID: 100773760}
   AudioMobil: {fileID: 548557563}
-  AudioMazo: {fileID: 548557562}
---- !u!82 &548557562
+  AudioMazo: {fileID: 548557564}
+--- !u!82 &548557563
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1166,9 +1166,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4089728600c859749b6a57855294b152, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d0333d2ff8ac83e488a0a9715ade38cf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1252,7 +1252,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &548557563
+--- !u!82 &548557564
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1262,9 +1262,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d0333d2ff8ac83e488a0a9715ade38cf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4089728600c859749b6a57855294b152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2916,7 +2916,7 @@ GameObject:
   - component: {fileID: 1538085424}
   - component: {fileID: 1538085428}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DialogueSystemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3857,7 +3857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1255905995445815756, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.679
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 1255905995445815756, guid: c5009729f4086e748b0eff21472df403, type: 3}
       propertyPath: m_LocalPosition.z

@@ -13,9 +13,9 @@ public class AUDIO_MANAGER : MonoBehaviour
 
     private void Update()
     {
-        if (pickUp.itemPicked != null)
+        if (pickUp.itemPicked != null && AudioMobil != null)
         {
-            if (pickUp.itemPicked.name == "Movil(Clone)" && pickUp.isInspecting)
+            if (pickUp.itemPicked.tag == "Mobile")
             {
                 AudioMobil.Play();
             }
@@ -25,7 +25,7 @@ public class AUDIO_MANAGER : MonoBehaviour
             }
         }
 
-        if (hammerBehaviour != null)
+        if (hammerBehaviour != null && AudioMazo != null)
         {
             if (hammerBehaviour.mazazo == true)
             {

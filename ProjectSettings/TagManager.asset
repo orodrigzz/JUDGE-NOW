@@ -12,6 +12,7 @@ TagManager:
   - Guilty
   - Ground
   - Table
+  - Mobile
   layers:
   - Default
   - TransparentFX

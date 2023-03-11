@@ -21,9 +21,9 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.tag == "Order")
         {
-            mazazo = true;
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
+                mazazo = true;
                 GAME_MANAGER._GAME_MANAGER.Order();
             }
         }
