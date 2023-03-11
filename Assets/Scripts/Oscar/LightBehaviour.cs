@@ -18,12 +18,18 @@ public class LightBehaviour : MonoBehaviour
     {
         if (lightOn == true)
         {
-            Light.GetComponent<Light>().range = 6;
+            if (Light != null)
+            {
+                Light.GetComponent<Light>().range = 6;
+            }
         }
 
         if (lightOn == false)
         {
-            Light.GetComponent<Light>().range = 0;
+            if (Light != null)
+            {
+                Light.GetComponent<Light>().range = 0;
+            }
         }
     }
 
