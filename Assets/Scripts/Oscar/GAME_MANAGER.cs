@@ -26,6 +26,7 @@ public class GAME_MANAGER : MonoBehaviour
     #region GameBasics
     public bool isGamePaused;
     public bool isPicked;
+    public bool isInspecting;
     public bool initDialogue;
     public bool endDialogue = false;
     #endregion
@@ -50,6 +51,8 @@ public class GAME_MANAGER : MonoBehaviour
             _GAME_MANAGER = this;
             DontDestroyOnLoad(gameObject);
         }
+
+        
     }
 
     void Start()
@@ -94,11 +97,15 @@ public class GAME_MANAGER : MonoBehaviour
             SceneManager.LoadScene("Fired");
         }
 
-        noise = noise + 0.00002f;
-        if(noiseAudio != null)
+        if(isGamePaused == false)
         {
-            noiseAudio.volume = noiseAudio.volume + 0.00002f;
+            noise = noise + 0.00002f;
+            if (noiseAudio != null)
+            {
+                noiseAudio.volume = noiseAudio.volume + 0.00002f;
+            }
         }
+        
 
        
     }

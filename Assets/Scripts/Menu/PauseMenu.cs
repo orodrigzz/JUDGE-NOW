@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public  bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject settingsUI;
 
@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
     }
 
     public void Settings()
@@ -24,36 +25,41 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
         Time.timeScale = 1f;
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
     }
     public void Resume()
     {
         Cursor.visible = false;
-        pauseMenuUI.SetActive(false);
-        settingsUI.SetActive(false);
+        if (pauseMenuUI != null && settingsUI != null)
+        {
+            pauseMenuUI.SetActive(false);
+            settingsUI.SetActive(false);
+        }   
         Time.timeScale = 1f;
         GameIsPaused = false;
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused)
+        {    
+            Pause();                 
         }
+        /*else if(Input.GetKeyDown(KeyCode.Escape) && GameIsPaused)
+        {
+            Resume();
+        }*/
     }
 
     void Pause()
     {
-        Cursor.visible = true;
+              
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
         GameIsPaused = true;
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+
     }
 }

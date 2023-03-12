@@ -69,7 +69,7 @@ public class NewDialogueSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             //Funcion que ira vinculada al input una vez iniciado el dialogo
-            if (dialogueOn)
+            if (dialogueOn && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
             {
                 OnDialogue();
             }

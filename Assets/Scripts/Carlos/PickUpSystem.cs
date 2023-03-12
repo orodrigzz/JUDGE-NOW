@@ -70,7 +70,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else
             {
-                if (Input.GetMouseButtonDown(1) && isInspecting == false)
+                if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
                 {
                     if(itemPicked != null)
                     {
@@ -82,7 +82,7 @@ public class PickUpSystem : MonoBehaviour
                         isPicked = false;
                         GAME_MANAGER._GAME_MANAGER.isPicked = false;
                 }
-                if(Input.GetKeyDown(KeyCode.Space) && isInspecting == false)
+                if(Input.GetKeyDown(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting)
                 {
                     hammerBehaviour.ThrowHammer();
                     if (itemPicked != null)
@@ -105,11 +105,11 @@ public class PickUpSystem : MonoBehaviour
         {
             EnterInspectionMode();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             ExitInspectionMode();
         }
-        if (isInspecting)
+        if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
             InspectObject();
         }
@@ -128,21 +128,21 @@ public class PickUpSystem : MonoBehaviour
             camera.transform.eulerAngles = startedCameraRotation;
             itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
             arm.SetActive(false);
-            isInspecting = true;
+            GAME_MANAGER._GAME_MANAGER.isInspecting = true;
             GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
         }      
     }
 
     void ExitInspectionMode()
     {
-        if (isInspecting)
+        if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
             itemPicked.transform.position = originaPosition;
             itemPicked.transform.eulerAngles = originalRotation;
             camera.transform.position = cameraOriginaPosition;
             camera.transform.eulerAngles = cameraOriginalRotation;
             arm.SetActive(true);
-            isInspecting = false;
+            GAME_MANAGER._GAME_MANAGER.isInspecting = false;
             GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
         }
 

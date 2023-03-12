@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class LightBehaviour : MonoBehaviour
 {
-    public GameObject Light;
-
+    public Light Light;
+    public Light pointLight;
     public bool lightOn;
 
     private void Start()
@@ -18,17 +18,19 @@ public class LightBehaviour : MonoBehaviour
     {
         if (lightOn == true)
         {
-            if (Light != null)
+            if (Light != null && pointLight != null)
             {
-                Light.GetComponent<Light>().range = 6;
+                Light.intensity = 0.5f;
+                pointLight.intensity = 1;
             }
         }
 
         if (lightOn == false)
         {
-            if (Light != null)
+            if (Light != null && pointLight != null)
             {
-                Light.GetComponent<Light>().range = 0;
+                Light.intensity = 0f;
+                pointLight.intensity = 0;
             }
         }
     }
