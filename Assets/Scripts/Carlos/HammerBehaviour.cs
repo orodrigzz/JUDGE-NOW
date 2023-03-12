@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class HammerBehaviour : MonoBehaviour
 {
-
-    [SerializeField] public bool mazazo = false;
     [SerializeField] float speed;
     [SerializeField] Rigidbody rb;
     [SerializeField] Vector3 direction;
+
+    [SerializeField] AudioSource AudioMazo;
 
     private void Update()
     {
@@ -21,7 +21,7 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.tag == "Order")
         {
-            mazazo = true; 
+            AudioMazo.Play();
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 GAME_MANAGER._GAME_MANAGER.Order();
@@ -30,7 +30,7 @@ public class HammerBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Guilty")
         {
-            mazazo = true;
+            AudioMazo.Play();
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 Debug.Log("GUILTY!!");
@@ -41,7 +41,7 @@ public class HammerBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Innocent")
         {
-            mazazo = true;
+            AudioMazo.Play();
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 Debug.Log("INNOCENT!!");
@@ -50,19 +50,14 @@ public class HammerBehaviour : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Table")
+        if (collision.gameObject.tag == "Table" || collision.gameObject.name == "LightBtnn")
         {
-            mazazo = true;
-        }
-
-        if (collision.gameObject.name == "LightBtnn")
-        {
-            mazazo = true;
+            AudioMazo.Play();
         }
 
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door")
         {
-            mazazo = true; 
+            AudioMazo.Play();
             Destroy(this.gameObject);
         }
     }

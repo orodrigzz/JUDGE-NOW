@@ -6,36 +6,14 @@ using UnityEngine;
 public class AUDIO_MANAGER : MonoBehaviour
 {
     public PickUpSystem pickUp;
-    public HammerBehaviour hammerBehaviour;
 
-    [SerializeField] private AudioSource AudioMobil;
-    [SerializeField] private AudioSource AudioMazo;
+    [SerializeField] AudioSource AudioMobil;
 
     private void Update()
     {
-        if (pickUp.itemPicked != null && AudioMobil != null)
+        if (!pickUp.isInspecting && pickUp.itemPicked.tag == "Mobile")
         {
-            if (pickUp.itemPicked.tag == "Mobile")
-            {
-                AudioMobil.Play();
-            }
-            else
-            {
-                AudioMobil.Stop();
-            }
+            AudioMobil.Play();
         }
-
-        if (hammerBehaviour != null && AudioMazo != null)
-        {
-            if (hammerBehaviour.mazazo == true)
-            {
-                AudioMazo.Play();
-            }
-            else
-            {
-                AudioMazo.Stop();
-            }
-        }
-
     }    
 }
