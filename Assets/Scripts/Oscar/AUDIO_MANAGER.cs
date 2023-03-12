@@ -11,9 +11,12 @@ public class AUDIO_MANAGER : MonoBehaviour
 
     private void Update()
     {
-        if (!pickUp.isInspecting && pickUp.itemPicked.tag == "Mobile")
+        if (pickUp.itemPicked != null && AudioMobil != null)
         {
-            AudioMobil.Play();
+            if (!pickUp.isInspecting && pickUp.itemPicked.tag == "Mobile")
+            {
+                AudioMobil.Play();
+            }
         }
     }    
 }

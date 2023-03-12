@@ -11,7 +11,6 @@ public class Door : MonoBehaviour
     [SerializeField] private float closeAngle = 0f;
 
     public AudioSource doorOpening;
-    //public AudioClip closeDoor;
 
     private void Start()
     {
@@ -19,7 +18,6 @@ public class Door : MonoBehaviour
         {
             doorOpening.Play();
         }
-        
     }
 
     void Update()
@@ -36,6 +34,5 @@ public class Door : MonoBehaviour
             Quaternion targetRotation = Quaternion.Euler(0, closeAngle, 0);
             transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, speed * Time.deltaTime);
         }
-
     }
 }
