@@ -8,10 +8,12 @@ public class LightBehaviour : MonoBehaviour
     public Light Light;
     public Light pointLight;
     public bool lightOn;
-
+    public float timerLightOff;
+    public float time;
     private void Start()
     {
         lightOn = true;
+        time = timerLightOff;
     }
 
     private void Update()
@@ -33,20 +35,27 @@ public class LightBehaviour : MonoBehaviour
                 pointLight.intensity = 0;
             }
         }
+
+        if(GAME_MANAGER._GAME_MANAGER.noise >= 0.15)
+        {
+            timerLightOff -= Time.deltaTime;
+            if(timerLightOff <= 0)
+            {
+                lightOn = false;
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Hammer")
         {
-            if (lightOn == true)
-            {
-                lightOn = false;
-            }
-            else
+            if (lightOn == false)
             {
                 lightOn = true;
+                time = timerLightOff;
             }
+            
         }
     }
 }
