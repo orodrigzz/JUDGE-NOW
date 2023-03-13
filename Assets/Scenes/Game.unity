@@ -686,6 +686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReputationCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1618480208955741099, guid: f4c77d25e4ca1af42a6d0d853eaf835b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4c77d25e4ca1af42a6d0d853eaf835b, type: 3}
 --- !u!114 &201381384 stripped
@@ -5576,7 +5580,7 @@ PrefabInstance:
       objectReference: {fileID: 1257816372}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: accusedID
-      value: 123123123
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: noiseAudio
@@ -5584,7 +5588,7 @@ PrefabInstance:
       objectReference: {fileID: 953578}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: accusedName
-      value: PAYO
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: defNoiseImg
@@ -5592,15 +5596,15 @@ PrefabInstance:
       objectReference: {fileID: 254380634}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: denunciantID
-      value: 12323
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: denunciantName
-      value: PEPO
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: complaintResume
-      value: ME PICA EL CULO
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8123921509383709332, guid: 3eb468e83eeb74c4a960ac51446c8e00, type: 3}
       propertyPath: defTownReputation

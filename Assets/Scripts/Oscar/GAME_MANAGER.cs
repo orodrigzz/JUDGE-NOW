@@ -8,6 +8,7 @@ public class GAME_MANAGER : MonoBehaviour
 {
     public static GAME_MANAGER _GAME_MANAGER;
     #region Reputation
+    [Header ("Reputation")]
     [SerializeField] public float courtReputation;
     [SerializeField] public float townReputation;
     [SerializeField] public float noise;
@@ -24,6 +25,7 @@ public class GAME_MANAGER : MonoBehaviour
     #endregion
 
     #region GameBasics
+    [Header("Game Basics")]
     public bool isGamePaused;
     public bool isPicked;
     public bool isInspecting;
@@ -32,12 +34,19 @@ public class GAME_MANAGER : MonoBehaviour
     #endregion
 
     #region SaveInfo
+    [Header("Save Info")]
     public string complaintResume;
     public string denunciantName;
     public string denunciantID;
     public string accusedName;
     public string accusedID;
     public string decisionCase;
+    #endregion
+
+    #region GetCurrentScene
+    [Header("Get Scene")]
+    public Scene currentScene;
+    public GameObject reputationCanvas;
     #endregion
 
     private void Awake()
@@ -52,13 +61,17 @@ public class GAME_MANAGER : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        
+        reputationCanvas = GetComponent<GameObject>();
     }
 
     void Start()
     {
         isGamePaused = false;
-
+        currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name == "Menu" && reputationCanvas != null)
+        {
+            reputationCanvas.SetActive(false);
+        } 
         //Reputation Bars
         noiseAudio.volume = 0;
         if (courtReputationImg != null && townReputationImg != null)
@@ -75,36 +88,41 @@ public class GAME_MANAGER : MonoBehaviour
 
     void Update()
     {
-        //Reputation
-        if (courtReputationImg != null && townReputationImg != null)
+        if(currentScene.name != "Menu")
         {
-            courtReputationImg.fillAmount = courtReputation;
-            townReputationImg.fillAmount = townReputation;
-        }
-
-        if (noiseImg != null)
-        {
-            noiseImg.fillAmount = noise;
-        }
-
-        if ( townReputation < 0.20 || townReputation > 0.70)
-        {
-            SceneManager.LoadScene("Fired");
-        }
-
-        if (courtReputation < 0.20 || courtReputation > 0.70)
-        {
-            SceneManager.LoadScene("Fired");
-        }
-
-        if(isGamePaused == false)
-        {
-            noise = noise + 0.00002f;
-            if (noiseAudio != null)
+            reputationCanvas.SetActive(true);
+            //Reputation
+            if (courtReputationImg != null && townReputationImg != null)
             {
-                noiseAudio.volume = noiseAudio.volume + 0.00002f;
+                courtReputationImg.fillAmount = courtReputation;
+                townReputationImg.fillAmount = townReputation;
+            }
+
+            if (noiseImg != null)
+            {
+                noiseImg.fillAmount = noise;
+            }
+
+            if (townReputation < 0.20 || townReputation > 0.70)
+            {
+                SceneManager.LoadScene("Fired");
+            }
+
+            if (courtReputation < 0.20 || courtReputation > 0.70)
+            {
+                SceneManager.LoadScene("Fired");
+            }
+
+            if (isGamePaused == false)
+            {
+                noise = noise + 0.00002f;
+                if (noiseAudio != null)
+                {
+                    noiseAudio.volume = noiseAudio.volume + 0.00002f;
+                }
             }
         }
+       
         
 
        
