@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     public void Tutorial()
     {
         SceneManager.LoadScene("Game");
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+        GAME_MANAGER._GAME_MANAGER.noise = 0;
     }
 
     public void Level1()
