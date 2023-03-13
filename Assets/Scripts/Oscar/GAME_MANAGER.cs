@@ -61,17 +61,17 @@ public class GAME_MANAGER : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        reputationCanvas = GetComponent<GameObject>();
+        
     }
 
     void Start()
     {
         isGamePaused = false;
         currentScene = SceneManager.GetActiveScene();
-        if(currentScene.name == "Menu" && reputationCanvas != null)
+        if (currentScene.name == "Menu" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
-        } 
+        }
         //Reputation Bars
         noiseAudio.volume = 0;
         if (courtReputationImg != null && townReputationImg != null)
@@ -122,10 +122,12 @@ public class GAME_MANAGER : MonoBehaviour
                 }
             }
         }
-       
-        
 
-       
+        if (currentScene.name == "Menu" && reputationCanvas != null)
+        {
+            reputationCanvas.SetActive(false);
+        }
+
     }
 
     //Reputation

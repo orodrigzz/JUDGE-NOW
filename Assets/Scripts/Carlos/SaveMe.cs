@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class SaveMe : MonoBehaviour
 {
-    public static GameObject saveObject;
+    public  GameObject saveObject;
     private void Awake()
     {
-        if(this.gameObject != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else {
-            DontDestroyOnLoad(this.gameObject);
-        }
+        
+        DontDestroyOnLoad(this.gameObject);
+        
     }
     void Start()
     {

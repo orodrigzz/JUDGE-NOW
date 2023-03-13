@@ -8,12 +8,19 @@ public class PauseMenu : MonoBehaviour
     public  bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject settingsUI;
+    [Header("Get Scene")]
+    public Scene currentScene;
+    
+
 
     public void Menu()
     {
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
+        GAME_MANAGER._GAME_MANAGER.reputationCanvas.SetActive(false);
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
-        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+        
+        pauseMenuUI.SetActive(false);
     }
 
     public void Settings()
@@ -42,20 +49,28 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused)
-        {    
-            Pause();                 
-        }
+       
         /*else if(Input.GetKeyDown(KeyCode.Escape) && GameIsPaused)
         {
             Resume();
         }*/
+      
+
+            
+            if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused)
+            {
+                Pause();
+            }
+        
     }
 
     void Pause()
     {
               
-        pauseMenuUI.SetActive(true);
+        if(pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(true);
+        }
         GameIsPaused = true;
         GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
         Cursor.visible = true;
