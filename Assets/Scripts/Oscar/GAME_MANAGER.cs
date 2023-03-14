@@ -70,7 +70,7 @@ public class GAME_MANAGER : MonoBehaviour
     {
         isGamePaused = false;
         currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "Menu" && reputationCanvas != null)
+        if (currentScene.name != "Game" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
         }
@@ -127,7 +127,7 @@ public class GAME_MANAGER : MonoBehaviour
             }
         }
 
-        if (currentScene.name == "Menu" && reputationCanvas != null )
+        if (currentScene.name == "Menu" || currentScene.name =="CaseOver" && reputationCanvas != null )
         {
             reputationCanvas.SetActive(false);
             noise = 0;
