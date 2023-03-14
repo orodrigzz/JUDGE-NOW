@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7082569550678788345}
   - component: {fileID: 2986320639878345180}
   m_Layer: 0
-  m_Name: PelotaTenis
+  m_Name: PelotaTenis 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
