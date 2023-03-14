@@ -49,6 +49,7 @@ public class GAME_MANAGER : MonoBehaviour
     [Header("Get Scene")]
     public Scene currentScene;
     public GameObject reputationCanvas;
+    public string lastScene;
     #endregion
 
     private void Awake()
@@ -63,13 +64,14 @@ public class GAME_MANAGER : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        
+       
     }
 
     void Start()
     {
         isGamePaused = false;
         currentScene = SceneManager.GetActiveScene();
+        lastScene = currentScene.name;
         if (currentScene.name != "Game" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
@@ -127,7 +129,7 @@ public class GAME_MANAGER : MonoBehaviour
             }
         }
 
-        if (currentScene.name == "Menu" || currentScene.name =="CaseOver" && reputationCanvas != null )
+        if (currentScene.name == "Menu" && reputationCanvas != null )
         {
             reputationCanvas.SetActive(false);
             noise = 0;
@@ -207,4 +209,5 @@ public class GAME_MANAGER : MonoBehaviour
         }
     }
 
+    
 }
