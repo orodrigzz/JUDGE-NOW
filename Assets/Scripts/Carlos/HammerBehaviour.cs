@@ -62,6 +62,16 @@ public class HammerBehaviour : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Switch")
+        {
+            if(GAME_MANAGER._GAME_MANAGER.lightsOn == false)
+            {
+                GAME_MANAGER._GAME_MANAGER.lightsOn = true;
+            }
+        }
+    }
     public void ThrowHammer()
     {
         if(rb != null)

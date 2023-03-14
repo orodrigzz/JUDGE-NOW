@@ -13,6 +13,8 @@ public class GAME_MANAGER : MonoBehaviour
     [SerializeField] public float townReputation;
     [SerializeField] public float noise;
 
+    [SerializeField] public bool lightsOn;
+
     [SerializeField] private Image courtReputationImg;
     [SerializeField] private Image townReputationImg;
     [SerializeField] private Image defCourtReputation;

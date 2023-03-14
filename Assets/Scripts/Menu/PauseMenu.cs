@@ -36,15 +36,18 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+        GameIsPaused = false;
         Cursor.visible = false;
-        if (pauseMenuUI != null && settingsUI != null)
+        Time.timeScale = 1f;
+        if (pauseMenuUI != null || settingsUI != null)
         {
             pauseMenuUI.SetActive(false);
             settingsUI.SetActive(false);
         }   
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+        
+       
+       
     }
 
     private void Update()

@@ -82,7 +82,7 @@ public class PickUpSystem : MonoBehaviour
                         isPicked = false;
                         GAME_MANAGER._GAME_MANAGER.isPicked = false;
                 }
-                if(Input.GetKeyDown(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting)
+                if(Input.GetKeyDown(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
                 {
                     hammerBehaviour.ThrowHammer();
                     if (itemPicked != null)
@@ -105,7 +105,7 @@ public class PickUpSystem : MonoBehaviour
         {
             EnterInspectionMode();
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ExitInspectionMode();
         }
