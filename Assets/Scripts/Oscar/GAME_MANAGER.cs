@@ -141,6 +141,18 @@ public class GAME_MANAGER : MonoBehaviour
             noise = 0;
             isGamePaused = true;
         }
+        if (currentScene.name == "Fired" && reputationCanvas != null)
+        {
+            reputationCanvas.SetActive(false);
+            noise = 0;
+            isGamePaused = true;
+        }
+        if (currentScene.name != "CaseOver" && reputationCanvas != null)
+        {
+            reputationCanvas.SetActive(true);
+            
+            isGamePaused = false;
+        }
     }
 
     //Reputation
