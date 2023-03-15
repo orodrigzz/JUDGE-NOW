@@ -66,9 +66,11 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(other.gameObject.tag == "Switch")
         {
-            GAME_MANAGER._GAME_MANAGER.TurnUpLights();
+            
+            
             if(GAME_MANAGER._GAME_MANAGER.lightsOn == false)
             {
+                GAME_MANAGER._GAME_MANAGER.TurnUpLights();
                 GAME_MANAGER._GAME_MANAGER.lightsOn = true;
             }
         }
