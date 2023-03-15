@@ -129,11 +129,21 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (isGamePaused == false)
             {
-                noise = noise + 0.0005f;
-                if (noiseAudio != null)
+
+                if(noise < 1)
                 {
-                    noiseAudio.volume = noiseAudio.volume + 0.0005f;
+                    noise = noise + 0.0005f;
+                    if (noiseAudio != null)
+                    {
+                        noiseAudio.volume = noiseAudio.volume + 0.0005f;
+                    }
                 }
+                else
+                {
+                    noiseAudio.volume = 1;
+                    noise = 1;
+                }
+               
             }
            
         }
