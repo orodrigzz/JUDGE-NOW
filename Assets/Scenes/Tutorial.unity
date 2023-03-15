@@ -4487,8 +4487,11 @@ MonoBehaviour:
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - I'm sure you've noticed the red bar that has "Noise" written on it.
-    - That indicates the amount of noise that is in the room
+    - 'I''m sure you''ve noticed the bars with your reputation with respect to the
+      people and the court. Your actions will change your reputation. You have to
+      make sure you don''t have too much or too little, then you will be fired. '
+    - Also you can watch the red bar that has "Noise" written on it. That indicates
+      the amount of noise that is in the room.
     - Slam your hammer so you can control it, to pick it up put the hand on the hammer
       and press left click, to let it go right clicked
     - If it goes under control, the room will boicot the session throwing things
