@@ -63,15 +63,16 @@ public class GAME_MANAGER : MonoBehaviour
             _GAME_MANAGER = this;
             DontDestroyOnLoad(gameObject);
         }
+        
+        
 
-       
     }
 
     void Start()
     {
         isGamePaused = false;
         currentScene = SceneManager.GetActiveScene();
-        lastScene = currentScene.name;
+       
         if (currentScene.name != "Game" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
@@ -93,6 +94,12 @@ public class GAME_MANAGER : MonoBehaviour
     void Update()
     {
         currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name != "CaseOver")
+        {
+            lastScene = currentScene.name;
+        }
+        
+
         Debug.Log(currentScene.name);
         if (currentScene.name != "Menu")
         {
@@ -162,8 +169,9 @@ public class GAME_MANAGER : MonoBehaviour
         if (currentScene.name == "Game" || currentScene.name == "Tutorial" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(true);
-            
-            
+            isGamePaused = false;
+
+
         }
     }
 

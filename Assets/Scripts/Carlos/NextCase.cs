@@ -11,7 +11,10 @@ public class NextCase : MonoBehaviour
         {
             SceneManager.LoadScene("Game");
             GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
-        }if(GAME_MANAGER._GAME_MANAGER.lastScene == "Game")
+            GAME_MANAGER._GAME_MANAGER.lastScene = null;
+
+        }
+        if(GAME_MANAGER._GAME_MANAGER.lastScene == "Game")
         {
             //TO DO
         }

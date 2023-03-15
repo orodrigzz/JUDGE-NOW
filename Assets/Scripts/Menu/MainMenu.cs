@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Tutorial");
         GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
         GAME_MANAGER._GAME_MANAGER.noise = 0;
+        GAME_MANAGER._GAME_MANAGER.lastScene = null;
     }
 
     public void Level1()
