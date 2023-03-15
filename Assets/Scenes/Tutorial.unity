@@ -2160,9 +2160,9 @@ MonoBehaviour:
   Shooter_L: {fileID: 1473796128}
   Proyectile: {fileID: 87120956496746107, guid: 222235cb2bea47a48939231af6dbb72f, type: 3}
   rightShooterTargetTime: 0
-  rightShooterTime: 10
+  rightShooterTime: 13
   leftShooterTargetTime: 0
-  leftShooterTime: 10
+  leftShooterTime: 17
 --- !u!4 &732082205
 Transform:
   m_ObjectHideFlags: 0
