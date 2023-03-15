@@ -129,11 +129,23 @@ public class GAME_MANAGER : MonoBehaviour
             }
         }
 
-        if (currentScene.name == "Menu" && reputationCanvas != null )
+        if (currentScene.name == "Menu"  && reputationCanvas != null )
         {
             reputationCanvas.SetActive(false);
             noise = 0;
             
+        }
+        if (currentScene.name == "Settings" && reputationCanvas != null)
+        {
+            reputationCanvas.SetActive(false);
+            noise = 0;
+
+        }
+        if (currentScene.name == "Credits" && reputationCanvas != null)
+        {
+            reputationCanvas.SetActive(false);
+            noise = 0;
+
         }
         if (currentScene.name == "CaseOver" && reputationCanvas != null)
         {
@@ -147,11 +159,11 @@ public class GAME_MANAGER : MonoBehaviour
             noise = 0;
             isGamePaused = true;
         }
-        if (currentScene.name != "CaseOver" && reputationCanvas != null)
+        if (currentScene.name == "Game" || currentScene.name == "Tutorial" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(true);
             
-            isGamePaused = false;
+            
         }
     }
 
