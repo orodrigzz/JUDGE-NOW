@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void Tutorial()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Tutorial");
         GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
         GAME_MANAGER._GAME_MANAGER.noise = 0;
     }

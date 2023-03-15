@@ -1827,7 +1827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548557559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.334, y: -0.671, z: -3.344}
+  m_LocalPosition: {x: 0.334, y: -0.671, z: -3.251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4464,10 +4464,10 @@ MonoBehaviour:
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - Welcome to your new job, Judge
+    - Welcome to Ekagate Court, your new job, Judge.
     - I'm sure you're anxious to know how everything works around here
-    - First of all, you can aproach the table with WASD and move you're arm with
-      the mouse
+    - First of all, you can aproach the table with WASD and move your arm with the
+      mouse
     - 
     characterName: Mister Inspector, Richard
     characterID: Clasified
@@ -4487,8 +4487,8 @@ MonoBehaviour:
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - I'm sure you've notice the red bar that have "Noise" write on it
-    - That indicates the amount of noice that is in the room
+    - I'm sure you've noticed the red bar that has "Noise" written on it.
+    - That indicates the amount of noise that is in the room
     - Slam your hammer so you can control it, to pick it up put the hand on the hammer
       and press left click, to let it go right clicked
     - If it goes under control, the room will boicot the session throwing things
