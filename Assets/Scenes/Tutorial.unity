@@ -2168,9 +2168,9 @@ MonoBehaviour:
   Shooter_L: {fileID: 1473796128}
   Proyectile: {fileID: 87120956496746107, guid: 222235cb2bea47a48939231af6dbb72f, type: 3}
   rightShooterTargetTime: 0
-  rightShooterTime: 13
+  rightShooterTime: 25
   leftShooterTargetTime: 0
-  leftShooterTime: 17
+  leftShooterTime: 33
 --- !u!4 &732082205
 Transform:
   m_ObjectHideFlags: 0
@@ -2179,7 +2179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732082203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06803338, y: -5.5427895, z: 24.094896}
+  m_LocalPosition: {x: -0.06803338, y: -5.5427895, z: 23.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4501,15 +4501,14 @@ MonoBehaviour:
     - {fileID: 565080188}
     - {fileID: 1870372146}
     - {fileID: 1466900415}
-    - {fileID: 95995715}
     nameText: {fileID: 1651456451}
     idText: {fileID: 864261920}
     textBox: {fileID: 1297240262}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - Welcome to Ekagate Court, your new job, Judge.
-    - I'm sure you're anxious to know how everything works around here
+    - Welcome to Ekagate Court, your new job, Judge. I'm sure you're anxious to know
+      how everything works around here
     - First of all, you can aproach the table with WASD and move your arm with the
       mouse
     - 
