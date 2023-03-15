@@ -126,12 +126,12 @@ public class GAME_MANAGER : MonoBehaviour
                 SceneManager.LoadScene("Fired");
             }
 
-            if (isGamePaused == false)
+            if (isGamePaused == false || isInspecting||!isInspecting)
             {
-                noise = noise + 0.00002f;
+                noise = noise + 0.0005f;
                 if (noiseAudio != null)
                 {
-                    noiseAudio.volume = noiseAudio.volume + 0.00002f;
+                    noiseAudio.volume = noiseAudio.volume + 0.0005f;
                 }
             }
         }
@@ -169,7 +169,11 @@ public class GAME_MANAGER : MonoBehaviour
         if (currentScene.name == "Game" || currentScene.name == "Tutorial" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(true);
-            isGamePaused = false;
+            if(isInspecting == false)
+            {
+                isGamePaused = false;
+            }
+            
 
 
         }
