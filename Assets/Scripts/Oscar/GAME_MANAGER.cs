@@ -117,12 +117,12 @@ public class GAME_MANAGER : MonoBehaviour
                 noiseImg.fillAmount = noise;
             }
 
-            if (townReputation < 0.20 || townReputation > 0.70)
+            if (townReputation < 0.20f || townReputation > 0.80f)
             {
                 SceneManager.LoadScene("Fired");
             }
 
-            if (courtReputation < 0.20 || courtReputation > 0.70)
+            if (courtReputation < 0.20f || courtReputation > 0.80f)
             {
                 SceneManager.LoadScene("Fired");
             }

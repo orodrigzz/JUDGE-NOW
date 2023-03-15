@@ -17,7 +17,10 @@ public class NextCase : MonoBehaviour
         }
         if(GAME_MANAGER._GAME_MANAGER.lastScene == "Game")
         {
-            //TO DO
+            SceneManager.LoadScene("Menu");
+            GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+            GAME_MANAGER._GAME_MANAGER.lastScene = null;
+            GAME_MANAGER._GAME_MANAGER.endDialogue = false;
         }
     }
 }

@@ -3480,7 +3480,9 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: YA NO ME PICA EL CULO
+  caseResume: The Complainant is innocent, he singed at 22:00 so is legal. If he
+    had sung at 0:00 he would be guilty since after 0:00 it is illegal to exceed
+    certain decibels.
   dialogueOn: 0
   dialoguesIndex: -1
   guiltyBut: {fileID: 919132148116991930}
