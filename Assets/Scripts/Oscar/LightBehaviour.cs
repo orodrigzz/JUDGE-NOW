@@ -20,7 +20,6 @@ public class LightBehaviour : MonoBehaviour
     {
         if (GAME_MANAGER._GAME_MANAGER.lightsOn == true)
         {
-            timerLightOff = time;
             if (Light != null && pointLight != null)
             {
                 Light.intensity = 0.5f;
@@ -37,7 +36,7 @@ public class LightBehaviour : MonoBehaviour
             }
         }
 
-        if(GAME_MANAGER._GAME_MANAGER.noise >= 0.15)
+        if(GAME_MANAGER._GAME_MANAGER.noise > 0.1)
         {
             timerLightOff -= Time.deltaTime;
             if(timerLightOff <= 0)

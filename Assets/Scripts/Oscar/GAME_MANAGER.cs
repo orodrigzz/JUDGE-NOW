@@ -245,5 +245,17 @@ public class GAME_MANAGER : MonoBehaviour
         }
     }
 
+    public void TurnUpLights()
+    {
+        noise = noise - 0.5f;
+        noiseAudio.volume = noiseAudio.volume - 0.5f;
+
+        if (noise < 0 || noiseAudio.volume < 0)
+        {
+            noise = 0;
+            noiseAudio.volume = 0;
+        }
+    }
+
     
 }
