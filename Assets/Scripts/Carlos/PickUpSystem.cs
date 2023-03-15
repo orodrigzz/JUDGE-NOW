@@ -8,6 +8,7 @@ public class PickUpSystem : MonoBehaviour
     public Vector3[] rayOrigins;
     public LayerMask layer;
     public GameObject parent;
+    public GameObject armHold;
     public Rigidbody itemPicked;
     public bool isPicked = false;
     #endregion
@@ -36,6 +37,8 @@ public class PickUpSystem : MonoBehaviour
     {
         startedCameraPosition = camera.transform.position;
         startedCameraRotation = camera.transform.rotation.eulerAngles;
+        armHold.SetActive(false);
+        arm.SetActive(true);
     }
     private void Update()
     {
@@ -54,10 +57,13 @@ public class PickUpSystem : MonoBehaviour
                     
                     if (Input.GetMouseButtonDown(0) && !isPicked)
                     {
+                        armHold.SetActive(true);
+                        arm.SetActive(false);
                         itemPicked = hit.rigidbody;
                         itemPicked.transform.localScale = transform.parent.localScale;
-                        itemPicked.transform.rotation = transform.parent.rotation;                        
-                        itemPicked.transform.SetParent(parent.transform);                                        
+                        itemPicked.transform.rotation = parent.transform.rotation;                       
+                        itemPicked.transform.SetParent(parent.transform);
+                        itemPicked.transform.localPosition = parent.transform.localPosition;
                         if (itemPicked != null)
                         {
                             itemPicked.useGravity = false;
@@ -72,7 +78,9 @@ public class PickUpSystem : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
                 {
-                    if(itemPicked != null)
+                    armHold.SetActive(false);
+                    arm.SetActive(true);
+                    if (itemPicked != null)
                     {
                         itemPicked.transform.SetParent(null);
                         itemPicked.useGravity = true;
