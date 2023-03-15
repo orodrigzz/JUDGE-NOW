@@ -12,6 +12,7 @@ public class NextCase : MonoBehaviour
             SceneManager.LoadScene("Game");
             GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
             GAME_MANAGER._GAME_MANAGER.lastScene = null;
+            GAME_MANAGER._GAME_MANAGER.endDialogue = false;
 
         }
         if(GAME_MANAGER._GAME_MANAGER.lastScene == "Game")

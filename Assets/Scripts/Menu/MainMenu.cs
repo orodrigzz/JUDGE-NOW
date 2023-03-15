@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour
         GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
         GAME_MANAGER._GAME_MANAGER.noise = 0;
         GAME_MANAGER._GAME_MANAGER.lastScene = null;
+        GAME_MANAGER._GAME_MANAGER.endDialogue = false;
+
     }
 
     public void Level1()
