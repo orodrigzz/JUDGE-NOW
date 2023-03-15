@@ -33,6 +33,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool isInspecting;
     public bool initDialogue;
     public bool endDialogue = false;
+    public bool menuOpen;
     #endregion
 
     #region SaveInfo
@@ -126,7 +127,7 @@ public class GAME_MANAGER : MonoBehaviour
                 SceneManager.LoadScene("Fired");
             }
 
-            if (isGamePaused == false || isInspecting||!isInspecting)
+            if (isGamePaused == false)
             {
                 noise = noise + 0.0005f;
                 if (noiseAudio != null)
@@ -134,13 +135,14 @@ public class GAME_MANAGER : MonoBehaviour
                     noiseAudio.volume = noiseAudio.volume + 0.0005f;
                 }
             }
+           
         }
 
         if (currentScene.name == "Menu"  && reputationCanvas != null )
         {
             reputationCanvas.SetActive(false);
             noise = 0;
-            
+           
         }
         if (currentScene.name == "Settings" && reputationCanvas != null)
         {
@@ -173,7 +175,10 @@ public class GAME_MANAGER : MonoBehaviour
             {
                 isGamePaused = false;
             }
-            
+            if (menuOpen)
+            {
+                isGamePaused = true;
+            }
 
 
         }

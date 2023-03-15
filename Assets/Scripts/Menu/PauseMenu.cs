@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Menu()
     {
-        GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
+        
         GAME_MANAGER._GAME_MANAGER.reputationCanvas.SetActive(false);
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
@@ -42,18 +42,18 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
-        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+        GAME_MANAGER._GAME_MANAGER.menuOpen = false;
         GameIsPaused = false;
         Cursor.visible = false;
         Time.timeScale = 1f;
-        if (pauseMenuUI != null || settingsUI != null)
+        if (pauseMenuUI != null)
         {
             pauseMenuUI.SetActive(false);
             settingsUI.SetActive(false);
-        }   
+        }
+
         
-       
-       
+
     }
 
     private void Update()
@@ -69,6 +69,8 @@ public class PauseMenu : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused)
             {
                 Pause();
+                GAME_MANAGER._GAME_MANAGER.menuOpen = true;
+
             }
         
     }
@@ -81,6 +83,7 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(true);
         }
         GameIsPaused = true;
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
         GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
         Cursor.visible = true;
         Time.timeScale = 0f;
