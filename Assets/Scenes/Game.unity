@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4231,31 +4231,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.186
+      value: 0.1812
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.108
+      value: 0.1086
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.002
+      value: 0.0174
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.73137337
+      value: 0.712385
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6436957
+      value: 0.6537221
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.13993853
+      value: 0.0810821
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.17653935
+      value: 0.2420345
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4267,19 +4267,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 337596219, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 76.04
+      value: 86.429
       objectReference: {fileID: 0}
     - target: {fileID: 337596220, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_Size.x
-      value: 1.61644
+      value: 1.6164402
+      objectReference: {fileID: 0}
+    - target: {fileID: 337596220, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Size.z
+      value: 1.9865029
       objectReference: {fileID: 0}
     - target: {fileID: 337596220, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_Center.x
-      value: -0.30821818
+      value: -0.3082194
+      objectReference: {fileID: 0}
+    - target: {fileID: 337596220, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Center.y
+      value: -0.000019950663
       objectReference: {fileID: 0}
     - target: {fileID: 337596220, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_Center.z
-      value: -0.000000014686984
+      value: 0.20647094
       objectReference: {fileID: 0}
     - target: {fileID: 337596223, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_IsKinematic
@@ -4404,6 +4412,10 @@ PrefabInstance:
     - target: {fileID: 4570388742376842707, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570388742784129860, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4570388742784129863, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5245,6 +5257,10 @@ PrefabInstance:
     - target: {fileID: 2771163110444557666, guid: fdd0acece0f9c384c9ef62974d13273b, type: 3}
       propertyPath: m_Name
       value: Juez
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771163111384736340, guid: fdd0acece0f9c384c9ef62974d13273b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2771163111384736361, guid: fdd0acece0f9c384c9ef62974d13273b, type: 3}
       propertyPath: m_Materials.Array.data[0]

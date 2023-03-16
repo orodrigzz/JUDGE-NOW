@@ -135,6 +135,7 @@ public class PickUpSystem : MonoBehaviour
             camera.transform.position = startedCameraPosition;
             camera.transform.eulerAngles = startedCameraRotation;
             itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+            armHold.SetActive(false);
             arm.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.isInspecting = true;
             GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
@@ -149,7 +150,8 @@ public class PickUpSystem : MonoBehaviour
             itemPicked.transform.eulerAngles = originalRotation;
             camera.transform.position = cameraOriginaPosition;
             camera.transform.eulerAngles = cameraOriginalRotation;
-            arm.SetActive(true);
+            armHold.SetActive(true);
+            arm.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.isInspecting = false;
             GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
         }

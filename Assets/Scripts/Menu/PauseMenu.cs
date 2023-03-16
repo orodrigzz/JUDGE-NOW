@@ -19,7 +19,9 @@ public class PauseMenu : MonoBehaviour
         GAME_MANAGER._GAME_MANAGER.reputationCanvas.SetActive(false);
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
-        
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+        GAME_MANAGER._GAME_MANAGER.menuOpen = false;
+        GameIsPaused = false;
         pauseMenuUI.SetActive(false);
     }
 

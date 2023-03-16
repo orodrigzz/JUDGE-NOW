@@ -101,7 +101,7 @@ public class GAME_MANAGER : MonoBehaviour
         }
         
 
-        Debug.Log(currentScene.name);
+       
         if (currentScene.name != "Menu")
         {
             reputationCanvas.SetActive(true);
