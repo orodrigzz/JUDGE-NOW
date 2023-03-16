@@ -16,6 +16,8 @@ TagManager:
   - Door
   - Switch
   - Hand
+  - Apple
+  - Tomatoe
   layers:
   - Default
   - TransparentFX

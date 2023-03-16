@@ -10,6 +10,9 @@ public class HammerBehaviour : MonoBehaviour
     [SerializeField] Vector3 direction;
 
     [SerializeField] AudioSource AudioMazo;
+    [SerializeField] AudioSource Bonk;
+    [SerializeField] AudioSource Interruptor;
+    [SerializeField] AudioSource Ouch;
 
     private void Update()
     {
@@ -50,9 +53,16 @@ public class HammerBehaviour : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Table" || collision.gameObject.name == "NPC")
+        if (collision.gameObject.tag == "Table")
         {
             AudioMazo.Play();
+        }
+
+        if (collision.gameObject.tag == "NPC")
+        {
+            Bonk.Play();
+            Ouch.Play();
+            //AudioMazo.Play();
         }
 
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door")
@@ -60,13 +70,20 @@ public class HammerBehaviour : MonoBehaviour
             //AudioMazo.Play();
             StartCoroutine(WaitForDestroy());
         }
+
+        if (collision.gameObject.tag == "Apple" || collision.gameObject.tag == "Tomatoe" || collision.gameObject.tag == "Mobile")
+        {
+            Physics.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider>());
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Switch")
         {
-            AudioMazo.Play();
+            Interruptor.Play();
+            //AudioMazo.Play();
             StartCoroutine(WaitForDestroy());
             if (GAME_MANAGER._GAME_MANAGER.lightsOn == false)
             {
