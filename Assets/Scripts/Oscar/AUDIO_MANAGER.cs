@@ -8,6 +8,7 @@ public class AUDIO_MANAGER : MonoBehaviour
     public PickUpSystem pickUp;
 
     [SerializeField] AudioSource AudioMobil;
+    private bool audioIsPlaying;
 
     private void Update()
     {
@@ -15,13 +16,23 @@ public class AUDIO_MANAGER : MonoBehaviour
         {
             if (GAME_MANAGER._GAME_MANAGER.isInspecting && pickUp.itemPicked.tag == "Mobile")
             {
-                  AudioMobil.Play();
-                Debug.Log("Plalala");
+                audioIsPlaying = true;
+                
             }
             else
             {
                 AudioMobil.Stop();
+                audioIsPlaying = false;
             }
         }
-    }    
+        if (audioIsPlaying)
+        {
+            AudioPlay();
+        }
+    }
+
+    public void AudioPlay()
+    {
+        AudioMobil.Play();
+    }
 }
