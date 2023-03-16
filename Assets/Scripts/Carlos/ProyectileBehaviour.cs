@@ -26,9 +26,9 @@ public class ProyectileBehaviour : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-           GAME_MANAGER._GAME_MANAGER.courtReputation = GAME_MANAGER._GAME_MANAGER.courtReputation - 0.1f;
-            GAME_MANAGER._GAME_MANAGER.courtReputation = GAME_MANAGER._GAME_MANAGER.townReputation - 0.1f;
-            Destroy(this.gameObject);
+           GAME_MANAGER._GAME_MANAGER.courtReputation -=  0.1f;
+            GAME_MANAGER._GAME_MANAGER.courtReputation -=  0.1f;
+            Debug.Log("Hit");
         }
     }
     private void OnCollisionEnter(Collision collision)
