@@ -50,15 +50,15 @@ public class HammerBehaviour : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Table" || collision.gameObject.name == "LightBtnn" || collision.gameObject.name == "NPC")
+        if (collision.gameObject.tag == "Table" || collision.gameObject.name == "NPC")
         {
             AudioMazo.Play();
         }
 
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door")
         {
-            AudioMazo.Play();
-            Destroy(this.gameObject);
+            //AudioMazo.Play();
+            StartCoroutine(WaitForDestroy());
         }
     }
 
@@ -66,7 +66,9 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(other.gameObject.tag == "Switch")
         {
-            if(GAME_MANAGER._GAME_MANAGER.lightsOn == false)
+            AudioMazo.Play();
+            StartCoroutine(WaitForDestroy());
+            if (GAME_MANAGER._GAME_MANAGER.lightsOn == false)
             {
                 GAME_MANAGER._GAME_MANAGER.TurnUpLights();
                 GAME_MANAGER._GAME_MANAGER.lightsOn = true;
@@ -83,5 +85,11 @@ public class HammerBehaviour : MonoBehaviour
         {
             rb.AddForce(direction * speed);
         }
+    }
+
+    IEnumerator WaitForDestroy()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(this.gameObject);   
     }
 }
