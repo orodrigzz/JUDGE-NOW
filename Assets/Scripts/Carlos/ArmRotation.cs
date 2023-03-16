@@ -76,22 +76,30 @@ public class ArmRotation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer != 7)
+        if (other.gameObject.tag == "Table")
         {
             fixy = true;
-            Debug.LogError("Enter");
+            //Debug.LogError("Enter");
         }
-
+        if (other.gameObject.tag == "Hammer")
+        {
+            fixy = false;
+            Debug.LogError("HammerTime");
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer != 7)
+        if (other.gameObject.tag == "Table")
         {
             fixy = false;
-            Debug.LogError("Enter");
+            //Debug.LogError("Enter");
+        }
+        if (other.gameObject.tag == "Hammer")
+        {
+            fixy = false;
+            Debug.LogError("HammerExit");
         }
     }
 
-    
 }

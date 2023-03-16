@@ -128,8 +128,8 @@ public class PickUpSystem : MonoBehaviour
     {
         if(itemPicked != null)
         {
-            originalRotation = itemPicked.transform.rotation.eulerAngles;
-            originaPosition = itemPicked.transform.position;
+            originalRotation = parent.transform.rotation.eulerAngles;
+            originaPosition = parent.transform.position;
             cameraOriginalRotation = camera.transform.rotation.eulerAngles;
             cameraOriginaPosition = camera.transform.position;
             camera.transform.position = startedCameraPosition;
