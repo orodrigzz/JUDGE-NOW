@@ -50,7 +50,7 @@ public class HammerBehaviour : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Table" || collision.gameObject.name == "LightBtnn")
+        if (collision.gameObject.tag == "Table" || collision.gameObject.name == "LightBtnn" || collision.gameObject.name == "NPC")
         {
             AudioMazo.Play();
         }
@@ -66,15 +66,17 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(other.gameObject.tag == "Switch")
         {
-            
-            
             if(GAME_MANAGER._GAME_MANAGER.lightsOn == false)
             {
                 GAME_MANAGER._GAME_MANAGER.TurnUpLights();
                 GAME_MANAGER._GAME_MANAGER.lightsOn = true;
+            }else
+            {
+                GAME_MANAGER._GAME_MANAGER.lightsOn = false;
             }
         }
     }
+
     public void ThrowHammer()
     {
         if(rb != null)
