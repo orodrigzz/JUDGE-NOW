@@ -64,9 +64,6 @@ public class GAME_MANAGER : MonoBehaviour
             _GAME_MANAGER = this;
             DontDestroyOnLoad(gameObject);
         }
-        
-        
-
     }
 
     void Start()
@@ -78,6 +75,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             reputationCanvas.SetActive(false);
         }
+
         //Reputation Bars
         noiseAudio.volume = 0;
         if (courtReputationImg != null && townReputationImg != null)
@@ -100,8 +98,6 @@ public class GAME_MANAGER : MonoBehaviour
             lastScene = currentScene.name;
         }
         
-
-       
         if (currentScene.name != "Menu")
         {
             reputationCanvas.SetActive(true);
@@ -178,6 +174,7 @@ public class GAME_MANAGER : MonoBehaviour
             noise = 0;
             isGamePaused = true;
         }
+
         if (currentScene.name == "Game" || currentScene.name == "Tutorial" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(true);
@@ -189,8 +186,6 @@ public class GAME_MANAGER : MonoBehaviour
             {
                 isGamePaused = true;
             }
-
-
         }
     }
 
@@ -247,9 +242,9 @@ public class GAME_MANAGER : MonoBehaviour
     //Callar sala
     public void Order()
     {
-        courtReputation = courtReputation + 0.02f;
-        townReputation = townReputation - 0.02f;
-        
+        courtReputation = courtReputation + 0.005f;
+        townReputation = townReputation - 0.005f;
+
         noise = noise - 0.05f;
         noiseAudio.volume = noiseAudio.volume - 0.05f;
 
@@ -271,6 +266,5 @@ public class GAME_MANAGER : MonoBehaviour
             noiseAudio.volume = 0;
         }
     }
-
     
 }
