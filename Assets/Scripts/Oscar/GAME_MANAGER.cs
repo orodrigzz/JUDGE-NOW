@@ -53,6 +53,7 @@ public class GAME_MANAGER : MonoBehaviour
     public string lastScene;
     #endregion
 
+
     private void Awake()
     {
         if (_GAME_MANAGER != null && _GAME_MANAGER != this)
@@ -113,15 +114,22 @@ public class GAME_MANAGER : MonoBehaviour
                 noiseImg.fillAmount = noise;
             }
 
-            if (townReputation < 0.20f || townReputation > 0.80f)
-            {
-                SceneManager.LoadScene("Fired");
-            }
 
-            if (courtReputation < 0.20f || courtReputation > 0.80f)
+            if (!isGamePaused)
             {
-                SceneManager.LoadScene("Fired");
+                if (townReputation < 0.20f || townReputation > 0.80f && currentScene.name != "Fired")
+                {
+                    SceneManager.LoadScene("Fired");
+                    isGamePaused = true;
+                }
+
+                if (courtReputation < 0.20f || courtReputation > 0.80f && currentScene.name != "Fired")
+                {
+                    SceneManager.LoadScene("Fired");
+                    isGamePaused = true;
+                }
             }
+            
 
             if (isGamePaused == false)
             {

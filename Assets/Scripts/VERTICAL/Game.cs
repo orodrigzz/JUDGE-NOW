@@ -43,5 +43,9 @@ public class Game : MonoBehaviour
     public void Menu()
     {
         SceneManager.LoadScene("Menu");
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+        GAME_MANAGER._GAME_MANAGER.courtReputation = 0.5f;
+        GAME_MANAGER._GAME_MANAGER.townReputation = 0.5f;
+        GAME_MANAGER._GAME_MANAGER.noise = 0;
     }
 }

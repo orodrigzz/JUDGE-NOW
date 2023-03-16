@@ -13,9 +13,10 @@ public class AUDIO_MANAGER : MonoBehaviour
     {
         if (pickUp.itemPicked != null && AudioMobil != null)
         {
-            if (!pickUp.isInspecting && pickUp.itemPicked.tag == "Mobile")
+            if (GAME_MANAGER._GAME_MANAGER.isInspecting && pickUp.itemPicked.tag == "Mobile")
             {
                   AudioMobil.Play();
+                Debug.Log("Plalala");
             }
             else
             {

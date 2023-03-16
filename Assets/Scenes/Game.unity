@@ -5087,7 +5087,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4372980117115388985
 PrefabInstance:
@@ -5099,7 +5099,7 @@ PrefabInstance:
     - target: {fileID: 5658897221238307855, guid: df97b4e9a9039124a8c4bfb9d931bd6b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 69308530e41d8fd4fae0cf139dc611d1, type: 2}
+      objectReference: {fileID: 2100000, guid: 3b5a26b462182e14d86c7cdcd0baf722, type: 2}
     - target: {fileID: 6163331646573845978, guid: df97b4e9a9039124a8c4bfb9d931bd6b, type: 3}
       propertyPath: m_Name
       value: NPC_C
@@ -5148,6 +5148,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7596594296175347909, guid: df97b4e9a9039124a8c4bfb9d931bd6b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5847450223222475691, guid: 4b2dc23128ecf584f84b8820a0121afc, type: 3}
     - target: {fileID: 8399490831688050962, guid: df97b4e9a9039124a8c4bfb9d931bd6b, type: 3}
       propertyPath: secs
       value: 1
