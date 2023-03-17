@@ -54,6 +54,8 @@ public class NewDialogueSystem : MonoBehaviour
     {
         innocentBut.SetActive(false);
         guiltyBut.SetActive(false);
+        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
     }
 
  
@@ -75,23 +77,7 @@ public class NewDialogueSystem : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            if (!isRevealed)
-            {
-
-                innocentBut.SetActive(true);
-                guiltyBut.SetActive(true);
-                isRevealed = true;
-            }
-            else
-            {
-
-                innocentBut.SetActive(false);
-                guiltyBut.SetActive(false);
-                isRevealed = false;
-            }
-        }
+        
         if (dialoguesIndex >= 0)
         {
             if (dialogueOn)
@@ -117,6 +103,30 @@ public class NewDialogueSystem : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.endDialogue = true;
                 GAME_MANAGER._GAME_MANAGER.initDialogue = false;
+                if (!isRevealed)
+                {
+                    GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
+                    GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+                }
+                if (Input.GetKeyDown(KeyCode.M))
+                {
+                    if (!isRevealed && GAME_MANAGER._GAME_MANAGER.endDialogue)
+                    {
+                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(true);
+                        innocentBut.SetActive(true);
+                        guiltyBut.SetActive(true);
+                        isRevealed = true;
+                    }
+                    else
+                    {
+                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
+                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+                        innocentBut.SetActive(false);
+                        guiltyBut.SetActive(false);
+                        isRevealed = false;
+                    }
+                }
                 for (int i = 0; i < dialogues.Length; i++)
                 {
                     dialogues[i].textBox.SetActive(false);

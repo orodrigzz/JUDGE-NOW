@@ -64,7 +64,9 @@ public class PickUpSystem : MonoBehaviour
                         itemPicked.transform.rotation = parent.transform.rotation;                       
                         itemPicked.transform.SetParent(parent.transform);
                         itemPicked.transform.localPosition = parent.transform.localPosition;
-                        if (itemPicked != null)
+                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+                    if (itemPicked != null)
                         {
                             itemPicked.useGravity = false;
                             itemPicked.constraints = RigidbodyConstraints.FreezeAll;
@@ -86,6 +88,11 @@ public class PickUpSystem : MonoBehaviour
                         itemPicked.useGravity = true;
                         itemPicked.constraints = RigidbodyConstraints.None;
                     }
+                    if (GAME_MANAGER._GAME_MANAGER.endDialogue)
+                    {
+                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
+                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+                    }                
                         itemPicked = null;
                         isPicked = false;
                         GAME_MANAGER._GAME_MANAGER.isPicked = false;
@@ -139,6 +146,8 @@ public class PickUpSystem : MonoBehaviour
             arm.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.isInspecting = true;
             GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
+            GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+            GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
         }      
     }
 
@@ -154,6 +163,8 @@ public class PickUpSystem : MonoBehaviour
             arm.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.isInspecting = false;
             GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+            GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+            GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
         }
 
     }

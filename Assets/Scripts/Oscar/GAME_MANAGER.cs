@@ -56,6 +56,8 @@ public class GAME_MANAGER : MonoBehaviour
     #region IndicacionesInput
     public GameObject eForInspect;
     public GameObject qForExitInspect;
+    public GameObject mForDecisionMode;
+    public GameObject mForExitDecisionMode;
     #endregion
 
     private void Awake()
