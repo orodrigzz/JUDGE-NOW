@@ -79,7 +79,10 @@ public class HammerBehaviour : MonoBehaviour
         {
             Physics.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider>());
         }
-
+        if (collision.gameObject.tag == "Table")
+        {
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
