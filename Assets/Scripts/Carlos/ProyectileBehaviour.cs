@@ -26,8 +26,8 @@ public class ProyectileBehaviour : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-           GAME_MANAGER._GAME_MANAGER.courtReputation -=  0.1f;
-            GAME_MANAGER._GAME_MANAGER.courtReputation -=  0.1f;
+           GAME_MANAGER._GAME_MANAGER.courtReputation -= 0.07f;
+            GAME_MANAGER._GAME_MANAGER.townReputation -= 0.07f;
             Debug.Log("Hit");
         }
     }

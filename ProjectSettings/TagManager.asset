@@ -18,6 +18,7 @@ TagManager:
   - Hand
   - Apple
   - Tomatoe
+  - Atril
   layers:
   - Default
   - TransparentFX

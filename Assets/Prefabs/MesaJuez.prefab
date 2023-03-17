@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2771163110444557665}
   m_Layer: 0
-  m_Name: Juez
+  m_Name: MesaJuez
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -37,23 +37,29 @@ public class HammerBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Guilty")
         {
-            AudioMazo.Play();
+            if (AudioMazo != null)
+            {
+                AudioMazo.Play();
+            }
+
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 Debug.Log("GUILTY!!");
-                GAME_MANAGER._GAME_MANAGER.goodCase();
-                SceneManager.LoadScene("CaseOver");
+                StartCoroutine(WaitForCaseOver());
             }
         }
 
         if (collision.gameObject.tag == "Innocent")
         {
-            AudioMazo.Play();
+            if (AudioMazo != null)
+            {
+                AudioMazo.Play();
+            }
+
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 Debug.Log("INNOCENT!!");
-                GAME_MANAGER._GAME_MANAGER.badCase();
-                SceneManager.LoadScene("CaseOver");
+                StartCoroutine(WaitForCaseOver());
             }
         }
 
@@ -66,10 +72,9 @@ public class HammerBehaviour : MonoBehaviour
         {
             Bonk.Play();
             Ouch.Play();
-            //AudioMazo.Play();
         }
 
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door" || collision.gameObject.tag == "Atril")
         {
             //AudioMazo.Play();
             StartCoroutine(WaitForDestroy());
@@ -79,9 +84,13 @@ public class HammerBehaviour : MonoBehaviour
         {
             Physics.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider>());
         }
+
         if (collision.gameObject.tag == "Table")
         {
-            rb.constraints = RigidbodyConstraints.FreezeAll;
+            if (rb != null)
+            {
+                rb.constraints = RigidbodyConstraints.FreezeAll;
+            }
         }
     }
 
@@ -90,7 +99,6 @@ public class HammerBehaviour : MonoBehaviour
         if(other.gameObject.tag == "Switch")
         {
             Interruptor.Play();
-            //AudioMazo.Play();
             StartCoroutine(WaitForDestroy());
             if (GAME_MANAGER._GAME_MANAGER.lightsOn == false)
             {
@@ -113,7 +121,13 @@ public class HammerBehaviour : MonoBehaviour
 
     IEnumerator WaitForDestroy()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);   
+    }
+
+    IEnumerator WaitForCaseOver()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("CaseOver");
     }
 }

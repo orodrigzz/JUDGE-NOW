@@ -163,7 +163,7 @@ public class GAME_MANAGER : MonoBehaviour
                 {
                     qForExitInspect.SetActive(true);
                     eForInspect.SetActive(false);
-                    rClickForLetItGo.SetActive(falses);
+                    rClickForLetItGo.SetActive(false);
                     lClickForPickItUp.SetActive(false);
                 }
                 if (!isInspecting && isPicked)
@@ -281,9 +281,6 @@ public class GAME_MANAGER : MonoBehaviour
     //Callar sala
     public void Order()
     {
-        courtReputation = courtReputation + 0.005f;
-        townReputation = townReputation - 0.005f;
-
         noise = noise - 0.05f;
         noiseAudio.volume = noiseAudio.volume - 0.05f;
 
