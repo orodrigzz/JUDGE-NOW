@@ -153,22 +153,25 @@ public class GAME_MANAGER : MonoBehaviour
                 }
                
             }
-
-            if (isInspecting && isPicked)
+            if(qForExitInspect != null && eForInspect != null)
             {
-                qForExitInspect.SetActive(true);
-                eForInspect.SetActive(false);
+                if (isInspecting && isPicked)
+                {
+                    qForExitInspect.SetActive(true);
+                    eForInspect.SetActive(false);
+                }
+                if (!isInspecting && isPicked)
+                {
+                    qForExitInspect.SetActive(false);
+                    eForInspect.SetActive(true);
+                }
+                if (!isInspecting && !isPicked)
+                {
+                    qForExitInspect.SetActive(false);
+                    eForInspect.SetActive(false);
+                }
             }
-            if (!isInspecting && isPicked)
-            {
-                qForExitInspect.SetActive(false);
-                eForInspect.SetActive(true);
-            }
-            if (!isInspecting && !isPicked)
-            {
-                qForExitInspect.SetActive(false);
-                eForInspect.SetActive(false);
-            }
+            
         }
 
         if (currentScene.name == "Menu"  && reputationCanvas != null )

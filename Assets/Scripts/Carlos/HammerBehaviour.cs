@@ -24,7 +24,11 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.tag == "Order")
         {
-            AudioMazo.Play();
+            if(AudioMazo != null)
+            {
+                AudioMazo.Play();
+            }
+            
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 GAME_MANAGER._GAME_MANAGER.Order();
