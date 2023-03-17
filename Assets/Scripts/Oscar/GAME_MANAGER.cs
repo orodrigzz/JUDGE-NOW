@@ -58,6 +58,8 @@ public class GAME_MANAGER : MonoBehaviour
     public GameObject qForExitInspect;
     public GameObject mForDecisionMode;
     public GameObject mForExitDecisionMode;
+    public GameObject lClickForPickItUp;
+    public GameObject rClickForLetItGo;
     #endregion
 
     private void Awake()
@@ -161,14 +163,19 @@ public class GAME_MANAGER : MonoBehaviour
                 {
                     qForExitInspect.SetActive(true);
                     eForInspect.SetActive(false);
+                    rClickForLetItGo.SetActive(falses);
+                    lClickForPickItUp.SetActive(false);
                 }
                 if (!isInspecting && isPicked)
                 {
                     qForExitInspect.SetActive(false);
                     eForInspect.SetActive(true);
+                    rClickForLetItGo.SetActive(true);
+                    lClickForPickItUp.SetActive(false);
                 }
                 if (!isInspecting && !isPicked)
                 {
+                    rClickForLetItGo.SetActive(false);
                     qForExitInspect.SetActive(false);
                     eForInspect.SetActive(false);
                 }

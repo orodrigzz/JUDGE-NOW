@@ -32,6 +32,8 @@ public class PickUpSystem : MonoBehaviour
     [SerializeField] HammerBehaviour hammerBehaviour;
     #endregion
 
+   
+
 
     private void Start()
     {
@@ -39,23 +41,37 @@ public class PickUpSystem : MonoBehaviour
         startedCameraRotation = camera.transform.rotation.eulerAngles;
         armHold.SetActive(false);
         arm.SetActive(true);
+        GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
+        GAME_MANAGER._GAME_MANAGER.rClickForLetItGo.SetActive(false);
     }
     private void Update()
     {
         if(itemPicked != null)
         {
             hammerBehaviour = itemPicked.GetComponent<HammerBehaviour>();
+            
         }
         
+       
+            
         
-            foreach (Vector3 origin in rayOrigins)
+
+        GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
+        
+        foreach (Vector3 origin in rayOrigins)
             {
                 Ray ray = new Ray(transform.position + origin, transform.forward);
                 RaycastHit hit;
-                if(Physics.Raycast(ray, out hit,10f, layer))
+                if(Physics.Raycast(ray, out hit, 10f, layer))
                 {
-                    
-                    if (Input.GetMouseButtonDown(0) && !isPicked)
+
+               
+                    GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(true);
+                   
+                
+
+
+                if (Input.GetMouseButtonDown(0) && !isPicked)
                     {
                         armHold.SetActive(true);
                         arm.SetActive(false);
@@ -75,43 +91,46 @@ public class PickUpSystem : MonoBehaviour
                         }
 
                     }
-            }
-            else
-            {
-                if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+                }
+                else
                 {
-                    armHold.SetActive(false);
-                    arm.SetActive(true);
-                    if (itemPicked != null)
+               
+                    if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
                     {
-                        itemPicked.transform.SetParent(null);
-                        itemPicked.useGravity = true;
-                        itemPicked.constraints = RigidbodyConstraints.None;
-                    }
-                    if (GAME_MANAGER._GAME_MANAGER.endDialogue)
-                    {
-                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
-                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
-                    }                
+                        armHold.SetActive(false);
+                        arm.SetActive(true);
+                        
+                        if (itemPicked != null)
+                        {
+                            itemPicked.transform.SetParent(null);
+                            itemPicked.useGravity = true;
+                            itemPicked.constraints = RigidbodyConstraints.None;
+                        }
+                        if (GAME_MANAGER._GAME_MANAGER.endDialogue)
+                        {
+                            GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
+                            GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+                        }                
                         itemPicked = null;
                         isPicked = false;
                         GAME_MANAGER._GAME_MANAGER.isPicked = false;
-                }
-                if(Input.GetKeyDown(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
-                {
-                    hammerBehaviour.ThrowHammer();
-                    if (itemPicked != null)
-                    {
-                        itemPicked.transform.SetParent(null);
-                        itemPicked.useGravity = true;
-                        itemPicked.constraints = RigidbodyConstraints.None;
                     }
-                    itemPicked = null;
-                    isPicked = false;
-                    GAME_MANAGER._GAME_MANAGER.isPicked = false;
+                        if(Input.GetKeyDown(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+                        {
+                           hammerBehaviour.ThrowHammer();
+                            if (itemPicked != null)
+                            {
+                                itemPicked.transform.SetParent(null);
+                                itemPicked.useGravity = true;
+                                itemPicked.constraints = RigidbodyConstraints.None;
+                            }
+                            itemPicked = null;
+                            isPicked = false;
+                            GAME_MANAGER._GAME_MANAGER.isPicked = false;
                     
+                        }
+               
                 }
-            }
            
                 Debug.DrawRay(transform.position + origin, transform.forward * 100, Color.green);
             }
@@ -148,6 +167,7 @@ public class PickUpSystem : MonoBehaviour
             GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
             GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+            
         }      
     }
 
@@ -165,6 +185,7 @@ public class PickUpSystem : MonoBehaviour
             GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
             GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+            
         }
 
     }
