@@ -14,7 +14,7 @@ public class ResetHammer : MonoBehaviour
 
         if(hammerObj == null)
         {
-            Instantiate(newHammer, resetObject, true);
+            Instantiate(newHammer, resetObject, false);
 
         }
     }
