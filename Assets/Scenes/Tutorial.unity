@@ -4229,9 +4229,8 @@ MonoBehaviour:
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - Welcome to Ekagate Court, your new job, Judge. I'm sure you're anxious to know
-      how everything works around here
-    - You can aproach the table with WASD and move your arm with the mouse
+    - WASD - Move Left, Right and Forward
+    - Mouse - Move arm
     - 
     characterName: Mister Inspector, Richard
     characterID: Clasified
@@ -4251,17 +4250,11 @@ MonoBehaviour:
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - 'At the top are the bars with your reputation. Your actions will change your
-      reputation. You have to make sure you don''t have too much or too little, then
-      you will be fired. '
-    - Also you can watch the red bar that has "Noise" written on it. That indicates
-      the amount of noise that is in the room.
-    - Slam your hammer so you can control it, to pick it up put the hand on the hammer
-      and press left click, to let it go right clicked
-    - If it goes under control, the room will boicot the session throwing things
-      at you that you've going to need to dodge and shootdown the lights
-    - To turn back the lights on you will need to throw the hammer to the light switch
-      by pressing space once you picked the hammer
+    - Right Click - Pick Up Objects
+    - Left Click - Realese Picked Object
+    - You can control the room nois by slamming the hammer
+    - E - Enter Inspect Mode
+    - Q - Exit Inspect Mode
     - 
     characterName: Mister Inspector, Richard
     characterID: Classified
@@ -4280,10 +4273,10 @@ MonoBehaviour:
     evidence: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
     spawnPoint: {fileID: 2065784276}
     dialogueLines:
-    - Inspect the evidence carefully it's what's going to help you make a right decision
-    - To inspect an object press E once it's picked
-    - To leave inspect mode press Q
-    - Try with your lunch, maybe you find something before you eat it
+    - You can throw your hammer with Space
+    - Throwing the hammer allows you to turn up the lights if you hit the switch
+    - M - Enter and exit decision mode
+    - Slam red with the hammer if you found it guilty or green if you found it innocent
     - 
     characterName: Mister Inspector, Richard
     characterID: Classified
