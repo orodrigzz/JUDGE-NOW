@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class GoodCase : MonoBehaviour
 {
-    private void OnMouseDown()
+    private void OnCollisionEnter(Collision collision)
     {
-        GAME_MANAGER._GAME_MANAGER.goodCase();
+        if (collision.gameObject.tag == "Hammer")
+        {
+            GAME_MANAGER._GAME_MANAGER.goodCase();
+        }
     }
 }
