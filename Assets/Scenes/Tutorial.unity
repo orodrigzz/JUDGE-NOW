@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2344,6 +2344,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906637853}
   m_CullTransparentMesh: 1
+--- !u!1 &935379779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 886025531326135046, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 2065784275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963476742
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,9 +4313,14 @@ MonoBehaviour:
     CASE 1? JUDGE NOW!
   dialogueOn: 0
   dialoguesIndex: -1
-  guiltyBut: {fileID: 0}
-  innocentBut: {fileID: 0}
+  guiltyBut: {fileID: 935379779}
+  innocentBut: {fileID: 1562626051}
   isRevealed: 0
+--- !u!1 &1562626051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7046060152008001710, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 2065784275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1602102120
 GameObject:
   m_ObjectHideFlags: 0
