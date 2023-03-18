@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 178369756767770536}
   - component: {fileID: 8094182322376571706}
   - component: {fileID: 2024937352992583258}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Manzana_Mordida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
