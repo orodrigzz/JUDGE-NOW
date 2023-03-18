@@ -13,6 +13,7 @@ public class HammerBehaviour : MonoBehaviour
     [SerializeField] AudioSource Bonk;
     [SerializeField] AudioSource Interruptor;
     [SerializeField] AudioSource Ouch;
+    [SerializeField] AudioSource golpeMesa;
 
     private void Update()
     {
@@ -63,10 +64,13 @@ public class HammerBehaviour : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Table")
-        {
-            AudioMazo.Play();
-        }
+        //if (collision.gameObject.tag == "Table")
+        //{
+        //    if (golpeMesa != null)
+        //    {
+        //        golpeMesa.Play();
+        //    }
+        //}
 
         if (collision.gameObject.tag == "NPC")
         {

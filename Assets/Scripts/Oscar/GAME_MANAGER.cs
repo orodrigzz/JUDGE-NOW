@@ -144,10 +144,10 @@ public class GAME_MANAGER : MonoBehaviour
 
                 if(noise < 1)
                 {
-                    noise = noise + 0.0005f;
+                    noise = noise + 0.0008f;
                     if (noiseAudio != null)
                     {
-                        noiseAudio.volume = noiseAudio.volume + 0.0005f;
+                        noiseAudio.volume = noiseAudio.volume + 0.0008f;
                     }
                 }
                 else
