@@ -2904,14 +2904,14 @@ MonoBehaviour:
     - 'You want me to go to jail because I''m more handsome than you. Judge you can''t
       permit this '
     - FUCKING LOSER!!!
-    characterName: "Rojger Zarzg\xF6za"
+    characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: The Complainant is innocent, he singed at 22:00 so is legal. If he
-    had sung at 0:00 he would be guilty since after 0:00 it is illegal to exceed
-    certain decibels.
+  caseResume: The defendant is innocent, he singed at 22:00 so is legal. If he had
+    sung at 0:00 he would be guilty since after 0:00 it is illegal to exceed certain
+    decibels.
   dialogueOn: 0
   dialoguesIndex: -1
   guiltyBut: {fileID: 1725626354}

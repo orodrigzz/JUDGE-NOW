@@ -245,14 +245,30 @@ public class GAME_MANAGER : MonoBehaviour
     {
         courtReputation = courtReputation + 0.1f;
         townReputation = townReputation + 0.1f;
-        decisionCase = "GUILTY";
+
+        if (currentScene.name == "Game")
+        {
+            decisionCase = "INNOCENT";
+        }
+        else
+        {
+            decisionCase = "GUILTY";
+        }
     }
 
     public void badCase()
     {
         courtReputation = courtReputation - 0.1f;
         townReputation = townReputation - 0.1f;
-        decisionCase = "INNOCENT";
+
+        if (currentScene.name == "Game")
+        {
+            decisionCase = "GUILTY";
+        }
+        else
+        {
+            decisionCase = "INNOCENT";
+        }
     }
 
     //Sobornos
