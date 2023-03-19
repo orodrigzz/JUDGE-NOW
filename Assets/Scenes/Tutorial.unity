@@ -958,7 +958,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 254455019}
   sliderVal: 0
-  preview: {fileID: 254455020}
 --- !u!114 &254455019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,9 +2091,9 @@ MonoBehaviour:
   Shooter_L: {fileID: 1473796128}
   Proyectile: {fileID: 87120956496746107, guid: 222235cb2bea47a48939231af6dbb72f, type: 3}
   rightShooterTargetTime: 0
-  rightShooterTime: 40
+  rightShooterTime: 30
   leftShooterTargetTime: 0
-  leftShooterTime: 50
+  leftShooterTime: 40
 --- !u!4 &732082205
 Transform:
   m_ObjectHideFlags: 0
@@ -2537,6 +2536,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 3072824182456407208, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+      propertyPath: Light
+      value: 
+      objectReference: {fileID: 838547897}
+    - target: {fileID: 3072824182456407208, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+      propertyPath: pointLight
+      value: 
+      objectReference: {fileID: 499914535}
     - target: {fileID: 4155275169456310112, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: m_TagString
       value: Switch

@@ -146,18 +146,18 @@ public class GAME_MANAGER : MonoBehaviour
                 {
                     if(currentScene.name != "Tutorial")
                     {
-                        noise = noise + 0.0008f;
+                        noise = noise + 0.0004f;
                         if (noiseAudio != null)
                         {
-                            noiseAudio.volume = noiseAudio.volume + 0.0008f;
+                            noiseAudio.volume = noiseAudio.volume + 0.0004f;
                         }
                     }
                     else
                     {
-                        noise = noise + 0.00001f;
+                        noise = noise + 0.0003f;
                         if (noiseAudio != null)
                         {
-                            noiseAudio.volume = noiseAudio.volume + 0.00001f;
+                            noiseAudio.volume = noiseAudio.volume + 0.003f;
                         }
                     }
                     
