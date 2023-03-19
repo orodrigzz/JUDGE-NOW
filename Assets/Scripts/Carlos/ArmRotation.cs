@@ -28,7 +28,12 @@ public class ArmRotation : MonoBehaviour
     private float horizontalInputValue;
     private float verticalInputValue;
 
+    Vector3 originalPosition;
 
+    private void Start()
+    {
+        originalPosition = rbPivot.position;
+    }
 
     // Update is called once per frame
     void Update()
@@ -58,20 +63,29 @@ public class ArmRotation : MonoBehaviour
                 Quaternion rot = Quaternion.Euler(0, rotationY, -rotationX);
                 root.transform.rotation = rot;
             }
+            if(GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+            {
+                Vector3 currentPosition = rbPivot.transform.position;
+                horizontalInputValue = Input.GetAxis(horizontalInputName);
+                verticalInputValue = Input.GetAxis(verticalInputName);
+
+                float newX = currentPosition.x + horizontalInputValue;
+                float newZ = currentPosition.z + verticalInputValue;
+
+                newX = Mathf.Clamp(newX, minX, maxX);
+                newZ = Mathf.Clamp(newZ, minZ, maxZ);
+
+                Vector3 newPosition = new Vector3(newX, currentPosition.y, newZ);
+                rbPivot.MovePosition(newPosition);
+            }
+            else
+            {
+                rbPivot.position = originalPosition;
+            }
+            
         }
 
-        Vector3 currentPosition =rbPivot.transform.position;
-        horizontalInputValue = Input.GetAxis(horizontalInputName);
-        verticalInputValue = Input.GetAxis(verticalInputName);
-
-        float newX = currentPosition.x + horizontalInputValue;
-        float newZ = currentPosition.z + verticalInputValue;
-
-        newX = Mathf.Clamp(newX, minX, maxX);
-        newZ = Mathf.Clamp(newZ, minZ, maxZ);
-
-        Vector3 newPosition = new Vector3(newX, currentPosition.y, newZ);
-        rbPivot.MovePosition(newPosition);
+        
     }
 
     private void OnTriggerEnter(Collider other)

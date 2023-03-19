@@ -6472,6 +6472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arm: {fileID: 2046991597}
   offset: {x: 0.3, y: 0.355, z: -0.17}
+  originalPos: {x: 0.723, y: 0.355, z: 0.269}
 --- !u!1001 &2065784275
 PrefabInstance:
   m_ObjectHideFlags: 0

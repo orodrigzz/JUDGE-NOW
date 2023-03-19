@@ -6,8 +6,16 @@ public class MoveCamera : MonoBehaviour
 {
     public Transform arm;
     public Vector3 offset;
+    public Vector3 originalPos;
     void Update()
     {
-        this.transform.position = arm.transform.position + offset;
+        if(GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
+        {
+            this.transform.position = arm.transform.position + offset;
+        }
+          
+        
+       
+        
     }
 }
