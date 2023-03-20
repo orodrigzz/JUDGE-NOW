@@ -32,9 +32,6 @@ public class PickUpSystem : MonoBehaviour
     [SerializeField] HammerBehaviour hammerBehaviour;
     #endregion
 
-   
-
-
     private void Start()
     {
         startedCameraPosition = camera.transform.position;
@@ -44,17 +41,13 @@ public class PickUpSystem : MonoBehaviour
         GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
         GAME_MANAGER._GAME_MANAGER.rClickForLetItGo.SetActive(false);
     }
+
     private void Update()
     {
         if(itemPicked != null)
         {
             hammerBehaviour = itemPicked.GetComponent<HammerBehaviour>();
-            
         }
-        
-       
-            
-        
 
         GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
         
@@ -64,14 +57,13 @@ public class PickUpSystem : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(ray, out hit, 10f, layer))
                 {
-
-               
-                    GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(true);
-                   
-                
-
-
-                if (Input.GetMouseButtonDown(0) && !isPicked)
+                    if(isPicked == false)
+                    {
+                        GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(true);
+                    }
+                    
+                  
+                    if (Input.GetMouseButtonDown(0) && !isPicked)
                     {
                         armHold.SetActive(true);
                         arm.SetActive(false);
@@ -82,19 +74,17 @@ public class PickUpSystem : MonoBehaviour
                         itemPicked.transform.localPosition = parent.transform.localPosition;
                         GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
                         GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
-                    if (itemPicked != null)
+                        if (itemPicked != null)
                         {
                             itemPicked.useGravity = false;
                             itemPicked.constraints = RigidbodyConstraints.FreezeAll;
                             isPicked = true;
                             GAME_MANAGER._GAME_MANAGER.isPicked = true;
                         }
-
                     }
                 }
                 else
                 {
-               
                     if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
                     {
                         armHold.SetActive(false);
@@ -127,11 +117,8 @@ public class PickUpSystem : MonoBehaviour
                             itemPicked = null;
                             isPicked = false;
                             GAME_MANAGER._GAME_MANAGER.isPicked = false;
-                    
                         }
-               
                 }
-           
                 Debug.DrawRay(transform.position + origin, transform.forward * 100, Color.green);
             }
 
@@ -147,27 +134,66 @@ public class PickUpSystem : MonoBehaviour
         {
             InspectObject();
         }
-        
     }
 
     void EnterInspectionMode()
     {
         if(itemPicked != null)
         {
-            originalRotation = parent.transform.rotation.eulerAngles;
-            originaPosition = parent.transform.position;
-            cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-            cameraOriginaPosition = camera.transform.position;
-            camera.transform.position = startedCameraPosition;
-            camera.transform.eulerAngles = startedCameraRotation;
-            itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
-            armHold.SetActive(false);
-            arm.SetActive(false);
-            GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-            GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
-            GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
-            GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
-            
+
+            if (itemPicked.tag == "Fingerprint")
+            {
+                offset = 0.3f;
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                isInspecting = true;
+                originalRotation = parent.transform.rotation.eulerAngles;
+                originaPosition = parent.transform.position;
+                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                cameraOriginaPosition = camera.transform.position;
+                camera.transform.position = startedCameraPosition;
+                camera.transform.eulerAngles = startedCameraRotation;
+                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                armHold.SetActive(false);
+                arm.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+                GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+            }else if (itemPicked.tag == "Mobile")
+            {
+                offset = 0.8f;
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                isInspecting = true;
+                originalRotation = parent.transform.rotation.eulerAngles;
+                originaPosition = parent.transform.position;
+                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                cameraOriginaPosition = camera.transform.position;
+                camera.transform.position = startedCameraPosition;
+                camera.transform.eulerAngles = startedCameraRotation;
+                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                armHold.SetActive(false);
+                arm.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+                GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+            }
+            else
+            {
+                offset = 1;
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                isInspecting = true;
+                originalRotation = parent.transform.rotation.eulerAngles;
+                originaPosition = parent.transform.position;
+                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                cameraOriginaPosition = camera.transform.position;
+                camera.transform.position = startedCameraPosition;
+                camera.transform.eulerAngles = startedCameraRotation;
+                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                armHold.SetActive(false);
+                arm.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+                GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+            }
         }      
     }
 
@@ -182,10 +208,10 @@ public class PickUpSystem : MonoBehaviour
             armHold.SetActive(true);
             arm.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.isInspecting = false;
-            GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+            isInspecting = false;
+            GAME_MANAGER._GAME_MANAGER.stopArmMovement = false;
             GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
-            
         }
 
     }

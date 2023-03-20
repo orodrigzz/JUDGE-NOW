@@ -7,9 +7,7 @@ public class Volumen : MonoBehaviour
 {
     public Slider slider;
     public float sliderVal;
-    public AudioSource preview;
 
-    // Start is called before the first frame update
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("volumenAudio", 0.5f);
@@ -21,6 +19,5 @@ public class Volumen : MonoBehaviour
         sliderVal = value;
         PlayerPrefs.SetFloat("volumenAudio", sliderVal);
         AudioListener.volume = slider.value;
-        preview.Play();
     }
 }

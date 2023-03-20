@@ -12,8 +12,6 @@ public class CaseEnded : MonoBehaviour
     public Text complainResume;
     public Text decision;
 
-
-   
     private void Awake()
     {
         complainerName.text = GAME_MANAGER._GAME_MANAGER.denunciantName;
@@ -26,9 +24,4 @@ public class CaseEnded : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-
-    void Update()
-    {
-        
-    }
 }

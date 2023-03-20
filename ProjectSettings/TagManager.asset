@@ -19,6 +19,7 @@ TagManager:
   - Apple
   - Tomatoe
   - Atril
+  - Fingerprint
   layers:
   - Default
   - TransparentFX

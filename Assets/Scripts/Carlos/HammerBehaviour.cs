@@ -76,12 +76,13 @@ public class HammerBehaviour : MonoBehaviour
         {
             Bonk.Play();
             Ouch.Play();
+            StartCoroutine(WaitForDestroy(1.5f));
         }
 
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door" || collision.gameObject.tag == "Atril")
         {
             //AudioMazo.Play();
-            StartCoroutine(WaitForDestroy());
+            StartCoroutine(WaitForDestroy(1));
         }
 
         if (collision.gameObject.tag == "Apple" || collision.gameObject.tag == "Tomatoe" || collision.gameObject.tag == "Mobile")
@@ -103,7 +104,7 @@ public class HammerBehaviour : MonoBehaviour
         if(other.gameObject.tag == "Switch")
         {
             Interruptor.Play();
-            StartCoroutine(WaitForDestroy());
+            StartCoroutine(WaitForDestroy(1));
             if (GAME_MANAGER._GAME_MANAGER.lightsOn == false)
             {
                 GAME_MANAGER._GAME_MANAGER.TurnUpLights();
@@ -123,9 +124,9 @@ public class HammerBehaviour : MonoBehaviour
         }
     }
 
-    IEnumerator WaitForDestroy()
+    IEnumerator WaitForDestroy(float secs)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(secs);
         Destroy(this.gameObject);   
     }
 

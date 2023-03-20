@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6114252927012870909}
   - component: {fileID: -6284615298389785563}
   - component: {fileID: -5402015847289791522}
+  - component: {fileID: 73483677128612786}
   m_Layer: 7
   m_Name: Movil
   m_TagString: Mobile
@@ -115,6 +116,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2047851, y: 0.43, z: 0.030717772}
   m_Center: {x: -0.06, y: -0.06, z: 0.03}
+--- !u!114 &73483677128612786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754136685962148648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac87e11638a93ec478274bf70b2eee8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5291556609803639949
 PrefabInstance:
   m_ObjectHideFlags: 0

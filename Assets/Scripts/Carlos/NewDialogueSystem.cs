@@ -24,6 +24,7 @@ public class NewDialogueSystem : MonoBehaviour
         public int diactivateCount;
 
         public bool currentDialogueEnded;
+
    }
     [NonReorderable]
 
@@ -35,6 +36,8 @@ public class NewDialogueSystem : MonoBehaviour
     public GameObject guiltyBut;
     public GameObject innocentBut;
     public bool isRevealed;
+    public bool evidenceInstantiated;
+
     private void Awake()
     {
         for(int i = 0; i < dialogues.Length; i++)
@@ -89,6 +92,7 @@ public class NewDialogueSystem : MonoBehaviour
                     if (dialogues[dialoguesIndex].spawnPoint != null && dialogues[dialoguesIndex].evidence != null)
                     {
                         Instantiate(dialogues[dialoguesIndex].evidence, dialogues[dialoguesIndex].spawnPoint.transform, false);
+                        evidenceInstantiated = true;
                     }
                     dialogues[dialoguesIndex].currentDialogueEnded = true;                   
                     dialoguesIndex++;

@@ -46,9 +46,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   courtReputation: 0.5
   townReputation: 0.5
+  noise: 0
+  lightsOn: 0
   courtReputationImg: {fileID: 0}
   townReputationImg: {fileID: 0}
   defCourtReputation: {fileID: 0}
   defTownReputation: {fileID: 0}
+  defNoiseImg: {fileID: 0}
+  noiseImg: {fileID: 0}
+  noiseAudio: {fileID: 0}
   isGamePaused: 0
   isPicked: 0
+  isInspecting: 0
+  initDialogue: 0
+  endDialogue: 0
+  menuOpen: 0
+  stopArmMovement: 0
+  sensivity: 0.2
+  complaintResume: 
+  denunciantName: 
+  denunciantID: 
+  accusedName: 
+  accusedID: 
+  decisionCase: 
+  currentScene:
+    m_Handle: 0
+  reputationCanvas: {fileID: 0}
+  lastScene: 
+  eForInspect: {fileID: 0}
+  qForExitInspect: {fileID: 0}
+  mForDecisionMode: {fileID: 0}
+  mForExitDecisionMode: {fileID: 0}
+  lClickForPickItUp: {fileID: 0}
+  rClickForLetItGo: {fileID: 0}
