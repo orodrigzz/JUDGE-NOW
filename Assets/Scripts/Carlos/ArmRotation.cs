@@ -45,18 +45,18 @@ public class ArmRotation : MonoBehaviour
                 mouseDelta = InputManager._INPUT_MANAGER.GetDeltaMouse();
                 if (!fixy)
                 {
-                    rotationX += mouseDelta.y * sensibility;
+                    rotationX += mouseDelta.y * GAME_MANAGER._GAME_MANAGER.sensibility;
                     rotationX = Mathf.Clamp(rotationX, -rotationxmax, rotationxmax);
                 }
                 else
                 {
                     if (mouseDelta.y > 0)
                     {
-                        rotationX += mouseDelta.y * sensibility;
+                        rotationX += mouseDelta.y * GAME_MANAGER._GAME_MANAGER.sensibility;
                         rotationX = Mathf.Clamp(rotationX, -rotationxmax, rotationxmax);
                     }
                 }
-                rotationY += mouseDelta.x * sensibility;
+                rotationY += mouseDelta.x * GAME_MANAGER._GAME_MANAGER.sensibility;
                 rotationY = Mathf.Clamp(rotationY, 1, 160f);
 
                 if (mouseDelta.x != 0 || mouseDelta.y != 0)

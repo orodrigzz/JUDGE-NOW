@@ -35,6 +35,9 @@ public class GAME_MANAGER : MonoBehaviour
     public bool endDialogue = false;
     public bool menuOpen;
     public bool stopArmMovement;
+
+    public float sensibility;
+    public float sliderSensibilityVal;
     #endregion
 
     #region SaveInfo
@@ -45,6 +48,7 @@ public class GAME_MANAGER : MonoBehaviour
     public string accusedName;
     public string accusedID;
     public string decisionCase;
+    public Slider sliderSensibility;
     #endregion
 
     #region GetCurrentScene
@@ -98,6 +102,9 @@ public class GAME_MANAGER : MonoBehaviour
         {
             noiseImg.fillAmount = noise;
         }
+
+        sliderSensibility.value = PlayerPrefs.GetFloat("playerSensibility", 0.5f);
+        sensibility = sliderSensibility.value;
     }
 
     void Update()
@@ -332,4 +339,10 @@ public class GAME_MANAGER : MonoBehaviour
         }
     }
     
+    public void ChangeSensibility(float sensibilityVal)
+    {
+        sliderSensibilityVal = sensibilityVal;
+        PlayerPrefs.SetFloat("playerSensibility", sliderSensibilityVal);
+        sensibility = sliderSensibilityVal;
+    }
 }
