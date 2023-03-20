@@ -154,6 +154,23 @@ public class PickUpSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
                 GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
                 GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+            }else if (itemPicked.tag == "Mobile")
+            {
+                offset = 0.8f;
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                isInspecting = true;
+                originalRotation = parent.transform.rotation.eulerAngles;
+                originaPosition = parent.transform.position;
+                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                cameraOriginaPosition = camera.transform.position;
+                camera.transform.position = startedCameraPosition;
+                camera.transform.eulerAngles = startedCameraRotation;
+                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                armHold.SetActive(false);
+                arm.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
+                GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
             }
             else
             {
