@@ -57,7 +57,11 @@ public class PickUpSystem : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(ray, out hit, 10f, layer))
                 {
-                    GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(true);
+                    if(isPicked == false)
+                    {
+                        GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(true);
+                    }
+                    
                   
                     if (Input.GetMouseButtonDown(0) && !isPicked)
                     {
