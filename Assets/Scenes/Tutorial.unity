@@ -603,7 +603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &160010903
 MonoBehaviour:
@@ -958,7 +958,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 254455019}
   sliderVal: 0
-  preview: {fileID: 254455020}
 --- !u!114 &254455019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,9 +2091,9 @@ MonoBehaviour:
   Shooter_L: {fileID: 1473796128}
   Proyectile: {fileID: 87120956496746107, guid: 222235cb2bea47a48939231af6dbb72f, type: 3}
   rightShooterTargetTime: 0
-  rightShooterTime: 40
+  rightShooterTime: 30
   leftShooterTargetTime: 0
-  leftShooterTime: 50
+  leftShooterTime: 40
 --- !u!4 &732082205
 Transform:
   m_ObjectHideFlags: 0
@@ -2537,6 +2536,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 3072824182456407208, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+      propertyPath: Light
+      value: 
+      objectReference: {fileID: 838547897}
+    - target: {fileID: 3072824182456407208, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+      propertyPath: pointLight
+      value: 
+      objectReference: {fileID: 499914535}
     - target: {fileID: 4155275169456310112, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: m_TagString
       value: Switch
@@ -4325,17 +4332,20 @@ MonoBehaviour:
     - {fileID: 565080188}
     - {fileID: 1870372146}
     - {fileID: 1466900415}
+    - {fileID: 1466900415}
     nameText: {fileID: 1651456451}
     idText: {fileID: 864261920}
     textBox: {fileID: 1297240262}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - WASD - Move Left, Right and Forward
-    - Mouse - Move arm
-    - 
+    - ' Welcome to Ekagate Court, your new job, Judge. I''m sure you''re anxious
+      to know how everything works around here'
+    - 'Controls: WASD - Move Left, Right and Forward'
+    - ' Mouse - Move arm'
+    - .
     characterName: Mister Inspector, Richard
-    characterID: Clasified
+    characterID: Classified
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
@@ -4349,14 +4359,15 @@ MonoBehaviour:
     nameText: {fileID: 963476744}
     idText: {fileID: 440558360}
     textBox: {fileID: 1276023892}
-    evidence: {fileID: 0}
-    spawnPoint: {fileID: 0}
+    evidence: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
+    spawnPoint: {fileID: 2065784276}
     dialogueLines:
-    - Right Click - Pick Up Objects
-    - Left Click - Realese Picked Object
-    - You can control the room nois by slamming the hammer
-    - E - Enter Inspect Mode
+    - Left Click - Pick Up Objects
+    - Right Click - Realese Picked Objects
+    - E - Enter Inspect Mode - Inspect the evidence carefully it's what's going to
+      help you make a right decision. Try with your lunch
     - Q - Exit Inspect Mode
+    - You can control the room noise by slamming the hammer
     - 
     characterName: Mister Inspector, Richard
     characterID: Classified
@@ -4369,36 +4380,32 @@ MonoBehaviour:
     - {fileID: 1899600616}
     - {fileID: 279170847}
     - {fileID: 993739600}
+    - {fileID: 993739600}
     nameText: {fileID: 1511940743}
     idText: {fileID: 207463637}
     textBox: {fileID: 1733115274}
-    evidence: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
+    evidence: {fileID: 0}
     spawnPoint: {fileID: 2065784276}
     dialogueLines:
     - You can throw your hammer with Space
     - Throwing the hammer allows you to turn up the lights if you hit the switch
-    - M - Enter and exit decision mode
-    - Slam red with the hammer if you found it guilty or green if you found it innocent
-    - 
+    - Press M to enter and exit decision mode
+    - 'Slam with the hammer: RED if you found it guilty or GREEN if you found it
+      innocent'
+    - That's it. Make your decision and...JUDGE NOW!
+    - .
     characterName: Mister Inspector, Richard
     characterID: Classified
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  - sentences:
-    - {fileID: 225308818}
-    - {fileID: 1902339914}
-    - {fileID: 1951212739}
+  - sentences: []
     nameText: {fileID: 2103562359}
     idText: {fileID: 777365873}
     textBox: {fileID: 1620547636}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
-    dialogueLines:
-    - One last thing, to unlock the decision system press M
-    - To make your decision, slam your hammer in one of these buttons, red it's guilty
-      green it's innocent
-    - 
+    dialogueLines: []
     characterName: Mister Inspector, Richard
     characterID: Classified
     sentenceIndex: -1
@@ -4411,6 +4418,7 @@ MonoBehaviour:
   guiltyBut: {fileID: 935379779}
   innocentBut: {fileID: 1562626051}
   isRevealed: 0
+  evidenceInstantiated: 0
 --- !u!1 &1562626051 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7046060152008001710, guid: 7282b8694e9472047a8610222111ea49, type: 3}
@@ -6447,6 +6455,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &2046991597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2379968225156262094, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+  m_PrefabInstance: {fileID: 2046991594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2046991598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4570388742856942540, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+  m_PrefabInstance: {fileID: 2046991594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2046991599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046991598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec2a10ee3f260a43b515d0ed237785f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arm: {fileID: 2046991597}
+  offset: {x: 0.3, y: 0.355, z: -0.17}
+  originalPos: {x: 0.723, y: 0.355, z: 0.269}
 --- !u!1001 &2065784275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6460,7 +6493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.699
+      value: 7.53
       objectReference: {fileID: 0}
     - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6468,7 +6501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.226
+      value: -15.269
       objectReference: {fileID: 0}
     - target: {fileID: 6053496988553805676, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_RootOrder
@@ -6614,7 +6647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5851995919696495150, guid: bb057507819d67343ba37b88e7543204, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5851995919696495150, guid: bb057507819d67343ba37b88e7543204, type: 3}
       propertyPath: m_LocalPosition.x

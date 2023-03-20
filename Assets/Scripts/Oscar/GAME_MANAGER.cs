@@ -34,6 +34,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool initDialogue;
     public bool endDialogue = false;
     public bool menuOpen;
+    public bool stopArmMovement;
     #endregion
 
     #region SaveInfo
@@ -146,18 +147,18 @@ public class GAME_MANAGER : MonoBehaviour
                 {
                     if(currentScene.name != "Tutorial")
                     {
-                        noise = noise + 0.0008f;
+                        noise = noise + 0.0004f;
                         if (noiseAudio != null)
                         {
-                            noiseAudio.volume = noiseAudio.volume + 0.0008f;
+                            noiseAudio.volume = noiseAudio.volume + 0.0004f;
                         }
                     }
                     else
                     {
-                        noise = noise + 0.00001f;
+                        noise = noise + 0.0003f;
                         if (noiseAudio != null)
                         {
-                            noiseAudio.volume = noiseAudio.volume + 0.00001f;
+                            noiseAudio.volume = noiseAudio.volume + 0.003f;
                         }
                     }
                     
@@ -245,14 +246,30 @@ public class GAME_MANAGER : MonoBehaviour
     {
         courtReputation = courtReputation + 0.1f;
         townReputation = townReputation + 0.1f;
-        decisionCase = "GUILTY";
+
+        if (currentScene.name == "Game")
+        {
+            decisionCase = "INNOCENT";
+        }
+        else
+        {
+            decisionCase = "GUILTY";
+        }
     }
 
     public void badCase()
     {
         courtReputation = courtReputation - 0.1f;
         townReputation = townReputation - 0.1f;
-        decisionCase = "INNOCENT";
+
+        if (currentScene.name == "Game")
+        {
+            decisionCase = "GUILTY";
+        }
+        else
+        {
+            decisionCase = "INNOCENT";
+        }
     }
 
     //Sobornos
