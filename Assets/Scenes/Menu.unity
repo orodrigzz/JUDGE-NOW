@@ -1610,6 +1610,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339556387}
   m_CullTransparentMesh: 1
+--- !u!1 &1586123749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3827449437717261841, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+  m_PrefabInstance: {fileID: 1568598853015842254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1588091399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,6 +2137,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 175855765764071957, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568598854267306561, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: settingsUI
+      value: 
+      objectReference: {fileID: 1586123749}
+    - target: {fileID: 3580096119884893362, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827449437717261841, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7311945610490847440, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
       propertyPath: defTownReputation
       value: 
@@ -2211,6 +2232,14 @@ PrefabInstance:
     - target: {fileID: 7643925303474263832, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133829468243262653, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365502872301701606, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}

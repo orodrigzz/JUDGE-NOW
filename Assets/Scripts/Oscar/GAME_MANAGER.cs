@@ -34,6 +34,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool initDialogue;
     public bool endDialogue = false;
     public bool menuOpen;
+    public bool stopArmMovement;
     #endregion
 
     #region SaveInfo
