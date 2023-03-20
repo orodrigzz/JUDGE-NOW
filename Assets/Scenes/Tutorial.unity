@@ -4345,7 +4345,7 @@ MonoBehaviour:
     - ' Mouse - Move arm'
     - .
     characterName: Mister Inspector, Richard
-    characterID: Clasified
+    characterID: Classified
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
