@@ -81,7 +81,7 @@ public class GAME_MANAGER : MonoBehaviour
         isGamePaused = false;
         currentScene = SceneManager.GetActiveScene();
        
-        if (currentScene.name != "Game" && reputationCanvas != null)
+        if (currentScene.name != "Game" || currentScene.name == "Case2" || currentScene.name == "Case3" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
         }
@@ -227,7 +227,7 @@ public class GAME_MANAGER : MonoBehaviour
             isGamePaused = true;
         }
 
-        if (currentScene.name == "Game" || currentScene.name == "Tutorial" && reputationCanvas != null)
+        if (currentScene.name == "Game" || currentScene.name == "Tutorial" || currentScene.name == "Case2" || currentScene.name == "Case3" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(true);
             if(isInspecting == false)
