@@ -3056,6 +3056,8 @@ MonoBehaviour:
     textBox: {fileID: 1297240262}
     evidence: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
     spawnPoint: {fileID: 548557559}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
     dialogueLines:
     - 'Good morning, Mr. Judge. I want to report my neighbor because he has been
       singing very loud for a few hours preventing me from sleeping '
@@ -3075,6 +3077,8 @@ MonoBehaviour:
     textBox: {fileID: 1276023892}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
     dialogueLines:
     - 'That''s totally false, it''s ridiculous that singing is a crime, plus I didn''t
       do it at night '
@@ -4901,6 +4905,10 @@ PrefabInstance:
     - target: {fileID: 756559346465900207, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_Name
       value: MesaCompleta
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.522
       objectReference: {fileID: 0}
     - target: {fileID: 6053496988553805676, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_RootOrder

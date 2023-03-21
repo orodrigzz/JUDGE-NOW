@@ -20,6 +20,7 @@ TagManager:
   - Tomatoe
   - Atril
   - Fingerprint
+  - Skull
   layers:
   - Default
   - TransparentFX

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1075,6 +1075,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304685673}
   m_CullTransparentMesh: 1
+--- !u!1 &408863216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408863217}
+  - component: {fileID: 408863218}
+  m_Layer: 0
+  m_Name: Spawner Pruebas2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &408863217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408863216}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.356, y: 11.274, z: -15.2968}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1687413229}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &408863218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408863216}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680185fef4309cb43ad654be70bfe475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  mobile: {fileID: 0}
+  newMobile: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
+  resetObject: {fileID: 408863217}
 --- !u!1 &440558357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1586,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &783958636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783958637}
+  - component: {fileID: 783958638}
+  m_Layer: 0
+  m_Name: Spawner Pruebas3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783958637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783958636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.53, y: 11.361, z: -15.085}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1687413229}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783958638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783958636}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680185fef4309cb43ad654be70bfe475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  mobile: {fileID: 0}
+  newMobile: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
+  resetObject: {fileID: 783958637}
 --- !u!1 &839574616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4570388742856942540, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
@@ -3004,7 +3100,7 @@ MonoBehaviour:
     evidence: {fileID: 6653001100958368574, guid: aea0d8b8d1c617242aa8e40086828c22, type: 3}
     spawnPoint: {fileID: 548557559}
     evidence2: {fileID: 1425727554223788183, guid: 629fa2aedb0fc964a98b3871ade0c361, type: 3}
-    spawnPoint2: {fileID: 2089202667}
+    spawnPoint2: {fileID: 408863216}
     dialogueLines:
     - This man has stolen my dead grandmother's skull from me!!!!!
     - This depraved man is crazy! You have to send him to jail!
@@ -3022,7 +3118,7 @@ MonoBehaviour:
     idText: {fileID: 440558360}
     textBox: {fileID: 1276023892}
     evidence: {fileID: 1526725269692890088, guid: 0f2a38c90c7ccac4da9bcff5240ab5e7, type: 3}
-    spawnPoint: {fileID: 548557559}
+    spawnPoint: {fileID: 783958636}
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
@@ -4717,54 +4813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2089202667
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2089202668}
-  - component: {fileID: 2089202669}
-  m_Layer: 0
-  m_Name: Spawner Pruebas2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2089202668
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089202667}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.024, y: 11.26, z: -15.152}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1687413229}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2089202669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089202667}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 680185fef4309cb43ad654be70bfe475, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newDialogueSystem: {fileID: 1538085428}
-  mobile: {fileID: 0}
-  newMobile: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
-  resetObject: {fileID: 2089202668}
 --- !u!1001 &554453828575262250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4901,6 +4949,18 @@ PrefabInstance:
     - target: {fileID: 756559346465900207, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_Name
       value: MesaCompleta
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5724
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.274
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.2968
       objectReference: {fileID: 0}
     - target: {fileID: 6053496988553805676, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_RootOrder
