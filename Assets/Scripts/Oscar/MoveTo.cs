@@ -8,7 +8,7 @@ public class MoveTo : MonoBehaviour
     [SerializeField] private GameObject target;
     [SerializeField] private float speed = 0.6f;
 
-    [SerializeField] private int secs;
+    [SerializeField] private float secs;
 
     private void Awake()
     {

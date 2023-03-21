@@ -16,6 +16,9 @@ public class NewDialogueSystem : MonoBehaviour
         public GameObject evidence;
         public GameObject spawnPoint;
 
+        public GameObject evidence2;
+        public GameObject spawnPoint2;
+
         public string[] dialogueLines;
         public string characterName;
         public string characterID;
@@ -93,6 +96,11 @@ public class NewDialogueSystem : MonoBehaviour
                     {
                         Instantiate(dialogues[dialoguesIndex].evidence, dialogues[dialoguesIndex].spawnPoint.transform, false);
                         evidenceInstantiated = true;
+
+                        if (dialogues[dialoguesIndex].spawnPoint2 != null && dialogues[dialoguesIndex].evidence2 != null)
+                        {
+                            Instantiate(dialogues[dialoguesIndex].evidence2, dialogues[dialoguesIndex].spawnPoint2.transform, false);
+                        }
                     }
                     dialogues[dialoguesIndex].currentDialogueEnded = true;                   
                     dialoguesIndex++;

@@ -1149,6 +1149,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2995892491049945296, guid: 4ef3ba01aee6170469875dbf751c8a46, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3943970510980546734, guid: aca9007d407e7cb4883256cd1198cbce, type: 3}
     m_RemovedComponents:
     - {fileID: 3778509582828710151, guid: 4ef3ba01aee6170469875dbf751c8a46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4ef3ba01aee6170469875dbf751c8a46, type: 3}
@@ -2476,7 +2480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2205357166630369240, guid: 77a26efac20d4574ea6a822d3db3208d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4820892
+      value: -0.573
       objectReference: {fileID: 0}
     - target: {fileID: 2205357166630369240, guid: 77a26efac20d4574ea6a822d3db3208d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2510,6 +2514,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2969239112903719037, guid: 77a26efac20d4574ea6a822d3db3208d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5847450223222475691, guid: d6622b797f009f748a6cb137a1d9053b, type: 3}
     - target: {fileID: 3803467005125892522, guid: 77a26efac20d4574ea6a822d3db3208d, type: 3}
       propertyPath: secs
       value: 0
@@ -2584,13 +2592,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5079369018994096477, guid: 830943c23fd6090439f6a13d7eb16e21, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5847450223222475691, guid: 36bcb17b12053f84badd33eb4c5a90f4, type: 3}
     - target: {fileID: 8201706533651445496, guid: 830943c23fd6090439f6a13d7eb16e21, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8201706533651445496, guid: 830943c23fd6090439f6a13d7eb16e21, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7148159
+      value: -2.259
       objectReference: {fileID: 0}
     - target: {fileID: 8201706533651445496, guid: 830943c23fd6090439f6a13d7eb16e21, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2598,7 +2610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8201706533651445496, guid: 830943c23fd6090439f6a13d7eb16e21, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.7768579
+      value: 3.898
       objectReference: {fileID: 0}
     - target: {fileID: 8201706533651445496, guid: 830943c23fd6090439f6a13d7eb16e21, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2642,6 +2654,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5578412927642638409, guid: 46e5b98b5e206e047b261a24393d7ca7, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5847450223222475691, guid: 4b2dc23128ecf584f84b8820a0121afc, type: 3}
     - target: {fileID: 8182629551976303958, guid: 46e5b98b5e206e047b261a24393d7ca7, type: 3}
       propertyPath: m_Name
       value: NPC_Male3
@@ -2652,7 +2668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8846576642334201836, guid: 46e5b98b5e206e047b261a24393d7ca7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9716939
+      value: 2.484
       objectReference: {fileID: 0}
     - target: {fileID: 8846576642334201836, guid: 46e5b98b5e206e047b261a24393d7ca7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2660,7 +2676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8846576642334201836, guid: 46e5b98b5e206e047b261a24393d7ca7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.669
+      value: 1.429
       objectReference: {fileID: 0}
     - target: {fileID: 8846576642334201836, guid: 46e5b98b5e206e047b261a24393d7ca7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3054,41 +3070,36 @@ MonoBehaviour:
     nameText: {fileID: 1651456451}
     idText: {fileID: 864261920}
     textBox: {fileID: 1297240262}
-    evidence: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
+    evidence: {fileID: 1835584263018215037, guid: f7553de6a9c98444ca3c7925a450908f, type: 3}
     spawnPoint: {fileID: 548557559}
     dialogueLines:
-    - 'Good morning, Mr. Judge. I want to report my neighbor because he has been
-      singing very loud for a few hours preventing me from sleeping '
-    - 'I bring the following tests: my mobile with a recorded audio of him singing '
+    - Good morning, Mr. Judge. I want to report my coworker because he bit my apple
+      and I'm out of lunch
+    - Here is the above mentioned. I'm not eating until noon :(
     - AAAA
-    characterName: "Arna\xF6 Figuerjas"
-    characterID: 44312862A
+    characterName: Alexa Pegej
+    characterID: 33994170A
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
   - sentences:
     - {fileID: 906637855}
     - {fileID: 1602102122}
-    - {fileID: 1201029129}
     nameText: {fileID: 963476744}
     idText: {fileID: 440558360}
     textBox: {fileID: 1276023892}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     dialogueLines:
-    - 'That''s totally false, it''s ridiculous that singing is a crime, plus I didn''t
-      do it at night '
-    - 'You want me to go to jail because I''m more handsome than you. Judge you can''t
-      permit this '
-    - FUCKING LOSER!!!
-    characterName: "\"Rogira\" Zarzg\xF6za"
-    characterID: 33442163R
+    - I was hungry and I couldn't resist. Now my stomach is happy.
+    - 
+    characterName: Jankduj
+    characterID: 46232177J
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: The defendant is innocent, he singed at 22:00 so is legal. If he had
-    sung at 0:00 he would be guilty since after 0:00 it is illegal to exceed certain
-    decibels.
+  caseResume: The defendant is clearly guilty. He has eaten poor Alexa's lunch. That's
+    all there is to it. Neeeeext caseeee
   dialogueOn: 0
   dialoguesIndex: -1
   guiltyBut: {fileID: 1725626354}
@@ -3859,7 +3870,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1725626354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1746837137
@@ -4220,7 +4231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1844345299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1870372144
@@ -4352,6 +4363,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 164363780880450437, guid: d746d049d5ce0364695864552bbebeca, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3943970510980546734, guid: b1994467dbc4beb4aab0e6ef032d3497, type: 3}
     - target: {fileID: 2286585990228288082, guid: d746d049d5ce0364695864552bbebeca, type: 3}
       propertyPath: secs
       value: 0.3
@@ -4370,7 +4385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3884412306924162080, guid: d746d049d5ce0364695864552bbebeca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.567
+      value: -0.552
       objectReference: {fileID: 0}
     - target: {fileID: 3884412306924162080, guid: d746d049d5ce0364695864552bbebeca, type: 3}
       propertyPath: m_LocalPosition.z
