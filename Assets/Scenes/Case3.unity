@@ -4894,6 +4894,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 504433026981077436, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.877
+      objectReference: {fileID: 0}
     - target: {fileID: 756559346465900207, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_Name
       value: MesaCompleta

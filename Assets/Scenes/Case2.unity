@@ -3072,6 +3072,8 @@ MonoBehaviour:
     textBox: {fileID: 1297240262}
     evidence: {fileID: 1835584263018215037, guid: f7553de6a9c98444ca3c7925a450908f, type: 3}
     spawnPoint: {fileID: 548557559}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
     dialogueLines:
     - Good morning, Mr. Judge. I want to report my coworker because he bit my apple
       and I'm out of lunch
@@ -3090,6 +3092,8 @@ MonoBehaviour:
     textBox: {fileID: 1276023892}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
     dialogueLines:
     - I was hungry and I couldn't resist. Now my stomach is happy.
     - 
@@ -4913,6 +4917,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 504433026981077436, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.901
+      objectReference: {fileID: 0}
     - target: {fileID: 756559346465900207, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_Name
       value: MesaCompleta
