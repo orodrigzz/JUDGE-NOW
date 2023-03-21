@@ -4338,6 +4338,8 @@ MonoBehaviour:
     textBox: {fileID: 1297240262}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
     dialogueLines:
     - ' Welcome to Ekagate Court, your new job, Judge. I''m sure you''re anxious
       to know how everything works around here'
@@ -4361,6 +4363,8 @@ MonoBehaviour:
     textBox: {fileID: 1276023892}
     evidence: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
     spawnPoint: {fileID: 2065784276}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
     dialogueLines:
     - Left Click - Pick Up Objects
     - Right Click - Realese Picked Objects
@@ -4386,6 +4390,8 @@ MonoBehaviour:
     textBox: {fileID: 1733115274}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 2065784276}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
     dialogueLines:
     - You can throw your hammer with Space
     - Throwing the hammer allows you to turn up the lights if you hit the switch
@@ -4405,6 +4411,8 @@ MonoBehaviour:
     textBox: {fileID: 1620547636}
     evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
     dialogueLines: []
     characterName: Mister Inspector, Richard
     characterID: Classified
@@ -6500,6 +6508,31 @@ MonoBehaviour:
   arm: {fileID: 2046991597}
   offset: {x: 0.3, y: 0.355, z: -0.17}
   originalPos: {x: 0.723, y: 0.355, z: 0.269}
+--- !u!1 &2059432917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6163331646573845978, guid: df97b4e9a9039124a8c4bfb9d931bd6b, type: 3}
+  m_PrefabInstance: {fileID: 30025919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2059432918
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059432917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 2dd011858fa87ed4eadefaa67c092f5c, type: 3}
+  m_Controller: {fileID: 9100000, guid: ddf0e8b0986737e42b2ec468888b361a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2065784275
 PrefabInstance:
   m_ObjectHideFlags: 0
