@@ -5,6 +5,22 @@ TagManager:
   serializedVersion: 2
   tags:
   - Seleccionable
+  - NPC
+  - Hammer
+  - Order
+  - Innocent
+  - Guilty
+  - Ground
+  - Table
+  - Mobile
+  - Door
+  - Switch
+  - Hand
+  - Apple
+  - Tomatoe
+  - Atril
+  - Fingerprint
+  - Skull
   layers:
   - Default
   - TransparentFX
@@ -13,9 +29,9 @@ TagManager:
   - Water
   - UI
   - Raycast Detect
-  - 
-  - 
-  - 
+  - PickUp
+  - Decoration
+  - HammerActions
   - 
   - 
   - 

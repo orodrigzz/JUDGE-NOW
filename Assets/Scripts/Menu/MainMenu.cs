@@ -7,7 +7,14 @@ public class MainMenu : MonoBehaviour
 {
     public void Tutorial()
     {
-        SceneManager.LoadScene("Welcome");
+        SceneManager.LoadScene("Tutorial");
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
+        GAME_MANAGER._GAME_MANAGER.noise = 0;
+        GAME_MANAGER._GAME_MANAGER.lastScene = null;
+        GAME_MANAGER._GAME_MANAGER.endDialogue = false;
+        GAME_MANAGER._GAME_MANAGER.courtReputation = 0.5f;
+        GAME_MANAGER._GAME_MANAGER.townReputation = 0.5f;
+
     }
 
     public void Level1()

@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8123921509383709339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8123921509383709333}
+  - component: {fileID: 8123921509383709332}
+  m_Layer: 0
+  m_Name: GAME_MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8123921509383709333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123921509383709339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8498164, y: 0.18128985, z: -2.8226244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8123921509383709332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123921509383709339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1658556aea71549ac8da6c24625d5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  courtReputation: 0.5
+  townReputation: 0.5
+  noise: 0
+  lightsOn: 0
+  courtReputationImg: {fileID: 0}
+  townReputationImg: {fileID: 0}
+  defCourtReputation: {fileID: 0}
+  defTownReputation: {fileID: 0}
+  defNoiseImg: {fileID: 0}
+  noiseImg: {fileID: 0}
+  noiseAudio: {fileID: 0}
+  isGamePaused: 0
+  isPicked: 0
+  isInspecting: 0
+  initDialogue: 0
+  endDialogue: 0
+  menuOpen: 0
+  stopArmMovement: 0
+  sensivity: 0.2
+  complaintResume: 
+  denunciantName: 
+  denunciantID: 
+  accusedName: 
+  accusedID: 
+  decisionCase: 
+  currentScene:
+    m_Handle: 0
+  reputationCanvas: {fileID: 0}
+  lastScene: 
+  eForInspect: {fileID: 0}
+  qForExitInspect: {fileID: 0}
+  mForDecisionMode: {fileID: 0}
+  mForExitDecisionMode: {fileID: 0}
+  lClickForPickItUp: {fileID: 0}
+  rClickForLetItGo: {fileID: 0}
