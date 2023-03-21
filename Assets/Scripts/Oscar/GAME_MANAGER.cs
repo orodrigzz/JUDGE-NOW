@@ -226,6 +226,12 @@ public class GAME_MANAGER : MonoBehaviour
             noise = 0;
             isGamePaused = true;
         }
+        if (currentScene.name == "Win" && reputationCanvas != null)
+        {
+            reputationCanvas.SetActive(false);
+            noise = 0;
+            isGamePaused = true;
+        }
 
         if (currentScene.name == "Game" || currentScene.name == "Tutorial" || currentScene.name == "Case2" || currentScene.name == "Case3" && reputationCanvas != null)
         {
