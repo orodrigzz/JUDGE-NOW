@@ -18,6 +18,7 @@ public class ArmRotation : MonoBehaviour
     [SerializeField] float minZ;
 
     [SerializeField] float sensibility;
+    [SerializeField] float velocity;
 
     [SerializeField]
     private string horizontalInputName = "Horizontal";
@@ -71,8 +72,8 @@ public class ArmRotation : MonoBehaviour
                     horizontalInputValue = Input.GetAxis(horizontalInputName);
                     verticalInputValue = Input.GetAxis(verticalInputName);
 
-                    float newX = currentPosition.x + horizontalInputValue;
-                    float newZ = currentPosition.z + verticalInputValue;
+                    float newX = currentPosition.x + horizontalInputValue * velocity * Time.deltaTime;
+                    float newZ = currentPosition.z + verticalInputValue * velocity * Time.deltaTime;
 
                     newX = Mathf.Clamp(newX, minX, maxX);
                     newZ = Mathf.Clamp(newZ, minZ, maxZ);

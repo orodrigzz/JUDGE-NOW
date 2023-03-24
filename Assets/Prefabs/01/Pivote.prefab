@@ -131,11 +131,12 @@ MonoBehaviour:
   fixy: 0
   rotationxmax: 89
   rbPivot: {fileID: 0}
-  minX: 0
-  maxX: 0
-  maxZ: 0
-  minZ: 0
-  sensibility: 0
+  minX: 0.023
+  maxX: 1
+  maxZ: -3.7
+  minZ: -4
+  sensibility: 0.1
+  velocity: 4
   horizontalInputName: Horizontal
   verticalInputName: Vertical
 --- !u!1 &4453674739169940067
@@ -228,6 +229,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   parent: {fileID: 4549482180541606497}
+  armHold: {fileID: 0}
   itemPicked: {fileID: 0}
   isPicked: 0
   arm: {fileID: 8345985602343871892}
