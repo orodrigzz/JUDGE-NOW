@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1903,11 +1903,11 @@ PrefabInstance:
     - target: {fileID: 3072824182456407208, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: Light
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938638682}
     - target: {fileID: 3072824182456407208, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: pointLight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 938638681}
     - target: {fileID: 5115287116233222582, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: m_Name
       value: Architect
@@ -1970,6 +1970,16 @@ GameObject:
 --- !u!1 &938638680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1489442162372033632, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+  m_PrefabInstance: {fileID: 938638678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &938638681 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 3119458301167416245, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+  m_PrefabInstance: {fileID: 938638678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &938638682 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6173903864375639397, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
   m_PrefabInstance: {fileID: 938638678}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &963476742
@@ -4715,6 +4725,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 554453827552186849, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.797
+      objectReference: {fileID: 0}
     - target: {fileID: 554453829022107185, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: m_Name
       value: SHOOTERS

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1749,11 +1749,11 @@ PrefabInstance:
     - target: {fileID: 3072824182456407208, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: Light
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1007495053}
     - target: {fileID: 3072824182456407208, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: pointLight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124644189}
     - target: {fileID: 5115287116233222582, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: m_Name
       value: Architect
@@ -1899,6 +1899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &1007495053 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6173903864375639397, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+  m_PrefabInstance: {fileID: 938638678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080079632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1489442161365584640, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
@@ -2066,6 +2071,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122332445}
   m_CullTransparentMesh: 1
+--- !u!108 &1124644189 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 3119458301167416245, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+  m_PrefabInstance: {fileID: 938638678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1201029127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,6 +4488,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 554453827552186849, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.827
+      objectReference: {fileID: 0}
+    - target: {fileID: 554453827882659338, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.591
+      objectReference: {fileID: 0}
+    - target: {fileID: 554453827882659338, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.911
+      objectReference: {fileID: 0}
     - target: {fileID: 554453829022107185, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: m_Name
       value: SHOOTERS
