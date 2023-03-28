@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 178369756767770536}
   - component: {fileID: 8094182322376571706}
   - component: {fileID: 2024937352992583258}
+  - component: {fileID: 2385811399510018438}
   m_Layer: 7
   m_Name: Manzana_Mordida
   m_TagString: Untagged
@@ -115,3 +116,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2845505134294023193, guid: 33a61bc7dc8bf764fba0f0364a6fbf2c, type: 3}
+--- !u!114 &2385811399510018438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835584263018215037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd89d7e92dcd92459d059122b38debf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
