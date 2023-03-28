@@ -76,7 +76,7 @@ public class NewDialogueSystem : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (dialogueOn && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+            if (dialogueOn)
             {
 
                 OnDialogue();
