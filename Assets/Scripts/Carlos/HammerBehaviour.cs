@@ -109,9 +109,7 @@ public class HammerBehaviour : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.TurnUpLights();
                 GAME_MANAGER._GAME_MANAGER.lightsOn = true;
-            }else
-            {
-                GAME_MANAGER._GAME_MANAGER.lightsOn = false;
+                
             }
         }
     }
