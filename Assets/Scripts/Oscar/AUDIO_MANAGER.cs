@@ -19,5 +19,12 @@ public class AUDIO_MANAGER : MonoBehaviour
                 AudioMobil.Play();
             }
         }
+        else if (pickUp.itemPicked == null && AudioMobil != null)
+        {
+            
+                Debug.Log("Stop");
+                AudioMobil.Stop();
+            
+        }
     }
 }
