@@ -21,6 +21,7 @@ TagManager:
   - Atril
   - Fingerprint
   - Skull
+  - NPC_W
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ public class HammerBehaviour : MonoBehaviour
     [SerializeField] AudioSource Interruptor;
     [SerializeField] AudioSource Ouch;
     [SerializeField] AudioSource golpeMesa;
+    [SerializeField] AudioSource OuchWoman;
 
     private void Update()
     {
@@ -79,6 +80,13 @@ public class HammerBehaviour : MonoBehaviour
             StartCoroutine(WaitForDestroy(1.5f));
         }
 
+        if (collision.gameObject.tag == "NPC_W")
+        {
+            Bonk.Play();
+            OuchWoman.Play();
+            StartCoroutine(WaitForDestroy(1.5f));
+        }
+
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door" || collision.gameObject.tag == "Atril")
         {
             //AudioMazo.Play();
@@ -109,9 +117,14 @@ public class HammerBehaviour : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.TurnUpLights();
                 GAME_MANAGER._GAME_MANAGER.lightsOn = true;
-                
+
+            }
+            else
+            {
+                GAME_MANAGER._GAME_MANAGER.lightsOn = false;
             }
         }
+        
     }
 
     public void ThrowHammer()
