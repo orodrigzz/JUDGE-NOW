@@ -1417,7 +1417,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 50, y: 180, z: 0}
 --- !u!1001 &825914077
 PrefabInstance:
@@ -3160,7 +3160,7 @@ MonoBehaviour:
     - Thanks to the police they have been able to find it together with these fingerprints.
     - 
     characterName: Marka Volteikg
-    characterID: 
+    characterID: 46342255V
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
@@ -3174,7 +3174,7 @@ MonoBehaviour:
     spawnPoint2: {fileID: 0}
     dialogueLines: []
     characterName: Rikar Hegber
-    characterID: 
+    characterID: 55142477B
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
@@ -4577,7 +4577,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2015933330
 AudioSource:
