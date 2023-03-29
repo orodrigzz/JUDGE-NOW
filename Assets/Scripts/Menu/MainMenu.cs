@@ -41,5 +41,17 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
- 
+    public void Case1()
+    {
+        SceneManager.LoadScene("Game");
+    }
+    public void Case2()
+    {
+        SceneManager.LoadScene("Case2");
+    }
+
+    public void Case3()
+    {
+        SceneManager.LoadScene("Case3");
+    }
 }
