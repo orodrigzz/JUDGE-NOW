@@ -4442,8 +4442,8 @@ MonoBehaviour:
     dialogueLines:
     - You can throw your hammer with Space
     - Throwing the hammer allows you to turn up the lights if you hit the switch
-    - 'Press M to enter and exit decision mode. Slam with the hammer: RED if you
-      found it guilty or GREEN if you found it innocent'
+    - 'Press M to enter and exit decision mode.Throw the hammer: RED if you found
+      it guilty or GREEN if you found it innocent'
     - That's it. Make your decision and...JUDGE NOW!
     - 
     characterName: Mister Inspector, Richard
