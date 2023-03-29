@@ -102,6 +102,12 @@ public class GAME_MANAGER : MonoBehaviour
 
     void Update()
     {
+        //if (noise > 0.75f)
+        //{
+        //    courtReputation = courtReputation + 0.000001f;
+        //    townReputation = townReputation + 0.000001f;
+        //}
+
         currentScene = SceneManager.GetActiveScene();
         if(currentScene.name != "CaseOver")
         {
