@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2881,9 +2881,10 @@ MonoBehaviour:
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
-    - 'Good morning, Mr. Judge. I want to report my neighbor because he has been
-      singing very loud for a few hours preventing me from sleeping '
-    - 'I bring the following tests: my mobile with a recorded audio of him singing '
+    - Good morning, Mr. Judge. I want to report my neighbour because he has been
+      singing very loud for hours preventing me from sleeping well
+    - 'I bring the following evidence: my mobile phone with a recorded audio of him
+      singing '
     - AAAA
     characterName: "Arna\xF6 Figuerjas"
     characterID: 44312862A
@@ -2902,10 +2903,10 @@ MonoBehaviour:
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
-    - 'That''s totally false, it''s ridiculous that singing is a crime, plus I didn''t
+    - 'That''s bullshit !!, it''s ridiculous that singing is a crime, plus I didn''t
       do it at night '
     - 'You want me to go to jail because I''m more handsome than you. Judge you can''t
-      permit this '
+      allow this '
     - FUCKING LOSER!!!
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
