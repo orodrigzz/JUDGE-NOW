@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 332472634003567418}
   - component: {fileID: 1395196385907748795}
   - component: {fileID: 359549364952539106}
-  - component: {fileID: 4045566935190820665}
   m_Layer: 0
   m_Name: Guilty
   m_TagString: Guilty
@@ -111,21 +110,7 @@ BoxCollider:
   m_GameObject: {fileID: 2278208336710963951}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.18670972, y: 0.18705244, z: 0.056712445}
   m_Center: {x: 0, y: -0.0000000037252907, z: 0}
---- !u!64 &4045566935190820665
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2278208336710963951}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2267269527571904676, guid: 246a04363276f1745a43a849b4fca625, type: 3}

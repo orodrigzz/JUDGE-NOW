@@ -43,12 +43,8 @@ public class HammerBehaviour : MonoBehaviour
             {
                 AudioMazo.Play();
             }
-
-            if (GAME_MANAGER._GAME_MANAGER.isPicked)
-            {
-                Debug.Log("GUILTY!!");
-                StartCoroutine(WaitForCaseOver());
-            }
+            Debug.Log("GUILTY!!");
+            StartCoroutine(WaitForCaseOver());
         }
 
         if (collision.gameObject.tag == "Innocent")
@@ -57,12 +53,8 @@ public class HammerBehaviour : MonoBehaviour
             {
                 AudioMazo.Play();
             }
-
-            if (GAME_MANAGER._GAME_MANAGER.isPicked)
-            {
-                Debug.Log("INNOCENT!!");
-                StartCoroutine(WaitForCaseOver());
-            }
+            Debug.Log("INNOCENT!!");
+            StartCoroutine(WaitForCaseOver());
         }
 
         //if (collision.gameObject.tag == "Table")
@@ -117,7 +109,6 @@ public class HammerBehaviour : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.TurnUpLights();
                 GAME_MANAGER._GAME_MANAGER.lightsOn = true;
-
             }
             else
             {

@@ -926,6 +926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaCompleta
       objectReference: {fileID: 0}
+    - target: {fileID: 886025531326135046, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.522
@@ -973,6 +977,18 @@ PrefabInstance:
     - target: {fileID: 6053496988553805676, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046060152008001710, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103305406705843191, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_Size.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103305406705843191, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_Center.y
+      value: 0.31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7282b8694e9472047a8610222111ea49, type: 3}
