@@ -74,7 +74,7 @@ public class NewDialogueSystem : MonoBehaviour
             //Ira vinculada al collaider
             CurrentDialogue();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (dialogueOn)
             {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1698,6 +1698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1488873032}
+  cameraTarget: {fileID: 0}
   speed: 1
   secs: 0
 --- !u!1 &705507993
@@ -1792,7 +1793,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 50, y: 180, z: 0}
 --- !u!1001 &729173443
 PrefabInstance:
@@ -1878,6 +1879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1488873033}
+  cameraTarget: {fileID: 0}
   speed: 1
   secs: 0
 --- !u!65 &729173446
@@ -2217,7 +2219,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[PRESS E TO CONTINUE]'
+  m_Text: '[LEFT CLICK TO CONTINUE]'
 --- !u!222 &1109970419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3982,7 +3984,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[PRESS E TO CONTINUE]'
+  m_Text: '[LEFT CLICK TO CONTINUE]'
 --- !u!222 &1687854130
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4395,7 +4397,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2015933330
 AudioSource:

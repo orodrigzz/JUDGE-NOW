@@ -1438,7 +1438,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[PRESS E TO CONTINUE]'
+  m_Text: '[LEFT CLICK TO CONTINUE]'
 --- !u!222 &368564367
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1547,6 +1547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 252030015}
+  cameraTarget: {fileID: 0}
   speed: 2
   secs: 0
 --- !u!65 &395486034
@@ -2779,7 +2780,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[PRESS E TO CONTINUE]'
+  m_Text: '[LEFT CLICK TO CONTINUE]'
 --- !u!222 &1109970419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5262,7 +5263,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[PRESS E TO CONTINUE]'
+  m_Text: '[LEFT CLICK TO CONTINUE]'
 --- !u!222 &1687854130
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5872,7 +5873,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[PRESS E TO CONTINUE]'
+  m_Text: '[LEFT CLICK TO CONTINUE]'
 --- !u!222 &1939181060
 CanvasRenderer:
   m_ObjectHideFlags: 0
