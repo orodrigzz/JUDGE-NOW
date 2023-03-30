@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4289565527438403542}
   m_Layer: 0
-  m_Name: Target
+  m_Name: ComplainantTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4289565527438403543}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.047, y: -0.317, z: 0.23}
+  m_LocalPosition: {x: -0.047, y: -0.317, z: -0.507}
   m_LocalScale: {x: 0.83333325, y: 0.8333331, z: 0.8333331}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4289565528444965046}
   m_Layer: 0
-  m_Name: Target
+  m_Name: DefendantTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4289565528444965047}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.016, y: -0.317, z: 0.246}
+  m_LocalPosition: {x: 0.016, y: -0.317, z: -0.491}
   m_LocalScale: {x: 0.83333325, y: 0.8333331, z: 0.8333331}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 384aedd8d160f4d4687d366b3cd4a88a, type: 2}
     - target: {fileID: 919132149155446097, guid: 35467380ad1c4ad40a585943d1c5759a, type: 3}
       propertyPath: m_Name
-      value: AtrilCutre
+      value: Complainant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 35467380ad1c4ad40a585943d1c5759a, type: 3}
       propertyPath: m_TagString
@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 384aedd8d160f4d4687d366b3cd4a88a, type: 2}
     - target: {fileID: 919132149155446097, guid: 35467380ad1c4ad40a585943d1c5759a, type: 3}
       propertyPath: m_Name
-      value: AtrilCutre
+      value: Defendant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 35467380ad1c4ad40a585943d1c5759a, type: 3}
       propertyPath: m_TagString

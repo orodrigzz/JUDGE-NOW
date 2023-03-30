@@ -122,13 +122,17 @@ public class PickUpSystem : MonoBehaviour
                 Debug.DrawRay(transform.position + origin, transform.forward * 100, Color.green);
             }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            EnterInspectionMode();
-        }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ExitInspectionMode();
+            if(GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+            {
+                EnterInspectionMode();
+            }
+            else if (GAME_MANAGER._GAME_MANAGER.isInspecting == true)
+            {
+                ExitInspectionMode();
+            }
+
         }
         if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {

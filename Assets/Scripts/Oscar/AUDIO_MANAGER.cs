@@ -15,9 +15,12 @@ public class AUDIO_MANAGER : MonoBehaviour
         {
             if (pickUp.itemPicked.tag == "Mobile")
             {
-                Debug.Log("Rogira");
                 AudioMobil.Play();
             }
+        }
+        else if (pickUp.itemPicked == null && AudioMobil != null)
+        {
+            AudioMobil.Stop();
         }
     }
 }

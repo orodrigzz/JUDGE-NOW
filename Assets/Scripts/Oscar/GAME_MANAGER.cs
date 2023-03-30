@@ -23,7 +23,7 @@ public class GAME_MANAGER : MonoBehaviour
     [SerializeField] private Image defNoiseImg;
     [SerializeField] private Image noiseImg;
 
-    [SerializeField] private AudioSource noiseAudio;
+    [SerializeField] public AudioSource noiseAudio;
     #endregion
 
     #region GameBasics
@@ -102,6 +102,12 @@ public class GAME_MANAGER : MonoBehaviour
 
     void Update()
     {
+        //if (noise > 0.75f)
+        //{
+        //    courtReputation = courtReputation + 0.000001f;
+        //    townReputation = townReputation + 0.000001f;
+        //}
+
         currentScene = SceneManager.GetActiveScene();
         if(currentScene.name != "CaseOver")
         {
@@ -147,18 +153,18 @@ public class GAME_MANAGER : MonoBehaviour
                 {
                     if(currentScene.name != "Tutorial")
                     {
-                        noise = noise + 0.0004f;
+                        noise = noise + 0.0001f;
                         if (noiseAudio != null)
                         {
-                            noiseAudio.volume = noiseAudio.volume + 0.0004f;
+                            noiseAudio.volume = noiseAudio.volume + 0.0001f;
                         }
                     }
                     else
                     {
-                        noise = noise + 0.0003f;
+                        noise = noise + 0.00025f;
                         if (noiseAudio != null)
                         {
-                            noiseAudio.volume = noiseAudio.volume + 0.003f;
+                            noiseAudio.volume = noiseAudio.volume + 0.0025f;
                         }
                     }
                     
@@ -328,8 +334,8 @@ public class GAME_MANAGER : MonoBehaviour
 
     public void TurnUpLights()
     {
-        noise = noise - 0.5f;
-        noiseAudio.volume = noiseAudio.volume - 0.5f;
+        noise = noise - 1f;
+        noiseAudio.volume = noiseAudio.volume - 1f;
 
         if (noise < 0 || noiseAudio.volume < 0)
         {

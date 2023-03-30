@@ -14,6 +14,7 @@ public class HammerBehaviour : MonoBehaviour
     [SerializeField] AudioSource Interruptor;
     [SerializeField] AudioSource Ouch;
     [SerializeField] AudioSource golpeMesa;
+    [SerializeField] AudioSource OuchWoman;
 
     private void Update()
     {
@@ -42,12 +43,8 @@ public class HammerBehaviour : MonoBehaviour
             {
                 AudioMazo.Play();
             }
-
-            if (GAME_MANAGER._GAME_MANAGER.isPicked)
-            {
-                Debug.Log("GUILTY!!");
-                StartCoroutine(WaitForCaseOver());
-            }
+            Debug.Log("GUILTY!!");
+            StartCoroutine(WaitForCaseOver());
         }
 
         if (collision.gameObject.tag == "Innocent")
@@ -56,12 +53,8 @@ public class HammerBehaviour : MonoBehaviour
             {
                 AudioMazo.Play();
             }
-
-            if (GAME_MANAGER._GAME_MANAGER.isPicked)
-            {
-                Debug.Log("INNOCENT!!");
-                StartCoroutine(WaitForCaseOver());
-            }
+            Debug.Log("INNOCENT!!");
+            StartCoroutine(WaitForCaseOver());
         }
 
         //if (collision.gameObject.tag == "Table")
@@ -76,6 +69,13 @@ public class HammerBehaviour : MonoBehaviour
         {
             Bonk.Play();
             Ouch.Play();
+            StartCoroutine(WaitForDestroy(1.5f));
+        }
+
+        if (collision.gameObject.tag == "NPC_W")
+        {
+            Bonk.Play();
+            OuchWoman.Play();
             StartCoroutine(WaitForDestroy(1.5f));
         }
 
@@ -109,11 +109,13 @@ public class HammerBehaviour : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.TurnUpLights();
                 GAME_MANAGER._GAME_MANAGER.lightsOn = true;
-            }else
+            }
+            else
             {
                 GAME_MANAGER._GAME_MANAGER.lightsOn = false;
             }
         }
+        
     }
 
     public void ThrowHammer()

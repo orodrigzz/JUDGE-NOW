@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'THE DEFENDANT HAS BEEN DECLARED:'
+  m_Text: 'THE ACCUSED HAS BEEN DECLARED:'
 --- !u!222 &1040476820
 CanvasRenderer:
   m_ObjectHideFlags: 0

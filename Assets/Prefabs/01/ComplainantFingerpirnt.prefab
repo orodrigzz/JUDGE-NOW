@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 633265749935354178}
   - component: {fileID: 8606639744923683304}
   - component: {fileID: 298492390645777254}
+  - component: {fileID: -111108059042926183}
   m_Layer: 7
   m_Name: ComplainantFingerpirnt
   m_TagString: Fingerprint
@@ -114,3 +115,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &-111108059042926183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425727554223788183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd89d7e92dcd92459d059122b38debf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

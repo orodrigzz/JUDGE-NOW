@@ -74,14 +74,13 @@ public class NewDialogueSystem : MonoBehaviour
             //Ira vinculada al collaider
             CurrentDialogue();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            //Funcion que ira vinculada al input una vez iniciado el dialogo
-            if (dialogueOn && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+            if (dialogueOn)
             {
+
                 OnDialogue();
             }
-
         }
         
         if (dialoguesIndex >= 0)
