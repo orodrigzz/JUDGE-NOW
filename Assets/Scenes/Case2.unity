@@ -748,6 +748,30 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1778785543267771893, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 251038154}
+    - target: {fileID: 1778785543267771893, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: offset
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778785543267771893, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: rotationSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881671932292229991, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Center.x
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881671932292229991, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Center.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881671932292229991, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Center.z
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 3431143354151240309, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: maxX
       value: 5
@@ -795,6 +819,10 @@ PrefabInstance:
     - target: {fileID: 4454771716222996904, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570388741818049478, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4570388741818049478, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: hammerBehaviour
@@ -973,6 +1001,7 @@ PrefabInstance:
     - {fileID: 337596222, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
     - {fileID: 3431143354151240309, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
     - {fileID: 4270530756678385830, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+    - {fileID: 1778785543267771893, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
 --- !u!4 &251038149 stripped
 Transform:
@@ -1020,6 +1049,11 @@ MonoBehaviour:
   arm: {fileID: 251038149}
   offset: {x: 0.3, y: 0.355, z: -0.17}
   originalPos: {x: 0, y: 0, z: 0}
+--- !u!20 &251038154 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4570388742856942542, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+  m_PrefabInstance: {fileID: 251038148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &254455016
 GameObject:
   m_ObjectHideFlags: 0

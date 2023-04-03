@@ -141,7 +141,7 @@ public class PickUpSystem : MonoBehaviour
             isPicked = false;
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetMouseButtonDown(0) && isPicked && itemPicked.tag != "Hammer")
         {
             if (GAME_MANAGER._GAME_MANAGER.isInspecting == false)
             {
@@ -261,9 +261,12 @@ public class PickUpSystem : MonoBehaviour
     {
         float xAxis = Input.GetAxis("Mouse X") * rotationSpeed;
         float yAxis = Input.GetAxis("Mouse Y") * rotationSpeed;
-
-        itemPicked.transform.Rotate(Vector3.up, -xAxis, Space.World);
-        itemPicked.transform.Rotate(Vector3.right, yAxis, Space.World);
+        if(itemPicked != null)
+        {
+            itemPicked.transform.Rotate(Vector3.up, -xAxis, Space.World);
+            itemPicked.transform.Rotate(Vector3.right, yAxis, Space.World);
+        }
+        
     }
 
     /*    private void OnDrawGizmos()

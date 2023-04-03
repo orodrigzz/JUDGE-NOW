@@ -3798,6 +3798,18 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2881671932292229991, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Center.x
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881671932292229991, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Center.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881671932292229991, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
+      propertyPath: m_Center.z
+      value: -0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 3431143354151240309, guid: 3d87bf6d501e93749b347aa907f9a5c9, type: 3}
       propertyPath: maxX
       value: 5

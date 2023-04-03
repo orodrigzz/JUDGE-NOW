@@ -122,7 +122,7 @@ public class HammerBehaviour : MonoBehaviour
     {
         if(rb != null)
         {
-            rb.AddForce(direction * speed);
+            rb.AddForce(direction * speed * -1);
         }
     }
 
