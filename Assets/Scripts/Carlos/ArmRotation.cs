@@ -103,7 +103,7 @@ public class ArmRotation : MonoBehaviour
         if (other.gameObject.tag == "Hammer")
         {
             fixy = false;
-            Debug.LogError("HammerTime");
+            //Debug.LogError("HammerTime");
         }
     }
 
@@ -117,7 +117,7 @@ public class ArmRotation : MonoBehaviour
         if (other.gameObject.tag == "Hammer")
         {
             fixy = false;
-            Debug.LogError("HammerExit");
+            //Debug.LogError("HammerExit");
         }
     }
 

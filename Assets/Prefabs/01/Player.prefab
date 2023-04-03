@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2774741658195449466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0, z: -2.944}
+  m_LocalPosition: {x: -0.148, y: -0.019, z: 0.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2774741658626992365}
+  cameraTarget: {fileID: 0}
   cam: {fileID: 2774741658264071920}
   hSpeed: 145
   vSpeed: 145
@@ -519,9 +520,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2774741659175497465}
   - component: {fileID: 2774741659175497464}
+  - component: {fileID: 4708158136057857300}
   m_Layer: 0
   m_Name: Rayorigin
-  m_TagString: Untagged
+  m_TagString: ObjectDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,15 +535,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2774741659175497466}
-  m_LocalRotation: {x: 0.3062317, y: -0.620024, z: 0.63702995, w: 0.3405661}
-  m_LocalPosition: {x: -0.41698968, y: -0.08800013, z: 0.24609622}
-  m_LocalScale: {x: 0.56278247, y: 0.27613524, z: 0.20108236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.012, y: 0.028, z: 1.296}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2774741658195449465}
   m_Father: {fileID: 2143725884300552873}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 86.895, y: -336.296, z: -270.878}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2774741659175497464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,8 +571,34 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   parent: {fileID: 2774741658195449466}
+  armHold: {fileID: 0}
   itemPicked: {fileID: 0}
   isPicked: 0
+  arm: {fileID: 0}
+  camera: {fileID: 0}
+  originaPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0}
+  cameraOriginaPosition: {x: 0, y: 0, z: 0}
+  cameraOriginalRotation: {x: 0, y: 0, z: 0}
+  startedCameraPosition: {x: 0, y: 0, z: 0}
+  startedCameraRotation: {x: 0, y: 0, z: 0}
+  rotationSpeed: 0
+  offset: 0
+  isInspecting: 0
+  hammerBehaviour: {fileID: 0}
+--- !u!135 &4708158136057857300
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2774741659175497466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.29
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3255752580116026383
 GameObject:
   m_ObjectHideFlags: 0
