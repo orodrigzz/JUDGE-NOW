@@ -3711,6 +3711,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691194778}
   m_CullTransparentMesh: 1
+--- !u!4 &1714900546 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5961844228120056773, guid: 7259233fc6f5eff45bde7daa4176107c, type: 3}
+  m_PrefabInstance: {fileID: 1285122331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1725626354 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7046060152008001710, guid: 7282b8694e9472047a8610222111ea49, type: 3}
@@ -4143,28 +4148,52 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 554453827552186849, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 554453827552186849, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.827
+      value: 5.913
+      objectReference: {fileID: 0}
+    - target: {fileID: 554453827552186849, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -21.841
+      objectReference: {fileID: 0}
+    - target: {fileID: 554453827882659338, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.506
       objectReference: {fileID: 0}
     - target: {fileID: 554453827882659338, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.591
+      value: 4.732
       objectReference: {fileID: 0}
     - target: {fileID: 554453827882659338, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23.911
+      value: -18.803
       objectReference: {fileID: 0}
     - target: {fileID: 554453829022107185, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: m_Name
       value: SHOOTERS
       objectReference: {fileID: 0}
     - target: {fileID: 554453829022107190, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1714900546}
+    - target: {fileID: 554453829022107190, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: Proyectile
+      value: 
+      objectReference: {fileID: 2986320639878345180, guid: 222235cb2bea47a48939231af6dbb72f, type: 3}
+    - target: {fileID: 554453829022107190, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
+      propertyPath: layer.m_Bits
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 554453829022107190, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: leftShooterTime
-      value: 15
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 554453829022107190, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: rightShooterTime
-      value: 25
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 554453829022107191, guid: bb0a25e71bfa46c41aa2a3a18f6a340d, type: 3}
       propertyPath: m_RootOrder

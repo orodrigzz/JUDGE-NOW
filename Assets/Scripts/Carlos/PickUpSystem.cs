@@ -50,64 +50,7 @@ public class PickUpSystem : MonoBehaviour
         }
 
         GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
-        #region OldPickUpSystem
-        /*
-        foreach (Vector3 origin in rayOrigins)
-            {
-                Ray ray = new Ray(transform.position + origin, transform.forward);
-                RaycastHit hit;
-                if(Physics.Raycast(ray, out hit, 10f, layer))
-                {
-                    if(isPicked == false)
-                    {
-                        GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(true);
-                    }
-                    
-                  
-                    if (Input.GetMouseButtonDown(0) && !isPicked)
-                    {
-                        armHold.SetActive(true);
-                        arm.SetActive(false);
-                        itemPicked = hit.rigidbody;
-                        itemPicked.transform.localScale = transform.parent.localScale;
-                        itemPicked.transform.rotation = parent.transform.rotation;                       
-                        itemPicked.transform.SetParent(parent.transform);
-                        itemPicked.transform.localPosition = parent.transform.localPosition;
-                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
-                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
-                        if (itemPicked != null)
-                        {
-                            itemPicked.useGravity = false;
-                            itemPicked.constraints = RigidbodyConstraints.FreezeAll;
-                            isPicked = true;
-                            GAME_MANAGER._GAME_MANAGER.isPicked = true;
-                        }
-                    }
-                }
-                else
-                {
-                    
-                }
-                Debug.DrawRay(transform.position + origin, transform.forward * 100, Color.green);
-            }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if(GAME_MANAGER._GAME_MANAGER.isInspecting == false)
-            {
-                EnterInspectionMode();
-            }
-            else if (GAME_MANAGER._GAME_MANAGER.isInspecting == true)
-            {
-                ExitInspectionMode();
-            }
-
-        }
-        if (GAME_MANAGER._GAME_MANAGER.isInspecting)
-        {
-            InspectObject();
-        }*/
-        #endregion
+        
         if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
             armHold.SetActive(false);
@@ -269,10 +212,7 @@ public class PickUpSystem : MonoBehaviour
         
     }
 
-    /*    private void OnDrawGizmos()
-        {
-            Gizmos.DrawLine(transform.position, camera.transform.position + (camera.transform.forward * offset));
-        }*/
+   
 
    
 
