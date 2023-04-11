@@ -102,11 +102,11 @@ public class GAME_MANAGER : MonoBehaviour
 
     void Update()
     {
-        //if (noise > 0.75f)
-        //{
-        //    courtReputation = courtReputation + 0.000001f;
-        //    townReputation = townReputation + 0.000001f;
-        //}
+        if (noise > 0.75f)
+        {
+            courtReputation = courtReputation + 0.000001f;
+            townReputation = townReputation + 0.000001f;
+        }
 
         currentScene = SceneManager.GetActiveScene();
         if(currentScene.name != "CaseOver")
@@ -132,13 +132,13 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (!isGamePaused)
             {
-                if (townReputation < 0.20f || townReputation > 0.80f && currentScene.name != "Fired")
+                if (townReputation < 0.15f || townReputation > 0.85f && currentScene.name != "Fired")
                 {
                     SceneManager.LoadScene("Fired");
                     isGamePaused = true;
                 }
 
-                if (courtReputation < 0.20f || courtReputation > 0.80f && currentScene.name != "Fired")
+                if (courtReputation < 0.15f || courtReputation > 0.85f && currentScene.name != "Fired")
                 {
                     SceneManager.LoadScene("Fired");
                     isGamePaused = true;
@@ -256,9 +256,9 @@ public class GAME_MANAGER : MonoBehaviour
     //Reputation
     public void goodCase()
     {
-        courtReputation = courtReputation + 0.1f;
-        townReputation = townReputation + 0.1f;
-
+        courtReputation = courtReputation + 0.08f;
+        townReputation = townReputation + 0.08f;
+        
         if (currentScene.name == "Game")
         {
             decisionCase = "INNOCENT";
@@ -271,8 +271,8 @@ public class GAME_MANAGER : MonoBehaviour
 
     public void badCase()
     {
-        courtReputation = courtReputation - 0.1f;
-        townReputation = townReputation - 0.1f;
+        courtReputation = courtReputation - 0.08f;
+        townReputation = townReputation - 0.08f;
 
         if (currentScene.name == "Game")
         {
@@ -322,8 +322,8 @@ public class GAME_MANAGER : MonoBehaviour
     //Callar sala
     public void Order()
     {
-        noise = noise - 0.05f;
-        noiseAudio.volume = noiseAudio.volume - 0.05f;
+        noise = noise - 0.03f;
+        noiseAudio.volume = noiseAudio.volume - 0.03f;
 
         if (noise < 0 || noiseAudio.volume < 0)
         {
