@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class HammerBehaviour : MonoBehaviour
 {
-    [SerializeField] float speed;
+   
     [SerializeField] Rigidbody rb;
-    [SerializeField] Vector3 direction;
+    
 
     [SerializeField] AudioSource AudioMazo;
     [SerializeField] AudioSource Bonk;
@@ -19,7 +19,7 @@ public class HammerBehaviour : MonoBehaviour
     private void Update()
     {
         rb = GetComponent<Rigidbody>();
-        direction = -this.transform.right;
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -118,13 +118,7 @@ public class HammerBehaviour : MonoBehaviour
         
     }
 
-    public void ThrowHammer()
-    {
-        if(rb != null)
-        {
-            rb.AddForce(direction * speed * -1);
-        }
-    }
+   
 
     IEnumerator WaitForDestroy(float secs)
     {

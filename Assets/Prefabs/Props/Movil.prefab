@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -5402015847289791522}
   - component: {fileID: 73483677128612786}
   - component: {fileID: 9214347823295262311}
+  - component: {fileID: 7322216056695488861}
   m_Layer: 7
   m_Name: Movil
   m_TagString: Mobile
@@ -142,6 +143,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd89d7e92dcd92459d059122b38debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7322216056695488861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754136685962148648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865301ea9ecc1a246806d09fdc391d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 400
+  rb: {fileID: -6284615298389785563}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!1001 &5291556609803639949
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 7649798625332317363}
   - component: {fileID: -43913482111905591}
   - component: {fileID: 5403296638947121432}
+  - component: {fileID: 8528078485179794057}
   m_Layer: 7
   m_Name: MazaJuez
   m_TagString: Hammer
@@ -133,9 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525f2d1a306d85f4c80277500983b0f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 111
   rb: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
   AudioMazo: {fileID: 1389130602186615703}
   Bonk: {fileID: 7649798625332317363}
   Interruptor: {fileID: 1437329030932361313}
@@ -718,3 +717,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8528078485179794057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884210492833305462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865301ea9ecc1a246806d09fdc391d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 400
+  rb: {fileID: 1650400643134373759}
+  direction: {x: 0, y: 0, z: 0}

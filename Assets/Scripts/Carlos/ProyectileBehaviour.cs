@@ -4,23 +4,17 @@ using UnityEngine;
 
 public class ProyectileBehaviour : MonoBehaviour
 {
-    public float speed = 10f;
-    public Transform player;
-    public Vector3 direction;
-    private Rigidbody rb;
+    
 
-    private void Awake()
-    {
-        direction = (player.position - transform.position).normalized;
-    }
+    
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+      
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        rb.AddForce(direction * speed);
+        Destroy(this, 3f);
     }
     private void OnTriggerEnter(Collider other)
     {

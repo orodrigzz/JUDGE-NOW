@@ -29,7 +29,7 @@ public class PickUpSystem : MonoBehaviour
     #endregion
 
     #region ThrowHammerMechanic
-    [SerializeField] HammerBehaviour hammerBehaviour;
+    [SerializeField] ThrowableObject throwableObject;
     #endregion
 
     private void Start()
@@ -46,7 +46,7 @@ public class PickUpSystem : MonoBehaviour
     {
         if(itemPicked != null)
         {
-            hammerBehaviour = itemPicked.GetComponent<HammerBehaviour>();
+            throwableObject = itemPicked.GetComponent<ThrowableObject>();
         }
 
         GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
@@ -73,7 +73,7 @@ public class PickUpSystem : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
-            hammerBehaviour.ThrowHammer();
+            throwableObject.Throw();
             if (itemPicked != null)
             {
                 itemPicked.transform.SetParent(null);
