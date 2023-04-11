@@ -572,7 +572,7 @@ MonoBehaviour:
   rotationSpeed: 15
   offset: 1
   isInspecting: 0
-  hammerBehaviour: {fileID: 0}
+  throwableObject: {fileID: 0}
 --- !u!135 &4864989213788480374
 SphereCollider:
   m_ObjectHideFlags: 0

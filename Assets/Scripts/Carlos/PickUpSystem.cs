@@ -71,7 +71,7 @@ public class PickUpSystem : MonoBehaviour
             isPicked = false;
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+        if (Input.GetKeyUp(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
             throwableObject.Throw();
             if (itemPicked != null)

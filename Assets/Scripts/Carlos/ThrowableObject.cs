@@ -7,6 +7,7 @@ public class ThrowableObject : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] Rigidbody rb;
     [SerializeField] Vector3 direction;
+    
     void Start()
     {
         
@@ -17,6 +18,7 @@ public class ThrowableObject : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         direction = -this.transform.right;
+        
     }
 
     public void Throw()

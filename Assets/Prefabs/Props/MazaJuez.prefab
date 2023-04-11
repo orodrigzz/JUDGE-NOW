@@ -732,3 +732,4 @@ MonoBehaviour:
   speed: 400
   rb: {fileID: 1650400643134373759}
   direction: {x: 0, y: 0, z: 0}
+  lineRenderer: {fileID: 0}
