@@ -52,7 +52,7 @@ MonoBehaviour:
   Shooter_R: {fileID: 554453827552186849}
   Proyectile: {fileID: 2986320639878345180, guid: 222235cb2bea47a48939231af6dbb72f, type: 3}
   rightShooterTargetTime: 0
-  rightShooterTime: 3
+  rightShooterTime: 20
   rightVel: {x: 0, y: 0, z: 0}
 --- !u!1 &554453827882659381
 GameObject:
@@ -106,7 +106,7 @@ MonoBehaviour:
   Shooter_L: {fileID: 554453827882659338}
   Proyectile: {fileID: 2986320639878345180, guid: 222235cb2bea47a48939231af6dbb72f, type: 3}
   leftShooterTargetTime: 0
-  leftShooterTime: 4
+  leftShooterTime: 30
   leftVel: {x: 0, y: 0, z: 0}
 --- !u!1 &554453829022107185
 GameObject:
