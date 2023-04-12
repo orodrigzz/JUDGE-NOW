@@ -31,6 +31,9 @@ public class PickUpSystem : MonoBehaviour
     #region ThrowHammerMechanic
     [SerializeField] ThrowableObject throwableObject;
     [SerializeField] LineRenderer laserPointer;
+    [SerializeField] Transform point0;
+    [SerializeField] Transform point1;
+    [SerializeField] Transform point2;
     
     #endregion
 
@@ -81,7 +84,19 @@ public class PickUpSystem : MonoBehaviour
             if(itemPicked != null)
             {
                 laserPointer.enabled = true;
-                laserPointer.SetPositions(new Vector3[] { transform.position, transform.position + itemPicked.transform.right * 10f });
+
+                laserPointer.positionCount = 200;
+                float t = 0f;
+                Vector3 B = new Vector3(0, 0, 0);
+                for (int i = 0; i < laserPointer.positionCount; i++)
+                {
+                    B = (1 - t) * (1 - t) * point0.position + 2 * (1 - t) * t * point1.position + t * t * point2.position;
+                    laserPointer.SetPosition(i, B);
+                    t += (1 / (float)laserPointer.positionCount);
+                }
+
+                
+
             }
             
         }

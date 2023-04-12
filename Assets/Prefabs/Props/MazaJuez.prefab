@@ -729,7 +729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865301ea9ecc1a246806d09fdc391d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
+  speed: 1200
   rb: {fileID: 1650400643134373759}
   direction: {x: 0, y: 0, z: 0}
-  lineRenderer: {fileID: 0}
