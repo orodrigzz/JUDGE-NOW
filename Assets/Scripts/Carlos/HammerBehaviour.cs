@@ -19,7 +19,6 @@ public class HammerBehaviour : MonoBehaviour
     private void Update()
     {
         rb = GetComponent<Rigidbody>();
-        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -82,7 +81,11 @@ public class HammerBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door" || collision.gameObject.tag == "Atril")
         {
             //AudioMazo.Play();
-            StartCoroutine(WaitForDestroy(1));
+            if(GAME_MANAGER._GAME_MANAGER.isPicked == false)
+            {
+                StartCoroutine(WaitForDestroy(1));
+            }
+           
         }
 
         if (collision.gameObject.tag == "Apple" || collision.gameObject.tag == "Tomatoe" || collision.gameObject.tag == "Mobile")

@@ -30,6 +30,8 @@ public class PickUpSystem : MonoBehaviour
 
     #region ThrowHammerMechanic
     [SerializeField] ThrowableObject throwableObject;
+    [SerializeField] LineRenderer laserPointer;
+    
     #endregion
 
     private void Start()
@@ -40,6 +42,8 @@ public class PickUpSystem : MonoBehaviour
         arm.SetActive(true);
         GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
         GAME_MANAGER._GAME_MANAGER.rClickForLetItGo.SetActive(false);
+        laserPointer.enabled = false;
+       
     }
 
     private void Update()
@@ -71,9 +75,23 @@ public class PickUpSystem : MonoBehaviour
             isPicked = false;
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
         }
+        if(Input.GetKey(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+        {
+           
+            if(itemPicked != null)
+            {
+                laserPointer.enabled = true;
+                laserPointer.SetPositions(new Vector3[] { transform.position, transform.position + itemPicked.transform.right * 10f });
+            }
+            
+        }
         if (Input.GetKeyUp(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
-            throwableObject.Throw();
+            if(throwableObject != null)
+            {
+                throwableObject.Throw();
+            }
+            
             if (itemPicked != null)
             {
                 itemPicked.transform.SetParent(null);
@@ -83,7 +101,9 @@ public class PickUpSystem : MonoBehaviour
             itemPicked = null;
             isPicked = false;
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
+            laserPointer.enabled = false;
         }
+        
         if (Input.GetMouseButtonDown(0) && isPicked && itemPicked.tag != "Hammer")
         {
             if (GAME_MANAGER._GAME_MANAGER.isInspecting == false)
