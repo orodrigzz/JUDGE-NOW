@@ -29,7 +29,9 @@ public class PickUpSystem : MonoBehaviour
     #endregion
 
     #region ThrowHammerMechanic
-    [SerializeField] HammerBehaviour hammerBehaviour;
+    [SerializeField] ThrowableObject throwableObject;
+    [SerializeField] LineRenderer laserPointer;
+    
     #endregion
 
     private void Start()
@@ -40,91 +42,71 @@ public class PickUpSystem : MonoBehaviour
         arm.SetActive(true);
         GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
         GAME_MANAGER._GAME_MANAGER.rClickForLetItGo.SetActive(false);
+        laserPointer.enabled = false;
+       
     }
 
     private void Update()
     {
         if(itemPicked != null)
         {
-            hammerBehaviour = itemPicked.GetComponent<HammerBehaviour>();
+            throwableObject = itemPicked.GetComponent<ThrowableObject>();
         }
 
         GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(false);
         
-        foreach (Vector3 origin in rayOrigins)
-            {
-                Ray ray = new Ray(transform.position + origin, transform.forward);
-                RaycastHit hit;
-                if(Physics.Raycast(ray, out hit, 10f, layer))
-                {
-                    if(isPicked == false)
-                    {
-                        GAME_MANAGER._GAME_MANAGER.lClickForPickItUp.SetActive(true);
-                    }
-                    
-                  
-                    if (Input.GetMouseButtonDown(0) && !isPicked)
-                    {
-                        armHold.SetActive(true);
-                        arm.SetActive(false);
-                        itemPicked = hit.rigidbody;
-                        itemPicked.transform.localScale = transform.parent.localScale;
-                        itemPicked.transform.rotation = parent.transform.rotation;                       
-                        itemPicked.transform.SetParent(parent.transform);
-                        itemPicked.transform.localPosition = parent.transform.localPosition;
-                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
-                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
-                        if (itemPicked != null)
-                        {
-                            itemPicked.useGravity = false;
-                            itemPicked.constraints = RigidbodyConstraints.FreezeAll;
-                            isPicked = true;
-                            GAME_MANAGER._GAME_MANAGER.isPicked = true;
-                        }
-                    }
-                }
-                else
-                {
-                    if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
-                    {
-                        armHold.SetActive(false);
-                        arm.SetActive(true);
-                        
-                        if (itemPicked != null)
-                        {
-                            itemPicked.transform.SetParent(null);
-                            itemPicked.useGravity = true;
-                            itemPicked.constraints = RigidbodyConstraints.None;
-                        }
-                        if (GAME_MANAGER._GAME_MANAGER.endDialogue)
-                        {
-                            GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
-                            GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
-                        }                
-                        itemPicked = null;
-                        isPicked = false;
-                        GAME_MANAGER._GAME_MANAGER.isPicked = false;
-                    }
-                        if(Input.GetKeyDown(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
-                        {
-                           hammerBehaviour.ThrowHammer();
-                            if (itemPicked != null)
-                            {
-                                itemPicked.transform.SetParent(null);
-                                itemPicked.useGravity = true;
-                                itemPicked.constraints = RigidbodyConstraints.None;
-                            }
-                            itemPicked = null;
-                            isPicked = false;
-                            GAME_MANAGER._GAME_MANAGER.isPicked = false;
-                        }
-                }
-                Debug.DrawRay(transform.position + origin, transform.forward * 100, Color.green);
-            }
-
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
-            if(GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+            armHold.SetActive(false);
+            arm.SetActive(true);
+
+            if (itemPicked != null)
+            {
+                itemPicked.transform.SetParent(null);
+                itemPicked.useGravity = true;
+                itemPicked.constraints = RigidbodyConstraints.None;
+            }
+            if (GAME_MANAGER._GAME_MANAGER.endDialogue)
+            {
+                GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
+                GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+            }
+            itemPicked = null;
+            isPicked = false;
+            GAME_MANAGER._GAME_MANAGER.isPicked = false;
+        }
+        if(Input.GetKey(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+        {
+           
+            if(itemPicked != null)
+            {
+                laserPointer.enabled = true;
+                laserPointer.SetPositions(new Vector3[] { transform.position, transform.position + itemPicked.transform.right * 10f });
+            }
+            
+        }
+        if (Input.GetKeyUp(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+        {
+            if(throwableObject != null)
+            {
+                throwableObject.Throw();
+            }
+            
+            if (itemPicked != null)
+            {
+                itemPicked.transform.SetParent(null);
+                itemPicked.useGravity = true;
+                itemPicked.constraints = RigidbodyConstraints.None;
+            }
+            itemPicked = null;
+            isPicked = false;
+            GAME_MANAGER._GAME_MANAGER.isPicked = false;
+            laserPointer.enabled = false;
+        }
+        
+        if (Input.GetMouseButtonDown(0) && isPicked && itemPicked.tag != "Hammer")
+        {
+            if (GAME_MANAGER._GAME_MANAGER.isInspecting == false)
             {
                 EnterInspectionMode();
             }
@@ -242,13 +224,43 @@ public class PickUpSystem : MonoBehaviour
     {
         float xAxis = Input.GetAxis("Mouse X") * rotationSpeed;
         float yAxis = Input.GetAxis("Mouse Y") * rotationSpeed;
-
-        itemPicked.transform.Rotate(Vector3.up, -xAxis, Space.World);
-        itemPicked.transform.Rotate(Vector3.right, yAxis, Space.World);
+        if(itemPicked != null)
+        {
+            itemPicked.transform.Rotate(Vector3.up, -xAxis, Space.World);
+            itemPicked.transform.Rotate(Vector3.right, yAxis, Space.World);
+        }
+        
     }
 
-    private void OnDrawGizmos()
+   
+
+   
+
+    private void OnTriggerStay(Collider other)
     {
-        Gizmos.DrawLine(transform.position, camera.transform.position + (camera.transform.forward * offset));
+        if (other.gameObject.layer == 7)
+        {
+            Debug.Log("PICK");
+            if (Input.GetMouseButtonDown(0) && !isPicked)
+            {
+                armHold.SetActive(true);
+                arm.SetActive(false);
+                itemPicked = other.gameObject.GetComponent<Rigidbody>();
+                itemPicked.transform.localScale = transform.parent.localScale;
+                itemPicked.transform.rotation = parent.transform.rotation;
+                itemPicked.transform.SetParent(parent.transform);
+                itemPicked.transform.localPosition = parent.transform.localPosition;
+                GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+                if (itemPicked != null)
+                {
+                    itemPicked.useGravity = false;
+                    itemPicked.constraints = RigidbodyConstraints.FreezeAll;
+                    isPicked = true;
+                    GAME_MANAGER._GAME_MANAGER.isPicked = true;
+                }
+            }
+
+        }
     }
 }

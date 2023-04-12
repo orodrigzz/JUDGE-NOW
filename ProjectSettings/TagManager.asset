@@ -22,6 +22,7 @@ TagManager:
   - Fingerprint
   - Skull
   - NPC_W
+  - ObjectDetector
   layers:
   - Default
   - TransparentFX
