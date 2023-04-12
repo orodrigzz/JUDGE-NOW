@@ -5,20 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class HammerBehaviour : MonoBehaviour
 {
-   
     [SerializeField] Rigidbody rb;
     
-
     [SerializeField] AudioSource AudioMazo;
     [SerializeField] AudioSource Bonk;
     [SerializeField] AudioSource Interruptor;
     [SerializeField] AudioSource Ouch;
-    [SerializeField] AudioSource golpeMesa;
+    [SerializeField] AudioSource silencio;
     [SerializeField] AudioSource OuchWoman;
+
+    [SerializeField] int mazazos;
+
+    private void Awake()
+    {
+        mazazos = 0;
+    }
 
     private void Update()
     {
         rb = GetComponent<Rigidbody>();
+
+        if (mazazos == 10 || mazazos == 20 || mazazos == 30 || mazazos == 40 || mazazos == 50 || mazazos == 60 || mazazos == 70 || mazazos == 80 || mazazos == 90 || mazazos == 100 || mazazos == 110 || mazazos == 120 || mazazos == 130 || mazazos == 140 || mazazos == 150)
+        {
+            silencio.Play();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -33,6 +43,7 @@ public class HammerBehaviour : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 GAME_MANAGER._GAME_MANAGER.Order();
+                mazazos++;
             }
         }
 
@@ -56,14 +67,6 @@ public class HammerBehaviour : MonoBehaviour
             StartCoroutine(WaitForCaseOver());
         }
 
-        //if (collision.gameObject.tag == "Table")
-        //{
-        //    if (golpeMesa != null)
-        //    {
-        //        golpeMesa.Play();
-        //    }
-        //}
-
         if (collision.gameObject.tag == "NPC")
         {
             Bonk.Play();
@@ -85,7 +88,6 @@ public class HammerBehaviour : MonoBehaviour
             {
                 StartCoroutine(WaitForDestroy(1));
             }
-           
         }
 
         if (collision.gameObject.tag == "Apple" || collision.gameObject.tag == "Tomatoe" || collision.gameObject.tag == "Mobile")
@@ -118,10 +120,7 @@ public class HammerBehaviour : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.lightsOn = false;
             }
         }
-        
     }
-
-   
 
     IEnumerator WaitForDestroy(float secs)
     {

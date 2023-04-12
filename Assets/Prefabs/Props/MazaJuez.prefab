@@ -139,8 +139,9 @@ MonoBehaviour:
   Bonk: {fileID: 7649798625332317363}
   Interruptor: {fileID: 1437329030932361313}
   Ouch: {fileID: 7820957155675374857}
-  golpeMesa: {fileID: -43913482111905591}
+  silencio: {fileID: -43913482111905591}
   OuchWoman: {fileID: 5403296638947121432}
+  mazazos: 0
 --- !u!82 &1389130602186615703
 AudioSource:
   m_ObjectHideFlags: 0
@@ -535,7 +536,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e6121cebdaa90064aaef9b8aa84b2ab9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 999640e1871e0564780fee34c988b999, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
