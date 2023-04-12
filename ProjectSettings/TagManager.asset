@@ -23,6 +23,10 @@ TagManager:
   - Skull
   - NPC_W
   - ObjectDetector
+  - Undefined
+  - BittedApple
+  - ComplainantFinger
+  - DefendantFinger
   layers:
   - Default
   - TransparentFX

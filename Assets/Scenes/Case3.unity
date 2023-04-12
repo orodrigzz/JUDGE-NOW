@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1023,6 +1023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 413799923}
+  - component: {fileID: 413799924}
   m_Layer: 0
   m_Name: Spawner Pruebas3
   m_TagString: Untagged
@@ -1045,6 +1046,22 @@ Transform:
   m_Father: {fileID: 486116444}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &413799924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413799922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355623a8b530b0b4bb72ede73c00f34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  skullObj: {fileID: 0}
+  newSkull: {fileID: 1526725269692890088, guid: 0f2a38c90c7ccac4da9bcff5240ab5e7, type: 3}
+  resetObject: {fileID: 413799923}
 --- !u!1001 &440407366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2624,6 +2641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1501961470}
+  - component: {fileID: 1501961471}
   m_Layer: 0
   m_Name: Spawner Pruebas2
   m_TagString: Untagged
@@ -2646,6 +2664,22 @@ Transform:
   m_Father: {fileID: 486116444}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1501961471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501961469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473f7a582de3cb44abf9a1cd2e3963d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  fingerObj: {fileID: 0}
+  newfinger: {fileID: 1425727554223788183, guid: 629fa2aedb0fc964a98b3871ade0c361, type: 3}
+  resetObject: {fileID: 1501961470}
 --- !u!1 &1538085423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,8 +2837,8 @@ MonoBehaviour:
     fingerprint on it. Clearly he stole it.
   dialogueOn: 0
   dialoguesIndex: -1
-  guiltyBut: {fileID: 1609594666}
-  innocentBut: {fileID: 1609594665}
+  guiltyBut: {fileID: 0}
+  innocentBut: {fileID: 0}
   isRevealed: 0
   evidenceInstantiated: 0
 --- !u!1 &1602102120
@@ -2954,45 +2988,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+--- !u!4 &1609594663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 1609594662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1609594664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2710372991640875645, guid: 7282b8694e9472047a8610222111ea49, type: 3}
   m_PrefabInstance: {fileID: 1609594662}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1609594665 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 886025531326135046, guid: 7282b8694e9472047a8610222111ea49, type: 3}
-  m_PrefabInstance: {fileID: 1609594662}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1609594666 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7046060152008001710, guid: 7282b8694e9472047a8610222111ea49, type: 3}
-  m_PrefabInstance: {fileID: 1609594662}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1609594667
+--- !u!114 &1609594665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609594666}
+  m_GameObject: {fileID: 1609594664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f733edd1583e984f90896cfeb40f4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1609594668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609594665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  fingerObj: {fileID: 0}
+  newfinger: {fileID: 6653001100958368574, guid: aea0d8b8d1c617242aa8e40086828c22, type: 3}
+  resetObject: {fileID: 1609594663}
 --- !u!1001 &1623722154
 PrefabInstance:
   m_ObjectHideFlags: 0

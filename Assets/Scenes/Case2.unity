@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2470,7 +2470,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.322
+      value: 11.3203
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.218
       objectReference: {fileID: 0}
     - target: {fileID: 6053496988553805676, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_RootOrder
@@ -2518,11 +2522,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+--- !u!4 &1414715710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 1414715709}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1414715711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2710372991640875645, guid: 7282b8694e9472047a8610222111ea49, type: 3}
   m_PrefabInstance: {fileID: 1414715709}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1414715712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414715711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff4f1d65eebd7d4dafd3307c8648373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  appleObj: {fileID: 0}
+  newApple: {fileID: 1835584263018215037, guid: f7553de6a9c98444ca3c7925a450908f, type: 3}
+  resetObject: {fileID: 1414715710}
 --- !u!1 &1422650638
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -884,7 +884,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &254455016
 GameObject:
@@ -1738,6 +1738,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 11.3203
       objectReference: {fileID: 0}
+    - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.218
+      objectReference: {fileID: 0}
     - target: {fileID: 6053496988553805676, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1784,6 +1788,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+--- !u!4 &614688194 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 614688193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &678069007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,7 +1967,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 50, y: 180, z: 0}
 --- !u!1 &710960020
 GameObject:
@@ -2062,6 +2071,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2710372991640875645, guid: 7282b8694e9472047a8610222111ea49, type: 3}
   m_PrefabInstance: {fileID: 614688193}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &724724526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724724525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2367d89fcac31924bb0394597182d3ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  appleObj: {fileID: 0}
+  newApple: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
+  resetObject: {fileID: 614688194}
 --- !u!1 &732082203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2123,11 @@ MonoBehaviour:
   rightShooterTime: 30
   leftShooterTargetTime: 0
   leftShooterTime: 40
+  player: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &732082205
 Transform:
   m_ObjectHideFlags: 0
@@ -2113,7 +2143,7 @@ Transform:
   - {fileID: 1125115851}
   - {fileID: 1473796128}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &777365871
 GameObject:
@@ -2658,11 +2688,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993739598}
   m_CullTransparentMesh: 1
---- !u!1 &1050169724 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 886025531326135046, guid: 7282b8694e9472047a8610222111ea49, type: 3}
-  m_PrefabInstance: {fileID: 614688193}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1109970416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,7 +3127,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231460148
 GameObject:
@@ -3686,11 +3711,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422650638}
   m_CullTransparentMesh: 1
---- !u!1 &1449541175 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7046060152008001710, guid: 7282b8694e9472047a8610222111ea49, type: 3}
-  m_PrefabInstance: {fileID: 614688193}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1466900413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,8 +4110,8 @@ MonoBehaviour:
     CASE 1? JUDGE NOW!
   dialogueOn: 0
   dialoguesIndex: -1
-  guiltyBut: {fileID: 1449541175}
-  innocentBut: {fileID: 1050169724}
+  guiltyBut: {fileID: 0}
+  innocentBut: {fileID: 0}
   isRevealed: 0
   evidenceInstantiated: 0
 --- !u!1 &1602102120
@@ -4318,7 +4338,7 @@ PrefabInstance:
       objectReference: {fileID: 1623722157}
     - target: {fileID: 7311945610490847441, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7311945610490847441, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
       propertyPath: m_LocalPosition.x
