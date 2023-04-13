@@ -52,15 +52,11 @@ public class GAME_MANAGER : MonoBehaviour
     public Scene currentScene;
     public GameObject reputationCanvas;
     public string lastScene;
+    public bool isMenu;
     #endregion
 
     #region IndicacionesInput
-    public GameObject eForInspect;
-    public GameObject qForExitInspect;
-    public GameObject mForDecisionMode;
-    public GameObject mForExitDecisionMode;
-    public GameObject lClickForPickItUp;
-    public GameObject rClickForLetItGo;
+    
     #endregion
 
     private void Awake()
@@ -85,7 +81,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             reputationCanvas.SetActive(false);
         }
-
+        
         //Reputation Bars
         noiseAudio.volume = 0;
         if (courtReputationImg != null && townReputationImg != null)
@@ -176,29 +172,7 @@ public class GAME_MANAGER : MonoBehaviour
                 }
                
             }
-            if(qForExitInspect != null && eForInspect != null)
-            {
-                if (isInspecting && isPicked)
-                {
-                    qForExitInspect.SetActive(true);
-                    eForInspect.SetActive(false);
-                    rClickForLetItGo.SetActive(false);
-                    lClickForPickItUp.SetActive(false);
-                }
-                if (!isInspecting && isPicked)
-                {
-                    qForExitInspect.SetActive(false);
-                    eForInspect.SetActive(true);
-                    rClickForLetItGo.SetActive(true);
-                    lClickForPickItUp.SetActive(false);
-                }
-                if (!isInspecting && !isPicked)
-                {
-                    rClickForLetItGo.SetActive(false);
-                    qForExitInspect.SetActive(false);
-                    eForInspect.SetActive(false);
-                }
-            }
+            
             
         }
 
@@ -250,6 +224,15 @@ public class GAME_MANAGER : MonoBehaviour
             {
                 isGamePaused = true;
             }
+        }
+
+        if (currentScene.name == "Menu")
+        {
+            isMenu = true;
+        }
+        else
+        {
+            isMenu = false;
         }
     }
 

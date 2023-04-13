@@ -8,8 +8,10 @@ public class PauseMenu : MonoBehaviour
     public  bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject settingsUI;
+    public bool isMenu;
     [Header("Get Scene")]
     public Scene currentScene;
+    public string nameScene;
     
 
 
@@ -60,15 +62,15 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-       
+
         /*else if(Input.GetKeyDown(KeyCode.Escape) && GameIsPaused)
         {
             Resume();
         }*/
-      
+        
 
             
-            if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused && currentScene.name != "Menu")
+            if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused && GAME_MANAGER._GAME_MANAGER.isMenu == false)
             {
                 Pause();
                 GAME_MANAGER._GAME_MANAGER.menuOpen = true;

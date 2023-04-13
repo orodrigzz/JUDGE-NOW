@@ -60,10 +60,12 @@ public class NewDialogueSystem : MonoBehaviour
     }
     void Start()
     {
-        innocentBut.SetActive(false);
-        guiltyBut.SetActive(false);
-        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
-        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+        if(innocentBut != null && guiltyBut != null){
+            innocentBut.SetActive(false);
+            guiltyBut.SetActive(false);
+        }
+       
+       
         
     }
 
@@ -120,23 +122,20 @@ public class NewDialogueSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.initDialogue = false;
                 if (!isRevealed)
                 {
-                    GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
-                    GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+                    
                 }
                 if (Input.GetKeyDown(KeyCode.M))
                 {
                     if (!isRevealed && GAME_MANAGER._GAME_MANAGER.endDialogue)
                     {
-                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
-                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(true);
+                        
                         innocentBut.SetActive(true);
                         guiltyBut.SetActive(true);
                         isRevealed = true;
                     }
                     else
                     {
-                        GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(true);
-                        GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+                       
                         innocentBut.SetActive(false);
                         guiltyBut.SetActive(false);
                         isRevealed = false;
