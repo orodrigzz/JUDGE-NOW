@@ -68,7 +68,7 @@ public class PauseMenu : MonoBehaviour
       
 
             
-            if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused)
+            if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused && currentScene.name != "Menu")
             {
                 Pause();
                 GAME_MANAGER._GAME_MANAGER.menuOpen = true;

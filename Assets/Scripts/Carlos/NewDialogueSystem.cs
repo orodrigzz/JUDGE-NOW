@@ -38,6 +38,7 @@ public class NewDialogueSystem : MonoBehaviour
 
     public GameObject guiltyBut;
     public GameObject innocentBut;
+    
     public bool isRevealed;
     public bool evidenceInstantiated;
 
@@ -55,6 +56,7 @@ public class NewDialogueSystem : MonoBehaviour
         GAME_MANAGER._GAME_MANAGER.accusedID = dialogues[1].characterID;
         GAME_MANAGER._GAME_MANAGER.accusedName = dialogues[1].characterName;
         GAME_MANAGER._GAME_MANAGER.complaintResume = caseResume;
+        
     }
     void Start()
     {
@@ -62,6 +64,7 @@ public class NewDialogueSystem : MonoBehaviour
         guiltyBut.SetActive(false);
         GAME_MANAGER._GAME_MANAGER.mForDecisionMode.SetActive(false);
         GAME_MANAGER._GAME_MANAGER.mForExitDecisionMode.SetActive(false);
+        
     }
 
  
@@ -105,8 +108,9 @@ public class NewDialogueSystem : MonoBehaviour
                     dialoguesIndex++;
                     dialogues[dialoguesIndex-1].textBox.SetActive(false);
                 }
-
+                
             }
+           
 
 
             //comprobamos si quedan mas dialogos 
