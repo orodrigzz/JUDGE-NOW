@@ -77,6 +77,7 @@ public class NewDialogueSystem : MonoBehaviour
         {
             //Funcion que da inicio al primer dialogo
             //Ira vinculada al collaider
+            GAME_MANAGER._GAME_MANAGER.isDialoging = true;
             CurrentDialogue();
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -120,10 +121,8 @@ public class NewDialogueSystem : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.endDialogue = true;
                 GAME_MANAGER._GAME_MANAGER.initDialogue = false;
-                if (!isRevealed)
-                {
-                    
-                }
+                GAME_MANAGER._GAME_MANAGER.isDialoging = false;
+
                 if (Input.GetKeyDown(KeyCode.M))
                 {
                     if (!isRevealed && GAME_MANAGER._GAME_MANAGER.endDialogue)

@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 1618480208955741092}
   - component: {fileID: 1618480208955741093}
   - component: {fileID: 1618480208955741098}
+  - component: {fileID: 9187411293885650896}
   m_Layer: 5
   m_Name: ReputationCanvas
   m_TagString: Untagged
@@ -485,6 +486,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &9187411293885650896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618480208955741099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8f9371ac6ec17489da17c069b8deb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamationPoints: []
 --- !u!1 &2118140584380106533
 GameObject:
   m_ObjectHideFlags: 0

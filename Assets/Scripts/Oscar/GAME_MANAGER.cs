@@ -32,6 +32,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool isPicked;
     public bool isInspecting;
     public bool initDialogue;
+    public bool isDialoging;
     public bool endDialogue = false;
     public bool menuOpen;
     public bool stopArmMovement;
