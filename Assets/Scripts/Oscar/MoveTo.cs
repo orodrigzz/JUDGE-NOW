@@ -11,8 +11,15 @@ public class MoveTo : MonoBehaviour
 
     [SerializeField] private float secs;
 
+    [SerializeField] private Animator animator;
+
     private void Awake()
     {
+        if (animator != null)
+        {
+            animator = GetComponent<Animator>();
+        }
+
         if ( target != null)
         {
             targetPos = target.transform.position;
@@ -42,6 +49,11 @@ public class MoveTo : MonoBehaviour
 
         if (transform.localPosition == targetPos)
         {
+            if (animator != null)
+            {
+                animator.SetBool("hasArrived", true);
+            }
+
             if (GAME_MANAGER._GAME_MANAGER.endDialogue == false)
             {
                 GAME_MANAGER._GAME_MANAGER.initDialogue = true;
