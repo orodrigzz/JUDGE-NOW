@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 6891579271215145236}
   - component: {fileID: 3254518377849129039}
   - component: {fileID: -2686832159510020209}
+  - component: {fileID: 7535469302160789494}
   m_Layer: 7
   m_Name: ComplainantFingerpirnt
   m_TagString: ComplainantFinger
@@ -545,3 +546,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac4e70d95e9530459627b569d57adf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7535469302160789494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425727554223788183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b0d02efdb6947439c0b7cdfedb7de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectMaterial: {fileID: 633265749935354178}
+  originalMaterial: {fileID: 2100000, guid: a8686f5a1254b5540a112636ddceaa35, type: 2}
+  canSelect: {fileID: 2100000, guid: bf2d9bcf4aa8d4e409e8d80cddb5ed7a, type: 2}

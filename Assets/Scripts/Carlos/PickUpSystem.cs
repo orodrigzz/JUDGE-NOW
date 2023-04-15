@@ -248,7 +248,7 @@ public class PickUpSystem : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            Debug.Log("PICK");
+            
             if (Input.GetMouseButtonDown(0) && !isPicked)
             {
                 armHold.SetActive(true);

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: -43913482111905591}
   - component: {fileID: 5403296638947121432}
   - component: {fileID: 8528078485179794057}
+  - component: {fileID: 2026470522045784181}
   m_Layer: 7
   m_Name: MazaJuez
   m_TagString: Hammer
@@ -733,3 +734,18 @@ MonoBehaviour:
   speed: 800
   rb: {fileID: 1650400643134373759}
   direction: {x: 0, y: 0, z: 0}
+--- !u!114 &2026470522045784181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884210492833305462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b0d02efdb6947439c0b7cdfedb7de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectMaterial: {fileID: 83020849808618147}
+  originalMaterial: {fileID: 2100000, guid: bcb271789a6b8054b9f5107c41a6ab24, type: 2}
+  canSelect: {fileID: 2100000, guid: bf2d9bcf4aa8d4e409e8d80cddb5ed7a, type: 2}

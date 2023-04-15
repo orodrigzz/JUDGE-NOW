@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2234045746478550464}
   - component: {fileID: 3271167027239493103}
   - component: {fileID: 8953749142772009650}
+  - component: {fileID: 8241720743869072173}
   m_Layer: 7
   m_Name: Manzana_Mordida
   m_TagString: BittedApple
@@ -562,3 +563,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac4e70d95e9530459627b569d57adf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8241720743869072173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835584263018215037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b0d02efdb6947439c0b7cdfedb7de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectMaterial: {fileID: 178369756767770536}
+  originalMaterial: {fileID: 2100000, guid: 3b5a26b462182e14d86c7cdcd0baf722, type: 2}
+  canSelect: {fileID: 2100000, guid: bf2d9bcf4aa8d4e409e8d80cddb5ed7a, type: 2}
