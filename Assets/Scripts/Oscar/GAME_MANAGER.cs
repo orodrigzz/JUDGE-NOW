@@ -36,6 +36,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool endDialogue = false;
     public bool menuOpen;
     public bool stopArmMovement;
+    public bool decisionMode = false;
     #endregion
 
     #region SaveInfo
@@ -240,31 +241,50 @@ public class GAME_MANAGER : MonoBehaviour
     //Reputation
     public void goodCase()
     {
-        courtReputation = courtReputation + 0.08f;
-        townReputation = townReputation + 0.08f;
-        
-        if (currentScene.name == "Game")
+        if (currentScene.name == "Tutorial")
         {
-            decisionCase = "INNOCENT";
+            decisionCase = "SUSPENDED";
         }
         else
         {
-            decisionCase = "GUILTY";
+            if (decisionMode)
+            {
+                courtReputation = courtReputation + 0.08f;
+                townReputation = townReputation + 0.08f;
+
+                if (currentScene.name == "Game")
+                {
+                    decisionCase = "INNOCENT";
+                }
+                else
+                {
+                    decisionCase = "GUILTY";
+                }
+            }
         }
     }
-
     public void badCase()
     {
-        courtReputation = courtReputation - 0.08f;
-        townReputation = townReputation - 0.08f;
-
-        if (currentScene.name == "Game")
+        if (currentScene.name == "Tutorial")
         {
-            decisionCase = "GUILTY";
+            decisionCase = "SUSPENDED";
         }
         else
         {
-            decisionCase = "INNOCENT";
+            if (decisionMode)
+            {
+                courtReputation = courtReputation - 0.08f;
+                townReputation = townReputation - 0.08f;
+
+                if (currentScene.name == "Game")
+                {
+                    decisionCase = "GUILTY";
+                }
+                else
+                {
+                    decisionCase = "INNOCENT";
+                }
+            }
         }
     }
 

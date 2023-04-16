@@ -49,22 +49,37 @@ public class HammerBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Guilty")
         {
-            if (AudioMazo != null)
-            {
-                AudioMazo.Play();
-            }
+            Bonk.Play();
+            Ouch.Play(); 
+
             Debug.Log("GUILTY!!");
-            StartCoroutine(WaitForCaseOver());
+
+            if (GAME_MANAGER._GAME_MANAGER.decisionMode)
+            {
+                StartCoroutine(WaitForCaseOver());
+                StartCoroutine(WaitForDestroy(1.5f));
+            }
+            else
+            {
+                StartCoroutine(WaitForDestroy(1.5f));
+            }
         }
 
         if (collision.gameObject.tag == "Innocent")
         {
-            if (AudioMazo != null)
-            {
-                AudioMazo.Play();
-            }
+            Bonk.Play();
+            OuchWoman.Play();
             Debug.Log("INNOCENT!!");
-            StartCoroutine(WaitForCaseOver());
+
+            if (GAME_MANAGER._GAME_MANAGER.decisionMode)
+            {
+                StartCoroutine(WaitForCaseOver());
+                StartCoroutine(WaitForDestroy(1.5f));
+            }
+            else
+            {
+                StartCoroutine(WaitForDestroy(1.5f));
+            }
         }
 
         if (collision.gameObject.tag == "NPC")
