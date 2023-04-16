@@ -36,8 +36,8 @@ public class NewDialogueSystem : MonoBehaviour
     public bool dialogueOn;
     public int dialoguesIndex = -1;
 
-    public GameObject guiltyBut;
-    public GameObject innocentBut;
+    public GameObject decisionMode;
+    
     
     public bool isRevealed;
     public bool evidenceInstantiated;
@@ -60,9 +60,9 @@ public class NewDialogueSystem : MonoBehaviour
     }
     void Start()
     {
-        if(innocentBut != null && guiltyBut != null){
-            innocentBut.SetActive(false);
-            guiltyBut.SetActive(false);
+        if( decisionMode != null){
+            
+            decisionMode.SetActive(false);
         }
        
        
@@ -128,15 +128,15 @@ public class NewDialogueSystem : MonoBehaviour
                     if (!isRevealed && GAME_MANAGER._GAME_MANAGER.endDialogue)
                     {
                         
-                        innocentBut.SetActive(true);
-                        guiltyBut.SetActive(true);
+                       
+                        decisionMode.SetActive(true);
                         isRevealed = true;
                     }
                     else
                     {
                        
-                        innocentBut.SetActive(false);
-                        guiltyBut.SetActive(false);
+                        
+                        decisionMode.SetActive(false);
                         isRevealed = false;
                     }
                 }
