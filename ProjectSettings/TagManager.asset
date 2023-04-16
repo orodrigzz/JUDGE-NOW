@@ -27,6 +27,7 @@ TagManager:
   - BittedApple
   - ComplainantFinger
   - DefendantFinger
+  - DecisionMode
   layers:
   - Default
   - TransparentFX
