@@ -45,7 +45,6 @@ public class PickUpSystem : MonoBehaviour
         arm.SetActive(true);
        
         laserPointer.enabled = false;
-       
     }
 
     private void Update()
@@ -54,8 +53,6 @@ public class PickUpSystem : MonoBehaviour
         {
             throwableObject = itemPicked.GetComponent<ThrowableObject>();
         }
-
-       
         
         if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
@@ -76,6 +73,7 @@ public class PickUpSystem : MonoBehaviour
             isPicked = false;
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
         }
+
         if(Input.GetKey(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
            
@@ -92,12 +90,9 @@ public class PickUpSystem : MonoBehaviour
                     laserPointer.SetPosition(i, B);
                     t += (1 / (float)laserPointer.positionCount);
                 }
-
-                
-
             }
-            
         }
+
         if (Input.GetKeyUp(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
             if(throwableObject != null)
@@ -228,6 +223,7 @@ public class PickUpSystem : MonoBehaviour
         }
 
     }
+
     void InspectObject()
     {
         float xAxis = Input.GetAxis("Mouse X") * rotationSpeed;
@@ -240,15 +236,11 @@ public class PickUpSystem : MonoBehaviour
         
     }
 
-   
-
-   
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == 7)
         {
-            
             if (Input.GetMouseButtonDown(0) && !isPicked)
             {
                 armHold.SetActive(true);

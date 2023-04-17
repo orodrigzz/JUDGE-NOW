@@ -1892,12 +1892,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7280676657038661171, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: flechaComplaint
+      value: 
+      objectReference: {fileID: 614688196}
+    - target: {fileID: 7280676657038661171, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: flechaDefendant
+      value: 
+      objectReference: {fileID: 614688197}
     m_RemovedComponents:
     - {fileID: 8407497707506590974, guid: 7282b8694e9472047a8610222111ea49, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7282b8694e9472047a8610222111ea49, type: 3}
 --- !u!4 &614688194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 614688193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &614688195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8833804834251672052, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 614688193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &614688196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5774142822718973411, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 614688193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &614688197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3236673145278076533, guid: 7282b8694e9472047a8610222111ea49, type: 3}
   m_PrefabInstance: {fileID: 614688193}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &678069007
@@ -4097,8 +4120,7 @@ MonoBehaviour:
     CASE 1? JUDGE NOW!
   dialogueOn: 0
   dialoguesIndex: -1
-  guiltyBut: {fileID: 0}
-  innocentBut: {fileID: 0}
+  decisionMode: {fileID: 614688195}
   isRevealed: 0
   evidenceInstantiated: 0
 --- !u!1 &1602102120

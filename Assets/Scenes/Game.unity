@@ -1575,6 +1575,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &648372444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8833804834251672052, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 2710372991096807562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,6 +2730,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9ae34c66999d8541ad7993f44e4978b, type: 3}
+--- !u!1 &1358049115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3236673145278076533, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 2710372991096807562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1394708843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,6 +2967,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466900413}
   m_CullTransparentMesh: 1
+--- !u!1 &1484886524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5774142822718973411, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 2710372991096807562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1497919416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7578774930893506600, guid: e81cb7002b1a130488eb1df29863c927, type: 3}
@@ -3215,8 +3230,7 @@ MonoBehaviour:
     decibels.
   dialogueOn: 0
   dialoguesIndex: -1
-  guiltyBut: {fileID: 0}
-  innocentBut: {fileID: 0}
+  decisionMode: {fileID: 648372444}
   isRevealed: 0
   evidenceInstantiated: 0
 --- !u!1 &1602102120
@@ -4665,6 +4679,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7280676657038661171, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: flechaComplaint
+      value: 
+      objectReference: {fileID: 1484886524}
+    - target: {fileID: 7280676657038661171, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: flechaDefendant
+      value: 
+      objectReference: {fileID: 1358049115}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7282b8694e9472047a8610222111ea49, type: 3}
 --- !u!4 &2710372991096807563 stripped
