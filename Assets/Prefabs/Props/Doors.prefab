@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4936ddbf98e934f964d5f3a9702ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.6
   openAngle: 90
   closeAngle: 0
   doorOpening: {fileID: 0}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4936ddbf98e934f964d5f3a9702ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.6
   openAngle: -90
   closeAngle: 0
   doorOpening: {fileID: 2045087950422628138}
