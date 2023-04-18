@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class StopConstraints : MonoBehaviour
 {
-
-
-    
     Rigidbody rb;
-
+    public bool freezedconstraints = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Table")
@@ -20,6 +18,7 @@ public class StopConstraints : MonoBehaviour
             if (rb != null)
             {
                 rb.constraints = RigidbodyConstraints.FreezeAll;
+                freezedconstraints = true;
             }
         }
     }

@@ -53,7 +53,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5754136685962148648}
-  m_Mesh: {fileID: 5060444177187149915, guid: 30ac84cbc8ec62146b27a9c708ee1d13, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &6114252927012870909
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &-5402015847289791522
 BoxCollider:
@@ -137,7 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac87e11638a93ec478274bf70b2eee8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AUDIO_MANAGER: {fileID: 0}
 --- !u!114 &9214347823295262311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd89d7e92dcd92459d059122b38debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezedconstraints: 0
 --- !u!114 &7322216056695488861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b0d02efdb6947439c0b7cdfedb7de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectMaterial: {fileID: 6114252927012870909}
+  objectMaterial: {fileID: 6822662145257619465}
   originalMaterial: {fileID: 2100000, guid: 0f951ac5b299b3143a852d9413a3deb4, type: 2}
   canSelect: {fileID: 2100000, guid: bf2d9bcf4aa8d4e409e8d80cddb5ed7a, type: 2}
 --- !u!1001 &5291556609803639949
@@ -656,5 +656,10 @@ PrefabInstance:
 --- !u!4 &5685191782880131942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 30ac84cbc8ec62146b27a9c708ee1d13, type: 3}
+  m_PrefabInstance: {fileID: 5291556609803639949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6822662145257619465 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 30ac84cbc8ec62146b27a9c708ee1d13, type: 3}
   m_PrefabInstance: {fileID: 5291556609803639949}
   m_PrefabAsset: {fileID: 0}
