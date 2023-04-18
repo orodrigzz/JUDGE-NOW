@@ -56,6 +56,7 @@ public class HammerBehaviour : MonoBehaviour
 
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
+                GAME_MANAGER._GAME_MANAGER.caseEnded = true;
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(1.5f));
             }
@@ -73,6 +74,7 @@ public class HammerBehaviour : MonoBehaviour
 
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
+                GAME_MANAGER._GAME_MANAGER.caseEnded = true;
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(1.5f));
             }

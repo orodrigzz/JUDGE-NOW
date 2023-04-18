@@ -37,6 +37,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool menuOpen;
     public bool stopArmMovement;
     public bool decisionMode = false;
+    public bool caseEnded;
     #endregion
 
     #region SaveInfo
@@ -58,7 +59,7 @@ public class GAME_MANAGER : MonoBehaviour
     #endregion
 
     #region IndicacionesInput
-    
+    public GameObject exclamationPoint;
     #endregion
 
     private void Awake()
@@ -76,9 +77,10 @@ public class GAME_MANAGER : MonoBehaviour
 
     void Start()
     {
+        caseEnded = false;
         isGamePaused = false;
         currentScene = SceneManager.GetActiveScene();
-       
+        exclamationPoint.SetActive(false);
         if (currentScene.name != "Game" || currentScene.name == "Case2" || currentScene.name == "Case3" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
@@ -95,6 +97,14 @@ public class GAME_MANAGER : MonoBehaviour
         if (noiseImg != null)
         {
             noiseImg.fillAmount = noise;
+        }
+        if(currentScene.name == "Tutorial")
+        {
+            if (noiseAudio != null)
+            {
+                noise = 0f;
+                noiseAudio.volume = 0f;
+            }
         }
     }
 
@@ -157,14 +167,7 @@ public class GAME_MANAGER : MonoBehaviour
                             noiseAudio.volume = noiseAudio.volume + 0.0001f;
                         }
                     }
-                    else
-                    {
-                        noise = noise + 0.00025f;
-                        if (noiseAudio != null)
-                        {
-                            noiseAudio.volume = noiseAudio.volume + 0.0025f;
-                        }
-                    }
+                    
                     
                 }
                 else
@@ -174,8 +177,12 @@ public class GAME_MANAGER : MonoBehaviour
                 }
                
             }
-            
-            
+
+
+        }
+        else
+        {
+            exclamationPoint.SetActive(false);
         }
 
         if (currentScene.name == "Menu"  && reputationCanvas != null )

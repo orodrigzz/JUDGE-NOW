@@ -28,6 +28,7 @@ TagManager:
   - ComplainantFinger
   - DefendantFinger
   - DecisionMode
+  - Diana
   layers:
   - Default
   - TransparentFX
