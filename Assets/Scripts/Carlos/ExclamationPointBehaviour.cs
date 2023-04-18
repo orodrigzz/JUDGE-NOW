@@ -37,6 +37,13 @@ public class ExclamationPointBehaviour : MonoBehaviour
                 }
             }
         }
+        if (GAME_MANAGER._GAME_MANAGER.isGamePaused)
+        {
+            for (int i = 0; i < exclamationPoints.Length - 1; i++)
+            {
+                exclamationPoints[i].SetActive(false);
+            }
+        }
        
     }
 }

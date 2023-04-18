@@ -80,16 +80,7 @@ public class PickUpSystem : MonoBehaviour
             if(itemPicked != null)
             {
                 laserPointer.enabled = true;
-
-                laserPointer.positionCount = 200;
-                float t = 0f;
-                Vector3 B = new Vector3(0, 0, 0);
-                for (int i = 0; i < laserPointer.positionCount; i++)
-                {
-                    B = (1 - t) * (1 - t) * point0.position + 2 * (1 - t) * t * point1.position + t * t * point2.position;
-                    laserPointer.SetPosition(i, B);
-                    t += (1 / (float)laserPointer.positionCount);
-                }
+                laserPointer.SetPositions(new Vector3[] { transform.position, transform.position + itemPicked.transform.right * 10f });
             }
         }
 
@@ -241,6 +232,7 @@ public class PickUpSystem : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
+            Debug.Log("LOLOLOLO");
             if (Input.GetMouseButtonDown(0) && !isPicked)
             {
                 armHold.SetActive(true);

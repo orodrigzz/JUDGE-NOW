@@ -31,8 +31,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 266054824870975149}
   - {fileID: 3580096119884893366}
+  - {fileID: 266054824870975149}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,9 +63,11 @@ MonoBehaviour:
   isPicked: 0
   isInspecting: 0
   initDialogue: 0
+  isDialoging: 0
   endDialogue: 0
   menuOpen: 0
   stopArmMovement: 0
+  decisionMode: 0
   complaintResume: 
   denunciantName: 
   denunciantID: 
@@ -249,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2624409097510610038, guid: 466b0c20067aeae4984dd717f6a2ea51, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2624409097510610038, guid: 466b0c20067aeae4984dd717f6a2ea51, type: 3}
       propertyPath: m_AnchorMax.x
@@ -401,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618480208955741095, guid: f4c77d25e4ca1af42a6d0d853eaf835b, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1618480208955741095, guid: f4c77d25e4ca1af42a6d0d853eaf835b, type: 3}
       propertyPath: m_AnchorMax.x

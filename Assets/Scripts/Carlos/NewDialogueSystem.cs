@@ -123,8 +123,7 @@ public class NewDialogueSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.initDialogue = false;
                 GAME_MANAGER._GAME_MANAGER.isDialoging = false;
 
-                if (Input.GetKeyDown(KeyCode.M))
-                {
+                
                     if (!isRevealed && GAME_MANAGER._GAME_MANAGER.endDialogue)
                     {
                         
@@ -132,14 +131,14 @@ public class NewDialogueSystem : MonoBehaviour
                         decisionMode.SetActive(true);
                         isRevealed = true;
                     }
-                    else
+                    /*else
                     {
                        
                         
                         decisionMode.SetActive(false);
                         isRevealed = false;
-                    }
-                }
+                    }*/
+                
                 for (int i = 0; i < dialogues.Length; i++)
                 {
                     dialogues[i].textBox.SetActive(false);
