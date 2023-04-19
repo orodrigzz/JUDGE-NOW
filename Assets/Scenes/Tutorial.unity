@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2294,7 +2294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -617, y: -188}
+  m_AnchoredPosition: {x: -628, y: 21}
   m_SizeDelta: {x: 628.8007, y: 327.5851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1225874875
@@ -3661,7 +3661,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: " - PUSH THE RED BUTTON TO ACTIVATE THE DECISION MODE\n\n - THROW THE HAMMER
     TO ONE OF THE ARROWS  TO MAKE A DECISION, DECISIONS AFFECTIN YOUR REPUTATION\n\n-
-    ON REAL CASES YOU WILL HAVE TO THROW THE HAMMER TO THE PERSON YOU THINK IS RIGHT"
+    ON REAL CASES YOU WILL HAVE TO THROW THE HAMMER TO THE PERSON YOU THINK IS RIGHT\n\nTHIS
+    IS THE FINAL PART OF THE TUTORIAL\n\n\t\t\t\t\t\t\tJUDGE NOW!"
 --- !u!222 &1895171599
 CanvasRenderer:
   m_ObjectHideFlags: 0
