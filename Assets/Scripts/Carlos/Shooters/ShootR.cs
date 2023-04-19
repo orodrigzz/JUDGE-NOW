@@ -12,6 +12,14 @@ public class ShootR : MonoBehaviour
     [SerializeField] float rightShooterTargetTime;
     [SerializeField] float rightShooterTime;
     [SerializeField] Vector3 rightVel;
+
+    public GameObject exclamation;
+
+    private void Awake()
+    {
+        exclamation.SetActive(false);
+    }
+
     void Start()
     {
         rightShooterTargetTime = rightShooterTime;
@@ -23,12 +31,19 @@ public class ShootR : MonoBehaviour
         if (GAME_MANAGER._GAME_MANAGER.noise >= 0.1)
         {
             rightShooterTargetTime -= Time.deltaTime;
+
+            if (rightShooterTargetTime <= 2)
+            {
+                exclamation.SetActive(true);
+            }
+
             if (rightShooterTargetTime <= 0)
             {
                 direction = player.position;
                 rightVel = CalculateVelocity(direction, Shooter_R.transform.position, 1f);
                 ShootRight();
                 rightShooterTargetTime = rightShooterTime;
+                StartCoroutine(Wait());
             }
         }
     }
@@ -54,10 +69,12 @@ public class ShootR : MonoBehaviour
         result *= Vxz;
         result.y = Vy;
 
-
-
         return result;
+    }
 
-
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
+        exclamation.SetActive(false);
     }
 }

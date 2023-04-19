@@ -54,6 +54,7 @@ MonoBehaviour:
   rightShooterTargetTime: 0
   rightShooterTime: 20
   rightVel: {x: 0, y: 0, z: 0}
+  exclamation: {fileID: 3580581266330859957, guid: 88ae0eede90e5ae4d847616b77e115b6, type: 3}
 --- !u!1 &554453827882659381
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +109,7 @@ MonoBehaviour:
   leftShooterTargetTime: 0
   leftShooterTime: 30
   leftVel: {x: 0, y: 0, z: 0}
+  exclamation: {fileID: 3580581266330859957, guid: 88ae0eede90e5ae4d847616b77e115b6, type: 3}
 --- !u!1 &554453829022107185
 GameObject:
   m_ObjectHideFlags: 0

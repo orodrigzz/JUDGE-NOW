@@ -12,11 +12,14 @@ public class Shoot : MonoBehaviour
     [SerializeField] float leftShooterTargetTime;
     [SerializeField] float leftShooterTime;
     [SerializeField] Vector3 leftVel;
+
+    public GameObject exclamation;
+
     private void Awake()
     {
-     
+        exclamation.SetActive(false);
     }
-    
+
     void Start()
     {
         leftShooterTargetTime = leftShooterTime;
@@ -25,16 +28,22 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (GAME_MANAGER._GAME_MANAGER.noise >= 0.2)
         {
             leftShooterTargetTime -= Time.deltaTime;
+
+            if (leftShooterTargetTime <= 2)
+            {
+                exclamation.SetActive(true);
+            }
+
             if (leftShooterTargetTime <= 0)
             {
                 direction = player.position;
                 leftVel = CalculateVelocity(direction, Shooter_L.transform.position, 1f);
                 ShootLeft();
                 leftShooterTargetTime = leftShooterTime;
+                StartCoroutine(Wait());
             }
         }
         
@@ -55,17 +64,18 @@ public class Shoot : MonoBehaviour
         result *= Vxz;
         result.y = Vy;
 
-
-
         return result;
-
-
     }
+
     public void ShootLeft()
     {
-
         Rigidbody obj = Instantiate(Proyectile, Shooter_L.position, Quaternion.identity);
         obj.velocity = leftVel;
-        
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
+        exclamation.SetActive(false);
     }
 }
