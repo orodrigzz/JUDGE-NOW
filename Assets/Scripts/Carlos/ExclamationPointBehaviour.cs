@@ -36,6 +36,13 @@ public class ExclamationPointBehaviour : MonoBehaviour
                     exclamationPoints[i].SetActive(false);
                 }
             }
+            if (GAME_MANAGER._GAME_MANAGER.currentScene.name == "Tutorial" && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
+            {
+                for (int i = 0; i < exclamationPoints.Length - 1; i++)
+                {
+                    exclamationPoints[i].SetActive(true);
+                }
+            }
         }
         if (GAME_MANAGER._GAME_MANAGER.isGamePaused)
         {
