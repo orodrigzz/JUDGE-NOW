@@ -54,12 +54,16 @@ public class MoveTo : MonoBehaviour
                 animator.SetBool("hasArrived", true);
             }
 
-            if (GAME_MANAGER._GAME_MANAGER.endDialogue == false)
+            if (GAME_MANAGER._GAME_MANAGER.endDialogue == false && GAME_MANAGER._GAME_MANAGER.currentScene.name != "Tutorial")
             {
                 GAME_MANAGER._GAME_MANAGER.initDialogue = true;
             }
+            if(GAME_MANAGER._GAME_MANAGER.currentScene.name == "Tutorial")
+            {
+                GAME_MANAGER._GAME_MANAGER.tutorialStarted = true;
+            }
             GAME_MANAGER._GAME_MANAGER.exclamationPoint.SetActive(true);
-            GAME_MANAGER._GAME_MANAGER.tutorialStarted = true;
+           
             speed = 0f;
         }
     }
