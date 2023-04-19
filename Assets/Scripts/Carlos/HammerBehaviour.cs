@@ -50,13 +50,15 @@ public class HammerBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "Guilty")
         {
             Bonk.Play();
-            Ouch.Play(); 
-
+            Ouch.Play();
+            
             Debug.Log("GUILTY!!");
+
+           
 
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
-                GAME_MANAGER._GAME_MANAGER.caseEnded = true;
+               
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(1.5f));
             }
@@ -71,10 +73,10 @@ public class HammerBehaviour : MonoBehaviour
             Bonk.Play();
             OuchWoman.Play();
             Debug.Log("INNOCENT!!");
-
+            
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
-                GAME_MANAGER._GAME_MANAGER.caseEnded = true;
+              
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(1.5f));
             }
@@ -118,6 +120,13 @@ public class HammerBehaviour : MonoBehaviour
             {
                 rb.constraints = RigidbodyConstraints.FreezeAll;
             }
+        }
+
+        if(collision.gameObject.tag == "Flecha")
+        {
+           
+                GAME_MANAGER._GAME_MANAGER.caseEnded = true;
+            
         }
     }
 

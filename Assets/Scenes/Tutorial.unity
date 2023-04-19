@@ -2816,6 +2816,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7311945610490847440, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: accusedName
+      value: Richard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311945610490847440, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: denunciantID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311945610490847440, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: denunciantName
+      value: Richard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311945610490847440, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
+      propertyPath: complaintResume
+      value: This is the tutorial, keep moving and start working !!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311945610490847440, guid: 136ff7951b5c69a4f848f47907da22bd, type: 3}
       propertyPath: exclamationPoint
       value: 
       objectReference: {fileID: 531198189}

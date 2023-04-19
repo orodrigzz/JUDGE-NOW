@@ -102,7 +102,7 @@ public class TutorialManagager : MonoBehaviour
         }
         if (tutorialCompleted)
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("CaseOver");
         }
 
     }
