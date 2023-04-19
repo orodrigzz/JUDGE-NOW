@@ -7,9 +7,10 @@ public class EnableDecision : MonoBehaviour
     [SerializeField] GameObject flechaDefendant;
     [SerializeField] GameObject flechaComplaint;
 
+    [SerializeField] AudioSource decisionMode;
+
     private void Start()
     {
-       
         if (flechaDefendant != null && flechaComplaint != null)
         {
             flechaComplaint.SetActive(false);
@@ -22,14 +23,13 @@ public class EnableDecision : MonoBehaviour
         {
             if(GAME_MANAGER._GAME_MANAGER.decisionMode == false)
             {
+                decisionMode.Play();
                 GAME_MANAGER._GAME_MANAGER.decisionMode = true;
                 if(flechaDefendant != null && flechaComplaint != null)
                 {
                     flechaComplaint.SetActive(true);
                     flechaDefendant.SetActive(true);
                 }
-                
-
             }
             else
             {

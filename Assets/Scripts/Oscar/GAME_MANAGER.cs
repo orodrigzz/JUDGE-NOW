@@ -80,7 +80,11 @@ public class GAME_MANAGER : MonoBehaviour
         caseEnded = false;
         isGamePaused = false;
         currentScene = SceneManager.GetActiveScene();
-        exclamationPoint.SetActive(false);
+        if (exclamationPoint != null)
+        {
+            exclamationPoint.SetActive(false);
+        }
+
         if (currentScene.name != "Game" || currentScene.name == "Case2" || currentScene.name == "Case3" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
@@ -182,7 +186,10 @@ public class GAME_MANAGER : MonoBehaviour
         }
         else
         {
-            exclamationPoint.SetActive(false);
+            if (exclamationPoint != null)
+            {
+                exclamationPoint.SetActive(false);
+            }
         }
 
         if (currentScene.name == "Menu"  && reputationCanvas != null )
