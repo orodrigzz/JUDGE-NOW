@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class ProyectileBehaviour : MonoBehaviour
 {
-    
-
-    
-    void Start()
-    {
-      
-    }
 
     private void Update()
     {
         Destroy(this, 3f);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
@@ -25,6 +19,7 @@ public class ProyectileBehaviour : MonoBehaviour
             Debug.Log("Hit");
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ground")

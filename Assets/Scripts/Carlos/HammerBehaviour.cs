@@ -47,18 +47,13 @@ public class HammerBehaviour : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Guilty")
+        if (collision.gameObject.tag == "Testigo_M")
         {
             Bonk.Play();
             Ouch.Play();
-            
-            Debug.Log("GUILTY!!");
-
-           
 
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
-               
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(1.5f));
             }
@@ -68,15 +63,13 @@ public class HammerBehaviour : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Innocent")
+        if (collision.gameObject.tag == "Testigo_W")
         {
             Bonk.Play();
             OuchWoman.Play();
-            Debug.Log("INNOCENT!!");
             
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
-              
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(1.5f));
             }

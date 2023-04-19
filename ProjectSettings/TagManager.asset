@@ -30,6 +30,8 @@ TagManager:
   - DecisionMode
   - Diana
   - Flecha
+  - Testigo_M
+  - Testigo_W
   layers:
   - Default
   - TransparentFX

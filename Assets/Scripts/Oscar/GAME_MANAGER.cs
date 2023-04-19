@@ -269,17 +269,17 @@ public class GAME_MANAGER : MonoBehaviour
 
                 if (currentScene.name == "Game")
                 {
-                    decisionCase = "ROGIRA";
+                    decisionCase = "ARNAÖ";
                 }
 
                 if (currentScene.name == "Case2")
                 {
-                    decisionCase = "Alexa Pegej";
+                    decisionCase = "Jankduj";
                 }
 
                 if (currentScene.name == "Case3")
                 {
-                    decisionCase = "Marka Volteikg";
+                    decisionCase = "Rikar Hegber";
                 }
             }
         }
@@ -299,19 +299,18 @@ public class GAME_MANAGER : MonoBehaviour
 
                 if (currentScene.name == "Game")
                 {
-                    decisionCase = "ARNAÖ";
+                    decisionCase = "ROGIRA";
                 }
 
                 if (currentScene.name == "Case2")
                 {
-                    decisionCase = "Jankduj";
+                    decisionCase = "Alexa Pegej";
                 }
 
                 if (currentScene.name == "Case3")
                 {
-                    decisionCase = "Rikar Hegber";
+                    decisionCase = "Marka Volteikg";
                 }
-
             }
         }
     }

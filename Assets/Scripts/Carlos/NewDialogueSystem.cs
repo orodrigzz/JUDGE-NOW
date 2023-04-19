@@ -163,10 +163,16 @@ public class NewDialogueSystem : MonoBehaviour
     public void OnDialogue()
     {
             dialogues[dialoguesIndex].nameText.text = null;
-            dialogues[dialoguesIndex].idText.text = null;
+            if (dialogues[dialoguesIndex].idText != null)
+            {
+                dialogues[dialoguesIndex].idText.text = null;
+            }
             dialogues[dialoguesIndex].nameText.text += dialogues[dialoguesIndex].characterName;
-            dialogues[dialoguesIndex].idText.text += dialogues[dialoguesIndex].characterID;
-            
+           if (dialogues[dialoguesIndex].idText != null)
+           {   
+                dialogues[dialoguesIndex].idText.text += dialogues[dialoguesIndex].characterID;
+           }
+
             if (dialogues[dialoguesIndex].sentenceIndex < dialogues[dialoguesIndex].sentences.Length)
             {
                 dialogues[dialoguesIndex].textBox.SetActive(true);
