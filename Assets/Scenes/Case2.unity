@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 677105655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &705507993
@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 729173444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &864261917
@@ -3153,8 +3153,8 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: The defendant is clearly guilty. He has eaten poor Alexa's lunch. That's
-    all there is to it. Neeeeext caseeee
+  caseResume: 'Alexa Pegej is right. The defendant (Jankduj) is clearly guilty. He
+    has eaten poor Alexa''s lunch. That''s all there is to it. '
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 1414715713}

@@ -3287,9 +3287,9 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: The defendant is innocent, he singed at 22:00 so is legal. If he had
-    sung at 0:00 he would be guilty since after 0:00 it is illegal to exceed certain
-    decibels.
+  caseResume: Rogira (The defendant) is right. The defendant is innocent, he singed
+    at 22:00 so is legal. If he had sung at 0:00 he would be guilty since after 0:00
+    it is illegal to exceed certain decibels.
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 648372444}

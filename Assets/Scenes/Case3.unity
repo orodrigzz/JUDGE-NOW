@@ -3124,8 +3124,8 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: The defendant is clearly guilty. As you can see the skull has your
-    fingerprint on it. Clearly he stole it.
+  caseResume: Marka Volteikg is right. The defendant (Rikar Hegber) is clearly guilty.
+    As you can see the skull has your fingerprint on it. Clearly he stole it.
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 1609594666}
@@ -3624,7 +3624,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1623770699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1633748961
@@ -3870,7 +3870,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646260177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1651456449

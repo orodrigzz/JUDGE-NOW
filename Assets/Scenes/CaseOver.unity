@@ -1105,8 +1105,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -351, y: -318}
-  m_SizeDelta: {x: 811.4719, y: 74.2509}
+  m_AnchoredPosition: {x: -379.1501, y: -318}
+  m_SizeDelta: {x: 991.17, y: 74.2509}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040476819
 MonoBehaviour:
@@ -1130,10 +1130,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 33
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'THE ACCUSED HAS BEEN DECLARED:'
+  m_Text: 'THE JUDGE HAS DECIDED THAT THE ONE WHO IS RIGHT IS:'
 --- !u!222 &1040476820
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1185,7 +1185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 428, y: 9.0441}
+  m_AnchoredPosition: {x: 551.1, y: 11}
   m_SizeDelta: {x: 301.7146, y: 56.1627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049026280
