@@ -58,6 +58,8 @@ public class MoveTo : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.initDialogue = true;
             }
+            GAME_MANAGER._GAME_MANAGER.exclamationPoint.SetActive(true);
+            GAME_MANAGER._GAME_MANAGER.tutorialStarted = true;
             speed = 0f;
         }
     }

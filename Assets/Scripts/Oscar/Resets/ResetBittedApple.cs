@@ -12,12 +12,16 @@ public class ResetBittedApple : MonoBehaviour
     {
         appleObj = GameObject.FindGameObjectWithTag("BittedApple");
 
-        if (newDialogueSystem.evidenceInstantiated == true)
+        if(newDialogueSystem != null)
         {
-            if (appleObj == null)
+            if (newDialogueSystem.evidenceInstantiated == true)
             {
-                Instantiate(newApple, resetObject, false);
+                if (appleObj == null)
+                {
+                    Instantiate(newApple, resetObject, false);
+                }
             }
         }
+        
     }
 }

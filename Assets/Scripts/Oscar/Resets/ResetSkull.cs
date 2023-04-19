@@ -12,12 +12,16 @@ public class ResetSkull : MonoBehaviour
     {
         skullObj = GameObject.FindGameObjectWithTag("Skull");
 
-        if (newDialogueSystem.evidenceInstantiated == true)
+        if(newDialogueSystem != null)
         {
-            if (skullObj == null)
+            if (newDialogueSystem.evidenceInstantiated == true)
             {
-                Instantiate(newSkull, resetObject, false);
+                if (skullObj == null)
+                {
+                    Instantiate(newSkull, resetObject, false);
+                }
             }
         }
+        
     }
 }

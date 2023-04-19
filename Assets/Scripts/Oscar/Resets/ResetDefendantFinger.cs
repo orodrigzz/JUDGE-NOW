@@ -12,12 +12,16 @@ public class ResetDefendantFinger : MonoBehaviour
     {
         fingerObj = GameObject.FindGameObjectWithTag("DefendantFinger");
 
-        if (newDialogueSystem.evidenceInstantiated == true)
+        if (newDialogueSystem != null)
         {
-            if (fingerObj == null)
+            if (newDialogueSystem.evidenceInstantiated == true)
             {
-                Instantiate(newfinger, resetObject, false);
+                if (fingerObj == null)
+                {
+                    Instantiate(newfinger, resetObject, false);
+                }
             }
         }
+        
     }
 }

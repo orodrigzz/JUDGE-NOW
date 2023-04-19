@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2013,7 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2367d89fcac31924bb0394597182d3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newDialogueSystem: {fileID: 1538085428}
+  newDialogueSystem: {fileID: 0}
   appleObj: {fileID: 0}
   newApple: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
   resetObject: {fileID: 614688194}
@@ -2634,7 +2634,6 @@ GameObject:
   - component: {fileID: 1538085426}
   - component: {fileID: 1538085425}
   - component: {fileID: 1538085424}
-  - component: {fileID: 1538085428}
   - component: {fileID: 1538085429}
   m_Layer: 5
   m_Name: DialogueSystemCanvas
@@ -2730,111 +2729,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1538085428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538085423}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f872b64e00447bf4684cceec9747e60d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - sentences:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    nameText: {fileID: 0}
-    idText: {fileID: 0}
-    textBox: {fileID: 0}
-    evidence: {fileID: 0}
-    spawnPoint: {fileID: 0}
-    evidence2: {fileID: 0}
-    spawnPoint2: {fileID: 0}
-    dialogueLines:
-    - ' Welcome to Ekagate Court, your new job, Judge. I''m sure you''re anxious
-      to know how everything works around here'
-    - You can move you with WASD - Forward, Left, Back and Right
-    - Use the Mouse to move your arm
-    - .
-    characterName: Mister Inspector, Richard
-    characterID: Classified
-    sentenceIndex: -1
-    diactivateCount: 0
-    currentDialogueEnded: 0
-  - sentences:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    nameText: {fileID: 0}
-    idText: {fileID: 0}
-    textBox: {fileID: 0}
-    evidence: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
-    spawnPoint: {fileID: 724724525}
-    evidence2: {fileID: 0}
-    spawnPoint2: {fileID: 0}
-    dialogueLines:
-    - Use Left Click to Pick Up Objects and Right Click to realese
-    - You can control the room noise by slamming the hammer
-    - Q - Enter and Exit the Inspect Mode - Inspect the evidence carefully it's what's
-      going to help you make a right decision. Try with your lunch
-    - 
-    characterName: Mister Inspector, Richard
-    characterID: Classified
-    sentenceIndex: -1
-    diactivateCount: 0
-    currentDialogueEnded: 0
-  - sentences:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    nameText: {fileID: 0}
-    idText: {fileID: 0}
-    textBox: {fileID: 0}
-    evidence: {fileID: 0}
-    spawnPoint: {fileID: 0}
-    evidence2: {fileID: 0}
-    spawnPoint2: {fileID: 0}
-    dialogueLines:
-    - You can throw your hammer with Space
-    - Throwing the hammer allows you to turn up the lights if you hit the switch
-    - 'Press M to enter and exit decision mode.Throw the hammer: RED if you found
-      it guilty or GREEN if you found it innocent'
-    - That's it. Make your decision and...JUDGE NOW!
-    - 
-    characterName: Mister Inspector, Richard
-    characterID: Classified
-    sentenceIndex: -1
-    diactivateCount: 0
-    currentDialogueEnded: 0
-  - sentences: []
-    nameText: {fileID: 0}
-    idText: {fileID: 0}
-    textBox: {fileID: 0}
-    evidence: {fileID: 0}
-    spawnPoint: {fileID: 0}
-    evidence2: {fileID: 0}
-    spawnPoint2: {fileID: 0}
-    dialogueLines: []
-    characterName: Mister Inspector, Richard
-    characterID: Classified
-    sentenceIndex: -1
-    diactivateCount: 0
-    currentDialogueEnded: 0
-  caseResume: It's the Tutorial, not much going on here, GET TO WORK!! READY FOR
-    CASE 1? JUDGE NOW!
-  dialogueOn: 0
-  dialoguesIndex: -1
-  decisionMode: {fileID: 614688195}
-  isRevealed: 0
-  evidenceInstantiated: 0
 --- !u!114 &1538085429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3713,8 +3607,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.6306, y: 40}
-  m_SizeDelta: {x: 578.7767, y: 135.4255}
+  m_AnchoredPosition: {x: -0, y: -6.3065}
+  m_SizeDelta: {x: 569.5154, y: 228.0386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895171598
 MonoBehaviour:
@@ -3738,7 +3632,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 75c3dd4dff7d71b46885051196b6d43b, type: 3}
-    m_FontSize: 19
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -3750,8 +3644,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: " - PUSH THE RED BUTTON TO ACTIVATE THE DECISION MODE\n\n - THROW THE HAMMER
-    TO ONE OF THE ARROWS  TO MAKE A DECISION\n\n-ON REAL CASES YOU WILL HAVE TO THROW
-    THE HAMMER TO THE PERSON YOU THINK IS RIGHT"
+    TO ONE OF THE ARROWS  TO MAKE A DECISION, DECISIONS AFFECTIN YOUR REPUTATION\n\n-
+    ON REAL CASES YOU WILL HAVE TO THROW THE HAMMER TO THE PERSON YOU THINK IS RIGHT"
 --- !u!222 &1895171599
 CanvasRenderer:
   m_ObjectHideFlags: 0

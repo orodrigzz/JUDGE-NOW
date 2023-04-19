@@ -13,13 +13,16 @@ public class ResetMobile : MonoBehaviour
     void Update()
     {
         mobile = GameObject.FindGameObjectWithTag("Mobile");
-
-        if (newDialogueSystem.evidenceInstantiated == true)
+        if(newDialogueSystem != null)
         {
-            if (mobile == null)
+            if (newDialogueSystem.evidenceInstantiated == true)
             {
-                Instantiate(newMobile, resetObject, false);
+                if (mobile == null)
+                {
+                    Instantiate(newMobile, resetObject, false);
+                }
             }
         }
+        
     }
 }

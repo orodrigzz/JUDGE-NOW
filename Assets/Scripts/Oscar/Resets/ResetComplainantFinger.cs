@@ -11,13 +11,16 @@ public class ResetComplainantFinger : MonoBehaviour
     void Update()
     {
         fingerObj = GameObject.FindGameObjectWithTag("ComplainantFinger");
-
-        if (newDialogueSystem.evidenceInstantiated == true)
+        if(newDialogueSystem != null)
         {
-            if (fingerObj == null)
+            if (newDialogueSystem.evidenceInstantiated == true)
             {
-                Instantiate(newfinger, resetObject, false);
+                if (fingerObj == null)
+                {
+                    Instantiate(newfinger, resetObject, false);
+                }
             }
         }
+        
     }
 }

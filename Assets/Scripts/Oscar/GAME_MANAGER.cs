@@ -38,6 +38,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool stopArmMovement;
     public bool decisionMode = false;
     public bool caseEnded;
+    public bool tutorialStarted;
     #endregion
 
     #region SaveInfo

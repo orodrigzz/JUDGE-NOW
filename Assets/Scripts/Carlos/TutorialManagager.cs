@@ -67,16 +67,16 @@ public class TutorialManagager : MonoBehaviour
     
     void Update()
     {
-        if (startTutorial && !inputCompleted)
+        if (GAME_MANAGER._GAME_MANAGER.tutorialStarted && !inputCompleted)
         {
             InputSystemTutorial();
         }
-        if(inputCompleted && startTutorial)
+        if(inputCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
             inputTutorialText.SetActive(false);
             PickUpSystemTutorial();
         }
-        if(pickCompleted && startTutorial)
+        if(pickCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
             pickItemSysText.SetActive(false);
             ThrowSystemTutorial();
@@ -86,17 +86,17 @@ public class TutorialManagager : MonoBehaviour
             trhowInputText.SetActive(false);
             NoiseSystemTutorial();
         }
-        if(noiseCompleted && startTutorial)
+        if(noiseCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
             noiseControlText.SetActive(false);
             InspectSystemTutorial();
         }
-        if(inspectCompleted && startTutorial)
+        if(inspectCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
             inspectSysText.SetActive(false);
             DecisionSystemTutorial();
         }
-        if(decisionCompleted && inputCompleted && pickCompleted && inputCompleted && throwCompleted && noiseCompleted && startTutorial)
+        if(decisionCompleted && inputCompleted && pickCompleted && inputCompleted && throwCompleted && noiseCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
             tutorialCompleted = true;
         }
