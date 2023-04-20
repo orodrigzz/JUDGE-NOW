@@ -467,8 +467,8 @@ MonoBehaviour:
   maxX: 1
   maxZ: -3.7
   minZ: -4
-  sensibility: 0.08
-  velocity: 4
+  sensibility: 0.05
+  velocity: 2.5
   horizontalInputName: Horizontal
   verticalInputName: Vertical
 --- !u!120 &2523612200135011276

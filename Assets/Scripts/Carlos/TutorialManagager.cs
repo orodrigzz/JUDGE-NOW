@@ -9,6 +9,8 @@ public class TutorialManagager : MonoBehaviour
     public GameObject inputTutorialText;
     public GameObject pickItemSysText;
     public GameObject trhowInputText;
+    public GameObject lightText;
+    public GameObject dodgeText;
     public GameObject noiseControlText;
     public GameObject inspectSysText;
     public GameObject decisionSystemText;
@@ -19,6 +21,8 @@ public class TutorialManagager : MonoBehaviour
     public bool inputCompleted;
     public bool pickCompleted;
     public bool throwCompleted;
+    public bool lightCompleted;
+    public bool dodgeCompleted;
     public bool noiseCompleted;
     public bool inspectCompleted;
     public bool decisionCompleted;
@@ -27,6 +31,7 @@ public class TutorialManagager : MonoBehaviour
     public bool startInspecting;
     public bool hasInspected;
     public bool hasSpawned;
+    public bool lightOff;
 
     [Header("Inputs")]
 
@@ -46,6 +51,7 @@ public class TutorialManagager : MonoBehaviour
     public GameObject evidence;
     public GameObject spawnPoint;
     public GameObject activateDecision;
+    
 
 
 
@@ -58,6 +64,7 @@ public class TutorialManagager : MonoBehaviour
         inputTutorialText.SetActive(false);
         pickItemSysText.SetActive(false);
         trhowInputText.SetActive(false);
+        lightText.SetActive(false);
         noiseControlText.SetActive(false);
         inspectSysText.SetActive(false);
         decisionSystemText.SetActive(false);
@@ -84,12 +91,16 @@ public class TutorialManagager : MonoBehaviour
         if(pickCompleted && throwCompleted)
         {
             trhowInputText.SetActive(false);
-            NoiseSystemTutorial();
+            LightSystemTutorial();
         }
         if(noiseCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
             noiseControlText.SetActive(false);
             InspectSystemTutorial();
+        }
+        if(lightCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
+        {
+            lightText.SetActive(false);
         }
         if(inspectCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
@@ -165,6 +176,21 @@ public class TutorialManagager : MonoBehaviour
             throwCompleted = true;
         }
 
+    }
+
+    public void LightSystemTutorial()
+    {
+        lightText.SetActive(true);
+        if(lightOff == false)
+        {
+            GAME_MANAGER._GAME_MANAGER.lightsOn = false;
+            lightOff = true;
+        }
+       
+        if (GAME_MANAGER._GAME_MANAGER.lightsOn == true)
+        {
+            lightCompleted = true;
+        }
     }
     public void NoiseSystemTutorial()
     {
