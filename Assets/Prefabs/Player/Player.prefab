@@ -467,7 +467,7 @@ MonoBehaviour:
   maxX: 1
   maxZ: -3.7
   minZ: -4
-  sensibility: 0.2
+  sensibility: 0.08
   velocity: 4
   horizontalInputName: Horizontal
   verticalInputName: Vertical
@@ -748,3 +748,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c850f992699ebc4ea7222e794adf2c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TomatoeUI: {fileID: 0}
