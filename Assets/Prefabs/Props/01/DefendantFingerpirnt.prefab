@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 6417362091544383132}
   - component: {fileID: 3166426249141628115}
   - component: {fileID: 7213489886501219626}
-  - component: {fileID: 3764647987978639657}
   - component: {fileID: 743676128669449711}
   m_Layer: 7
   m_Name: DefendantFingerpirnt
@@ -134,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd89d7e92dcd92459d059122b38debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezedconstraints: 0
 --- !u!114 &8577854333508878360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,18 +534,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3764647987978639657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6653001100958368574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ac4e70d95e9530459627b569d57adf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &743676128669449711
 MonoBehaviour:
   m_ObjectHideFlags: 0

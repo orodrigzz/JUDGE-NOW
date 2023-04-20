@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6114252927012870909}
   - component: {fileID: -6284615298389785563}
   - component: {fileID: -5402015847289791522}
-  - component: {fileID: 73483677128612786}
   - component: {fileID: 9214347823295262311}
   - component: {fileID: 7322216056695488861}
   - component: {fileID: 5315529458792143468}
@@ -21,7 +20,6 @@ GameObject:
   - component: {fileID: 4441492792737774140}
   - component: {fileID: 5961669702815693207}
   - component: {fileID: 4544098251291130985}
-  - component: {fileID: 5174777688228073546}
   - component: {fileID: 1279025803432783141}
   m_Layer: 7
   m_Name: Movil
@@ -125,18 +123,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2047851, y: 0.43, z: 0.15}
   m_Center: {x: -0.06, y: -0.06, z: 0.09}
---- !u!114 &73483677128612786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754136685962148648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac87e11638a93ec478274bf70b2eee8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9214347823295262311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,18 +551,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5174777688228073546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754136685962148648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ac4e70d95e9530459627b569d57adf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1279025803432783141
 MonoBehaviour:
   m_ObjectHideFlags: 0
