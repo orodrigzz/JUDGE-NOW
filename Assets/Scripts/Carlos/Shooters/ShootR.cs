@@ -46,9 +46,16 @@ public class ShootR : MonoBehaviour
                 direction = player.position;
                 rightVel = CalculateVelocity(direction, Shooter_R.transform.position, 1f);
                 ShootRight();
+                GAME_MANAGER._GAME_MANAGER.hasShootedR = true;
                 rightShooterTargetTime = rightShooterTime;
                 StartCoroutine(Wait());
             }
+        }
+
+        if(GAME_MANAGER._GAME_MANAGER.currentScene.name == "Tutorial")
+        {
+            direction = player.position;
+            rightVel = CalculateVelocity(direction, Shooter_R.transform.position, 1f);
         }
     }
 
@@ -79,6 +86,7 @@ public class ShootR : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1);
+        GAME_MANAGER._GAME_MANAGER.hasShootedR = false;
         exclamation.SetActive(false);
     }
 }

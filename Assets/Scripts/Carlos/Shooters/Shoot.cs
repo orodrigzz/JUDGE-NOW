@@ -46,9 +46,15 @@ public class Shoot : MonoBehaviour
                 direction = player.position;
                 leftVel = CalculateVelocity(direction, Shooter_L.transform.position, 1f);
                 ShootLeft();
+                GAME_MANAGER._GAME_MANAGER.hasShootedL = true;
                 leftShooterTargetTime = leftShooterTime;
                 StartCoroutine(Wait());
             }
+        }
+        if(GAME_MANAGER._GAME_MANAGER.currentScene.name == "Tutorial")
+        {
+            direction = player.position;
+            leftVel = CalculateVelocity(direction, Shooter_L.transform.position, 1f);
         }
         
     }
@@ -80,6 +86,7 @@ public class Shoot : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1);
+        GAME_MANAGER._GAME_MANAGER.hasShootedL = false;
         exclamation.SetActive(false);
     }
 }

@@ -32,6 +32,8 @@ public class TutorialManagager : MonoBehaviour
     public bool hasInspected;
     public bool hasSpawned;
     public bool lightOff;
+    public bool hasShootedR;
+    public bool hasShootedL;
 
     [Header("Inputs")]
 
@@ -51,6 +53,10 @@ public class TutorialManagager : MonoBehaviour
     public GameObject evidence;
     public GameObject spawnPoint;
     public GameObject activateDecision;
+    public Shoot shootL;
+    public ShootR shootR;
+    public float shootTimerR;
+    public float shootTimeL;
     
 
 
@@ -65,6 +71,7 @@ public class TutorialManagager : MonoBehaviour
         pickItemSysText.SetActive(false);
         trhowInputText.SetActive(false);
         lightText.SetActive(false);
+        dodgeText.SetActive(false);
         noiseControlText.SetActive(false);
         inspectSysText.SetActive(false);
         decisionSystemText.SetActive(false);
@@ -93,6 +100,16 @@ public class TutorialManagager : MonoBehaviour
             trhowInputText.SetActive(false);
             LightSystemTutorial();
         }
+        if(lightCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
+        {
+            lightText.SetActive(false);
+            ShootSystemTutorial();
+        }
+        if(dodgeCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
+        {
+            dodgeText.SetActive(false);
+            NoiseSystemTutorial();
+        }
         if(noiseCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
             noiseControlText.SetActive(false);
@@ -107,7 +124,7 @@ public class TutorialManagager : MonoBehaviour
             inspectSysText.SetActive(false);
             DecisionSystemTutorial();
         }
-        if(decisionCompleted && inputCompleted && pickCompleted && inputCompleted && throwCompleted && noiseCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
+        if(decisionCompleted && inputCompleted && pickCompleted && inputCompleted && throwCompleted && noiseCompleted && dodgeCompleted && lightCompleted && GAME_MANAGER._GAME_MANAGER.tutorialStarted)
         {
             tutorialCompleted = true;
         }
@@ -190,6 +207,38 @@ public class TutorialManagager : MonoBehaviour
         if (GAME_MANAGER._GAME_MANAGER.lightsOn == true)
         {
             lightCompleted = true;
+        }
+    }
+
+    public void ShootSystemTutorial()
+    {
+        dodgeText.SetActive(true);
+        if (!hasShootedL)
+        {
+            shootTimeL -= Time.deltaTime;
+            if(shootTimeL <= 0)
+            {
+                shootL.ShootLeft();
+                hasShootedL = true;
+                shootTimeL = 0;
+            } 
+        }
+        if(hasShootedL && !hasShootedR)
+        {
+            shootTimerR -= Time.deltaTime;
+            if(shootTimerR <= 0)
+            {
+                shootR.ShootRight();
+                hasShootedR = true;
+                shootTimerR = 0;
+
+            }
+           
+            
+        }
+        if(hasShootedR && hasShootedL)
+        {
+            dodgeCompleted = true;
         }
     }
     public void NoiseSystemTutorial()

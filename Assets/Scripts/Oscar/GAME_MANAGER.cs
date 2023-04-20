@@ -39,6 +39,8 @@ public class GAME_MANAGER : MonoBehaviour
     public bool decisionMode = false;
     public bool caseEnded;
     public bool tutorialStarted;
+    public bool hasShootedR;
+    public bool hasShootedL;
     #endregion
 
     #region SaveInfo
