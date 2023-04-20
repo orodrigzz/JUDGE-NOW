@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThrowableObject : MonoBehaviour
 {
-    [SerializeField] float speed;
+    
     [SerializeField] Rigidbody rb;
     [SerializeField] Vector3 direction;
     
@@ -25,7 +25,7 @@ public class ThrowableObject : MonoBehaviour
     {
         if (rb != null)
         {
-            rb.AddForce(direction * speed * -1);
+            rb.AddForce(direction * GAME_MANAGER._GAME_MANAGER.objectVel * -1);
         }
     }
 }

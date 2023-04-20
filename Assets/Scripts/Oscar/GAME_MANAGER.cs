@@ -41,6 +41,10 @@ public class GAME_MANAGER : MonoBehaviour
     public bool tutorialStarted;
     public bool hasShootedR;
     public bool hasShootedL;
+    public bool isHoldingSpace;
+
+    public float timeHolding;
+    public float objectVel;
     #endregion
 
     #region SaveInfo
@@ -80,6 +84,7 @@ public class GAME_MANAGER : MonoBehaviour
 
     void Start()
     {
+        objectVel = 800;
         caseEnded = false;
         isGamePaused = false;
         currentScene = SceneManager.GetActiveScene();

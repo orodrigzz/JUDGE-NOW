@@ -76,11 +76,27 @@ public class PickUpSystem : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
-           
-            if(itemPicked != null)
+            GAME_MANAGER._GAME_MANAGER.isHoldingSpace = true;
+            if (itemPicked != null)
             {
                 laserPointer.enabled = true;
                 laserPointer.SetPositions(new Vector3[] { transform.position, transform.position + itemPicked.transform.right * 10f });
+            }
+            if (GAME_MANAGER._GAME_MANAGER.isHoldingSpace)
+            {
+                GAME_MANAGER._GAME_MANAGER.timeHolding += Time.deltaTime;
+                if(GAME_MANAGER._GAME_MANAGER.timeHolding >= 3)
+                {
+                    GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
+                }
+                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 5)
+                {
+                    GAME_MANAGER._GAME_MANAGER.objectVel = 950f;
+                }
+                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 8)
+                {
+                    GAME_MANAGER._GAME_MANAGER.objectVel = 1000f;
+                }
             }
         }
 
@@ -96,11 +112,16 @@ public class PickUpSystem : MonoBehaviour
                 itemPicked.transform.SetParent(null);
                 itemPicked.useGravity = true;
                 itemPicked.constraints = RigidbodyConstraints.None;
+                
             }
             itemPicked = null;
             isPicked = false;
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
+
+            GAME_MANAGER._GAME_MANAGER.timeHolding = 0;
+            GAME_MANAGER._GAME_MANAGER.objectVel = 800f;
             laserPointer.enabled = false;
+
         }
         
         if (Input.GetMouseButtonDown(0) && isPicked && itemPicked.tag != "Hammer")
