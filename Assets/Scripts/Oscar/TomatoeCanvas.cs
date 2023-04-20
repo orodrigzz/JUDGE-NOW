@@ -26,8 +26,7 @@ public class TomatoeCanvas : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1);
-        //Hacer que se deslice hacia abajo
-        Destroy(TomatoeUI);
+        TomatoeUI.SetActive(false);
     }
 
 }

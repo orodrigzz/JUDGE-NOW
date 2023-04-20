@@ -431,7 +431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.5541, y: -18.8364}
+  m_AnchoredPosition: {x: -2.6, y: -18.8364}
   m_SizeDelta: {x: 562.5774, y: 244.1174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95995715
@@ -1630,7 +1630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.5541, y: -18.8364}
+  m_AnchoredPosition: {x: 1.3, y: -18.8364}
   m_SizeDelta: {x: 562.5774, y: 244.1174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565080188
@@ -1655,7 +1655,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 75c3dd4dff7d71b46885051196b6d43b, type: 3}
-    m_FontSize: 22
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1974,7 +1974,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 75c3dd4dff7d71b46885051196b6d43b, type: 3}
-    m_FontSize: 22
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2955,7 +2955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.5541, y: -18.8364}
+  m_AnchoredPosition: {x: -8.1541, y: -18.8364}
   m_SizeDelta: {x: 562.5774, y: 244.1174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1466900415
@@ -3226,8 +3226,8 @@ MonoBehaviour:
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
-    - Good morning, Mr. Judge. I want to report my neighbour because he has been
-      singing very loud for hours preventing me from sleeping well
+    - Good morning, Mr. Judge. I want to report my neighbour. He has been singing
+      very loud  preventing me from sleeping
     - 'I bring the following evidence: my mobile phone with a recorded audio of him
       singing '
     - AAAA
@@ -3248,7 +3248,7 @@ MonoBehaviour:
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
-    - 'That''s bullshit !!, it''s ridiculous that singing is a crime, plus I didn''t
+    - 'That''s bullshit !! It''s ridiculous that singing is a crime, plus I didn''t
       do it at night '
     - 'You want me to go to jail because I''m more handsome than you. Judge you can''t
       allow this '
@@ -3731,7 +3731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.5541, y: -18.8364}
+  m_AnchoredPosition: {x: -2.6, y: -18.8364}
   m_SizeDelta: {x: 562.5774, y: 244.1174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657113568
@@ -4081,7 +4081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.5541, y: -18.8364}
+  m_AnchoredPosition: {x: -2.6, y: -18.8364}
   m_SizeDelta: {x: 562.5774, y: 244.1174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870372146
