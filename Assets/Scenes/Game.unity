@@ -1211,7 +1211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a10a6138af2f2be42b7583324bb9680f, type: 3}
       propertyPath: m_TagString
-      value: Innocent
+      value: Testigo_W
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a10a6138af2f2be42b7583324bb9680f, type: 3}
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 372519452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &375089258
@@ -1673,7 +1673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e91e144e48cfd6747a4ab3958b5c869f, type: 3}
       propertyPath: m_TagString
-      value: Guilty
+      value: Testigo_M
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e91e144e48cfd6747a4ab3958b5c869f, type: 3}
@@ -1742,7 +1742,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 788992756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &906637853
@@ -3089,9 +3089,9 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: Rogira (The defendant) is right. The defendant is innocent, he singed
-    at 22:00 so is legal. If he had sung at 0:00 he would be guilty since after 0:00
-    it is illegal to exceed certain decibels.
+  caseResume: "Arna\xF6 Figuerjas is the Guilty. Rogira (The defendant) is right
+    she is innocent, he singed at 22:00 so is legal. If he had sung at 0:00 he would
+    be guilty since after 0:00 it is illegal to exceed certain decibels."
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 648372444}

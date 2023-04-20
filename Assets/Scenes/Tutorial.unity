@@ -1195,7 +1195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e91e144e48cfd6747a4ab3958b5c869f, type: 3}
       propertyPath: m_TagString
-      value: Guilty
+      value: Testigo_M
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e91e144e48cfd6747a4ab3958b5c869f, type: 3}
@@ -1770,7 +1770,7 @@ GameObject:
   - component: {fileID: 710960025}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Guilty
+  m_TagString: Testigo_M
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

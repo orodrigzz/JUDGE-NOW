@@ -2759,8 +2759,9 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: Marka Volteikg is right. The defendant (Rikar Hegber) is clearly guilty.
-    As you can see the skull has your fingerprint on it. Clearly he stole it.
+  caseResume: Rikar Hegber is the Guilty. Marka Volteikg is right. The defendant
+    (Rikar Hegber) is clearly guilty. As you can see the skull has your fingerprint
+    on it. Clearly he stole it.
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 1609594666}
@@ -3186,7 +3187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b45d3da3d8464045b1439ef8cc62d9c, type: 3}
       propertyPath: m_TagString
-      value: Guilty
+      value: Testigo_M
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b45d3da3d8464045b1439ef8cc62d9c, type: 3}
@@ -3255,7 +3256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1623770699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1633748961
@@ -3432,7 +3433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81f9f97bba49bc94fabc4ed3970baa75, type: 3}
       propertyPath: m_TagString
-      value: Innocent
+      value: Testigo_W
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81f9f97bba49bc94fabc4ed3970baa75, type: 3}
@@ -3501,7 +3502,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646260177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1651456449

@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'THE JUDGE HAS DECIDED THAT THE ONE WHO IS RIGHT IS:'
+  m_Text: 'THE JUDGE HAS DECIDED THAT THE ONE WHO IS GUILTY IS:'
 --- !u!222 &1040476820
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1185,7 +1185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 551.1, y: 11}
+  m_AnchoredPosition: {x: 560.7, y: 11}
   m_SizeDelta: {x: 301.7146, y: 56.1627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049026280
