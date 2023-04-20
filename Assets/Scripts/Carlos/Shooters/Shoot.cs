@@ -17,7 +17,11 @@ public class Shoot : MonoBehaviour
 
     private void Awake()
     {
-        exclamation.SetActive(false);
+        if(exclamation != null)
+        {
+            exclamation.SetActive(false);
+        }
+        
     }
 
     void Start()
