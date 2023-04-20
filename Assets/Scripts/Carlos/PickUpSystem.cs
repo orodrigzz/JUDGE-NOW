@@ -147,7 +147,7 @@ public class PickUpSystem : MonoBehaviour
         if(itemPicked != null)
         {
 
-            if (itemPicked.tag == "Fingerprint")
+            if (itemPicked.tag == "DenfendantFinger" || itemPicked.tag == "ComplainantFinger")
             {
                 offset = 0.4f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;

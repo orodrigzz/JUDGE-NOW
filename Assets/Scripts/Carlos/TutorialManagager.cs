@@ -49,6 +49,9 @@ public class TutorialManagager : MonoBehaviour
     public GameObject diana_1;
     public GameObject diana_2;
     public GameObject diana_3;
+    public GameObject npc1;
+    public GameObject npc2;
+    public GameObject richard;
     public GameObject[] dianas;
     public GameObject evidence;
     public GameObject spawnPoint;
@@ -57,13 +60,12 @@ public class TutorialManagager : MonoBehaviour
     public ShootR shootR;
     public float shootTimerR;
     public float shootTimeL;
-    
-
-
-
+  
 
     void Start()
     {
+        npc1.SetActive(false);
+        npc2.SetActive(false);
         diana_1.SetActive(false);
         diana_2.SetActive(false);
         diana_3.SetActive(false);
@@ -78,7 +80,6 @@ public class TutorialManagager : MonoBehaviour
         activateDecision.SetActive(false);
     }
 
-    
     void Update()
     {
         if (GAME_MANAGER._GAME_MANAGER.tutorialStarted && !inputCompleted)
@@ -274,7 +275,11 @@ public class TutorialManagager : MonoBehaviour
     {
         decisionSystemText.SetActive(true);
         activateDecision.SetActive(true);
-        if(GAME_MANAGER._GAME_MANAGER.caseEnded == true)
+        npc1.SetActive(true);
+        npc2.SetActive(true);
+        richard.SetActive(false);
+
+        if (GAME_MANAGER._GAME_MANAGER.caseEnded == true)
         {
             decisionCompleted = true;
         }
