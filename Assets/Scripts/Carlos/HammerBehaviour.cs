@@ -13,6 +13,8 @@ public class HammerBehaviour : MonoBehaviour
     [SerializeField] AudioSource Ouch;
     [SerializeField] AudioSource silencio;
     [SerializeField] AudioSource OuchWoman;
+    [SerializeField] AudioSource Notificacion;
+    [SerializeField] AudioSource Diana;
 
     [SerializeField] int mazazos;
 
@@ -90,6 +92,13 @@ public class HammerBehaviour : MonoBehaviour
         {
             Bonk.Play();
             OuchWoman.Play();
+            StartCoroutine(WaitForDestroy(1.5f));
+        }
+
+        if (collision.gameObject.tag == "Diana")
+        {
+            Diana.Play();
+            Notificacion.Play();
             StartCoroutine(WaitForDestroy(1.5f));
         }
 
