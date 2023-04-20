@@ -3260,8 +3260,8 @@ MonoBehaviour:
     nameText: {fileID: 1651456451}
     idText: {fileID: 0}
     textBox: {fileID: 1297240262}
-    evidence: {fileID: 1835584263018215037, guid: f7553de6a9c98444ca3c7925a450908f, type: 3}
-    spawnPoint: {fileID: 1414715711}
+    evidence: {fileID: 0}
+    spawnPoint: {fileID: 0}
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
@@ -3279,8 +3279,8 @@ MonoBehaviour:
     nameText: {fileID: 963476744}
     idText: {fileID: 0}
     textBox: {fileID: 1276023892}
-    evidence: {fileID: 0}
-    spawnPoint: {fileID: 0}
+    evidence: {fileID: 1835584263018215037, guid: f7553de6a9c98444ca3c7925a450908f, type: 3}
+    spawnPoint: {fileID: 1414715711}
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:

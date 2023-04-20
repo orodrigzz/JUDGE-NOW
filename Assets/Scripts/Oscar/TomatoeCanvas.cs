@@ -25,7 +25,7 @@ public class TomatoeCanvas : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(7);
         TomatoeUI.SetActive(false);
     }
 
