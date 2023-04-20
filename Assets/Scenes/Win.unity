@@ -188,7 +188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273809243
 GameObject:
@@ -660,7 +660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Good Job Judge! \nYou've arrived to the end of the JUDGE NOW Alpha"
+  m_Text: "Good Job Judge! \nYou've arrived to the end of the JUDGE NOW BETA"
 --- !u!222 &1331998049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -964,8 +964,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 335637709}
+  cameraTarget: {fileID: 0}
   speed: 1.2
   secs: 0
+  animator: {fileID: 0}
 --- !u!1001 &1568598853015842254
 PrefabInstance:
   m_ObjectHideFlags: 0
