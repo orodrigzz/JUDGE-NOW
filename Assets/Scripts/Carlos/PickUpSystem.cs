@@ -34,8 +34,10 @@ public class PickUpSystem : MonoBehaviour
     [SerializeField] Transform point0;
     [SerializeField] Transform point1;
     [SerializeField] Transform point2;
-    
+
     #endregion
+
+    public GameObject judgality;
 
     private void Start()
     {
@@ -43,7 +45,9 @@ public class PickUpSystem : MonoBehaviour
         startedCameraRotation = camera.transform.rotation.eulerAngles;
         armHold.SetActive(false);
         arm.SetActive(true);
-       
+        judgality.SetActive(false);
+
+
         laserPointer.enabled = false;
     }
 
@@ -87,7 +91,10 @@ public class PickUpSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.timeHolding += Time.deltaTime;
                 if(GAME_MANAGER._GAME_MANAGER.timeHolding >= 3)
                 {
+                    judgality.SetActive(true);
+                    GAME_MANAGER._GAME_MANAGER.decisionMode = true;
                     GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
+                    StartCoroutine(Wait());
                 }
                 if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 5)
                 {
@@ -276,5 +283,10 @@ public class PickUpSystem : MonoBehaviour
             }
 
         }
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3);
+        judgality.SetActive(false);
     }
 }

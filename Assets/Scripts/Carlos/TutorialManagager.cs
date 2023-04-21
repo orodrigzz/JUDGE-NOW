@@ -55,7 +55,6 @@ public class TutorialManagager : MonoBehaviour
     public GameObject[] dianas;
     public GameObject evidence;
     public GameObject spawnPoint;
-    public GameObject activateDecision;
     public Shoot shootL;
     public ShootR shootR;
     public float shootTimerR;
@@ -77,7 +76,6 @@ public class TutorialManagager : MonoBehaviour
         noiseControlText.SetActive(false);
         inspectSysText.SetActive(false);
         decisionSystemText.SetActive(false);
-        activateDecision.SetActive(false);
     }
 
     void Update()
@@ -275,7 +273,6 @@ public class TutorialManagager : MonoBehaviour
     public void DecisionSystemTutorial()
     {
         decisionSystemText.SetActive(true);
-        activateDecision.SetActive(true);
         npc1.SetActive(true);
         npc2.SetActive(true);
         richard.SetActive(false);
