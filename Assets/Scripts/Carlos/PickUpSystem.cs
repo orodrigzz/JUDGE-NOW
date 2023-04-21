@@ -95,6 +95,7 @@ public class PickUpSystem : MonoBehaviour
                     GAME_MANAGER._GAME_MANAGER.decisionMode = true;
                     GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
                     StartCoroutine(Wait());
+                    StartCoroutine(FJudgality());
                 }
                 if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 5)
                 {
@@ -156,7 +157,7 @@ public class PickUpSystem : MonoBehaviour
         if(itemPicked != null)
         {
 
-            if (itemPicked.tag == "DenfendantFinger" || itemPicked.tag == "ComplainantFinger")
+            if (itemPicked.tag == "DenfendantFinger")
             {
                 offset = 0.4f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
@@ -172,6 +173,22 @@ public class PickUpSystem : MonoBehaviour
                 arm.SetActive(false);
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
                
+            }
+            else if (itemPicked.tag == "ComplainantFinger")
+            {
+                offset = 0.4f;
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                isInspecting = true;
+                originalRotation = parent.transform.rotation.eulerAngles;
+                originaPosition = parent.transform.position;
+                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                cameraOriginaPosition = camera.transform.position;
+                camera.transform.position = startedCameraPosition;
+                camera.transform.eulerAngles = startedCameraRotation;
+                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                armHold.SetActive(false);
+                arm.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
             }
             else if (itemPicked.tag == "Skull")
             {
@@ -288,5 +305,11 @@ public class PickUpSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         judgality.SetActive(false);
+    }
+
+    IEnumerator FJudgality()
+    {
+        yield return new WaitForSeconds(10);
+        GAME_MANAGER._GAME_MANAGER.decisionMode = false;
     }
 }

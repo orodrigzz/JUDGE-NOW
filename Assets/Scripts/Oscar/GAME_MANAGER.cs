@@ -221,6 +221,7 @@ public class GAME_MANAGER : MonoBehaviour
         }
         if (currentScene.name == "CaseOver" && reputationCanvas != null)
         {
+            decisionMode = false;
             reputationCanvas.SetActive(false);
             noise = 0;
             isGamePaused = true;
