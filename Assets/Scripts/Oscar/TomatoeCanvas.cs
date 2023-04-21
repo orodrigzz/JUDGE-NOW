@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class TomatoeCanvas : MonoBehaviour
 {
     public GameObject TomatoeUI;
+    public AudioSource tomatoe;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class TomatoeCanvas : MonoBehaviour
     {
         if (other.gameObject.tag == "Tomatoe")
         {
-            //Reproducir audio tomatazo
+            tomatoe.Play();
             TomatoeUI.SetActive(true);
             StartCoroutine(Wait());
         }
