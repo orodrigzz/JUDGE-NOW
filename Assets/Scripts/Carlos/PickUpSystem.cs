@@ -94,7 +94,6 @@ public class PickUpSystem : MonoBehaviour
                     judgality.SetActive(true);
                     GAME_MANAGER._GAME_MANAGER.decisionMode = true;
                     GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
-                    StartCoroutine(Wait());
                     StartCoroutine(FJudgality());
                 }
                 if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 5)
@@ -301,15 +300,11 @@ public class PickUpSystem : MonoBehaviour
 
         }
     }
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(3);
-        judgality.SetActive(false);
-    }
 
     IEnumerator FJudgality()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(12);
+        judgality.SetActive(false);
         GAME_MANAGER._GAME_MANAGER.decisionMode = false;
     }
 }
