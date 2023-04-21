@@ -42,6 +42,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool hasShootedR;
     public bool hasShootedL;
     public bool isHoldingSpace;
+    public bool isDoneInspecting;
 
     public float timeHolding;
     public float objectVel;

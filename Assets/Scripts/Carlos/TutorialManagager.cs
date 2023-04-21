@@ -260,13 +260,14 @@ public class TutorialManagager : MonoBehaviour
     public void InspectSystemTutorial()
     {
         inspectSysText.SetActive(true);
+        leftClick = false;
         if (!hasSpawned)
         {
             Instantiate(evidence, spawnPoint.transform.position, Quaternion.identity);
             hasSpawned = true;
         }
 
-        if (GAME_MANAGER._GAME_MANAGER.isInspecting)
+        if (GAME_MANAGER._GAME_MANAGER.isDoneInspecting)
         {
             inspectCompleted = true;
         }

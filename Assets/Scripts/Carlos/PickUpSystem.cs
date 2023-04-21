@@ -129,9 +129,11 @@ public class PickUpSystem : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.isInspecting == false)
             {
                 EnterInspectionMode();
+                GAME_MANAGER._GAME_MANAGER.isDoneInspecting = false;
             }
             else if (GAME_MANAGER._GAME_MANAGER.isInspecting == true)
             {
+                GAME_MANAGER._GAME_MANAGER.isDoneInspecting = true; 
                 ExitInspectionMode();
             }
 
