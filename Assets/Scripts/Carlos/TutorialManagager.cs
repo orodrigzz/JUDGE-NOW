@@ -129,7 +129,7 @@ public class TutorialManagager : MonoBehaviour
         }
         if (tutorialCompleted)
         {
-            SceneManager.LoadScene("Game");
+            StartCoroutine(Wait());
         }
 
     }
@@ -281,5 +281,11 @@ public class TutorialManagager : MonoBehaviour
         {
             decisionCompleted = true;
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Game");
     }
 }
