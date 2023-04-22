@@ -12,6 +12,7 @@ public class MoveTo : MonoBehaviour
     [SerializeField] private float secs;
 
     [SerializeField] private Animator animator;
+    public bool dead;
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ public class MoveTo : MonoBehaviour
             animator = GetComponent<Animator>();
         }
 
-        if ( target != null)
+        if (target != null)
         {
             targetPos = target.transform.position;
         }
@@ -42,6 +43,34 @@ public class MoveTo : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Hammer")
+        {
+            if (GAME_MANAGER._GAME_MANAGER.decisionMode)
+            {
+                speed = 0;
+                animator.SetBool("Judgalitydead", true);
+                StartCoroutine(StopAnimation());
+            }
+            else
+            {
+                dead = true;
+                speed = 0;
+                animator.SetBool("dead", true);
+                StartCoroutine(StopAnimation());
+            }
+        }
+    }
+
+    IEnumerator StopAnimation()
+    {
+        yield return new WaitForSeconds(3);
+        animator.SetBool("dead", false);
+        dead = false;
+        speed = 1;
+    }
+
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(secs);
@@ -58,17 +87,23 @@ public class MoveTo : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.initDialogue = true;
             }
-            if(GAME_MANAGER._GAME_MANAGER.currentScene.name == "Tutorial")
+            if (GAME_MANAGER._GAME_MANAGER.currentScene.name == "Tutorial")
             {
                 GAME_MANAGER._GAME_MANAGER.tutorialStarted = true;
             }
-            if(GAME_MANAGER._GAME_MANAGER.exclamationPoint != null)
+            if (GAME_MANAGER._GAME_MANAGER.exclamationPoint != null)
             {
                 GAME_MANAGER._GAME_MANAGER.exclamationPoint.SetActive(true);
             }
-            
-           
+
             speed = 0f;
+        }
+        else
+        {
+            if (animator != null)
+            {
+                animator.SetBool("hasArrived", false);
+            }
         }
     }
 }
