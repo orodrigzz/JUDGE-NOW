@@ -38,6 +38,7 @@ public class PickUpSystem : MonoBehaviour
     #endregion
 
     public GameObject judgality;
+    public AudioSource judgalityAudio;
 
     private void Start()
     {
@@ -91,6 +92,7 @@ public class PickUpSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.timeHolding += Time.deltaTime;
                 if(GAME_MANAGER._GAME_MANAGER.timeHolding >= 3)
                 {
+                    judgalityAudio.Play(); 
                     judgality.SetActive(true);
                     GAME_MANAGER._GAME_MANAGER.decisionMode = true;
                     GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
