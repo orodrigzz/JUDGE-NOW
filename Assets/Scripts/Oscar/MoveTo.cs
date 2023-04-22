@@ -51,7 +51,6 @@ public class MoveTo : MonoBehaviour
             {
                 speed = 0;
                 animator.SetBool("Judgalitydead", true);
-                StartCoroutine(StopAnimation());
             }
             else
             {
