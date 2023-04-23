@@ -80,6 +80,7 @@ public class TutorialManagager : MonoBehaviour
 
     void Update()
     {
+        
         if (GAME_MANAGER._GAME_MANAGER.tutorialStarted && !inputCompleted)
         {
             InputSystemTutorial();

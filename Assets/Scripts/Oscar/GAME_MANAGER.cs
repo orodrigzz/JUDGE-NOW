@@ -88,6 +88,7 @@ public class GAME_MANAGER : MonoBehaviour
         objectVel = 800;
         caseEnded = false;
         isGamePaused = false;
+       
         currentScene = SceneManager.GetActiveScene();
         if (exclamationPoint != null)
         {
@@ -206,6 +207,10 @@ public class GAME_MANAGER : MonoBehaviour
             reputationCanvas.SetActive(false);
             noise = 0;
            
+        }
+        if(currentScene.name == "Menu")
+        {
+            tutorialStarted = false;
         }
         if (currentScene.name == "Settings" && reputationCanvas != null)
         {

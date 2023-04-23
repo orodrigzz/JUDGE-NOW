@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1381,6 +1381,7 @@ MonoBehaviour:
   speed: 2
   secs: 0
   animator: {fileID: 395486036}
+  dead: 0
 --- !u!65 &395486034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3583,7 +3584,7 @@ MonoBehaviour:
   noiseControlText: {fileID: 438613732}
   inspectSysText: {fileID: 62095976}
   decisionSystemText: {fileID: 588785213}
-  startTutorial: 1
+  startTutorial: 0
   inputCompleted: 0
   pickCompleted: 0
   throwCompleted: 0
