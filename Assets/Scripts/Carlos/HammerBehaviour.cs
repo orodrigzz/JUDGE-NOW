@@ -153,6 +153,7 @@ public class HammerBehaviour : MonoBehaviour
     IEnumerator WaitForDestroy(float secs)
     {
         yield return new WaitForSeconds(secs);
+        GAME_MANAGER._GAME_MANAGER.objectVel = 800f;
         Destroy(this.gameObject);   
     }
 

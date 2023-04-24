@@ -29,6 +29,7 @@ public class ObjectBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door" || collision.gameObject.tag == "Atril")
         {
             StartCoroutine(WaitForDestroy(1.5f));
+            GAME_MANAGER._GAME_MANAGER.objectVel = 800f;
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -128,7 +128,7 @@ public class PickUpSystem : MonoBehaviour
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
 
             GAME_MANAGER._GAME_MANAGER.timeHolding = 0;
-            GAME_MANAGER._GAME_MANAGER.objectVel = 800f;
+            
             laserPointer.enabled = false;
 
         }
