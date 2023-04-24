@@ -130,6 +130,9 @@ public class TutorialManagager : MonoBehaviour
         }
         if (tutorialCompleted)
         {
+            GAME_MANAGER._GAME_MANAGER.endDialogue = false;
+            GAME_MANAGER._GAME_MANAGER.decisionMode = false;
+            GAME_MANAGER._GAME_MANAGER.caseEnded = false;
             StartCoroutine(Wait());
         }
 
@@ -273,6 +276,7 @@ public class TutorialManagager : MonoBehaviour
     }
     public void DecisionSystemTutorial()
     {
+        GAME_MANAGER._GAME_MANAGER.endDialogue = true;
         decisionSystemText.SetActive(true);
         npc1.SetActive(true);
         npc2.SetActive(true);
