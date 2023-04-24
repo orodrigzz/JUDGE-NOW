@@ -49,7 +49,7 @@ public class MoveTo : MonoBehaviour
         {
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
-                speed = 0;
+                speed = -5;
                 animator.SetBool("Judgalitydead", true);
             }
             else
