@@ -18,9 +18,15 @@ public class HammerBehaviour : MonoBehaviour
 
     [SerializeField] int mazazos;
 
+    [SerializeField] GameObject particle_1;
+    [SerializeField] GameObject particle_2;
+    [SerializeField] GameObject particle_3;
     private void Awake()
     {
         mazazos = 0;
+        particle_1.SetActive(false);
+        particle_2.SetActive(false);
+        particle_3.SetActive(false);
     }
 
     private void Update()
@@ -30,6 +36,21 @@ public class HammerBehaviour : MonoBehaviour
         if (mazazos == 10 || mazazos == 20 || mazazos == 30 || mazazos == 40 || mazazos == 50 || mazazos == 60 || mazazos == 70 || mazazos == 80 || mazazos == 90 || mazazos == 100 || mazazos == 110 || mazazos == 120 || mazazos == 130 || mazazos == 140 || mazazos == 150)
         {
             silencio.Play();
+        }
+        if(GAME_MANAGER._GAME_MANAGER.objectVel >= 850f)
+        {
+            particle_1.SetActive(true);
+        }
+        if (GAME_MANAGER._GAME_MANAGER.objectVel >= 950f)
+        {
+            particle_1.SetActive(false);
+            particle_2.SetActive(true);
+        }
+        if (GAME_MANAGER._GAME_MANAGER.objectVel >= 1000f)
+        {
+            particle_1.SetActive(false);
+            particle_2.SetActive(false);
+            particle_3.SetActive(true);
         }
     }
 
