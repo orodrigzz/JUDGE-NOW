@@ -1160,7 +1160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 413799923}
-  - component: {fileID: 413799924}
   m_Layer: 0
   m_Name: Spawner Pruebas3
   m_TagString: Untagged
@@ -1176,29 +1175,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413799922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.53, y: 11.3605, z: -15.0137}
+  m_LocalPosition: {x: 7.53, y: 11.3605, z: -14.934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 486116444}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &413799924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413799922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 355623a8b530b0b4bb72ede73c00f34c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newDialogueSystem: {fileID: 1538085428}
-  skullObj: {fileID: 0}
-  newSkull: {fileID: 1526725269692890088, guid: 0f2a38c90c7ccac4da9bcff5240ab5e7, type: 3}
-  resetObject: {fileID: 413799923}
 --- !u!1001 &440407366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2868,7 +2851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501961469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.35, y: 11.26, z: -15.257}
+  m_LocalPosition: {x: 7.976, y: 11.26, z: -15.257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3215,7 +3198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.53
+      value: 7.769
       objectReference: {fileID: 0}
     - target: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3558,6 +3541,7 @@ MonoBehaviour:
   speed: 1
   secs: 0
   animator: {fileID: 1623770702}
+  dead: 0
 --- !u!65 &1623770701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3804,6 +3788,7 @@ MonoBehaviour:
   speed: 1
   secs: 0
   animator: {fileID: 1646260180}
+  dead: 0
 --- !u!65 &1646260179
 BoxCollider:
   m_ObjectHideFlags: 0

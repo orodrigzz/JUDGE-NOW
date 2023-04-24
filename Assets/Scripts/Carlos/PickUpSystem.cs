@@ -158,9 +158,9 @@ public class PickUpSystem : MonoBehaviour
         if(itemPicked != null)
         {
 
-            if (itemPicked.tag == "DenfendantFinger")
+            if (itemPicked.tag == "DefendantFinger")
             {
-                offset = 0.4f;
+                offset = 0.35f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
@@ -177,7 +177,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (itemPicked.tag == "ComplainantFinger")
             {
-                offset = 0.4f;
+                offset = 0.35f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
@@ -193,7 +193,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (itemPicked.tag == "Skull")
             {
-                offset = 0.45f;
+                offset = 0.47f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
