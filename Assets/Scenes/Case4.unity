@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3118,7 +3118,7 @@ MonoBehaviour:
     spawnPoint2: {fileID: 0}
     dialogueLines:
     - This man has stolen my dead grandmother's skull from me!!!!!
-    - Thanks to the police they have been able to find it together with these fingerprints.
+    - There has to be marks all over it, how disgusting!
     - AAAA
     characterName: "Arna\xF6 Figuerjas"
     characterID: 44312862A
