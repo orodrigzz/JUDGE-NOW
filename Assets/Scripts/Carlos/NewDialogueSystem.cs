@@ -42,6 +42,8 @@ public class NewDialogueSystem : MonoBehaviour
     public bool isRevealed;
     public bool evidenceInstantiated;
 
+    public bool spawnNow = false;
+
     private void Awake()
     {
         for(int i = 0; i < dialogues.Length; i++)
@@ -107,6 +109,7 @@ public class NewDialogueSystem : MonoBehaviour
                             Instantiate(dialogues[dialoguesIndex].evidence2, dialogues[dialoguesIndex].spawnPoint2.transform, false);
                         }
                     }
+                    spawnNow = true;
                     dialogues[dialoguesIndex].currentDialogueEnded = true;                   
                     dialoguesIndex++;
                     dialogues[dialoguesIndex-1].textBox.SetActive(false);
