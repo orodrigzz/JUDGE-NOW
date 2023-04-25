@@ -37,6 +37,12 @@ public class HammerBehaviour : MonoBehaviour
         {
             silencio.Play();
         }
+        if(GAME_MANAGER._GAME_MANAGER.objectVel <=800F)
+        {
+            particle_1.SetActive(false);
+            particle_2.SetActive(false);
+            particle_3.SetActive(false);
+        }
         if(GAME_MANAGER._GAME_MANAGER.objectVel >= 850f)
         {
             particle_1.SetActive(true);

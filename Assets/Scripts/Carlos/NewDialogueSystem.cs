@@ -128,7 +128,7 @@ public class NewDialogueSystem : MonoBehaviour
                     {
                         
                        
-                        decisionMode.SetActive(true);
+                        //decisionMode.SetActive(true);
                         isRevealed = true;
                     }
                     /*else
