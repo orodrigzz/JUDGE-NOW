@@ -3116,7 +3116,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 440407368}
   cameraTarget: {fileID: 0}
-  speed: 0.6
+  speed: 0.95
   secs: 0
   animator: {fileID: 1571728713}
   dead: 0
