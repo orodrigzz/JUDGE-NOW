@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8011739943172355053}
   m_Layer: 7
   m_Name: Papel
-  m_TagString: Untagged
+  m_TagString: Servilleta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,5 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMaterial: {fileID: 1339482756306457755}
-  originalMaterial: {fileID: 2100000, guid: 3d24db6babe417f44974b6841cc79bb3, type: 2}
+  originalMaterial: {fileID: 2100000, guid: 369552e252e7c2d45b50e3807e19fc7d, type: 2}
   canSelect: {fileID: 2100000, guid: bf2d9bcf4aa8d4e409e8d80cddb5ed7a, type: 2}

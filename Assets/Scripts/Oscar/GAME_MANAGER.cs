@@ -95,7 +95,7 @@ public class GAME_MANAGER : MonoBehaviour
             exclamationPoint.SetActive(false);
         }
 
-        if (currentScene.name != "Game" || currentScene.name == "Case2" || currentScene.name == "Case3" && reputationCanvas != null)
+        if (currentScene.name != "Game" || currentScene.name == "Case2" || currentScene.name == "Case3" || currentScene.name == "Case4" || currentScene.name == "Case5" || currentScene.name == "Case6" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
         }
@@ -314,7 +314,12 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (currentScene.name == "Case5")
             {
-                decisionCase = "Pava";
+                decisionCase = "Pisabel Payuso";
+            }
+
+            if (currentScene.name == "Case6")
+            {
+                decisionCase = "Pisabel Payuso";
             }
         }
     }
@@ -353,6 +358,11 @@ public class GAME_MANAGER : MonoBehaviour
             }
 
             if (currentScene.name == "Case5")
+            {
+                decisionCase = "Samid Concejal";
+            }
+
+            if (currentScene.name == "Case6")
             {
                 decisionCase = "Pibe";
             }
