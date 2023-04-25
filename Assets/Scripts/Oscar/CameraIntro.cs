@@ -44,7 +44,7 @@ public class CameraIntro : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(6);
         SceneManager.LoadScene("Case4");
     }
 }
