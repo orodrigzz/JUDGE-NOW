@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1704258004}
   cameraTarget: {fileID: 0}
-  speed: 1
+  speed: 1.1
   secs: 0
   animator: {fileID: 450773055}
   dead: 0
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1043059502466576344}
   cameraTarget: {fileID: 0}
-  speed: 1
+  speed: 1.1
   secs: 0
   animator: {fileID: 904631193}
   dead: 0
