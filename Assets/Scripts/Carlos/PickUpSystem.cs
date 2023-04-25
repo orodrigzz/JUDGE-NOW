@@ -172,7 +172,7 @@ public class PickUpSystem : MonoBehaviour
 
             if (itemPicked.tag == "DefendantFinger")
             {
-                offset = 1f;
+                offset = 0.35f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
@@ -189,7 +189,23 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (itemPicked.tag == "ComplainantFinger")
             {
-                offset = 1f;
+                offset = 0.35f;
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                isInspecting = true;
+                originalRotation = parent.transform.rotation.eulerAngles;
+                originaPosition = parent.transform.position;
+                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                cameraOriginaPosition = camera.transform.position;
+                camera.transform.position = startedCameraPosition;
+                camera.transform.eulerAngles = startedCameraRotation;
+                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                armHold.SetActive(false);
+                arm.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+            }
+            else if (itemPicked.tag == "Servilleta")
+            {
+                offset = 0.47f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
@@ -205,7 +221,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (itemPicked.tag == "Skull")
             {
-                offset = 1f;
+                offset = 0.47f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
