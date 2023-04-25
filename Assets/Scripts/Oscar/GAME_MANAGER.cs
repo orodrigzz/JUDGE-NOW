@@ -88,7 +88,7 @@ public class GAME_MANAGER : MonoBehaviour
         objectVel = 800;
         caseEnded = false;
         isGamePaused = false;
-       
+        decisionMode = false;
         currentScene = SceneManager.GetActiveScene();
         if (exclamationPoint != null)
         {
@@ -134,8 +134,12 @@ public class GAME_MANAGER : MonoBehaviour
         if(currentScene.name != "CaseOver")
         {
             lastScene = currentScene.name;
+            decisionMode = false;
         }
-        
+        if (endDialogue)
+        {
+            decisionMode = true;
+        }
         if (currentScene.name != "Menu")
         {
             reputationCanvas.SetActive(true);

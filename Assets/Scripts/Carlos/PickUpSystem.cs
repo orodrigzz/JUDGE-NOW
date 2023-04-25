@@ -93,7 +93,7 @@ public class PickUpSystem : MonoBehaviour
                 if(GAME_MANAGER._GAME_MANAGER.timeHolding >= 3)
                 {
                     
-                    GAME_MANAGER._GAME_MANAGER.decisionMode = true;
+                   
                     GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
                    
                 }

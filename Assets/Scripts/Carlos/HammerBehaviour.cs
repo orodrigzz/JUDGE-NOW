@@ -97,6 +97,7 @@ public class HammerBehaviour : MonoBehaviour
             {
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(2.5f));
+                GAME_MANAGER._GAME_MANAGER.decisionMode = false;
             }
             else
             {
@@ -113,6 +114,7 @@ public class HammerBehaviour : MonoBehaviour
             {
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(2.5f));
+                GAME_MANAGER._GAME_MANAGER.decisionMode = false;
             }
             else
             {
@@ -125,6 +127,7 @@ public class HammerBehaviour : MonoBehaviour
             Bonk.Play();
             Ouch.Play();
             StartCoroutine(WaitForDestroy(1.5f));
+            GAME_MANAGER._GAME_MANAGER.decisionMode = false;
         }
 
         if (collision.gameObject.tag == "NPC_W")
@@ -132,6 +135,7 @@ public class HammerBehaviour : MonoBehaviour
             Bonk.Play();
             OuchWoman.Play();
             StartCoroutine(WaitForDestroy(1.5f));
+            GAME_MANAGER._GAME_MANAGER.decisionMode = false;
         }
 
         if (collision.gameObject.tag == "Diana")

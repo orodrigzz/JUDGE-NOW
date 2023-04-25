@@ -52,7 +52,7 @@ public class NewDialogueSystem : MonoBehaviour
             dialogues[i].currentDialogueEnded = false;
         }
         dialogueOn = false;
-
+        GAME_MANAGER._GAME_MANAGER.decisionMode = false;
         GAME_MANAGER._GAME_MANAGER.denunciantName = dialogues[0].characterName;
         GAME_MANAGER._GAME_MANAGER.denunciantID = dialogues[0].characterID;
         GAME_MANAGER._GAME_MANAGER.accusedID = dialogues[1].characterID;
@@ -125,8 +125,8 @@ public class NewDialogueSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.endDialogue = true;
                 GAME_MANAGER._GAME_MANAGER.initDialogue = false;
                 GAME_MANAGER._GAME_MANAGER.isDialoging = false;
-
                 
+
                     if (!isRevealed && GAME_MANAGER._GAME_MANAGER.endDialogue)
                     {
                         
