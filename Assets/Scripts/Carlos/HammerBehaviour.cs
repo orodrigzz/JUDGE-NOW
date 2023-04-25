@@ -15,6 +15,8 @@ public class HammerBehaviour : MonoBehaviour
     [SerializeField] AudioSource OuchWoman;
     [SerializeField] AudioSource Notificacion;
     [SerializeField] AudioSource Diana;
+    [SerializeField] AudioSource chargeSound;
+    [SerializeField] bool charHasSound;
 
     [SerializeField] int mazazos;
 
@@ -42,21 +44,31 @@ public class HammerBehaviour : MonoBehaviour
             particle_1.SetActive(false);
             particle_2.SetActive(false);
             particle_3.SetActive(false);
+            chargeSound.Stop();
+            charHasSound = false;
         }
         if(GAME_MANAGER._GAME_MANAGER.objectVel >= 850f)
         {
             particle_1.SetActive(true);
+            if (!charHasSound)
+            {
+                chargeSound.Play();
+                charHasSound = true;
+            }
+            
         }
         if (GAME_MANAGER._GAME_MANAGER.objectVel >= 950f)
         {
             particle_1.SetActive(false);
             particle_2.SetActive(true);
+            chargeSound.pitch = 1.5f;
         }
         if (GAME_MANAGER._GAME_MANAGER.objectVel >= 1000f)
         {
             particle_1.SetActive(false);
             particle_2.SetActive(false);
             particle_3.SetActive(true);
+            chargeSound.pitch =2f;
         }
     }
 
