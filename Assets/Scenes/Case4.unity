@@ -3120,7 +3120,7 @@ MonoBehaviour:
     - This man has stolen my dead grandmother's skull from me!!!!!
     - There has to be marks all over it, how disgusting!
     - AAAA
-    characterName: "Arna\xF6 Figuerjas"
+    characterName: "\xC4brahim Pezlo"
     characterID: 44312862A
     sentenceIndex: -1
     diactivateCount: 0
@@ -3134,7 +3134,7 @@ MonoBehaviour:
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines: []
-    characterName: "\"Rogira\" Zarzg\xF6za"
+    characterName: Humberto Triste
     characterID: 33442163R
     sentenceIndex: -1
     diactivateCount: 0
