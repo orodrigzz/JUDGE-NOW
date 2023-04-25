@@ -61,14 +61,14 @@ public class HammerBehaviour : MonoBehaviour
         {
             particle_1.SetActive(false);
             particle_2.SetActive(true);
-            chargeSound.pitch = 1.5f;
+            chargeSound.pitch = 2f;
         }
         if (GAME_MANAGER._GAME_MANAGER.objectVel >= 1000f)
         {
             particle_1.SetActive(false);
             particle_2.SetActive(false);
             particle_3.SetActive(true);
-            chargeSound.pitch =2f;
+            chargeSound.pitch =3f;
         }
     }
 
