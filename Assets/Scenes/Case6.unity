@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3155,35 +3155,41 @@ MonoBehaviour:
     nameText: {fileID: 1651456451}
     idText: {fileID: 0}
     textBox: {fileID: 1297240262}
+    evidence: {fileID: 0}
+    spawnPoint: {fileID: 0}
+    evidence2: {fileID: 0}
+    spawnPoint2: {fileID: 0}
+    dialogueLines:
+    - This man made me a monster
+    - She wants to ruin my model career
+    - AAAA
+    characterName: Pelen Besteban
+    characterID: 44312862A
+    sentenceIndex: -1
+    diactivateCount: 0
+    currentDialogueEnded: 0
+  - sentences:
+    - {fileID: 1602102122}
+    - {fileID: 1201029129}
+    - {fileID: 1201029129}
+    nameText: {fileID: 963476744}
+    idText: {fileID: 0}
+    textBox: {fileID: 1276023892}
     evidence: {fileID: 690792405490201934, guid: 144b52592591d3f47adc3149f9fb18db, type: 3}
     spawnPoint: {fileID: 182547272}
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
-    - This man has stolen my dead grandmother's skull from me!!!!!
-    - There has to be marks all over it, how disgusting!
-    - AAAA
-    characterName: Abrahim Pezlo
-    characterID: 44312862A
-    sentenceIndex: -1
-    diactivateCount: 0
-    currentDialogueEnded: 0
-  - sentences: []
-    nameText: {fileID: 963476744}
-    idText: {fileID: 0}
-    textBox: {fileID: 1276023892}
-    evidence: {fileID: 0}
-    spawnPoint: {fileID: 0}
-    evidence2: {fileID: 0}
-    spawnPoint2: {fileID: 0}
-    dialogueLines: []
-    characterName: Humberto Triste
+    - She's lying!!
+    - Here is the mail she send me before the operation
+    - aa
+    characterName: "Cada Cul\xEFao"
     characterID: 33442163R
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: Humberto Triste is the Guilty. Abrahim is right. You can see the fingerprint
-    of Humberto in the skull
+  caseResume: "Pelen Besteban is the Guilty. Cada Cul\xEFao is right. In the mail
+    you can see that the order is exactly the operation Pelen had"
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 0}
