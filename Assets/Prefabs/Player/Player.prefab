@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 4864989213788480374}
   - component: {fileID: 3345541993623051675}
   m_Layer: 0
-  m_Name: Rayorigin
+  m_Name: PickUpSystem
   m_TagString: ObjectDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

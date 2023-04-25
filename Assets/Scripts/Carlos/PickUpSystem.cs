@@ -39,7 +39,7 @@ public class PickUpSystem : MonoBehaviour
 
     public GameObject judgality;
     public AudioSource judgalityAudio;
-
+    public bool hasPlayedJudgability;
     private void Start()
     {
         startedCameraPosition = camera.transform.position;
@@ -106,7 +106,12 @@ public class PickUpSystem : MonoBehaviour
                     GAME_MANAGER._GAME_MANAGER.objectVel = 1000f;
                     if (GAME_MANAGER._GAME_MANAGER.endDialogue)
                     {
-                        judgalityAudio.Play();
+                        if (!hasPlayedJudgability)
+                        {
+                            judgalityAudio.Play();
+                            hasPlayedJudgability = true;
+                        }
+                        
                         judgality.SetActive(true);
                         StartCoroutine(FJudgality());
                     }
@@ -135,7 +140,7 @@ public class PickUpSystem : MonoBehaviour
             GAME_MANAGER._GAME_MANAGER.isHoldingSpace = false;
             GAME_MANAGER._GAME_MANAGER.timeHolding = 0;
             GAME_MANAGER._GAME_MANAGER.objectVel = 800;
-            
+            hasPlayedJudgability = false;
             laserPointer.enabled = false;
 
         }
@@ -167,7 +172,7 @@ public class PickUpSystem : MonoBehaviour
 
             if (itemPicked.tag == "DefendantFinger")
             {
-                offset = 0.35f;
+                offset = 1f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
@@ -184,7 +189,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (itemPicked.tag == "ComplainantFinger")
             {
-                offset = 0.35f;
+                offset = 1f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
@@ -200,7 +205,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (itemPicked.tag == "Skull")
             {
-                offset = 0.47f;
+                offset = 1f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
@@ -217,7 +222,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (itemPicked.tag == "Mobile")
             {
-                offset = 0.7f;
+                offset = 1;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;
