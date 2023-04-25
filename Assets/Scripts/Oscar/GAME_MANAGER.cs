@@ -251,7 +251,7 @@ public class GAME_MANAGER : MonoBehaviour
             isGamePaused = false;
         }
 
-        if (currentScene.name == "Game" || currentScene.name == "Tutorial" || currentScene.name == "Case2" || currentScene.name == "Case3" && reputationCanvas != null)
+        if (currentScene.name == "Game" || currentScene.name == "Tutorial" || currentScene.name == "Case2" || currentScene.name == "Case3" || currentScene.name == "Case4" || currentScene.name == "Case5" || currentScene.name == "Case6" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(true);
             if(isInspecting == false)
