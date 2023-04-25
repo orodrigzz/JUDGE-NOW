@@ -311,6 +311,11 @@ public class GAME_MANAGER : MonoBehaviour
             {
                 decisionCase = "Humberto Triste";
             }
+
+            if (currentScene.name == "Case5")
+            {
+                decisionCase = "Pava";
+            }
         }
     }
     public void badCase()
@@ -345,6 +350,11 @@ public class GAME_MANAGER : MonoBehaviour
             if (currentScene.name == "Case4")
             {
                 decisionCase = "Abrahim Pezlo";
+            }
+
+            if (currentScene.name == "Case5")
+            {
+                decisionCase = "Pibe";
             }
         }
     }
