@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3053,15 +3053,17 @@ MonoBehaviour:
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
-    - This man has stolen my dead grandmother's skull from me!!!!!
-    - Thanks to the police they have been able to find it together with these fingerprints.
+    - This man has eaten a burger in our restaurant
+    - WITHOUT PAYING!!
     - 
     characterName: Marka Volteikg
     characterID: 46342255V
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  - sentences: []
+  - sentences:
+    - {fileID: 1602102122}
+    - {fileID: 1201029129}
     nameText: {fileID: 963476744}
     idText: {fileID: 0}
     textBox: {fileID: 1276023892}
@@ -3069,7 +3071,9 @@ MonoBehaviour:
     spawnPoint: {fileID: 1609594664}
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
-    dialogueLines: []
+    dialogueLines:
+    - That's a lie, I never went to that restaurant in my life.
+    - 
     characterName: Rikar Hegber
     characterID: 55142477B
     sentenceIndex: -1
