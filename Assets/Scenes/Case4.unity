@@ -560,6 +560,11 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+--- !u!1 &182547272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1256846440953887623, guid: 2682e85b4dd1889439a209220da28593, type: 3}
+  m_PrefabInstance: {fileID: 1043059502466576343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &241140689
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,37 +938,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279177579}
   m_CullTransparentMesh: 1
---- !u!1 &285376904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 285376905}
-  m_Layer: 0
-  m_Name: Spawner Pruebas3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &285376905
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285376904}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.37000036, y: -0.5564995, z: -2.9899998}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &304685673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,54 +2846,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466900413}
   m_CullTransparentMesh: 1
---- !u!1 &1501775475
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1501775477}
-  - component: {fileID: 1501775476}
-  m_Layer: 0
-  m_Name: Spawner Pruebas2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1501775476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501775475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 473f7a582de3cb44abf9a1cd2e3963d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newDialogueSystem: {fileID: 0}
-  fingerObj: {fileID: 0}
-  newfinger: {fileID: 1425727554223788183, guid: 629fa2aedb0fc964a98b3871ade0c361, type: 3}
-  resetObject: {fileID: 1501775477}
---- !u!4 &1501775477
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501775475}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.816, y: -0.6569996, z: -3.2469997}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1519258701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3186,38 +3112,28 @@ MonoBehaviour:
     nameText: {fileID: 1651456451}
     idText: {fileID: 0}
     textBox: {fileID: 1297240262}
-    evidence: {fileID: 0}
-    spawnPoint: {fileID: 0}
+    evidence: {fileID: 182547272}
+    spawnPoint: {fileID: 1526725269692890088, guid: 0f2a38c90c7ccac4da9bcff5240ab5e7, type: 3}
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
     dialogueLines:
-    - Good morning, Mr. Judge. I want to report my neighbour. He has been singing
-      very loud  preventing me from sleeping
-    - 'I bring the following evidence: my mobile phone with a recorded audio of him
-      singing '
+    - This man has stolen my dead grandmother's skull from me!!!!!
+    - Thanks to the police they have been able to find it together with these fingerprints.
     - AAAA
     characterName: "Arna\xF6 Figuerjas"
     characterID: 44312862A
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  - sentences:
-    - {fileID: 906637855}
-    - {fileID: 1602102122}
-    - {fileID: 1201029129}
+  - sentences: []
     nameText: {fileID: 963476744}
     idText: {fileID: 0}
     textBox: {fileID: 1276023892}
-    evidence: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
+    evidence: {fileID: 0}
     spawnPoint: {fileID: 0}
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
-    dialogueLines:
-    - 'That''s bullshit !! It''s ridiculous that singing is a crime, plus I didn''t
-      do it at night '
-    - 'You want me to go to jail because I''m more handsome than you. Judge you can''t
-      allow this '
-    - FUCKING LOSER!!!
+    dialogueLines: []
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
     sentenceIndex: -1
