@@ -291,21 +291,25 @@ public class GAME_MANAGER : MonoBehaviour
             {
                 courtReputation = courtReputation + 0.08f;
                 townReputation = townReputation + 0.08f;
+            }
+            if (currentScene.name == "Game")
+            {
+                decisionCase = "ARNAO";
+            }
 
-                if (currentScene.name == "Game")
-                {
-                    decisionCase = "ARNAÖ";
-                }
+            if (currentScene.name == "Case2")
+            {
+                decisionCase = "Jankduj";
+            }
 
-                if (currentScene.name == "Case2")
-                {
-                    decisionCase = "Jankduj";
-                }
+            if (currentScene.name == "Case3")
+            {
+                decisionCase = "Rikar Hegber";
+            }
 
-                if (currentScene.name == "Case3")
-                {
-                    decisionCase = "Rikar Hegber";
-                }
+            if (currentScene.name == "Case4")
+            {
+                decisionCase = "Humberto Triste";
             }
         }
     }
@@ -319,23 +323,28 @@ public class GAME_MANAGER : MonoBehaviour
         {
             if (decisionMode)
             {
-                courtReputation = courtReputation - 0.08f;
-                townReputation = townReputation - 0.08f;
+                courtReputation = courtReputation + 0.08f;
+                townReputation = townReputation + 0.08f;
+            }
 
-                if (currentScene.name == "Game")
-                {
-                    decisionCase = "ROGIRA";
-                }
+            if (currentScene.name == "Game")
+            {
+                decisionCase = "ROGIRA";
+            }
 
-                if (currentScene.name == "Case2")
-                {
-                    decisionCase = "Alexa Pegej";
-                }
+            if (currentScene.name == "Case2")
+            {
+                decisionCase = "Alexa Pegej";
+            }
 
-                if (currentScene.name == "Case3")
-                {
-                    decisionCase = "Marka Volteikg";
-                }
+            if (currentScene.name == "Case3")
+            {
+                decisionCase = "Marka Volteikg";
+            }
+
+            if (currentScene.name == "Case4")
+            {
+                decisionCase = "Abrahim Pezlo";
             }
         }
     }

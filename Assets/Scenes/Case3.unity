@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3067,7 +3067,7 @@ MonoBehaviour:
     nameText: {fileID: 963476744}
     idText: {fileID: 0}
     textBox: {fileID: 1276023892}
-    evidence: {fileID: 411030197073753960, guid: 5d8b8562174ac0045adf6b8c98854040, type: 3}
+    evidence: {fileID: 1375184054618203546, guid: 5d8b8562174ac0045adf6b8c98854040, type: 3}
     spawnPoint: {fileID: 1609594664}
     evidence2: {fileID: 0}
     spawnPoint2: {fileID: 0}
@@ -3079,14 +3079,14 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: Rikar Hegber is the Guilty. Marka Volteikg is right. The defendant
-    (Rikar Hegber) is clearly guilty. As you can see the skull has your fingerprint
-    on it. Clearly he stole it.
+  caseResume: Rikar Hegber is the Guilty. Marka Volteikg is right as you can see
+    him covered and with merch of the restaurant
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 0}
   isRevealed: 0
   evidenceInstantiated: 0
+  spawnNow: 0
 --- !u!1001 &1543798272
 PrefabInstance:
   m_ObjectHideFlags: 0

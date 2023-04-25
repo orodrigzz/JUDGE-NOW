@@ -1399,6 +1399,7 @@ MonoBehaviour:
   speed: 1
   secs: 0
   animator: {fileID: 372519455}
+  dead: 0
 --- !u!95 &372519455
 Animator:
   serializedVersion: 4
@@ -2075,6 +2076,7 @@ MonoBehaviour:
   speed: 1
   secs: 0
   animator: {fileID: 788992760}
+  dead: 0
 --- !u!95 &788992760
 Animator:
   serializedVersion: 4
@@ -3428,7 +3430,7 @@ MonoBehaviour:
     - 'I bring the following evidence: my mobile phone with a recorded audio of him
       singing '
     - AAAA
-    characterName: "Arna\xF6 Figuerjas"
+    characterName: Arnao Figuerjas
     characterID: 44312862A
     sentenceIndex: -1
     diactivateCount: 0
@@ -3455,14 +3457,15 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: "Arna\xF6 Figuerjas is the Guilty. Rogira (The defendant) is right
-    she is innocent, he singed at 22:00 so is legal. If he had sung at 0:00 he would
-    be guilty since after 0:00 it is illegal to exceed certain decibels."
+  caseResume: Arnao Figuerjas is the Guilty. Rogira (The defendant) is right she
+    is innocent, he singed at 22:00 so is legal. If he had sung at 0:00 he would
+    be guilty since after 0:00 it is illegal to exceed certain decibels.
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 0}
   isRevealed: 0
   evidenceInstantiated: 0
+  spawnNow: 0
 --- !u!1 &1602102120
 GameObject:
   m_ObjectHideFlags: 0
