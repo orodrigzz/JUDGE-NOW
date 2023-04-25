@@ -319,7 +319,7 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (currentScene.name == "Case6")
             {
-                decisionCase = "Pisabel Payuso";
+                decisionCase = "Maria Cardaxian";
             }
         }
     }
@@ -364,7 +364,7 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (currentScene.name == "Case6")
             {
-                decisionCase = "Pibe";
+                decisionCase = "Cada Culiao";
             }
         }
     }

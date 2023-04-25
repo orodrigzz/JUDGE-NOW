@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1234,6 +1234,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.79, y: 2.16, z: 0.49}
   m_Center: {x: 0, y: 0.74, z: 0}
+--- !u!114 &559795688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559795684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a273dfb8c8a0f841988a6bc55ce0192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &565080186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1459,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.76, y: 2.01, z: 0.53}
   m_Center: {x: 0, y: 0.83, z: 0}
+--- !u!114 &599433846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599433842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ee1a721459fc14ba805f07369324f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &701306401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,7 +3187,7 @@ MonoBehaviour:
     - This man made me a monster
     - She wants to ruin my model career
     - AAAA
-    characterName: Pelen Besteban
+    characterName: Maria Cardaxian
     characterID: 44312862A
     sentenceIndex: -1
     diactivateCount: 0
@@ -3183,13 +3207,13 @@ MonoBehaviour:
     - She's lying!!
     - Here is the mail she send me before the operation
     - aa
-    characterName: "Cada Cul\xEFao"
+    characterName: Cada Culiao
     characterID: 33442163R
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: "Pelen Besteban is the Guilty. Cada Cul\xEFao is right. In the mail
-    you can see that the order is exactly the operation Pelen had"
+  caseResume: "Maria Cardaxian is the Guilty. Cada Cul\xEFao is right. In the mail
+    you can see that the order is exactly the operation she had"
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 0}
