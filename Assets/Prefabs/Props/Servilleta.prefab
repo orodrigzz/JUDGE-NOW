@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2293681643694692552}
   - component: {fileID: 2293681643694692553}
   - component: {fileID: 2293681643694692550}
+  - component: {fileID: -5695897438809764057}
   m_Layer: 7
   m_Name: Servilleta
   m_TagString: Servilleta
@@ -130,3 +131,17 @@ MonoBehaviour:
   objectMaterial: {fileID: 582476097252426831}
   originalMaterial: {fileID: 2100000, guid: 3d24db6babe417f44974b6841cc79bb3, type: 2}
   canSelect: {fileID: 2100000, guid: bf2d9bcf4aa8d4e409e8d80cddb5ed7a, type: 2}
+--- !u!114 &-5695897438809764057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375184054618203546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865301ea9ecc1a246806d09fdc391d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2293681643694692552}
+  direction: {x: 0, y: 0, z: 0}

@@ -90,22 +90,22 @@ public class PickUpSystem : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.isHoldingSpace)
             {
                 GAME_MANAGER._GAME_MANAGER.timeHolding += Time.deltaTime;
-                if(GAME_MANAGER._GAME_MANAGER.timeHolding >= 3)
+                if(GAME_MANAGER._GAME_MANAGER.timeHolding >= 1)
                 {
                     
                    
                     GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
                    
                 }
-                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 5)
+                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 2)
                 {
                     GAME_MANAGER._GAME_MANAGER.objectVel = 950f;
                 }
-                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 8)
+                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 4)
                 {
                     GAME_MANAGER._GAME_MANAGER.objectVel = 1000f;
 
-                    if (GAME_MANAGER._GAME_MANAGER.canDecision)
+                    if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
                     {
                         if (!hasPlayedJudgability)
                         {
@@ -116,6 +116,8 @@ public class PickUpSystem : MonoBehaviour
                         judgality.SetActive(true);
                         StartCoroutine(FJudgality());
                     }
+                        
+                    
                    
                 }
             }
@@ -130,6 +132,7 @@ public class PickUpSystem : MonoBehaviour
             
             if (itemPicked != null)
             {
+
                 itemPicked.transform.SetParent(null);
                 itemPicked.useGravity = true;
                 itemPicked.constraints = RigidbodyConstraints.None;
@@ -158,8 +161,21 @@ public class PickUpSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.isDoneInspecting = true; 
                 ExitInspectionMode();
             }
-
+            
         }
+
+        if(itemPicked != null)
+        {
+            if (itemPicked.tag == "Hammer")
+            {
+                GAME_MANAGER._GAME_MANAGER.isPickingHammer = true;
+            }
+            else
+            {
+                GAME_MANAGER._GAME_MANAGER.isPickingHammer = false;
+            }
+        }
+        
         if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
             InspectObject();

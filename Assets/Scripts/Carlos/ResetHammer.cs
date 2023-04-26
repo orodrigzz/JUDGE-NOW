@@ -15,6 +15,7 @@ public class ResetHammer : MonoBehaviour
         if(hammerObj == null)
         {
             Instantiate(newHammer, resetObject, false);
+            GAME_MANAGER._GAME_MANAGER.isPickingHammer = false;
 
         }
     }

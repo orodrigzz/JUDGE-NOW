@@ -40,37 +40,41 @@ public class HammerBehaviour : MonoBehaviour
         {
             silencio.Play();
         }
-        if(GAME_MANAGER._GAME_MANAGER.objectVel <=800F)
+        if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
         {
-            particle_1.SetActive(false);
-            particle_2.SetActive(false);
-            particle_3.SetActive(false);
-            chargeSound.Stop();
-            charHasSound = false;
-        }
-        if(GAME_MANAGER._GAME_MANAGER.objectVel >= 850f)
-        {
-            particle_1.SetActive(true);
-            if (!charHasSound)
+            if (GAME_MANAGER._GAME_MANAGER.objectVel <= 800F)
             {
-                chargeSound.Play();
-                charHasSound = true;
+                particle_1.SetActive(false);
+                particle_2.SetActive(false);
+                particle_3.SetActive(false);
+                chargeSound.Stop();
+                charHasSound = false;
             }
-            
+            if (GAME_MANAGER._GAME_MANAGER.objectVel >= 850f)
+            {
+                particle_1.SetActive(true);
+                if (!charHasSound)
+                {
+                    chargeSound.Play();
+                    charHasSound = true;
+                }
+
+            }
+            if (GAME_MANAGER._GAME_MANAGER.objectVel >= 950f)
+            {
+                particle_1.SetActive(false);
+                particle_2.SetActive(true);
+                chargeSound.pitch = 2f;
+            }
+            if (GAME_MANAGER._GAME_MANAGER.objectVel >= 1000f)
+            {
+                particle_1.SetActive(false);
+                particle_2.SetActive(false);
+                particle_3.SetActive(true);
+                chargeSound.pitch = 3f;
+            }
         }
-        if (GAME_MANAGER._GAME_MANAGER.objectVel >= 950f)
-        {
-            particle_1.SetActive(false);
-            particle_2.SetActive(true);
-            chargeSound.pitch = 2f;
-        }
-        if (GAME_MANAGER._GAME_MANAGER.objectVel >= 1000f)
-        {
-            particle_1.SetActive(false);
-            particle_2.SetActive(false);
-            particle_3.SetActive(true);
-            chargeSound.pitch =3f;
-        }
+       
     }
 
     private void OnCollisionEnter(Collision collision)
