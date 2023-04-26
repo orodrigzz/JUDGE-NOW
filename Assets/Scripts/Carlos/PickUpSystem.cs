@@ -178,7 +178,11 @@ public class PickUpSystem : MonoBehaviour
         
         if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
-            InspectObject();
+            if(GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
+            {
+                InspectObject();
+            }
+            
         }
     }
 
