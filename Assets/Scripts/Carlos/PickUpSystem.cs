@@ -200,8 +200,8 @@ public class PickUpSystem : MonoBehaviour
                 originaPosition = parent.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = startedCameraPosition;
-                camera.transform.eulerAngles = startedCameraRotation;
+                camera.transform.position = cameraOriginaPosition;
+                camera.transform.eulerAngles = cameraOriginalRotation;
                 itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
@@ -217,8 +217,8 @@ public class PickUpSystem : MonoBehaviour
                 originaPosition = parent.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = startedCameraPosition;
-                camera.transform.eulerAngles = startedCameraRotation;
+                camera.transform.position = cameraOriginaPosition;
+                camera.transform.eulerAngles = cameraOriginalRotation;
                 itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
@@ -233,8 +233,8 @@ public class PickUpSystem : MonoBehaviour
                 originaPosition = parent.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = startedCameraPosition;
-                camera.transform.eulerAngles = startedCameraRotation;
+                camera.transform.position = cameraOriginaPosition;
+                camera.transform.eulerAngles = cameraOriginalRotation;
                 itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
@@ -249,8 +249,8 @@ public class PickUpSystem : MonoBehaviour
                 originaPosition = parent.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = startedCameraPosition;
-                camera.transform.eulerAngles = startedCameraRotation;
+                camera.transform.position = cameraOriginaPosition;
+                camera.transform.eulerAngles = cameraOriginalRotation;
                 itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
@@ -266,8 +266,8 @@ public class PickUpSystem : MonoBehaviour
                 originaPosition = parent.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = startedCameraPosition;
-                camera.transform.eulerAngles = startedCameraRotation;
+                camera.transform.position = cameraOriginaPosition;
+                camera.transform.eulerAngles = cameraOriginalRotation;
                 itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
@@ -283,8 +283,8 @@ public class PickUpSystem : MonoBehaviour
                 originaPosition = parent.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = startedCameraPosition;
-                camera.transform.eulerAngles = startedCameraRotation;
+                camera.transform.position = cameraOriginaPosition;
+                camera.transform.eulerAngles = cameraOriginalRotation;
                 itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
