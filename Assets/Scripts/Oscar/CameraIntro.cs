@@ -66,7 +66,7 @@ public class CameraIntro : MonoBehaviour
 
     IEnumerator Win()
     {
-        yield return new WaitForSeconds(25);
+        yield return new WaitForSeconds(18);
             SceneManager.LoadScene("Win");
     }
 
