@@ -1096,7 +1096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 24db89b57d0c04b49960e62df562928d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.753
+      value: 26.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 24db89b57d0c04b49960e62df562928d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1704258004}
   cameraTarget: {fileID: 0}
-  speed: 1.1
+  speed: 2
   secs: 0
   animator: {fileID: 450773055}
   dead: 0
@@ -1679,11 +1679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e451256ec66b84ba1d2ad5253e629f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.528
+      value: -1.532
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e451256ec66b84ba1d2ad5253e629f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.873
+      value: 26.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e451256ec66b84ba1d2ad5253e629f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1043059502466576344}
   cameraTarget: {fileID: 0}
-  speed: 1.1
+  speed: 2
   secs: 0
   animator: {fileID: 904631193}
   dead: 0
