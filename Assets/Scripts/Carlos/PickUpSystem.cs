@@ -240,6 +240,38 @@ public class PickUpSystem : MonoBehaviour
                 arm.SetActive(false);
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
             }
+            else if (itemPicked.tag == "Vibrador")
+            {
+                offset = 0.47f;
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                isInspecting = true;
+                originalRotation = parent.transform.rotation.eulerAngles;
+                originaPosition = parent.transform.position;
+                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                cameraOriginaPosition = camera.transform.position;
+                camera.transform.position = cameraOriginaPosition;
+                camera.transform.eulerAngles = cameraOriginalRotation;
+                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                armHold.SetActive(false);
+                arm.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+            }
+            else if (itemPicked.tag == "Papel")
+            {
+                offset = 0.47f;
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                isInspecting = true;
+                originalRotation = parent.transform.rotation.eulerAngles;
+                originaPosition = parent.transform.position;
+                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                cameraOriginaPosition = camera.transform.position;
+                camera.transform.position = cameraOriginaPosition;
+                camera.transform.eulerAngles = cameraOriginalRotation;
+                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                armHold.SetActive(false);
+                arm.SetActive(false);
+                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+            }
             else if (itemPicked.tag == "Skull")
             {
                 offset = 0.47f;

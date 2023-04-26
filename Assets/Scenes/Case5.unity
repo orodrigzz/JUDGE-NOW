@@ -4767,3 +4767,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3123568295724689143, guid: 2682e85b4dd1889439a209220da28593, type: 3}
   m_PrefabInstance: {fileID: 1043059502466576343}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1043059502466576345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 572970654676474018, guid: 2682e85b4dd1889439a209220da28593, type: 3}
+  m_PrefabInstance: {fileID: 1043059502466576343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1043059502466576346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182547272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6832d6cd4a9c304d973807095188c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  vibratorObj: {fileID: 0}
+  newVibrator: {fileID: 6586111296621812873, guid: 3909078c463db6a49a03bca6928c27b1, type: 3}
+  resetObject: {fileID: 1043059502466576345}

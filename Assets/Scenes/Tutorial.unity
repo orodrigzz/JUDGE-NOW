@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2367d89fcac31924bb0394597182d3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newDialogueSystem: {fileID: 0}
+  tutorialManagager: {fileID: 1538085429}
   appleObj: {fileID: 0}
   newApple: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
   resetObject: {fileID: 614688194}
@@ -3614,7 +3614,7 @@ MonoBehaviour:
   npc2: {fileID: 1393596358}
   richard: {fileID: 395486032}
   dianas: []
-  evidence: {fileID: 1835584263018215037, guid: f7553de6a9c98444ca3c7925a450908f, type: 3}
+  evidence: {fileID: 87120956496746107, guid: bdf00a3f318f9e8449a65b7b1b61f42d, type: 3}
   spawnPoint: {fileID: 724724525}
   shootL: {fileID: 799855951}
   shootR: {fileID: 1707112948}

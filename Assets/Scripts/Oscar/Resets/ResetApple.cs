@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ResetApple : MonoBehaviour
 {
-    public NewDialogueSystem newDialogueSystem;
+    public TutorialManagager tutorialManagager;
 
     [SerializeField] GameObject appleObj;
     [SerializeField] GameObject newApple;
@@ -13,9 +13,9 @@ public class ResetApple : MonoBehaviour
         appleObj = GameObject.FindGameObjectWithTag("Apple");
 
 
-        if(newDialogueSystem != null)
+        if(tutorialManagager != null)
         {
-            if (newDialogueSystem.evidenceInstantiated == true)
+            if (tutorialManagager.hasSpawned == true)
             {
                 if (appleObj == null)
                 {

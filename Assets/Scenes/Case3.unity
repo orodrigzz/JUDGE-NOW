@@ -3321,11 +3321,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+--- !u!4 &1609594663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2710372991640875634, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+  m_PrefabInstance: {fileID: 1609594662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1609594664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2710372991640875645, guid: 7282b8694e9472047a8610222111ea49, type: 3}
   m_PrefabInstance: {fileID: 1609594662}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1609594665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609594664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03c5116e3803c8945853d18b64006b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  servilletaObj: {fileID: 0}
+  newServilleta: {fileID: 1375184054618203546, guid: 5d8b8562174ac0045adf6b8c98854040, type: 3}
+  resetObject: {fileID: 1609594663}
 --- !u!1 &1609594667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5774142822718973411, guid: 7282b8694e9472047a8610222111ea49, type: 3}

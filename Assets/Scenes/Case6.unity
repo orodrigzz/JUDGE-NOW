@@ -4778,3 +4778,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3123568295724689143, guid: 2682e85b4dd1889439a209220da28593, type: 3}
   m_PrefabInstance: {fileID: 1043059502466576343}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1043059502466576345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 572970654676474018, guid: 2682e85b4dd1889439a209220da28593, type: 3}
+  m_PrefabInstance: {fileID: 1043059502466576343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1043059502466576346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182547272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05201a67aec34e8408b4aad8fc53be9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newDialogueSystem: {fileID: 1538085428}
+  papelObj: {fileID: 0}
+  newPapel: {fileID: 690792405490201934, guid: 144b52592591d3f47adc3149f9fb18db, type: 3}
+  resetObject: {fileID: 1043059502466576345}
