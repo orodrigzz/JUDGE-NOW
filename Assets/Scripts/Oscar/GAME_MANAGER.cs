@@ -37,7 +37,6 @@ public class GAME_MANAGER : MonoBehaviour
     public bool menuOpen;
     public bool stopArmMovement;
     public bool decisionMode = false;
-    public bool canDecision = false;
     public bool caseEnded;
     public bool tutorialStarted;
     public bool hasShootedR;
@@ -91,7 +90,6 @@ public class GAME_MANAGER : MonoBehaviour
         caseEnded = false;
         isGamePaused = false;
         decisionMode = false;
-        canDecision = false;
         currentScene = SceneManager.GetActiveScene();
         if (exclamationPoint != null)
         {
@@ -137,10 +135,6 @@ public class GAME_MANAGER : MonoBehaviour
         if(currentScene.name != "CaseOver")
         {
             lastScene = currentScene.name;
-        }
-        if (endDialogue)
-        {
-            canDecision = true;
         }
         if (currentScene.name != "Menu")
         {
@@ -203,7 +197,6 @@ public class GAME_MANAGER : MonoBehaviour
             reputationCanvas.SetActive(false);
             noise = 0;
             decisionMode = false;
-            canDecision = false;
             endDialogue = false;
         }
 
@@ -227,7 +220,6 @@ public class GAME_MANAGER : MonoBehaviour
         if (currentScene.name == "CaseOver" && reputationCanvas != null)
         {
             decisionMode = false;
-            canDecision = false;
             reputationCanvas.SetActive(false);
             noise = 0;
             noiseAudio.volume = 0;
@@ -236,7 +228,6 @@ public class GAME_MANAGER : MonoBehaviour
         if (currentScene.name == "Fired" && reputationCanvas != null)
         {
             decisionMode = false;
-            canDecision = false; 
             reputationCanvas.SetActive(false);
             noise = 0;
             noiseAudio.volume = 0;
@@ -246,7 +237,6 @@ public class GAME_MANAGER : MonoBehaviour
         if (currentScene.name == "Win" && reputationCanvas != null)
         {
             decisionMode = false;
-            canDecision = false; 
             reputationCanvas.SetActive(false);
             noise = 0;
             noiseAudio.volume = 0;
@@ -256,7 +246,6 @@ public class GAME_MANAGER : MonoBehaviour
         if (currentScene.name == "Scenario2" && reputationCanvas != null)
         {
             decisionMode = false;
-            canDecision = false;
             reputationCanvas.SetActive(false);
             noise = 0;
             noiseAudio.volume = 0;
