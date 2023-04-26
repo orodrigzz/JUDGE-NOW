@@ -199,8 +199,11 @@ public class GAME_MANAGER : MonoBehaviour
         {
             reputationCanvas.SetActive(false);
             noise = 0;
-           
+            decisionMode = false;
+            canDecision = false;
+            endDialogue = false;
         }
+
         if(currentScene.name == "Menu")
         {
             tutorialStarted = false;
@@ -228,21 +231,28 @@ public class GAME_MANAGER : MonoBehaviour
         }
         if (currentScene.name == "Fired" && reputationCanvas != null)
         {
+            decisionMode = false;
+            canDecision = false; 
             reputationCanvas.SetActive(false);
             noise = 0;
             noiseAudio.volume = 0;
             isGamePaused = true;
+            endDialogue = false;
         }
         if (currentScene.name == "Win" && reputationCanvas != null)
         {
+            decisionMode = false;
+            canDecision = false; 
             reputationCanvas.SetActive(false);
             noise = 0;
             noiseAudio.volume = 0;
             isGamePaused = true;
+            endDialogue = false;
         }
         if (currentScene.name == "Scenario2" && reputationCanvas != null)
         {
             decisionMode = false;
+            canDecision = false;
             reputationCanvas.SetActive(false);
             noise = 0;
             noiseAudio.volume = 0;
