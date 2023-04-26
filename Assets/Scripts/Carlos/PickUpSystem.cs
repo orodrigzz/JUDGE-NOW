@@ -104,14 +104,15 @@ public class PickUpSystem : MonoBehaviour
                 if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 8)
                 {
                     GAME_MANAGER._GAME_MANAGER.objectVel = 1000f;
-                    if (GAME_MANAGER._GAME_MANAGER.endDialogue)
+
+                    if (GAME_MANAGER._GAME_MANAGER.canDecision)
                     {
                         if (!hasPlayedJudgability)
                         {
                             judgalityAudio.Play();
                             hasPlayedJudgability = true;
                         }
-                        
+                        GAME_MANAGER._GAME_MANAGER.decisionMode = true;
                         judgality.SetActive(true);
                         StartCoroutine(FJudgality());
                     }
@@ -238,7 +239,7 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (itemPicked.tag == "Mobile")
             {
-                offset = 1;
+                offset = 0.7f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
                 originalRotation = parent.transform.rotation.eulerAngles;

@@ -290,7 +290,8 @@ public class TutorialManagager : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1);
+        GAME_MANAGER._GAME_MANAGER.canDecision = false;
         SceneManager.LoadScene("Game");
     }
 }

@@ -98,7 +98,6 @@ public class HammerBehaviour : MonoBehaviour
             {
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(2.5f));
-                GAME_MANAGER._GAME_MANAGER.decisionMode = false;
             }
             else
             {
@@ -115,7 +114,6 @@ public class HammerBehaviour : MonoBehaviour
             {
                 StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(2.5f));
-                GAME_MANAGER._GAME_MANAGER.decisionMode = false;
             }
             else
             {

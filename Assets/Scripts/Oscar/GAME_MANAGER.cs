@@ -37,6 +37,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool menuOpen;
     public bool stopArmMovement;
     public bool decisionMode = false;
+    public bool canDecision = false;
     public bool caseEnded;
     public bool tutorialStarted;
     public bool hasShootedR;
@@ -89,6 +90,7 @@ public class GAME_MANAGER : MonoBehaviour
         caseEnded = false;
         isGamePaused = false;
         decisionMode = false;
+        canDecision = false;
         currentScene = SceneManager.GetActiveScene();
         if (exclamationPoint != null)
         {
@@ -134,11 +136,10 @@ public class GAME_MANAGER : MonoBehaviour
         if(currentScene.name != "CaseOver")
         {
             lastScene = currentScene.name;
-            decisionMode = false;
         }
         if (endDialogue)
         {
-            decisionMode = true;
+            canDecision = true;
         }
         if (currentScene.name != "Menu")
         {
@@ -158,16 +159,14 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (!isGamePaused)
             {
-                if (townReputation < 0.15f || townReputation > 0.85f && currentScene.name != "Fired")
+                if (townReputation < 0.27f || townReputation > 0.90f && currentScene.name != "Fired")
                 {
-                    SceneManager.LoadScene("Fired");
-                    isGamePaused = true;
+                    StartCoroutine(Fired());
                 }
 
-                if (courtReputation < 0.15f || courtReputation > 0.85f && currentScene.name != "Fired")
+                if (courtReputation < 0.27f || courtReputation > 0.90f && currentScene.name != "Fired")
                 {
-                    SceneManager.LoadScene("Fired");
-                    isGamePaused = true;
+                    StartCoroutine(Fired());
                 }
             }
             
@@ -231,6 +230,7 @@ public class GAME_MANAGER : MonoBehaviour
         if (currentScene.name == "CaseOver" && reputationCanvas != null)
         {
             decisionMode = false;
+            canDecision = false;
             reputationCanvas.SetActive(false);
             noise = 0;
             noiseAudio.volume = 0;
@@ -345,8 +345,8 @@ public class GAME_MANAGER : MonoBehaviour
         {
             if (decisionMode)
             {
-                courtReputation = courtReputation + 0.08f;
-                townReputation = townReputation + 0.08f;
+                courtReputation = courtReputation - 0.08f;
+                townReputation = townReputation - 0.08f;
             }
 
             if (currentScene.name == "Game")
@@ -441,4 +441,10 @@ public class GAME_MANAGER : MonoBehaviour
         }
     }
     
+    IEnumerator Fired()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Fired");
+        isGamePaused = true;
+    }
 }
