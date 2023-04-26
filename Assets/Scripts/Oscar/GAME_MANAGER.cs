@@ -44,6 +44,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool hasShootedL;
     public bool isHoldingSpace;
     public bool isDoneInspecting;
+    public bool isPickingHammer;
 
     public float timeHolding;
     public float objectVel;
@@ -269,6 +270,7 @@ public class GAME_MANAGER : MonoBehaviour
 
         if (currentScene.name == "Game" || currentScene.name == "Tutorial" || currentScene.name == "Case2" || currentScene.name == "Case3" || currentScene.name == "Case4" || currentScene.name == "Case5" || currentScene.name == "Case6" && reputationCanvas != null)
         {
+            Cursor.visible = false;
             reputationCanvas.SetActive(true);
             if(isInspecting == false)
             {
@@ -282,6 +284,7 @@ public class GAME_MANAGER : MonoBehaviour
 
         if (currentScene.name == "Menu")
         {
+            Cursor.visible = true;
             isMenu = true;
         }
         else
