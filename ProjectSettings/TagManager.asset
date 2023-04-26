@@ -33,6 +33,7 @@ TagManager:
   - Testigo_M
   - Testigo_W
   - Servilleta
+  - Planta
   layers:
   - Default
   - TransparentFX

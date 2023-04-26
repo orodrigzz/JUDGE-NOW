@@ -72,7 +72,7 @@ public class NextCase : MonoBehaviour
         }
         if (GAME_MANAGER._GAME_MANAGER.lastScene == "Case6")
         {
-            SceneManager.LoadScene("Win");
+            SceneManager.LoadScene("Scenario3");
             GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
             GAME_MANAGER._GAME_MANAGER.lastScene = null;
             GAME_MANAGER._GAME_MANAGER.endDialogue = false;

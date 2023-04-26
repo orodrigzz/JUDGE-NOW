@@ -16,6 +16,7 @@ public class HammerBehaviour : MonoBehaviour
     [SerializeField] AudioSource Notificacion;
     [SerializeField] AudioSource Diana;
     [SerializeField] AudioSource chargeSound;
+    [SerializeField] AudioSource macetazo;
     [SerializeField] bool charHasSound;
 
     [SerializeField] int mazazos;
@@ -169,9 +170,13 @@ public class HammerBehaviour : MonoBehaviour
 
         if(collision.gameObject.tag == "Flecha")
         {
-           
-                GAME_MANAGER._GAME_MANAGER.caseEnded = true;
-            
+            GAME_MANAGER._GAME_MANAGER.caseEnded = true;
+        }
+
+        if (collision.gameObject.tag == "Planta")
+        {
+            macetazo.Play();
+            StartCoroutine(WaitForDestroy(1));
         }
     }
 

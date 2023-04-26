@@ -233,18 +233,21 @@ public class GAME_MANAGER : MonoBehaviour
             decisionMode = false;
             reputationCanvas.SetActive(false);
             noise = 0;
+            noiseAudio.volume = 0;
             isGamePaused = true;
         }
         if (currentScene.name == "Fired" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
             noise = 0;
+            noiseAudio.volume = 0;
             isGamePaused = true;
         }
         if (currentScene.name == "Win" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
             noise = 0;
+            noiseAudio.volume = 0;
             isGamePaused = true;
         }
         if (currentScene.name == "Scenario2" && reputationCanvas != null)
@@ -252,6 +255,15 @@ public class GAME_MANAGER : MonoBehaviour
             decisionMode = false;
             reputationCanvas.SetActive(false);
             noise = 0;
+            noiseAudio.volume = 0;
+            isGamePaused = false;
+        }
+        if (currentScene.name == "Scenario3" && reputationCanvas != null)
+        {
+            decisionMode = false;
+            reputationCanvas.SetActive(false);
+            noise = 0;
+            noiseAudio.volume = 0;
             isGamePaused = false;
         }
 

@@ -15,7 +15,10 @@ public class CameraIntro : MonoBehaviour
 
     private void Awake()
     {
-        UI.SetActive(false);
+        if (UI != null)
+        {
+            UI.SetActive(false);
+        }
 
         if (target != null)
         {
@@ -37,14 +40,35 @@ public class CameraIntro : MonoBehaviour
         if (transform.localPosition == targetPos)
         {
             speed = 0f;
-            UI.SetActive(true);
+
+            if (UI != null)
+            {
+                UI.SetActive(true);
+            }
+
             StartCoroutine(Wait());
+        }
+
+        if (GAME_MANAGER._GAME_MANAGER.currentScene.name == "Scenario3")
+        {
+            StartCoroutine(Win());
         }
     }
 
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(6);
-        SceneManager.LoadScene("Case4");
+        if (GAME_MANAGER._GAME_MANAGER.currentScene.name == "Scenario2")
+        {
+            SceneManager.LoadScene("Case4");
+        }
     }
+
+    IEnumerator Win()
+    {
+        yield return new WaitForSeconds(25);
+            SceneManager.LoadScene("Win");
+    }
+
+
 }
