@@ -159,12 +159,7 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (!isGamePaused)
             {
-                if (townReputation < 0.27f || townReputation > 0.90f && currentScene.name != "Fired")
-                {
-                    StartCoroutine(Fired());
-                }
-
-                if (courtReputation < 0.27f || courtReputation > 0.90f && currentScene.name != "Fired")
+                if (townReputation < 0.27f || courtReputation < 0.27f && currentScene.name != "Fired")
                 {
                     StartCoroutine(Fired());
                 }
@@ -183,19 +178,14 @@ public class GAME_MANAGER : MonoBehaviour
                         {
                             noiseAudio.volume = noiseAudio.volume + 0.0001f;
                         }
-                    }
-                    
-                    
+                    } 
                 }
                 else
                 {
                     noiseAudio.volume = 1;
                     noise = 1;
                 }
-               
             }
-
-
         }
         else
         {

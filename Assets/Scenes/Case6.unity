@@ -2499,7 +2499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -600, y: 5}
+  m_AnchoredPosition: {x: -534, y: 61}
   m_SizeDelta: {x: 600, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276023894
@@ -2583,7 +2583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 570, y: 5}
+  m_AnchoredPosition: {x: 658, y: 61}
   m_SizeDelta: {x: 600, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297240264
@@ -3212,8 +3212,8 @@ MonoBehaviour:
     sentenceIndex: -1
     diactivateCount: 0
     currentDialogueEnded: 0
-  caseResume: "Maria Cardaxian is the Guilty. Cada Cul\xEFao is right. In the mail
-    you can see that the order is exactly the operation she had"
+  caseResume: Maria Cardaxian is the Guilty. Cada Culiao is right. In the mail you
+    can see that the order is exactly the operation she had
   dialogueOn: 0
   dialoguesIndex: -1
   decisionMode: {fileID: 0}
