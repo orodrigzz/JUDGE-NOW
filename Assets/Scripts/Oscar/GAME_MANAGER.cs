@@ -160,17 +160,19 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (!isGamePaused)
             {
+                
                 if (townReputation < 0.27f || courtReputation < 0.27f && currentScene.name != "Fired")
                 {
                     StartCoroutine(Fired());
                 }
             }
             
+            
 
             if (isGamePaused == false)
             {
-
-                if(noise < 1)
+               
+                if (noise < 1)
                 {
                     if(currentScene.name != "Tutorial")
                     {
@@ -211,6 +213,7 @@ public class GAME_MANAGER : MonoBehaviour
         }
         if (currentScene.name == "Settings" && reputationCanvas != null)
         {
+            
             reputationCanvas.SetActive(false);
             noise = 0;
 
@@ -279,6 +282,11 @@ public class GAME_MANAGER : MonoBehaviour
             if (menuOpen)
             {
                 isGamePaused = true;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.visible = false;
             }
         }
 

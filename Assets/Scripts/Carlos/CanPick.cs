@@ -21,14 +21,14 @@ public class CanPick : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    
+    private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "ObjectDetector" && GAME_MANAGER._GAME_MANAGER.isPicked == false)
+        if (other.gameObject.tag == "ObjectDetector" && GAME_MANAGER._GAME_MANAGER.isPicked == false)
         {
 
             objectMaterial.material = canSelect;
         }
-        
     }
     private void OnTriggerExit(Collider other)
     {

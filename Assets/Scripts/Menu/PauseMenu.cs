@@ -25,16 +25,20 @@ public class PauseMenu : MonoBehaviour
         GAME_MANAGER._GAME_MANAGER.menuOpen = false;
         GameIsPaused = false;
         pauseMenuUI.SetActive(false);
+        
     }
 
     public void Settings()
     {
         settingsUI.SetActive(true);
         
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
+
     }
     public void Back()
     {
         settingsUI.SetActive(false);
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
         
     }
 
@@ -48,7 +52,7 @@ public class PauseMenu : MonoBehaviour
     {
         GAME_MANAGER._GAME_MANAGER.menuOpen = false;
         GameIsPaused = false;
-        Cursor.visible = false;
+        
         Time.timeScale = 1f;
         if (pauseMenuUI != null)
         {
@@ -67,10 +71,10 @@ public class PauseMenu : MonoBehaviour
         {
             Resume();
         }*/
-        
 
-            
-            if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused && GAME_MANAGER._GAME_MANAGER.isMenu == false)
+
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused && GAME_MANAGER._GAME_MANAGER.isMenu == false)
             {
                 Pause();
                 GAME_MANAGER._GAME_MANAGER.menuOpen = true;
@@ -88,8 +92,7 @@ public class PauseMenu : MonoBehaviour
         }
         GameIsPaused = true;
         GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
-        GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
-        Cursor.visible = true;
+        
         Time.timeScale = 0f;
 
     }

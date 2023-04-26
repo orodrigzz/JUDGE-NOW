@@ -628,7 +628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8544153345260212501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6791, y: 0.0615, z: 0.3093}
+  m_LocalPosition: {x: -0.6791, y: 0.078, z: 0.3093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -680,6 +680,7 @@ MonoBehaviour:
   point2: {fileID: 0}
   judgality: {fileID: 0}
   judgalityAudio: {fileID: 3345541993623051675}
+  hasPlayedJudgability: 0
 --- !u!135 &4864989213788480374
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -691,7 +692,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.29
+  m_Radius: 0.14
   m_Center: {x: -0.14, y: -0.04, z: 0.07}
 --- !u!82 &3345541993623051675
 AudioSource:
