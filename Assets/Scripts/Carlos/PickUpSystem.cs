@@ -54,11 +54,11 @@ public class PickUpSystem : MonoBehaviour
 
     private void Update()
     {
-        if(itemPicked != null)
+        if (itemPicked != null)
         {
             throwableObject = itemPicked.GetComponent<ThrowableObject>();
         }
-        
+
         if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
             armHold.SetActive(false);
@@ -72,14 +72,16 @@ public class PickUpSystem : MonoBehaviour
             }
             if (GAME_MANAGER._GAME_MANAGER.endDialogue)
             {
-               
+
             }
             itemPicked = null;
             isPicked = false;
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
+            GAME_MANAGER._GAME_MANAGER.isHoldingSpace = false;
+            GAME_MANAGER._GAME_MANAGER.objectVel = 800;
         }
 
-        if(Input.GetKey(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+        if (Input.GetKey(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false && itemPicked != null)
         {
             GAME_MANAGER._GAME_MANAGER.isHoldingSpace = true;
             if (itemPicked != null)
@@ -87,15 +89,17 @@ public class PickUpSystem : MonoBehaviour
                 laserPointer.enabled = true;
                 laserPointer.SetPositions(new Vector3[] { transform.position, transform.position + itemPicked.transform.right * 10f });
             }
+
+
             if (GAME_MANAGER._GAME_MANAGER.isHoldingSpace)
             {
                 GAME_MANAGER._GAME_MANAGER.timeHolding += Time.deltaTime;
-                if(GAME_MANAGER._GAME_MANAGER.timeHolding >= 1)
+                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 1)
                 {
-                    
-                   
+
+
                     GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
-                   
+
                 }
                 if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 2)
                 {
@@ -116,27 +120,27 @@ public class PickUpSystem : MonoBehaviour
                         judgality.SetActive(true);
                         StartCoroutine(FJudgality());
                     }
-                        
-                    
-                   
+
+
+
                 }
             }
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
         {
-            if(throwableObject != null)
+            if (throwableObject != null)
             {
                 throwableObject.Throw();
             }
-            
+
             if (itemPicked != null)
             {
 
                 itemPicked.transform.SetParent(null);
                 itemPicked.useGravity = true;
                 itemPicked.constraints = RigidbodyConstraints.None;
-                
+
             }
             itemPicked = null;
             isPicked = false;
@@ -148,7 +152,7 @@ public class PickUpSystem : MonoBehaviour
             laserPointer.enabled = false;
 
         }
-        
+
         if (Input.GetMouseButtonDown(0) && isPicked && itemPicked.tag != "Hammer")
         {
             if (GAME_MANAGER._GAME_MANAGER.isInspecting == false)
@@ -158,13 +162,13 @@ public class PickUpSystem : MonoBehaviour
             }
             else if (GAME_MANAGER._GAME_MANAGER.isInspecting == true)
             {
-                GAME_MANAGER._GAME_MANAGER.isDoneInspecting = true; 
+                GAME_MANAGER._GAME_MANAGER.isDoneInspecting = true;
                 ExitInspectionMode();
             }
-            
+
         }
 
-        if(itemPicked != null)
+        if (itemPicked != null)
         {
             if (itemPicked.tag == "Hammer")
             {
@@ -175,14 +179,19 @@ public class PickUpSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.isPickingHammer = false;
             }
         }
-        
+
         if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
-            if(GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
+            if (GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
             {
                 InspectObject();
             }
-            
+
+        }
+        if (itemPicked == null)
+        {
+            laserPointer.enabled = false;
+
         }
     }
 
