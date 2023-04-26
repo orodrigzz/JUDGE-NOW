@@ -57,7 +57,7 @@ public class CameraIntro : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         if (GAME_MANAGER._GAME_MANAGER.currentScene.name == "Scenario2")
         {
             SceneManager.LoadScene("Case4");
