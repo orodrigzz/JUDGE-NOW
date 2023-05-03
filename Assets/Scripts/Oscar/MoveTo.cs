@@ -5,7 +5,9 @@ using UnityEngine;
 public class MoveTo : MonoBehaviour
 {
     [SerializeField] private Vector3 targetPos;
+    [SerializeField] private Vector3 judgalityTargetPos;
     [SerializeField] private GameObject target;
+    [SerializeField] private GameObject judgalityTarget;
     [SerializeField] private GameObject cameraTarget;
     [SerializeField] private float speed = 0.6f;
 
@@ -24,6 +26,11 @@ public class MoveTo : MonoBehaviour
         if (target != null)
         {
             targetPos = target.transform.position;
+        }
+
+        if (judgalityTarget != null)
+        {
+            judgalityTargetPos = judgalityTarget.transform.position;
         }
 
         if (cameraTarget != null)
@@ -50,6 +57,7 @@ public class MoveTo : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
                 speed = -50;
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, judgalityTargetPos, Time.deltaTime * -speed);
                 animator.SetBool("Judgalitydead", true);
             }
             else
