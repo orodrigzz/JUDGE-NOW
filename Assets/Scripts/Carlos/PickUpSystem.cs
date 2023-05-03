@@ -395,7 +395,7 @@ public class PickUpSystem : MonoBehaviour
 
     IEnumerator FJudgality()
     {
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(6);
         judgality.SetActive(false);
         GAME_MANAGER._GAME_MANAGER.decisionMode = false;
     }
