@@ -1078,6 +1078,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1704258004}
+    - target: {fileID: 8545231162753409889, guid: e496c391cff2340469e6fe333836c449, type: 3}
+      propertyPath: judgalityTarget
+      value: 
+      objectReference: {fileID: 1223730433}
     - target: {fileID: 8815703525851848245, guid: e496c391cff2340469e6fe333836c449, type: 3}
       propertyPath: m_Name
       value: NPC2_Man_WALK
@@ -2164,6 +2168,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201029127}
   m_CullTransparentMesh: 1
+--- !u!1 &1223730433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223730434}
+  m_Layer: 0
+  m_Name: ' judgalityTargetPos'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1223730434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223730433}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1.0000001}
+  m_LocalPosition: {x: 0.394, y: -0.477, z: 58.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231460148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4648,7 +4683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
+  judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1043059502466576344}
+  judgalityTarget: {fileID: 1223730433}
   cameraTarget: {fileID: 0}
   speed: 2
   secs: 0
