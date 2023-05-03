@@ -100,7 +100,6 @@ public class HammerBehaviour : MonoBehaviour
 
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
-                StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(2.5f));
             }
             else
@@ -116,7 +115,6 @@ public class HammerBehaviour : MonoBehaviour
             
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
-                StartCoroutine(WaitForCaseOver());
                 StartCoroutine(WaitForDestroy(2.5f));
             }
             else
@@ -211,9 +209,5 @@ public class HammerBehaviour : MonoBehaviour
         Destroy(this.gameObject);   
     }
 
-    IEnumerator WaitForCaseOver()
-    {
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("CaseOver");
-    }
+   
 }
