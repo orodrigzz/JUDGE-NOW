@@ -96,10 +96,7 @@ public class PickUpSystem : MonoBehaviour
                 GAME_MANAGER._GAME_MANAGER.timeHolding += Time.deltaTime;
                 if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 1)
                 {
-
-
                     GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
-
                 }
                 if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 2)
                 {
@@ -120,8 +117,6 @@ public class PickUpSystem : MonoBehaviour
                         judgality.SetActive(true);
                         StartCoroutine(FJudgality());
                     }
-
-
 
                 }
             }
@@ -397,6 +392,5 @@ public class PickUpSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(6);
         judgality.SetActive(false);
-        GAME_MANAGER._GAME_MANAGER.decisionMode = false;
     }
 }
