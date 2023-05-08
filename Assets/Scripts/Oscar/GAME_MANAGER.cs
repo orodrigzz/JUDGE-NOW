@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,16 +10,9 @@ public class GAME_MANAGER : MonoBehaviour
     public static GAME_MANAGER _GAME_MANAGER;
     #region Reputation
     [Header ("Reputation")]
-    [SerializeField] public float courtReputation;
-    [SerializeField] public float townReputation;
     [SerializeField] public float noise;
 
     [SerializeField] public bool lightsOn;
-
-    [SerializeField] private Image courtReputationImg;
-    [SerializeField] private Image townReputationImg;
-    [SerializeField] private Image defCourtReputation;
-    [SerializeField] private Image defTownReputation;
 
     [SerializeField] private Image defNoiseImg;
     [SerializeField] private Image noiseImg;
@@ -44,6 +38,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool isHoldingSpace;
     public bool isDoneInspecting;
     public bool isPickingHammer;
+    public bool areOrder;
 
     public float timeHolding;
     public float objectVel;
@@ -90,6 +85,7 @@ public class GAME_MANAGER : MonoBehaviour
         caseEnded = false;
         isGamePaused = false;
         decisionMode = false;
+        areOrder = false;
         currentScene = SceneManager.GetActiveScene();
         if (exclamationPoint != null)
         {
@@ -103,11 +99,6 @@ public class GAME_MANAGER : MonoBehaviour
         
         //Reputation Bars
         noiseAudio.volume = 0;
-        if (courtReputationImg != null && townReputationImg != null)
-        {
-            courtReputationImg.fillAmount = courtReputation;
-            townReputationImg.fillAmount = townReputation;
-        }
 
         if (noiseImg != null)
         {
@@ -125,11 +116,13 @@ public class GAME_MANAGER : MonoBehaviour
 
     void Update()
     {
-        if (noise > 0.75f)
-        {
-            courtReputation = courtReputation + 0.000001f;
-            townReputation = townReputation + 0.000001f;
-        }
+        //if (noise > 0.75f)
+        //{
+        //    if (!areOrder)
+        //    {
+        //        noise = noise + 0.000001f;
+        //    }
+        //}
 
         currentScene = SceneManager.GetActiveScene();
         if(currentScene.name != "CaseOver")
@@ -139,12 +132,6 @@ public class GAME_MANAGER : MonoBehaviour
         if (currentScene.name != "Menu")
         {
             reputationCanvas.SetActive(true);
-            //Reputation
-            if (courtReputationImg != null && townReputationImg != null)
-            {
-                courtReputationImg.fillAmount = courtReputation;
-                townReputationImg.fillAmount = townReputation;
-            }
 
             if (noiseImg != null)
             {
@@ -154,27 +141,27 @@ public class GAME_MANAGER : MonoBehaviour
 
             if (!isGamePaused)
             {
-                
-                if (townReputation < 0.27f || courtReputation < 0.27f && currentScene.name != "Fired")
+                if (noise > 0.90f && currentScene.name != "Fired")
                 {
                     StartCoroutine(Fired());
                 }
             }
-            
-            
 
             if (isGamePaused == false)
             {
-               
                 if (noise < 1)
                 {
                     if(currentScene.name != "Tutorial")
                     {
-                        noise = noise + 0.0001f;
-                        if (noiseAudio != null)
+                        if (areOrder == false)
                         {
-                            noiseAudio.volume = noiseAudio.volume + 0.0001f;
+                            noise = noise + 0.0001f;
+                            if (noiseAudio != null)
+                            {
+                                noiseAudio.volume = noiseAudio.volume + 0.0001f;
+                            }
                         }
+
                     } 
                 }
                 else
@@ -196,6 +183,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             reputationCanvas.SetActive(false);
             noise = 0;
+            areOrder = false;
             decisionMode = false;
             endDialogue = false;
         }
@@ -209,12 +197,14 @@ public class GAME_MANAGER : MonoBehaviour
             
             reputationCanvas.SetActive(false);
             noise = 0;
+            areOrder = false;
 
         }
         if (currentScene.name == "Credits" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
             noise = 0;
+            areOrder = false;
 
         }
         if (currentScene.name == "CaseOver" && reputationCanvas != null)
@@ -224,6 +214,7 @@ public class GAME_MANAGER : MonoBehaviour
             noise = 0;
             noiseAudio.volume = 0;
             isGamePaused = true;
+            areOrder = false;
         }
         if (currentScene.name == "Fired" && reputationCanvas != null)
         {
@@ -232,6 +223,7 @@ public class GAME_MANAGER : MonoBehaviour
             noise = 0;
             noiseAudio.volume = 0;
             isGamePaused = true;
+            areOrder = false;
             endDialogue = false;
         }
         if (currentScene.name == "Win" && reputationCanvas != null)
@@ -242,6 +234,7 @@ public class GAME_MANAGER : MonoBehaviour
             noiseAudio.volume = 0;
             isGamePaused = true;
             endDialogue = false;
+            areOrder = false;
         }
         if (currentScene.name == "Scenario2" && reputationCanvas != null)
         {
@@ -250,6 +243,7 @@ public class GAME_MANAGER : MonoBehaviour
             noise = 0;
             noiseAudio.volume = 0;
             isGamePaused = false;
+            areOrder = false;
         }
         if (currentScene.name == "Scenario3" && reputationCanvas != null)
         {
@@ -258,6 +252,7 @@ public class GAME_MANAGER : MonoBehaviour
             noise = 0;
             noiseAudio.volume = 0;
             isGamePaused = false;
+            areOrder = false;
         }
 
         if (currentScene.name == "Game" || currentScene.name == "Tutorial" || currentScene.name == "Case2" || currentScene.name == "Case3" || currentScene.name == "Case4" || currentScene.name == "Case5" || currentScene.name == "Case6" && reputationCanvas != null)
@@ -301,8 +296,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             if (decisionMode)
             {
-                courtReputation = courtReputation + 0.08f;
-                townReputation = townReputation + 0.08f;
+                noise = noise - 0.08f;
             }
             if (currentScene.name == "Game")
             {
@@ -345,8 +339,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             if (decisionMode)
             {
-                courtReputation = courtReputation - 0.08f;
-                townReputation = townReputation - 0.08f;
+                noise = noise + 0.08f;
             }
 
             if (currentScene.name == "Game")
@@ -384,42 +377,23 @@ public class GAME_MANAGER : MonoBehaviour
     //Sobornos
     public void firstBribe()
     {
-        courtReputation = courtReputation + 0.01f;
-        townReputation = townReputation - 0.01f;
+        noise = noise + 0.01f;
     }
 
     public void secondBribe()
     {
-        courtReputation = courtReputation + 0.03f;
-        townReputation = townReputation - 0.03f;
+        noise = noise + 0.03f;
     }
 
     public void thirdBribe()
     {
-        courtReputation = courtReputation + 0.1f;
-        townReputation = townReputation - 0.1f;
-        // Open Investigation 
-        courtReputation = courtReputation - 0.05f;
-        townReputation = townReputation - 0.05f;
-    }
-
-    public void fourthBribe()
-    {
-        courtReputation = courtReputation - 0.12f;
-        townReputation = townReputation - 0.12f;
-    }
-
-    public void fiveBribe()
-    {
-        courtReputation = courtReputation - 0.15f;
-        townReputation = townReputation - 0.15f;
-        // Fired!
+        noise = noise + 0.07f;
     }
 
     //Callar sala
     public void Order()
     {
-        noise = noise - 0.03f;
+        areOrder = true;
         noiseAudio.volume = noiseAudio.volume - 0.03f;
 
         if (noise < 0 || noiseAudio.volume < 0)
@@ -431,8 +405,7 @@ public class GAME_MANAGER : MonoBehaviour
 
     public void TurnUpLights()
     {
-        noise = noise - 1f;
-        noiseAudio.volume = noiseAudio.volume - 1f;
+        noiseAudio.volume = noiseAudio.volume - 0.06f;
 
         if (noise < 0 || noiseAudio.volume < 0)
         {

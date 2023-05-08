@@ -9,7 +9,7 @@ public class ShootR : MonoBehaviour
     public LayerMask layer;
     [SerializeField] Transform Shooter_R;
     [SerializeField] Rigidbody Proyectile;
-    [SerializeField] float rightShooterTargetTime;
+    [SerializeField] public float rightShooterTargetTime;
     [SerializeField] float rightShooterTime;
     [SerializeField] Vector3 rightVel;
 

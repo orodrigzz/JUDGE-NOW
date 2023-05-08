@@ -128,19 +128,10 @@ public class NewDialogueSystem : MonoBehaviour
                 
 
                     if (!isRevealed && GAME_MANAGER._GAME_MANAGER.endDialogue)
-                    {
-                        
-                       
-                        //decisionMode.SetActive(true);
-                        isRevealed = true;
+                    {                                        
+                      isRevealed = true;
                     }
-                    /*else
-                    {
-                       
-                        
-                        decisionMode.SetActive(false);
-                        isRevealed = false;
-                    }*/
+                    
                 
                 for (int i = 0; i < dialogues.Length; i++)
                 {

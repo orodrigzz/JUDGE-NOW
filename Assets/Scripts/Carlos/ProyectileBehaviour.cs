@@ -14,8 +14,7 @@ public class ProyectileBehaviour : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-           GAME_MANAGER._GAME_MANAGER.courtReputation -= 0.02f;
-            GAME_MANAGER._GAME_MANAGER.townReputation -= 0.02f;
+           GAME_MANAGER._GAME_MANAGER.noise += 0.02f;
             Debug.Log("Hit");
         }
     }

@@ -9,7 +9,7 @@ public class Shoot : MonoBehaviour
     public LayerMask layer;
     [SerializeField] Transform Shooter_L;
     [SerializeField] Rigidbody Proyectile;
-    [SerializeField] float leftShooterTargetTime;
+    [SerializeField] public float leftShooterTargetTime;
     [SerializeField] float leftShooterTime;
     [SerializeField] Vector3 leftVel;
 
