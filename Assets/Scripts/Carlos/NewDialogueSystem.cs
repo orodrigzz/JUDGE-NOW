@@ -15,9 +15,12 @@ public class NewDialogueSystem : MonoBehaviour
         public GameObject textBox;
         public GameObject evidence;
         public GameObject spawnPoint;
+        public GameObject NPC_1;
+        public GameObject NPC_2;
 
         public GameObject evidence2;
         public GameObject spawnPoint2;
+        
 
         public string[] dialogueLines;
         public string characterName;
@@ -27,14 +30,19 @@ public class NewDialogueSystem : MonoBehaviour
         public int diactivateCount;
 
         public bool currentDialogueEnded;
+        public bool npc1Spawned;
+        public bool npc2Spawned;
 
-   }
+    }
     [NonReorderable]
 
     public Dialogues[] dialogues;
     public string caseResume;
     public bool dialogueOn;
     public int dialoguesIndex = -1;
+
+    public GameObject npcSpawner_1;
+    public GameObject npcSpawner_2;
 
     public GameObject decisionMode;
     
@@ -142,15 +150,30 @@ public class NewDialogueSystem : MonoBehaviour
             }
 
         }
+        if (dialoguesIndex <= 0  )
+        {
+            dialoguesIndex = 0;
+            
+
+
+        }if(dialoguesIndex == 0 && dialogues[0].npc1Spawned == false)
+        {
+            Instantiate(dialogues[0].NPC_1, npcSpawner_1.transform);
+            
+            dialogues[0].npc1Spawned = true;
+        }
+        if (dialoguesIndex == 0 && dialogues[0].npc2Spawned == false)
+        {
+            Instantiate(dialogues[0].NPC_2, npcSpawner_2.transform);
+
+            dialogues[0].npc2Spawned = true;
+        }
         
-        
+
     }
     public void CurrentDialogue()
     {
-        if(dialoguesIndex <= 0)
-        {
-            dialoguesIndex++;
-        }
+        
         dialogueOn = true;
         OnDialogue();   
     }
