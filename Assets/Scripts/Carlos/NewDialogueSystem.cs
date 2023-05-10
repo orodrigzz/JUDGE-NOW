@@ -8,11 +8,13 @@ public class NewDialogueSystem : MonoBehaviour
     [System.Serializable]
    public struct Dialogues
    {
-        public Text[] sentences;
+        public Text sentence_1;
+        public Text sentence_2;
         public Text nameText;
         public Text idText;
         
-        public GameObject textBox;
+        public GameObject textBox_1;
+        public GameObject textBox_2;
         public GameObject evidence;
         public GameObject spawnPoint;
         public GameObject NPC_1;
@@ -22,7 +24,8 @@ public class NewDialogueSystem : MonoBehaviour
         public GameObject spawnPoint2;
         
 
-        public string[] dialogueLines;
+        public string dialogueLines_1;
+        public string dialogueLines_2;
         public string characterName;
         public string characterID;
 
@@ -30,8 +33,13 @@ public class NewDialogueSystem : MonoBehaviour
         public int diactivateCount;
 
         public bool currentDialogueEnded;
-        public bool npc1Spawned;
-        public bool npc2Spawned;
+
+        public bool npc1IsActive;
+        public bool npc2IsActive;
+
+        public bool caseStarted;
+        public bool caseOver;
+
 
     }
     [NonReorderable]
@@ -39,25 +47,40 @@ public class NewDialogueSystem : MonoBehaviour
     public Dialogues[] dialogues;
     public string caseResume;
     public bool dialogueOn;
-    public int dialoguesIndex = -1;
+    public int caseIndex = -1;
+  
 
-    public GameObject npcSpawner_1;
-    public GameObject npcSpawner_2;
 
-    public GameObject decisionMode;
-    
-    
+
+   private GameObject decisionMode;
+
+
     public bool isRevealed;
     public bool evidenceInstantiated;
 
     public bool spawnNow = false;
 
+    
+
     private void Awake()
     {
         for(int i = 0; i < dialogues.Length; i++)
         {
-            dialogues[i].textBox.SetActive(false);
+            if (dialogues[i].textBox_1 != null || dialogues[i].textBox_1 != null)
+            {
+                dialogues[i].textBox_1.SetActive(false);
+                dialogues[i].textBox_2.SetActive(false);
+               
+            }
+            
             dialogues[i].currentDialogueEnded = false;
+            if(dialogues[i].NPC_1 != null && dialogues[i].NPC_2 != null)
+            {
+                dialogues[i].NPC_1.SetActive(false);
+                dialogues[i].NPC_2.SetActive(false);
+            }
+            
+
         }
         dialogueOn = false;
         
@@ -82,131 +105,76 @@ public class NewDialogueSystem : MonoBehaviour
  
     void Update()
     {
+        if(caseIndex >= 0)
+        {
+            dialogues[caseIndex].caseOver = GAME_MANAGER._GAME_MANAGER.iscaseOver;
 
-        if (GAME_MANAGER._GAME_MANAGER.initDialogue && !dialogueOn)
+        }
+       
+        if (GAME_MANAGER._GAME_MANAGER.initDialogue && !dialogueOn && dialogues[0].caseStarted == false)
         {
             //Funcion que da inicio al primer dialogo
             //Ira vinculada al collaider
             GAME_MANAGER._GAME_MANAGER.isDialoging = true;
-            CurrentDialogue();
-        }
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (dialogueOn)
-            {
+            dialogues[0].caseStarted = true;
+            dialogues[0].textBox_1.SetActive(true);
+            dialogues[0].textBox_2.SetActive(true);
+            dialogues[0].sentence_1.text = dialogues[0].dialogueLines_1;
+            dialogues[0].sentence_2.text = dialogues[0].dialogueLines_1;
 
-                OnDialogue();
-            }
         }
         
-        if (dialoguesIndex >= 0)
+        if (caseIndex >= 0)
         {
             if (dialogueOn)
             {
                
-                //Comprobamos si ha acabado el dialogo actual y si es asi pasamos al siguiente
-                if (dialogues[dialoguesIndex].sentenceIndex >= dialogues[dialoguesIndex].sentences.Length-1)
-                {
-                    if (dialogues[dialoguesIndex].spawnPoint != null && dialogues[dialoguesIndex].evidence != null)
-                    {
-                        Instantiate(dialogues[dialoguesIndex].evidence, dialogues[dialoguesIndex].spawnPoint.transform, false);
-                        evidenceInstantiated = true;
-
-                        if (dialogues[dialoguesIndex].spawnPoint2 != null && dialogues[dialoguesIndex].evidence2 != null)
-                        {
-                            Instantiate(dialogues[dialoguesIndex].evidence2, dialogues[dialoguesIndex].spawnPoint2.transform, false);
-                        }
-                    }
-                    spawnNow = true;
-                    dialogues[dialoguesIndex].currentDialogueEnded = true;                   
-                    dialoguesIndex++;
-                    dialogues[dialoguesIndex-1].textBox.SetActive(false);
-                }
+               
+                
                 
             }
            
-
-
-            //comprobamos si quedan mas dialogos 
-            if (dialoguesIndex > dialogues.Length-1)
-            {
-                GAME_MANAGER._GAME_MANAGER.endDialogue = true;
-                GAME_MANAGER._GAME_MANAGER.initDialogue = false;
-                GAME_MANAGER._GAME_MANAGER.isDialoging = false;
-                
-
-                    if (!isRevealed && GAME_MANAGER._GAME_MANAGER.endDialogue)
-                    {                                        
-                      isRevealed = true;
-                    }
-                    
-                
-                for (int i = 0; i < dialogues.Length; i++)
-                {
-                    dialogues[i].textBox.SetActive(false);
-                    dialogues[i].currentDialogueEnded = false;
-                }
-                dialogueOn = false;
-            }
+            
 
         }
-        if (dialoguesIndex <= 0  )
+        if (caseIndex <= 0  )
         {
-            dialoguesIndex = 0;
+            caseIndex = 0;
             
 
 
-        }if(dialoguesIndex == 0 && dialogues[0].npc1Spawned == false)
+        }if(caseIndex == 0 && dialogues[0].npc1IsActive == false)
         {
-            Instantiate(dialogues[0].NPC_1, npcSpawner_1.transform);
-            
-            dialogues[0].npc1Spawned = true;
+            dialogues[0].NPC_1.SetActive(true);
+            dialogues[0].npc1IsActive = true;
         }
-        if (dialoguesIndex == 0 && dialogues[0].npc2Spawned == false)
+        if (caseIndex == 0 && dialogues[0].npc2IsActive == false)
         {
-            Instantiate(dialogues[0].NPC_2, npcSpawner_2.transform);
-
-            dialogues[0].npc2Spawned = true;
+            dialogues[0].NPC_2.SetActive(true);
+            dialogues[0].npc2IsActive = true;
         }
-        
-
-    }
-    public void CurrentDialogue()
-    {
-        
-        dialogueOn = true;
-        OnDialogue();   
-    }
-    public void OnDialogue()
-    {
-            dialogues[dialoguesIndex].nameText.text = null;
-            if (dialogues[dialoguesIndex].idText != null)
+        if (dialogues[caseIndex].caseOver == true && caseIndex >=0)
+        {
+            dialogues[caseIndex].NPC_1.SetActive(false);
+            dialogues[caseIndex].NPC_2.SetActive(false);
+            if(dialogues[caseIndex].textBox_1 != null && dialogues[caseIndex].textBox_2 != null)
             {
-                dialogues[dialoguesIndex].idText.text = null;
+                dialogues[caseIndex].textBox_1.SetActive(false);
+                dialogues[caseIndex].textBox_2.SetActive(false);
             }
-            dialogues[dialoguesIndex].nameText.text += dialogues[dialoguesIndex].characterName;
-           if (dialogues[dialoguesIndex].idText != null)
-           {   
-                dialogues[dialoguesIndex].idText.text += dialogues[dialoguesIndex].characterID;
-           }
-
-            if (dialogues[dialoguesIndex].sentenceIndex < dialogues[dialoguesIndex].sentences.Length)
-            {
-                dialogues[dialoguesIndex].textBox.SetActive(true);
-                dialogues[dialoguesIndex].currentDialogueEnded = false;
-                dialogues[dialoguesIndex].sentenceIndex++;
-                dialogues[dialoguesIndex].sentences[dialogues[dialoguesIndex].sentenceIndex].enabled = true;
-                dialogues[dialoguesIndex].sentences[dialogues[dialoguesIndex].sentenceIndex].text += dialogues[dialoguesIndex].dialogueLines[dialogues[dialoguesIndex].sentenceIndex];
-            }
-            if (dialogues[dialoguesIndex].sentenceIndex > 0)
-            {
-                dialogues[dialoguesIndex].diactivateCount = dialogues[dialoguesIndex].sentenceIndex - 1;
-                dialogues[dialoguesIndex].sentences[dialogues[dialoguesIndex].diactivateCount].enabled = false;
-            }
-        
             
-               
+            caseIndex++;
+            dialogues[caseIndex].NPC_1.SetActive(true);
+            dialogues[caseIndex].NPC_2.SetActive(true);
+            dialogues[caseIndex].sentence_1.text = dialogues[caseIndex].dialogueLines_1;
+            dialogues[caseIndex].sentence_2.text = dialogues[caseIndex].dialogueLines_1;
+            GAME_MANAGER._GAME_MANAGER.ResetCaseStatus(false);
+
+
+        }
+
     }
+   
 
  
 }

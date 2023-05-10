@@ -39,9 +39,11 @@ public class GAME_MANAGER : MonoBehaviour
     public bool isDoneInspecting;
     public bool isPickingHammer;
     public bool areOrder;
+    public bool iscaseOver;
 
     public float timeHolding;
     public float objectVel;
+   
     #endregion
 
     #region SaveInfo
@@ -419,5 +421,17 @@ public class GAME_MANAGER : MonoBehaviour
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("Fired");
         isGamePaused = true;
+    }
+
+    public bool SetCaseStatus(bool isCaseOver)
+    {
+        iscaseOver=isCaseOver;
+        return isCaseOver;
+    }
+
+    public bool ResetCaseStatus(bool isCaseOver)
+    {
+        iscaseOver = isCaseOver;
+        return isCaseOver;
     }
 }

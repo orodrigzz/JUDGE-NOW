@@ -116,6 +116,8 @@ public class HammerBehaviour : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
                 StartCoroutine(WaitForDestroy(2.5f));
+                GAME_MANAGER._GAME_MANAGER.SetCaseStatus(true);
+                GAME_MANAGER._GAME_MANAGER.isDialoging = false;
             }
             else
             {
