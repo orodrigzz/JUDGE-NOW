@@ -58,7 +58,8 @@ public class MoveTo : MonoBehaviour
             {
                 speed = -50;
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, judgalityTargetPos, Time.deltaTime * -speed);
-                animator.SetBool("Judgalitydead", true);
+                animator.SetBool("Judgalitydead", true); 
+                StartCoroutine(DesapearNPCs());
             }
             else
             {
@@ -98,10 +99,7 @@ public class MoveTo : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.tutorialStarted = true;
             }
-            if (GAME_MANAGER._GAME_MANAGER.exclamationPoint != null)
-            {
-                GAME_MANAGER._GAME_MANAGER.exclamationPoint.SetActive(true);
-            }
+            
 
             speed = 0f;
         }
@@ -112,5 +110,11 @@ public class MoveTo : MonoBehaviour
                 animator.SetBool("hasArrived", false);
             }
         }
+    }
+    IEnumerator DesapearNPCs()
+    {
+        yield return new WaitForSeconds(1);
+        GAME_MANAGER._GAME_MANAGER.SetCaseStatus(true);
+        GAME_MANAGER._GAME_MANAGER.isDialoging = false;
     }
 }

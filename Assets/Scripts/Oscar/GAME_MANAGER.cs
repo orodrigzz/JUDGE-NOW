@@ -434,4 +434,12 @@ public class GAME_MANAGER : MonoBehaviour
         iscaseOver = isCaseOver;
         return isCaseOver;
     }
+
+    public void NextLevel()
+    {
+        if(lastScene == "Game")
+        {
+            SceneManager.LoadScene("Scenario2");
+        }
+    }
 }

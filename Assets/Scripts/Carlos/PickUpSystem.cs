@@ -108,14 +108,18 @@ public class PickUpSystem : MonoBehaviour
 
                     if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
                     {
-                        if (!hasPlayedJudgability)
+                        if(GAME_MANAGER._GAME_MANAGER.initDialogue == true)
                         {
-                            judgalityAudio.Play();
-                            hasPlayedJudgability = true;
+                            if (!hasPlayedJudgability)
+                            {
+                                judgalityAudio.Play();
+                                hasPlayedJudgability = true;
+                            }
+                            GAME_MANAGER._GAME_MANAGER.decisionMode = true;
+                            judgality.SetActive(true);
+                            StartCoroutine(FJudgality());
                         }
-                        GAME_MANAGER._GAME_MANAGER.decisionMode = true;
-                        judgality.SetActive(true);
-                        StartCoroutine(FJudgality());
+                        
                     }
 
                 }
