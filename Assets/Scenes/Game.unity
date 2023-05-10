@@ -1408,15 +1408,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3700588031169945101, guid: 078f9053a2ef64f4ca12ce3ac407d899, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.28
+      value: 0.291
       objectReference: {fileID: 0}
     - target: {fileID: 3700588031169945101, guid: 078f9053a2ef64f4ca12ce3ac407d899, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.443
+      value: -1.4832
       objectReference: {fileID: 0}
     - target: {fileID: 3700588031169945101, guid: 078f9053a2ef64f4ca12ce3ac407d899, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.244
+      value: 11.029
       objectReference: {fileID: 0}
     - target: {fileID: 3700588031169945101, guid: 078f9053a2ef64f4ca12ce3ac407d899, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1446,6 +1446,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3805990596440439264, guid: 078f9053a2ef64f4ca12ce3ac407d899, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1529909787}
+    - target: {fileID: 3805990596440439264, guid: 078f9053a2ef64f4ca12ce3ac407d899, type: 3}
+      propertyPath: judgalityTarget
+      value: 
+      objectReference: {fileID: 322157}
     - target: {fileID: 4039994508056855735, guid: 078f9053a2ef64f4ca12ce3ac407d899, type: 3}
       propertyPath: m_Name
       value: NPC_MALE_C2
@@ -1761,11 +1769,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1280835693628674471, guid: 79e24d0ab44169c46b82ee55656d8557, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.469
+      value: -1.499
       objectReference: {fileID: 0}
     - target: {fileID: 1280835693628674471, guid: 79e24d0ab44169c46b82ee55656d8557, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.514
+      value: 11.029
       objectReference: {fileID: 0}
     - target: {fileID: 1280835693628674471, guid: 79e24d0ab44169c46b82ee55656d8557, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1795,6 +1803,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1606879325089281603, guid: 79e24d0ab44169c46b82ee55656d8557, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1232167637}
+    - target: {fileID: 1606879325089281603, guid: 79e24d0ab44169c46b82ee55656d8557, type: 3}
+      propertyPath: judgalityTarget
+      value: 
+      objectReference: {fileID: 322157}
     - target: {fileID: 1913363444922354461, guid: 79e24d0ab44169c46b82ee55656d8557, type: 3}
       propertyPath: m_Name
       value: NPC_WOMAN_C2
@@ -2457,15 +2473,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5034565863413101998, guid: e75f7615feb346c44bdcc68c4379a6d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.26860803
+      value: 0.291
       objectReference: {fileID: 0}
     - target: {fileID: 5034565863413101998, guid: e75f7615feb346c44bdcc68c4379a6d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4327875
+      value: -1.4832
       objectReference: {fileID: 0}
     - target: {fileID: 5034565863413101998, guid: e75f7615feb346c44bdcc68c4379a6d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.268
+      value: 11.029
       objectReference: {fileID: 0}
     - target: {fileID: 5034565863413101998, guid: e75f7615feb346c44bdcc68c4379a6d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2497,7 +2513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5662588610360897300, guid: e75f7615feb346c44bdcc68c4379a6d7, type: 3}
       propertyPath: m_Name
-      value: NPC1_Woman_WALK
+      value: NPC_WOMAN_C1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75f7615feb346c44bdcc68c4379a6d7, type: 3}
@@ -3040,21 +3056,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_MALE_C3
       objectReference: {fileID: 0}
+    - target: {fileID: 8887470222318942685, guid: b81f0be8e03a0d647a832170fa6ea4c8, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1529909787}
+    - target: {fileID: 8887470222318942685, guid: b81f0be8e03a0d647a832170fa6ea4c8, type: 3}
+      propertyPath: judgalityTarget
+      value: 
+      objectReference: {fileID: 322157}
     - target: {fileID: 8997095194651516475, guid: b81f0be8e03a0d647a832170fa6ea4c8, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8997095194651516475, guid: b81f0be8e03a0d647a832170fa6ea4c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.26
+      value: 0.291
       objectReference: {fileID: 0}
     - target: {fileID: 8997095194651516475, guid: b81f0be8e03a0d647a832170fa6ea4c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.383
+      value: -1.4832
       objectReference: {fileID: 0}
     - target: {fileID: 8997095194651516475, guid: b81f0be8e03a0d647a832170fa6ea4c8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.303504
+      value: 11.029
       objectReference: {fileID: 0}
     - target: {fileID: 8997095194651516475, guid: b81f0be8e03a0d647a832170fa6ea4c8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3713,7 +3737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5064896048200429316, guid: 44942127ec5b99d4fb27cc66d1e866f6, type: 3}
       propertyPath: m_Name
-      value: NPC1_Man_WALK
+      value: NPC_MALE_C1
       objectReference: {fileID: 0}
     - target: {fileID: 5371468134333616720, guid: 44942127ec5b99d4fb27cc66d1e866f6, type: 3}
       propertyPath: target
@@ -3741,15 +3765,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5548980865003189694, guid: 44942127ec5b99d4fb27cc66d1e866f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1217678
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5548980865003189694, guid: 44942127ec5b99d4fb27cc66d1e866f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.434
+      value: -1.499
       objectReference: {fileID: 0}
     - target: {fileID: 5548980865003189694, guid: 44942127ec5b99d4fb27cc66d1e866f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.458
+      value: 11.029
       objectReference: {fileID: 0}
     - target: {fileID: 5548980865003189694, guid: 44942127ec5b99d4fb27cc66d1e866f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4121,11 +4145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1232548470283093222, guid: 934aea186622c9f4597d594fbb1b85d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.379
+      value: -1.499
       objectReference: {fileID: 0}
     - target: {fileID: 1232548470283093222, guid: 934aea186622c9f4597d594fbb1b85d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.513
+      value: 11.029
       objectReference: {fileID: 0}
     - target: {fileID: 1232548470283093222, guid: 934aea186622c9f4597d594fbb1b85d8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4155,6 +4179,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1625901929795265295, guid: 934aea186622c9f4597d594fbb1b85d8, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1232167637}
+    - target: {fileID: 1625901929795265295, guid: 934aea186622c9f4597d594fbb1b85d8, type: 3}
+      propertyPath: judgalityTarget
+      value: 
+      objectReference: {fileID: 322157}
     - target: {fileID: 1896355059895934556, guid: 934aea186622c9f4597d594fbb1b85d8, type: 3}
       propertyPath: m_Name
       value: NPC_WOMAN_C3
