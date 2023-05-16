@@ -49,8 +49,9 @@ public class NewDialogueSystem : MonoBehaviour
     public string caseResume;
     public bool dialogueOn;
     public int caseIndex = -1;
-  
 
+    public GameObject evidence_1;
+    public GameObject evidence_2;
 
 
    private GameObject decisionMode;
@@ -139,12 +140,14 @@ public class NewDialogueSystem : MonoBehaviour
                 if(dialogues[caseIndex].evidence != null && dialogues[caseIndex].evidence1HasSpawned == false)
                 {
                     Instantiate(dialogues[caseIndex].evidence, dialogues[caseIndex].spawnPoint.transform, false);
+                    evidence_1 = dialogues[caseIndex].evidence;
                     dialogues[caseIndex].evidence1HasSpawned = true;
 
                 }
                 if (dialogues[caseIndex].evidence2 != null && dialogues[caseIndex].evidence2HasSpawned == false)
                 {
                     Instantiate(dialogues[caseIndex].evidence2, dialogues[caseIndex].spawnPoint2.transform, false);
+                    evidence_1 = dialogues[caseIndex].evidence2;
                     dialogues[caseIndex].evidence1HasSpawned = true;
 
                 }
@@ -175,7 +178,20 @@ public class NewDialogueSystem : MonoBehaviour
         {
             dialogues[caseIndex].NPC_1.SetActive(false);
             dialogues[caseIndex].NPC_2.SetActive(false);
-            if(GAME_MANAGER._GAME_MANAGER.exclamationPoint != null)
+            if (dialogues[caseIndex].evidence != null)
+            {
+                evidence_1.SetActive(false);
+                evidence_1 = null;
+               
+            }
+            if (dialogues[caseIndex].evidence2 != null)
+            {
+                evidence_2.SetActive(false);
+                evidence_2 = null;
+               
+            }
+
+            if (GAME_MANAGER._GAME_MANAGER.exclamationPoint != null)
             {
                 GAME_MANAGER._GAME_MANAGER.exclamationPoint.SetActive(false);
             }
@@ -202,7 +218,7 @@ public class NewDialogueSystem : MonoBehaviour
            
 
     }
-   
 
- 
+    
+
 }

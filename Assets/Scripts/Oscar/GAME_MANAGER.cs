@@ -442,4 +442,6 @@ public class GAME_MANAGER : MonoBehaviour
             SceneManager.LoadScene("Scenario2");
         }
     }
+
+    
 }
