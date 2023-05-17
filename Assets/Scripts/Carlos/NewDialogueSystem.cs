@@ -49,9 +49,7 @@ public class NewDialogueSystem : MonoBehaviour
     public bool dialogueOn;
     public int caseIndex = -1;
 
-    public GameObject evidence_1;
-    public GameObject evidence_2;
-
+  
 
    private GameObject decisionMode;
 
