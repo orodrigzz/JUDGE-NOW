@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 2234045746478550464}
   - component: {fileID: 3271167027239493103}
   - component: {fileID: 8241720743869072173}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Manzana_Mordida
   m_TagString: BittedApple
   m_Icon: {fileID: 0}
@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865301ea9ecc1a246806d09fdc391d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 800
   rb: {fileID: 8094182322376571706}
   direction: {x: 0, y: 0, z: 0}
 --- !u!114 &1996979438878300457

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 5961669702815693207}
   - component: {fileID: 4544098251291130985}
   - component: {fileID: 1279025803432783141}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Movil
   m_TagString: Mobile
   m_Icon: {fileID: 0}
@@ -623,6 +623,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 30ac84cbc8ec62146b27a9c708ee1d13, type: 3}
       propertyPath: m_Name
       value: Movil
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30ac84cbc8ec62146b27a9c708ee1d13, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ac84cbc8ec62146b27a9c708ee1d13, type: 3}

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3988870666764776092}
   - component: {fileID: -7780501250665335351}
   - component: {fileID: 2077746697050529367}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Consolador_Prueba
   m_TagString: Vibrador
   m_Icon: {fileID: 0}

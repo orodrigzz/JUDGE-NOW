@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 8889757688801977081}
   - component: {fileID: 3803317683397150749}
   - component: {fileID: 435112252971186844}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Servilleta
   m_TagString: Servilleta
   m_Icon: {fileID: 0}

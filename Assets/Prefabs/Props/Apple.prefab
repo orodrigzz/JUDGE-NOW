@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 7843562610917649342}
   - component: {fileID: 6912989589765489646}
   - component: {fileID: 7834054950386622762}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Apple
   m_TagString: Apple
   m_Icon: {fileID: 0}
@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865301ea9ecc1a246806d09fdc391d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 800
   rb: {fileID: 2986320639878345180}
   direction: {x: 0, y: 0, z: 0}
 --- !u!114 &2199330574530375535

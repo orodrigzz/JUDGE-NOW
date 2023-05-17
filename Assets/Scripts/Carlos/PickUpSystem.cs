@@ -24,6 +24,7 @@ public class PickUpSystem : MonoBehaviour
     [SerializeField] Vector3 startedCameraRotation;
     [SerializeField] float rotationSpeed;
     [SerializeField] float offset;
+    [SerializeField] GameObject evidenceOriginalPosition;
     public bool isInspecting = false;
 
     #endregion
@@ -59,7 +60,7 @@ public class PickUpSystem : MonoBehaviour
             throwableObject = itemPicked.GetComponent<ThrowableObject>();
         }
 
-        if (Input.GetMouseButtonDown(1) && GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+        if (Input.GetMouseButtonDown(1)  && !isInspecting)
         {
             armHold.SetActive(false);
             arm.SetActive(true);
@@ -152,18 +153,30 @@ public class PickUpSystem : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonDown(0) && isPicked && itemPicked.tag != "Hammer")
+        if(itemPicked != null && itemPicked.tag != "Hammer")
         {
-            if (GAME_MANAGER._GAME_MANAGER.isInspecting == false)
+            if (Input.GetMouseButtonDown(0))
             {
-                EnterInspectionMode();
-                GAME_MANAGER._GAME_MANAGER.isDoneInspecting = false;
+
+                GAME_MANAGER._GAME_MANAGER.isInspecting = !GAME_MANAGER._GAME_MANAGER.isInspecting;
+                
+                if (GAME_MANAGER._GAME_MANAGER.isInspecting && itemPicked.tag != "Hammer" && itemPicked != null)
+                {
+                    ExitInspectionMode();
+
+
+                }
+
+
+
+
+
             }
-            else if (GAME_MANAGER._GAME_MANAGER.isInspecting == true)
-            {
-                GAME_MANAGER._GAME_MANAGER.isDoneInspecting = true;
-                ExitInspectionMode();
-            }
+        }
+        if (isInspecting)
+        {
+            InspectObject();
+
 
         }
 
@@ -181,10 +194,7 @@ public class PickUpSystem : MonoBehaviour
 
         if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
-            if (GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
-            {
-                InspectObject();
-            }
+           
 
         }
         if (itemPicked == null)
@@ -204,15 +214,16 @@ public class PickUpSystem : MonoBehaviour
                 offset = 0.35f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
-                originalRotation = parent.transform.rotation.eulerAngles;
-                originaPosition = parent.transform.position;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
+                
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
                
             }
@@ -221,15 +232,16 @@ public class PickUpSystem : MonoBehaviour
                 offset = 0.35f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
-                originalRotation = parent.transform.rotation.eulerAngles;
-                originaPosition = parent.transform.position;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
+                
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
             }
             else if (itemPicked.tag == "Servilleta")
@@ -237,15 +249,16 @@ public class PickUpSystem : MonoBehaviour
                 offset = 0.47f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
-                originalRotation = parent.transform.rotation.eulerAngles;
-                originaPosition = parent.transform.position;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
+                
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
             }
             else if (itemPicked.tag == "Vibrador")
@@ -253,15 +266,16 @@ public class PickUpSystem : MonoBehaviour
                 offset = 0.47f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
-                originalRotation = parent.transform.rotation.eulerAngles;
-                originaPosition = parent.transform.position;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
+                
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
             }
             else if (itemPicked.tag == "Papel")
@@ -269,15 +283,16 @@ public class PickUpSystem : MonoBehaviour
                 offset = 0.47f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
-                originalRotation = parent.transform.rotation.eulerAngles;
-                originaPosition = parent.transform.position;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
+                
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
             }
             else if (itemPicked.tag == "Skull")
@@ -285,15 +300,16 @@ public class PickUpSystem : MonoBehaviour
                 offset = 0.47f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
-                originalRotation = parent.transform.rotation.eulerAngles;
-                originaPosition = parent.transform.position;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
+                
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
                 
             }
@@ -302,15 +318,17 @@ public class PickUpSystem : MonoBehaviour
                 offset = 0.7f;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
-                originalRotation = parent.transform.rotation.eulerAngles;
-                originaPosition = parent.transform.position;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
+                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
+                  
+                
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
                 
             }
@@ -319,8 +337,8 @@ public class PickUpSystem : MonoBehaviour
                 offset = 1;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 isInspecting = true;
-                originalRotation = parent.transform.rotation.eulerAngles;
-                originaPosition = parent.transform.position;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
@@ -328,6 +346,7 @@ public class PickUpSystem : MonoBehaviour
                 itemPicked.transform.position = camera.transform.position + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
+                
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
                
             }
@@ -345,6 +364,7 @@ public class PickUpSystem : MonoBehaviour
             armHold.SetActive(true);
             arm.SetActive(false);
             GAME_MANAGER._GAME_MANAGER.isInspecting = false;
+            GAME_MANAGER._GAME_MANAGER.isDoneInspecting = true;
             isInspecting = false;
             GAME_MANAGER._GAME_MANAGER.stopArmMovement = false;
             
@@ -369,6 +389,8 @@ public class PickUpSystem : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
+            GAME_MANAGER._GAME_MANAGER.isInspecting = false;
+            isInspecting = false;
            // Debug.Log("LOLOLOLO");
             if (Input.GetMouseButtonDown(0) && !isPicked)
             {
@@ -386,6 +408,27 @@ public class PickUpSystem : MonoBehaviour
                     itemPicked.constraints = RigidbodyConstraints.FreezeAll;
                     isPicked = true;
                     GAME_MANAGER._GAME_MANAGER.isPicked = true;
+                }
+            }
+
+        }
+        if (other.gameObject.layer == 10)
+        {
+            // Debug.Log("LOLOLOLO");
+            if (Input.GetMouseButtonDown(0) && !isPicked)
+            {
+                armHold.SetActive(true);
+                arm.SetActive(false);
+                itemPicked = other.gameObject.GetComponent<Rigidbody>();
+                //isPicked = true;
+                EnterInspectionMode();
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+
+                if (itemPicked != null)
+                {
+                    
+                    GAME_MANAGER._GAME_MANAGER.isPicked = true;
+                   
                 }
             }
 
