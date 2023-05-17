@@ -16,12 +16,11 @@ public class NewDialogueSystem : MonoBehaviour
         public GameObject textBox_1;
         public GameObject textBox_2;
         public GameObject evidence;
-        public GameObject spawnPoint;
         public GameObject NPC_1;
         public GameObject NPC_2;
 
         public GameObject evidence2;
-        public GameObject spawnPoint2;
+       
         
 
         public string dialogueLines_1;
@@ -81,8 +80,14 @@ public class NewDialogueSystem : MonoBehaviour
                 dialogues[i].NPC_1.SetActive(false);
                 dialogues[i].NPC_2.SetActive(false);
             }
-            
-
+            if(dialogues[i].evidence != null)
+            {
+                dialogues[i].evidence.SetActive(false);
+            }
+            if (dialogues[i].evidence2 != null)
+            {
+                dialogues[i].evidence2.SetActive(false);
+            }
         }
         dialogueOn = false;
         
@@ -137,19 +142,16 @@ public class NewDialogueSystem : MonoBehaviour
 
                 dialogues[caseIndex].textBox_1.SetActive(true);
                 dialogues[caseIndex].textBox_2.SetActive(true);
-                if(dialogues[caseIndex].evidence != null && dialogues[caseIndex].evidence1HasSpawned == false)
+                if(dialogues[caseIndex].evidence != null)
                 {
-                    Instantiate(dialogues[caseIndex].evidence, dialogues[caseIndex].spawnPoint.transform, false);
-                    evidence_1 = dialogues[caseIndex].evidence;
-                    dialogues[caseIndex].evidence1HasSpawned = true;
+
+                    dialogues[caseIndex].evidence.SetActive(true);
 
                 }
-                if (dialogues[caseIndex].evidence2 != null && dialogues[caseIndex].evidence2HasSpawned == false)
+                if (dialogues[caseIndex].evidence2 != null)
                 {
-                    Instantiate(dialogues[caseIndex].evidence2, dialogues[caseIndex].spawnPoint2.transform, false);
-                    evidence_1 = dialogues[caseIndex].evidence2;
-                    dialogues[caseIndex].evidence1HasSpawned = true;
 
+                    dialogues[caseIndex].evidence2.SetActive(true);
                 }
 
             }
@@ -180,14 +182,14 @@ public class NewDialogueSystem : MonoBehaviour
             dialogues[caseIndex].NPC_2.SetActive(false);
             if (dialogues[caseIndex].evidence != null)
             {
-                evidence_1.SetActive(false);
-                evidence_1 = null;
+                dialogues[caseIndex].evidence.SetActive(false);
+                
                
             }
             if (dialogues[caseIndex].evidence2 != null)
             {
-                evidence_2.SetActive(false);
-                evidence_2 = null;
+                dialogues[caseIndex].evidence2.SetActive(false);
+                
                
             }
 
