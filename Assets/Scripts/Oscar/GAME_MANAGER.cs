@@ -441,7 +441,21 @@ public class GAME_MANAGER : MonoBehaviour
         {
             SceneManager.LoadScene("Scenario2");
         }
+        if (lastScene == "Scenario2")
+        {
+            SceneManager.LoadScene("Day2");
+        }
+        if (lastScene == "Day2")
+        {
+            SceneManager.LoadScene("Scenario3");
+        }
+        if (lastScene == "Scenario3")
+        {
+            SceneManager.LoadScene("Day3");
+        }
+        if (lastScene == "Day3")
+        {
+            SceneManager.LoadScene("Win");
+        }
     }
-
-    
 }

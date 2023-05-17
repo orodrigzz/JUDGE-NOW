@@ -48,11 +48,6 @@ public class CameraIntro : MonoBehaviour
 
             StartCoroutine(Wait());
         }
-
-        if (GAME_MANAGER._GAME_MANAGER.currentScene.name == "Scenario3")
-        {
-            StartCoroutine(Win());
-        }
     }
 
     IEnumerator Wait()
@@ -60,15 +55,12 @@ public class CameraIntro : MonoBehaviour
         yield return new WaitForSeconds(3);
         if (GAME_MANAGER._GAME_MANAGER.currentScene.name == "Scenario2")
         {
-            SceneManager.LoadScene("Case4");
+            SceneManager.LoadScene("Day2");
+        }
+        if (GAME_MANAGER._GAME_MANAGER.currentScene.name == "Scenario3")
+        {
+            SceneManager.LoadScene("Day3");
         }
     }
-
-    IEnumerator Win()
-    {
-        yield return new WaitForSeconds(18);
-            SceneManager.LoadScene("Win");
-    }
-
 
 }
