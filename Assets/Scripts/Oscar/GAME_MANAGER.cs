@@ -145,7 +145,8 @@ public class GAME_MANAGER : MonoBehaviour
             {
                 if (noise > 0.90f && currentScene.name != "Fired")
                 {
-                    StartCoroutine(Fired());
+                    SceneManager.LoadScene("Fired");
+                    isGamePaused = true;
                 }
             }
 
@@ -298,7 +299,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             if (decisionMode)
             {
-                noise = noise - 0.08f;
+                noise = noise - 0.03f;
             }
             if (currentScene.name == "Game")
             {
@@ -341,7 +342,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             if (decisionMode)
             {
-                noise = noise + 0.08f;
+                noise = noise + 0.04f;
             }
 
             if (currentScene.name == "Game")
@@ -416,13 +417,6 @@ public class GAME_MANAGER : MonoBehaviour
         }
     }
     
-    IEnumerator Fired()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Fired");
-        isGamePaused = true;
-    }
-
     public bool SetCaseStatus(bool isCaseOver)
     {
         iscaseOver=isCaseOver;

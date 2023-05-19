@@ -199,8 +199,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480, y: 150}
-  m_SizeDelta: {x: 600, y: 350}
+  m_AnchoredPosition: {x: 620, y: 188}
+  m_SizeDelta: {x: 600, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &68065300
 GameObject:
@@ -317,8 +317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3, y: -18.8364}
-  m_SizeDelta: {x: 562.5774, y: 244.1174}
+  m_AnchoredPosition: {x: 1.3, y: -72}
+  m_SizeDelta: {x: 562, y: 244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &110141457
 CanvasRenderer:
@@ -558,8 +558,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.2093, y: -15.4811}
-  m_SizeDelta: {x: 556.3885, y: 278.8086}
+  m_AnchoredPosition: {x: 1.3, y: -72}
+  m_SizeDelta: {x: 562, y: 244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &226526281
 CanvasRenderer:
@@ -602,9 +602,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: 
 --- !u!1 &241140689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,8 +1198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -464, y: 150}
-  m_SizeDelta: {x: 600, y: 350}
+  m_AnchoredPosition: {x: -475, y: 188}
+  m_SizeDelta: {x: 600, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414641859
 MonoBehaviour:
@@ -2738,7 +2736,7 @@ Transform:
   - {fileID: 1859256713}
   - {fileID: 617042292}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1310657613
 PrefabInstance:
@@ -4136,7 +4134,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1930605066253174013, guid: 88ae0eede90e5ae4d847616b77e115b6, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1930605066253174013, guid: 88ae0eede90e5ae4d847616b77e115b6, type: 3}
       propertyPath: m_LocalPosition.x
