@@ -1550,8 +1550,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3, y: -18.8364}
-  m_SizeDelta: {x: 562.5774, y: 244.1174}
+  m_AnchoredPosition: {x: 1.3, y: -72}
+  m_SizeDelta: {x: 562, y: 244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565080188
 MonoBehaviour:
@@ -2155,8 +2155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.2093, y: -15.4811}
-  m_SizeDelta: {x: 556.3885, y: 278.8086}
+  m_AnchoredPosition: {x: 1.3, y: -72}
+  m_SizeDelta: {x: 562, y: 244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &906637855
 MonoBehaviour:
@@ -2191,9 +2191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: 
 --- !u!222 &906637856
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2554,8 +2552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -464, y: 150}
-  m_SizeDelta: {x: 600, y: 350}
+  m_AnchoredPosition: {x: -412, y: 152}
+  m_SizeDelta: {x: 600, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276023894
 MonoBehaviour:
@@ -2702,8 +2700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480, y: 150}
-  m_SizeDelta: {x: 600, y: 350}
+  m_AnchoredPosition: {x: 444, y: 152}
+  m_SizeDelta: {x: 600, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297240264
 MonoBehaviour:
@@ -3491,8 +3489,10 @@ MonoBehaviour:
     NPC_1: {fileID: 2072366572}
     NPC_2: {fileID: 1886669603}
     evidence2: {fileID: 0}
-    dialogueLines_1: a
-    dialogueLines_2: b
+    dialogueLines_1: ' I want to report my neighbour. He has been singing very loud
+      ALL NIGHT preventing me from sleeping'
+    dialogueLines_2: 'That''s bullshit !! It''''s ridiculous I didn''t  do it at
+      night '
     characterName: Arnao Figuerjas
     characterID: 44312862A
     sentenceIndex: -1

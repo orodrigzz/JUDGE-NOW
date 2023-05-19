@@ -437,7 +437,7 @@ public class GAME_MANAGER : MonoBehaviour
 
     public void NextLevel()
     {
-        if(lastScene == "Game")
+        if(lastScene == "Day1")
         {
             SceneManager.LoadScene("Scenario2");
         }

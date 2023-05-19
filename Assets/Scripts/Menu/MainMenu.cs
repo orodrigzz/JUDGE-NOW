@@ -15,11 +15,6 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    public void Level1()
-    {
-        SceneManager.LoadScene("Level1");
-    }
-
     public void Menu ()
     {
         SceneManager.LoadScene("Menu");
@@ -39,17 +34,17 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
-    public void Case1()
+    public void Day1()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Day1");
     }
-    public void Case2()
+    public void Day2()
     {
-        SceneManager.LoadScene("Case2");
+        SceneManager.LoadScene("Day2");
     }
 
-    public void Case3()
+    public void Day3()
     {
-        SceneManager.LoadScene("Case3");
+        SceneManager.LoadScene("Day3");
     }
 }
