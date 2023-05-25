@@ -4253,6 +4253,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5020963152250692060, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
+      propertyPath: m_TagString
+      value: Mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 5754136685962148648, guid: f357aaf1964632945b12127cb8da2c99, type: 3}
       propertyPath: m_Name
       value: Movil
