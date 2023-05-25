@@ -51,6 +51,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         GAME_MANAGER._GAME_MANAGER.menuOpen = false;
+        GAME_MANAGER._GAME_MANAGER.isGamePaused = false;
         GameIsPaused = false;
         
         Time.timeScale = 1f;
@@ -73,13 +74,13 @@ public class PauseMenu : MonoBehaviour
         }*/
 
 
-        
-        if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused && GAME_MANAGER._GAME_MANAGER.isMenu == false)
-            {
-                Pause();
-                GAME_MANAGER._GAME_MANAGER.menuOpen = true;
 
-            }
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused && GAME_MANAGER._GAME_MANAGER.isMenu == false)
+        {
+            Pause();
+            GAME_MANAGER._GAME_MANAGER.menuOpen = true;
+
+        }   
         
     }
 

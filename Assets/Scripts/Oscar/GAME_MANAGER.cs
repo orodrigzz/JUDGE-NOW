@@ -40,7 +40,7 @@ public class GAME_MANAGER : MonoBehaviour
     public bool isPickingHammer;
     public bool areOrder;
     public bool iscaseOver;
-
+    public bool canDecision;
     public float timeHolding;
     public float objectVel;
    

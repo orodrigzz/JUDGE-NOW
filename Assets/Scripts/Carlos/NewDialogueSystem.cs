@@ -129,7 +129,7 @@ public class NewDialogueSystem : MonoBehaviour
             dialogues[0].textBox_1.SetActive(true);
             dialogues[0].textBox_2.SetActive(true);
             dialogues[0].sentence_1.text = dialogues[0].dialogueLines_1;
-            dialogues[0].sentence_2.text = dialogues[0].dialogueLines_1;
+            dialogues[0].sentence_2.text = dialogues[0].dialogueLines_2;
 
         }
         
@@ -206,7 +206,7 @@ public class NewDialogueSystem : MonoBehaviour
             dialogues[caseIndex].NPC_1.SetActive(true);
             dialogues[caseIndex].NPC_2.SetActive(true);
             dialogues[caseIndex].sentence_1.text = dialogues[caseIndex].dialogueLines_1;
-            dialogues[caseIndex].sentence_2.text = dialogues[caseIndex].dialogueLines_1;
+            dialogues[caseIndex].sentence_2.text = dialogues[caseIndex].dialogueLines_2;
             GAME_MANAGER._GAME_MANAGER.ResetCaseStatus(false);
             GAME_MANAGER._GAME_MANAGER.isDialoging = false;
             GAME_MANAGER._GAME_MANAGER.initDialogue = false;
