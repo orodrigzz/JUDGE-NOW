@@ -9,6 +9,7 @@ public class PickUpSystem : MonoBehaviour
     public GameObject parent;
     public GameObject armHold;
     public Rigidbody itemPicked;
+    public Collider colliderDetector;
     public bool isPicked = false;
     private Vector3 xOfsset = new Vector3(0.0846749f, 0,0);
     #endregion
@@ -48,7 +49,7 @@ public class PickUpSystem : MonoBehaviour
         armHold.SetActive(false);
         arm.SetActive(true);
         judgality.SetActive(false);
-
+        
 
         laserPointer.enabled = false;
     }
@@ -82,51 +83,59 @@ public class PickUpSystem : MonoBehaviour
             GAME_MANAGER._GAME_MANAGER.isHoldingSpace = false;
             GAME_MANAGER._GAME_MANAGER.objectVel = 800;
         }
-
-        if (Input.GetKey(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false && itemPicked != null && GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
-        {
-            GAME_MANAGER._GAME_MANAGER.isHoldingSpace = true;
-            if (itemPicked != null)
+        
+        
+            if (Input.GetKey(KeyCode.Space) && itemPicked != null && GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
             {
-                laserPointer.enabled = true;
-                laserPointer.SetPositions(new Vector3[] { transform.position, transform.position + itemPicked.transform.right * 10f });
-            }
-
-
-            if (GAME_MANAGER._GAME_MANAGER.isHoldingSpace)
-            {
-                GAME_MANAGER._GAME_MANAGER.timeHolding += Time.deltaTime;
-                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 1)
+                if (GAME_MANAGER._GAME_MANAGER.stopArmMovement == false)
                 {
-                    GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
-                }
-                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 2)
-                {
-                    GAME_MANAGER._GAME_MANAGER.objectVel = 950f;
-                }
-                if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 4)
-                {
-                    GAME_MANAGER._GAME_MANAGER.objectVel = 1000f;
-
-                    if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
+                    GAME_MANAGER._GAME_MANAGER.isHoldingSpace = true;
+                    if (itemPicked != null)
                     {
-                        if(GAME_MANAGER._GAME_MANAGER.initDialogue == true)
-                        {
-                            if (!hasPlayedJudgability)
-                            {
-                                judgalityAudio.Play();
-                                hasPlayedJudgability = true;
-                            }
-                            GAME_MANAGER._GAME_MANAGER.decisionMode = true;
-                            judgality.SetActive(true);
-                            StartCoroutine(FJudgality());
-                        }
-                        
+                        laserPointer.enabled = true;
+                        laserPointer.SetPositions(new Vector3[] { transform.position, transform.position + itemPicked.transform.right * 10f });
                     }
 
+
+                    if (GAME_MANAGER._GAME_MANAGER.isHoldingSpace && GAME_MANAGER._GAME_MANAGER.stopArmMovement == false)
+                    {
+                        GAME_MANAGER._GAME_MANAGER.timeHolding += Time.deltaTime;
+                            if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 1)
+                            {
+                                GAME_MANAGER._GAME_MANAGER.objectVel = 850f;
+                            }
+                            if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 2)
+                            {
+                                GAME_MANAGER._GAME_MANAGER.objectVel = 950f;
+                            }
+                            if (GAME_MANAGER._GAME_MANAGER.timeHolding >= 4)
+                            {
+                                    GAME_MANAGER._GAME_MANAGER.objectVel = 1000f;
+
+                                    if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
+                                    {
+                                        if (GAME_MANAGER._GAME_MANAGER.initDialogue == true)
+                                        {
+                                            if (!hasPlayedJudgability)
+                                            {
+                                                judgalityAudio.Play();
+                                                hasPlayedJudgability = true;
+                                            }
+                                                GAME_MANAGER._GAME_MANAGER.decisionMode = true;
+                                                judgality.SetActive(true);
+                                                StartCoroutine(FJudgality());
+                                        }
+
+                                    }
+
+                            }
+                    }
                 }
+                
             }
-        }
+        
+
+        
 
         if (Input.GetKeyUp(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false && GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
         {
@@ -135,23 +144,24 @@ public class PickUpSystem : MonoBehaviour
                 throwableObject.Throw();
             }
 
-            if (itemPicked != null)
+            if (itemPicked != null && GAME_MANAGER._GAME_MANAGER.stopArmMovement == false)
             {
 
                 itemPicked.transform.SetParent(null);
                 itemPicked.useGravity = true;
                 itemPicked.constraints = RigidbodyConstraints.None;
+                GAME_MANAGER._GAME_MANAGER.isPicked = false;
+                itemPicked = null;
+                isPicked = false;
+                GAME_MANAGER._GAME_MANAGER.isHoldingSpace = false;
+                GAME_MANAGER._GAME_MANAGER.isPickingHammer = false;
+                GAME_MANAGER._GAME_MANAGER.timeHolding = 0;
+                GAME_MANAGER._GAME_MANAGER.objectVel = 800;
+                hasPlayedJudgability = false;
+                laserPointer.enabled = false;
 
             }
-            itemPicked = null;
-            isPicked = false;
-            GAME_MANAGER._GAME_MANAGER.isPicked = false;
-            GAME_MANAGER._GAME_MANAGER.isHoldingSpace = false;
-            GAME_MANAGER._GAME_MANAGER.isPickingHammer = false;
-            GAME_MANAGER._GAME_MANAGER.timeHolding = 0;
-            GAME_MANAGER._GAME_MANAGER.objectVel = 800;
-            hasPlayedJudgability = false;
-            laserPointer.enabled = false;
+            
 
         }
 
@@ -162,10 +172,11 @@ public class PickUpSystem : MonoBehaviour
 
                 GAME_MANAGER._GAME_MANAGER.isInspecting = !GAME_MANAGER._GAME_MANAGER.isInspecting;
                 
+                
                 if (GAME_MANAGER._GAME_MANAGER.isInspecting && itemPicked.tag != "Hammer" && itemPicked != null && GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
                 {
                     ExitInspectionMode();
-
+                   
 
                 }
 
@@ -188,172 +199,170 @@ public class PickUpSystem : MonoBehaviour
 
         if (itemPicked != null)
         {
+            GAME_MANAGER._GAME_MANAGER.isPicked = true;
             if (itemPicked.tag == "Hammer")
             {
                 GAME_MANAGER._GAME_MANAGER.isPickingHammer = true;
+                
+                
             }
             else
             {
                 GAME_MANAGER._GAME_MANAGER.isPickingHammer = false;
+                
             }
         }
 
-        if (GAME_MANAGER._GAME_MANAGER.isInspecting == false)
-        {
-
-            GAME_MANAGER._GAME_MANAGER.isPicked = false;
-        }
+        
         if (itemPicked == null)
         {
             laserPointer.enabled = false;
+            GAME_MANAGER._GAME_MANAGER.isPicked = false;
 
         }
-        if(GAME_MANAGER._GAME_MANAGER.isDoneInspecting == false)
+        if(GAME_MANAGER._GAME_MANAGER.stopArmMovement == true)
         {
-            GAME_MANAGER._GAME_MANAGER.isPicked = false;
+            laserPointer.enabled = false;
         }
-        if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
-        {
-            GAME_MANAGER._GAME_MANAGER.isPicked = true;
-        }
-        if (GAME_MANAGER._GAME_MANAGER.isPickingHammer == false)
-        {
-            GAME_MANAGER._GAME_MANAGER.isPicked = false;
-        }
+       
+        
+        
     }
 
     void EnterInspectionMode()
     {
         if(itemPicked != null)
         {
+            #region BasuraOscar
+            /* if (itemPicked.tag == "DefendantFinger")
+             {
+                 offset = 0.35f;
+                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                 isInspecting = true;
+                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                 originaPosition = evidenceOriginalPosition.transform.position;
+                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                 cameraOriginaPosition = camera.transform.position;
+                 camera.transform.position = cameraOriginaPosition;
+                 camera.transform.eulerAngles = cameraOriginalRotation;
+                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
+                 armHold.SetActive(false);
+                 arm.SetActive(false);
 
-            if (itemPicked.tag == "DefendantFinger")
-            {
-                offset = 0.35f;
-                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                isInspecting = true;
-                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                originaPosition = evidenceOriginalPosition.transform.position;
-                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = cameraOriginaPosition;
-                camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                armHold.SetActive(false);
-                arm.SetActive(false);
-                
-                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-               
-            }
-            else if (itemPicked.tag == "ComplainantFinger")
-            {
-                offset = 0.35f;
-                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                isInspecting = true;
-                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                originaPosition = evidenceOriginalPosition.transform.position;
-                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = cameraOriginaPosition;
-                camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                armHold.SetActive(false);
-                arm.SetActive(false);
-                
-                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-            }
-            else if (itemPicked.tag == "Servilleta")
-            {
-                offset = 0.47f;
-                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                isInspecting = true;
-                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                originaPosition = evidenceOriginalPosition.transform.position;
-                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = cameraOriginaPosition;
-                camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                armHold.SetActive(false);
-                arm.SetActive(false);
-                
-                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-            }
-            else if (itemPicked.tag == "Vibrador")
-            {
-                offset = 0.47f;
-                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                isInspecting = true;
-                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                originaPosition = evidenceOriginalPosition.transform.position;
-                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = cameraOriginaPosition;
-                camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                armHold.SetActive(false);
-                arm.SetActive(false);
-                
-                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-            }
-            else if (itemPicked.tag == "Papel")
-            {
-                offset = 0.47f;
-                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                isInspecting = true;
-                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                originaPosition = evidenceOriginalPosition.transform.position;
-                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = cameraOriginaPosition;
-                camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                armHold.SetActive(false);
-                arm.SetActive(false);
-                
-                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-            }
-            else if (itemPicked.tag == "Skull")
-            {
-                offset = 0.47f;
-                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                isInspecting = true;
-                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                originaPosition = evidenceOriginalPosition.transform.position ;
-                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = cameraOriginaPosition;
-                camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                armHold.SetActive(false);
-                arm.SetActive(false);
-                
-                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-                
-            }
-            else if (itemPicked.tag == "Mobile")
-            {
-                offset = 0.5f;
-                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                isInspecting = true;
-                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                originaPosition = evidenceOriginalPosition.transform.position + xOfsset;
-                cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                cameraOriginaPosition = camera.transform.position;
-                camera.transform.position = cameraOriginaPosition;
-                camera.transform.eulerAngles = cameraOriginalRotation;
-                itemPicked.transform.position = (startedCameraPosition + xOfsset) + (camera.transform.forward * offset);
-                armHold.SetActive(false);
-                arm.SetActive(false);
-                  
-                
-                GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-                
-            }
-            else
-            {
+                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+
+             }
+             else if (itemPicked.tag == "ComplainantFinger")
+             {
+                 offset = 0.35f;
+                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                 isInspecting = true;
+                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                 originaPosition = evidenceOriginalPosition.transform.position;
+                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                 cameraOriginaPosition = camera.transform.position;
+                 camera.transform.position = cameraOriginaPosition;
+                 camera.transform.eulerAngles = cameraOriginalRotation;
+                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
+                 armHold.SetActive(false);
+                 arm.SetActive(false);
+
+                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+             }
+             else if (itemPicked.tag == "Servilleta")
+             {
+                 offset = 0.47f;
+                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                 isInspecting = true;
+                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                 originaPosition = evidenceOriginalPosition.transform.position;
+                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                 cameraOriginaPosition = camera.transform.position;
+                 camera.transform.position = cameraOriginaPosition;
+                 camera.transform.eulerAngles = cameraOriginalRotation;
+                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
+                 armHold.SetActive(false);
+                 arm.SetActive(false);
+
+                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+             }
+             else if (itemPicked.tag == "Vibrador")
+             {
+                 offset = 0.47f;
+                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                 isInspecting = true;
+                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                 originaPosition = evidenceOriginalPosition.transform.position;
+                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                 cameraOriginaPosition = camera.transform.position;
+                 camera.transform.position = cameraOriginaPosition;
+                 camera.transform.eulerAngles = cameraOriginalRotation;
+                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
+                 armHold.SetActive(false);
+                 arm.SetActive(false);
+
+                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+             }
+             else if (itemPicked.tag == "Papel")
+             {
+                 offset = 0.47f;
+                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                 isInspecting = true;
+                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                 originaPosition = evidenceOriginalPosition.transform.position;
+                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                 cameraOriginaPosition = camera.transform.position;
+                 camera.transform.position = cameraOriginaPosition;
+                 camera.transform.eulerAngles = cameraOriginalRotation;
+                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
+                 armHold.SetActive(false);
+                 arm.SetActive(false);
+
+                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+             }
+             else if (itemPicked.tag == "Skull")
+             {
+                 offset = 0.47f;
+                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                 isInspecting = true;
+                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                 originaPosition = evidenceOriginalPosition.transform.position ;
+                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                 cameraOriginaPosition = camera.transform.position;
+                 camera.transform.position = cameraOriginaPosition;
+                 camera.transform.eulerAngles = cameraOriginalRotation;
+                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
+                 armHold.SetActive(false);
+                 arm.SetActive(false);
+
+                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+
+             }
+             else if (itemPicked.tag == "Mobile")
+             {
+                 offset = 0.5f;
+                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                 isInspecting = true;
+                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
+                 originaPosition = evidenceOriginalPosition.transform.position + xOfsset;
+                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
+                 cameraOriginaPosition = camera.transform.position;
+                 camera.transform.position = cameraOriginaPosition;
+                 camera.transform.eulerAngles = cameraOriginalRotation;
+                 itemPicked.transform.position = (startedCameraPosition + xOfsset) + (camera.transform.forward * offset);
+                 armHold.SetActive(false);
+                 arm.SetActive(false);
+
+
+                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
+
+             }*/
+            #endregion
+
                 offset = 1;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                GAME_MANAGER._GAME_MANAGER.isPicked = true;
+                isPicked = true;    
                 isInspecting = true;
                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
                 originaPosition = evidenceOriginalPosition.transform.position;
@@ -364,10 +373,10 @@ public class PickUpSystem : MonoBehaviour
                 itemPicked.transform.position = (startedCameraPosition + xOfsset) + (camera.transform.forward * offset);
                 armHold.SetActive(false);
                 arm.SetActive(false);
-                
+                colliderDetector.enabled = false;
                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-               
-            }
+                laserPointer.enabled = false;
+
         }      
     }
 
@@ -384,9 +393,12 @@ public class PickUpSystem : MonoBehaviour
             GAME_MANAGER._GAME_MANAGER.isInspecting = false;
             GAME_MANAGER._GAME_MANAGER.isPicked = false;
             GAME_MANAGER._GAME_MANAGER.isDoneInspecting = true;
+            colliderDetector.enabled = true;
             isInspecting = false;
             GAME_MANAGER._GAME_MANAGER.stopArmMovement = false;
-            
+            itemPicked = null;
+            isPicked = false;
+            laserPointer.enabled = true;
         }
 
     }
@@ -421,6 +433,7 @@ public class PickUpSystem : MonoBehaviour
                 itemPicked.transform.rotation = parent.transform.rotation;
                 itemPicked.transform.SetParent(parent.transform);
                 itemPicked.transform.localPosition = parent.transform.localPosition;
+                
                
                 if (itemPicked != null)
                 {
@@ -438,18 +451,14 @@ public class PickUpSystem : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && !isPicked)
             {
                 armHold.SetActive(true);
+                GAME_MANAGER._GAME_MANAGER.isPicked = true;
                 arm.SetActive(false);
                 itemPicked = other.gameObject.GetComponent<Rigidbody>();
-                //isPicked = true;
+                isPicked = true;
                 EnterInspectionMode();
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
 
-                if (itemPicked != null)
-                {
-                    
-                    GAME_MANAGER._GAME_MANAGER.isPicked = true;
-                   
-                }
+                
             }
 
         }

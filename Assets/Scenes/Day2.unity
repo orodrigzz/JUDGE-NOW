@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2738,6 +2738,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1248374708 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 4864989213788480374, guid: 7259233fc6f5eff45bde7daa4176107c, type: 3}
+  m_PrefabInstance: {fileID: 1629509260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1310657613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3486,6 +3491,14 @@ PrefabInstance:
       propertyPath: judgality
       value: 
       objectReference: {fileID: 1741704788}
+    - target: {fileID: 829463813145439450, guid: 7259233fc6f5eff45bde7daa4176107c, type: 3}
+      propertyPath: colliderDetector
+      value: 
+      objectReference: {fileID: 1248374708}
+    - target: {fileID: 829463813145439450, guid: 7259233fc6f5eff45bde7daa4176107c, type: 3}
+      propertyPath: evidenceOriginalPosition
+      value: 
+      objectReference: {fileID: 182547272}
     - target: {fileID: 2696412628568201292, guid: 7259233fc6f5eff45bde7daa4176107c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4073,6 +4086,10 @@ PrefabInstance:
     - target: {fileID: 1526725269692890088, guid: 0f2a38c90c7ccac4da9bcff5240ab5e7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526725269692890088, guid: 0f2a38c90c7ccac4da9bcff5240ab5e7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2196582509978345810, guid: 0f2a38c90c7ccac4da9bcff5240ab5e7, type: 3}
       propertyPath: m_RootOrder
