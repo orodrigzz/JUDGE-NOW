@@ -11,7 +11,7 @@ public class PickUpSystem : MonoBehaviour
     public Rigidbody itemPicked;
     public Collider colliderDetector;
     public bool isPicked = false;
-    private Vector3 xOfsset = new Vector3(0.0846749f, 0,0);
+    private Vector3 xOfsset = new Vector3(0.2f, 0,0);
     #endregion
 
     #region InspectObject
@@ -26,6 +26,8 @@ public class PickUpSystem : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] float offset;
     [SerializeField] GameObject evidenceOriginalPosition;
+    [SerializeField] Vector3 originalScale;
+    [SerializeField] Vector3 scaledScale;
     public bool isInspecting = false;
 
     #endregion
@@ -233,144 +235,24 @@ public class PickUpSystem : MonoBehaviour
     {
         if(itemPicked != null)
         {
-            #region BasuraOscar
-            /* if (itemPicked.tag == "DefendantFinger")
-             {
-                 offset = 0.35f;
-                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                 isInspecting = true;
-                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                 originaPosition = evidenceOriginalPosition.transform.position;
-                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                 cameraOriginaPosition = camera.transform.position;
-                 camera.transform.position = cameraOriginaPosition;
-                 camera.transform.eulerAngles = cameraOriginalRotation;
-                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                 armHold.SetActive(false);
-                 arm.SetActive(false);
-
-                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-
-             }
-             else if (itemPicked.tag == "ComplainantFinger")
-             {
-                 offset = 0.35f;
-                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                 isInspecting = true;
-                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                 originaPosition = evidenceOriginalPosition.transform.position;
-                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                 cameraOriginaPosition = camera.transform.position;
-                 camera.transform.position = cameraOriginaPosition;
-                 camera.transform.eulerAngles = cameraOriginalRotation;
-                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                 armHold.SetActive(false);
-                 arm.SetActive(false);
-
-                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-             }
-             else if (itemPicked.tag == "Servilleta")
-             {
-                 offset = 0.47f;
-                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                 isInspecting = true;
-                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                 originaPosition = evidenceOriginalPosition.transform.position;
-                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                 cameraOriginaPosition = camera.transform.position;
-                 camera.transform.position = cameraOriginaPosition;
-                 camera.transform.eulerAngles = cameraOriginalRotation;
-                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                 armHold.SetActive(false);
-                 arm.SetActive(false);
-
-                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-             }
-             else if (itemPicked.tag == "Vibrador")
-             {
-                 offset = 0.47f;
-                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                 isInspecting = true;
-                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                 originaPosition = evidenceOriginalPosition.transform.position;
-                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                 cameraOriginaPosition = camera.transform.position;
-                 camera.transform.position = cameraOriginaPosition;
-                 camera.transform.eulerAngles = cameraOriginalRotation;
-                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                 armHold.SetActive(false);
-                 arm.SetActive(false);
-
-                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-             }
-             else if (itemPicked.tag == "Papel")
-             {
-                 offset = 0.47f;
-                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                 isInspecting = true;
-                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                 originaPosition = evidenceOriginalPosition.transform.position;
-                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                 cameraOriginaPosition = camera.transform.position;
-                 camera.transform.position = cameraOriginaPosition;
-                 camera.transform.eulerAngles = cameraOriginalRotation;
-                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                 armHold.SetActive(false);
-                 arm.SetActive(false);
-
-                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-             }
-             else if (itemPicked.tag == "Skull")
-             {
-                 offset = 0.47f;
-                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                 isInspecting = true;
-                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                 originaPosition = evidenceOriginalPosition.transform.position ;
-                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                 cameraOriginaPosition = camera.transform.position;
-                 camera.transform.position = cameraOriginaPosition;
-                 camera.transform.eulerAngles = cameraOriginalRotation;
-                 itemPicked.transform.position = startedCameraPosition + (camera.transform.forward * offset);
-                 armHold.SetActive(false);
-                 arm.SetActive(false);
-
-                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-
-             }
-             else if (itemPicked.tag == "Mobile")
-             {
-                 offset = 0.5f;
-                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
-                 isInspecting = true;
-                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                 originaPosition = evidenceOriginalPosition.transform.position + xOfsset;
-                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
-                 cameraOriginaPosition = camera.transform.position;
-                 camera.transform.position = cameraOriginaPosition;
-                 camera.transform.eulerAngles = cameraOriginalRotation;
-                 itemPicked.transform.position = (startedCameraPosition + xOfsset) + (camera.transform.forward * offset);
-                 armHold.SetActive(false);
-                 arm.SetActive(false);
-
-
-                 GAME_MANAGER._GAME_MANAGER.stopArmMovement = true;
-
-             }*/
-            #endregion
+           
 
                 offset = 1;
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 GAME_MANAGER._GAME_MANAGER.isPicked = true;
                 isPicked = true;    
                 isInspecting = true;
+                originalScale = itemPicked.transform.localScale;
                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
                 originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
+                scaledScale = originalScale * 2f;
                 itemPicked.transform.position = (startedCameraPosition + xOfsset) + (camera.transform.forward * offset);
+                itemPicked.transform.localScale = scaledScale;
+                
                 armHold.SetActive(false);
                 arm.SetActive(false);
                 colliderDetector.enabled = false;
@@ -384,6 +266,7 @@ public class PickUpSystem : MonoBehaviour
     {
         if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
+            itemPicked.transform.localScale = originalScale;
             itemPicked.transform.position = originaPosition;
             itemPicked.transform.eulerAngles = originalRotation;
             camera.transform.position = cameraOriginaPosition;
