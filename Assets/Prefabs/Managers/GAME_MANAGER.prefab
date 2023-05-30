@@ -44,14 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1658556aea71549ac8da6c24625d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  courtReputation: 0.5
-  townReputation: 0.5
   noise: 0
   lightsOn: 0
-  courtReputationImg: {fileID: 0}
-  townReputationImg: {fileID: 0}
-  defCourtReputation: {fileID: 0}
-  defTownReputation: {fileID: 0}
   defNoiseImg: {fileID: 0}
   noiseImg: {fileID: 0}
   noiseAudio: {fileID: 0}
@@ -59,10 +53,25 @@ MonoBehaviour:
   isPicked: 0
   isInspecting: 0
   initDialogue: 0
+  isDialoging: 0
   endDialogue: 0
   menuOpen: 0
   stopArmMovement: 0
-  sensivity: 0.2
+  decisionMode: 0
+  caseEnded: 0
+  tutorialStarted: 0
+  hasShootedR: 0
+  hasShootedL: 0
+  isHoldingSpace: 0
+  isDoneInspecting: 0
+  isPickingHammer: 0
+  areOrder: 0
+  iscaseOver: 0
+  canDecision: 0
+  timeHolding: 0
+  objectVel: 0
+  fillBackUpTime: 3
+  noiseTuto: 0
   complaintResume: 
   denunciantName: 
   denunciantID: 
@@ -73,9 +82,5 @@ MonoBehaviour:
     m_Handle: 0
   reputationCanvas: {fileID: 0}
   lastScene: 
-  eForInspect: {fileID: 0}
-  qForExitInspect: {fileID: 0}
-  mForDecisionMode: {fileID: 0}
-  mForExitDecisionMode: {fileID: 0}
-  lClickForPickItUp: {fileID: 0}
-  rClickForLetItGo: {fileID: 0}
+  isMenu: 0
+  exclamationPoint: {fileID: 0}

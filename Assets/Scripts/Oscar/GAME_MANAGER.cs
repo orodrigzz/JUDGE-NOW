@@ -43,7 +43,9 @@ public class GAME_MANAGER : MonoBehaviour
     public bool canDecision;
     public float timeHolding;
     public float objectVel;
-   
+     float fillBackUpNoiseTargetTime;
+    public float fillBackUpTime;
+    public bool noiseTuto;
     #endregion
 
     #region SaveInfo
@@ -93,7 +95,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             exclamationPoint.SetActive(false);
         }
-
+        fillBackUpNoiseTargetTime = fillBackUpTime;
         if (currentScene.name != "Game" || currentScene.name == "Case2" || currentScene.name == "Case3" || currentScene.name == "Case4" || currentScene.name == "Case5" || currentScene.name == "Case6" && reputationCanvas != null)
         {
             reputationCanvas.SetActive(false);
@@ -106,7 +108,7 @@ public class GAME_MANAGER : MonoBehaviour
         {
             noiseImg.fillAmount = noise;
         }
-        if(currentScene.name == "Tutorial")
+        if(currentScene.name == "Tutorial" && !noiseTuto )
         {
             if (noiseAudio != null)
             {
@@ -154,6 +156,17 @@ public class GAME_MANAGER : MonoBehaviour
             {
                 if (noise < 1)
                 {
+                    if(currentScene.name == "Tutorial" && noiseTuto)
+                    {
+                        if (areOrder == false)
+                        {
+                            noise = noise + 0.0001f;
+                            if (noiseAudio != null)
+                            {
+                                noiseAudio.volume = noiseAudio.volume + 0.0001f;
+                            }
+                        }
+                    } 
                     if(currentScene.name != "Tutorial")
                     {
                         if (areOrder == false)
@@ -164,14 +177,26 @@ public class GAME_MANAGER : MonoBehaviour
                                 noiseAudio.volume = noiseAudio.volume + 0.0001f;
                             }
                         }
+                    }
+                        
 
-                    } 
+                    
                 }
                 else
                 {
                     noiseAudio.volume = 1;
                     noise = 1;
                 }
+                if (areOrder)
+                {
+                    fillBackUpNoiseTargetTime -= Time.deltaTime;
+                    if(fillBackUpNoiseTargetTime <= 0)
+                    {
+                        areOrder = false;
+                        fillBackUpNoiseTargetTime = fillBackUpTime;
+                    }
+                }
+
             }
         }
         else
@@ -405,7 +430,7 @@ public class GAME_MANAGER : MonoBehaviour
             noiseAudio.volume = 0;
         }
     }
-
+    
     public void TurnUpLights()
     {
         noiseAudio.volume = noiseAudio.volume - 0.06f;

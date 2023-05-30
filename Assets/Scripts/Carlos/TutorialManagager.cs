@@ -247,13 +247,9 @@ public class TutorialManagager : MonoBehaviour
     public void NoiseSystemTutorial()
     {
         noiseControlText.SetActive(true);
-        if (!barFilled)
-        {
-            GAME_MANAGER._GAME_MANAGER.noise = 0.5f;
-            GAME_MANAGER._GAME_MANAGER.noiseAudio.volume = 0.5f;
-            barFilled = true;
-        }
-        if (GAME_MANAGER._GAME_MANAGER.noiseAudio.volume <= 0f && GAME_MANAGER._GAME_MANAGER.noise <= 0)
+        GAME_MANAGER._GAME_MANAGER.noiseTuto = true;
+        
+        if (GAME_MANAGER._GAME_MANAGER.areOrder)
         {
             noiseCompleted = true;
         }
@@ -292,6 +288,6 @@ public class TutorialManagager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         GAME_MANAGER._GAME_MANAGER.canDecision = false;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Day1");
     }
 }

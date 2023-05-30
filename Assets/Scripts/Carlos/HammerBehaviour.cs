@@ -89,6 +89,7 @@ public class HammerBehaviour : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 GAME_MANAGER._GAME_MANAGER.Order();
+                Debug.Log("PUM");
                 mazazos++;
             }
         }
