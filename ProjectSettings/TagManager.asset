@@ -36,6 +36,10 @@ TagManager:
   - Planta
   - Vibrador
   - Papel
+  - Rules1
+  - Rules2
+  - Rules3
+  - TutoRules
   layers:
   - Default
   - TransparentFX

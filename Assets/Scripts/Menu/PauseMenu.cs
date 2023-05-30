@@ -91,6 +91,7 @@ public class PauseMenu : MonoBehaviour
         if(pauseMenuUI != null)
         {
             pauseMenuUI.SetActive(true);
+            Cursor.visible = true;
         }
         GameIsPaused = true;
         GAME_MANAGER._GAME_MANAGER.isGamePaused = true;

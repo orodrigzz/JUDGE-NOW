@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProyectileBehaviour : MonoBehaviour
 {
-
+    public SphereCollider colliderTomatoe;
     private void Update()
     {
         Destroy(this, 3f);
@@ -25,6 +25,14 @@ public class ProyectileBehaviour : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.layer == 7 ||collision.gameObject.layer == 11 || collision.gameObject.layer == 10)
+        {
+            
+                Physics.IgnoreCollision(collision.collider,  colliderTomatoe);
+            
+        }
     }
+    
+   
 
 }

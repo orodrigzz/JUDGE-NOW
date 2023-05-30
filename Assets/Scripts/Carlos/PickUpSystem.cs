@@ -244,7 +244,6 @@ public class PickUpSystem : MonoBehaviour
                 isPicked = true;    
                 isInspecting = true;
                 originalScale = itemPicked.transform.localScale;
-                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
@@ -266,6 +265,7 @@ public class PickUpSystem : MonoBehaviour
     {
         if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
+            itemPicked.GetComponent<Collider>().enabled = true;
             itemPicked.transform.localScale = originalScale;
             itemPicked.transform.position = originaPosition;
             itemPicked.transform.eulerAngles = originalRotation;
@@ -282,6 +282,7 @@ public class PickUpSystem : MonoBehaviour
             itemPicked = null;
             isPicked = false;
             laserPointer.enabled = true;
+            
         }
 
     }
@@ -342,7 +343,9 @@ public class PickUpSystem : MonoBehaviour
                 EnterInspectionMode();
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
                 itemPicked.transform.localScale = scaledScale;
+                originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
                 originaPosition = evidenceOriginalPosition.transform.position;
+                itemPicked.GetComponent<Collider>().enabled = false;
             }
 
         }
@@ -353,6 +356,7 @@ public class PickUpSystem : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && !isPicked)
             {
                 originaPosition = rulesOriginalPosition.transform.position;
+                originalRotation = rulesOriginalPosition.transform.rotation.eulerAngles;
                 armHold.SetActive(true);
                 GAME_MANAGER._GAME_MANAGER.isPicked = true;
                 arm.SetActive(false);

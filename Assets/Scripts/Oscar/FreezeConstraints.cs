@@ -12,7 +12,19 @@ public class FreezeConstraints : MonoBehaviour
 
     private void Update()
     {
-        //Apple
+
         m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Apple" || collision.gameObject.tag == "Tomatoe" || collision.gameObject.tag == "Mobile" || collision.gameObject.tag == "Rules1" || collision.gameObject.tag == "Rules2" || collision.gameObject.tag == "Rules3" || collision.gameObject.tag == "Hammer")
+        {
+            Physics.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider>());
+        }
+        if (collision.gameObject.tag == "Table")
+        {
+            m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        }
+    }
+   
 }

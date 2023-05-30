@@ -89,11 +89,7 @@ public class NewDialogueSystem : MonoBehaviour
         }
         dialogueOn = false;
         
-        GAME_MANAGER._GAME_MANAGER.denunciantName = dialogues[0].characterName;
-        GAME_MANAGER._GAME_MANAGER.denunciantID = dialogues[0].characterID;
-        GAME_MANAGER._GAME_MANAGER.accusedID = dialogues[1].characterID;
-        GAME_MANAGER._GAME_MANAGER.accusedName = dialogues[1].characterName;
-        GAME_MANAGER._GAME_MANAGER.complaintResume = caseResume;
+       
         
     }
     void Start()

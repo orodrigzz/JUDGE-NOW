@@ -157,7 +157,7 @@ public class HammerBehaviour : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Apple" || collision.gameObject.tag == "Tomatoe" || collision.gameObject.tag == "Mobile")
+        if (collision.gameObject.tag == "Apple" || collision.gameObject.tag == "Tomatoe" || collision.gameObject.tag == "Mobile" || collision.gameObject.tag == "Rules1" || collision.gameObject.tag == "Rules2" || collision.gameObject.tag == "Rules3")
         {
             Physics.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider>());
         }

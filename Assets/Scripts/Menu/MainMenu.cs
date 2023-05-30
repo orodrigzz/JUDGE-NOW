@@ -37,14 +37,17 @@ public class MainMenu : MonoBehaviour
     public void Day1()
     {
         SceneManager.LoadScene("Day1");
+        Cursor.visible = false;
     }
     public void Day2()
     {
         SceneManager.LoadScene("Day2");
+        Cursor.visible = false;
     }
 
     public void Day3()
     {
         SceneManager.LoadScene("Day3");
+        Cursor.visible = false;
     }
 }

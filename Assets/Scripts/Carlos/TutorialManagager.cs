@@ -261,7 +261,7 @@ public class TutorialManagager : MonoBehaviour
         leftClick = false;
         if (!hasSpawned)
         {
-            Instantiate(evidence, spawnPoint.transform.position, Quaternion.identity);
+            Instantiate(evidence, spawnPoint.transform);
             hasSpawned = true;
         }
 
@@ -288,6 +288,8 @@ public class TutorialManagager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         GAME_MANAGER._GAME_MANAGER.canDecision = false;
+        GAME_MANAGER._GAME_MANAGER.noise = 0;
+        GAME_MANAGER._GAME_MANAGER.noiseAudio.volume = 0f;
         SceneManager.LoadScene("Day1");
     }
 }
