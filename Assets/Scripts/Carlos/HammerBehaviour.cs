@@ -36,7 +36,7 @@ public class HammerBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        if (mazazos == 10 || mazazos == 20 || mazazos == 30 || mazazos == 40 || mazazos == 50 || mazazos == 60 || mazazos == 70 || mazazos == 80 || mazazos == 90 || mazazos == 100 || mazazos == 110 || mazazos == 120 || mazazos == 130 || mazazos == 140 || mazazos == 150)
+        if (mazazos % 10 == 0 && mazazos > 0)
         {
             silencio.Play();
         }
