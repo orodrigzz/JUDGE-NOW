@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 8400067859543095466}
   - component: {fileID: 4844978897725617935}
   - component: {fileID: 7266599689290646469}
-  - component: {fileID: 5108246343382442660}
-  m_Layer: 10
+  - component: {fileID: -7653413736562751073}
+  - component: {fileID: 8994263359765612167}
+  - component: {fileID: -1048420276609959898}
+  - component: {fileID: 1420993109437681630}
+  m_Layer: 11
   m_Name: Day1Rules
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9212352297052250640}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.7705538, y: -0.394, z: 2.284}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84,7 +87,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5108246343382442660
+--- !u!114 &-7653413736562751073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212352297052250640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d90a8ac4d5f994192a0e1f63da60ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &8994263359765612167
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212352297052250640}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-1048420276609959898
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,3 +128,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.21, y: 0.29700008, z: 0.00907151}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1420993109437681630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212352297052250640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b0d02efdb6947439c0b7cdfedb7de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectMaterial: {fileID: 7266599689290646469}
+  originalMaterial: {fileID: 2100000, guid: 96cd91445e2d34d4599c418636b94a21, type: 2}
+  canSelect: {fileID: 2100000, guid: bf2d9bcf4aa8d4e409e8d80cddb5ed7a, type: 2}

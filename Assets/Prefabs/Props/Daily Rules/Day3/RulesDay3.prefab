@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 5958331632156442868}
   - component: {fileID: 8454602598869660734}
   - component: {fileID: 4989371647534565447}
-  m_Layer: 10
+  - component: {fileID: -5196037261951183429}
+  - component: {fileID: 4791509133694427452}
+  - component: {fileID: 5877080374383829661}
+  m_Layer: 11
   m_Name: RulesDay3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,8 +95,51 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7950036643784152555}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.21, y: 0.29700008, z: 0.00907151}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-5196037261951183429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7950036643784152555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d90a8ac4d5f994192a0e1f63da60ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &4791509133694427452
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7950036643784152555}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5877080374383829661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7950036643784152555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b0d02efdb6947439c0b7cdfedb7de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectMaterial: {fileID: 8454602598869660734}
+  originalMaterial: {fileID: 2100000, guid: 56d327209b4b3a841ab081d1f2df8906, type: 2}
+  canSelect: {fileID: 2100000, guid: bf2d9bcf4aa8d4e409e8d80cddb5ed7a, type: 2}

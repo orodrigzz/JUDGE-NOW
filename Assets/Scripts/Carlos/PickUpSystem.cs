@@ -26,6 +26,7 @@ public class PickUpSystem : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] float offset;
     [SerializeField] GameObject evidenceOriginalPosition;
+    [SerializeField] GameObject rulesOriginalPosition;
     [SerializeField] Vector3 originalScale;
     [SerializeField] Vector3 scaledScale;
     public bool isInspecting = false;
@@ -62,7 +63,7 @@ public class PickUpSystem : MonoBehaviour
         {
             throwableObject = itemPicked.GetComponent<ThrowableObject>();
         }
-
+        #region InputsPickUp&Inspect
         if (Input.GetMouseButtonDown(1)  && !isInspecting  && GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
         {
             armHold.SetActive(false);
@@ -226,9 +227,9 @@ public class PickUpSystem : MonoBehaviour
         {
             laserPointer.enabled = false;
         }
-       
-        
-        
+
+        #endregion
+
     }
 
     void EnterInspectionMode()
@@ -244,7 +245,6 @@ public class PickUpSystem : MonoBehaviour
                 isInspecting = true;
                 originalScale = itemPicked.transform.localScale;
                 originalRotation = evidenceOriginalPosition.transform.rotation.eulerAngles;
-                originaPosition = evidenceOriginalPosition.transform.position;
                 cameraOriginalRotation = camera.transform.rotation.eulerAngles;
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
@@ -306,7 +306,7 @@ public class PickUpSystem : MonoBehaviour
             
             GAME_MANAGER._GAME_MANAGER.isInspecting = false;
             isInspecting = false;
-           // Debug.Log("LOLOLOLO");
+           
             if (Input.GetMouseButtonDown(0) && !isPicked && !isInspecting && GAME_MANAGER._GAME_MANAGER.isInspecting == false && GAME_MANAGER._GAME_MANAGER.stopArmMovement == false)
             {
                 armHold.SetActive(true);
@@ -330,9 +330,10 @@ public class PickUpSystem : MonoBehaviour
         }
         if (other.gameObject.layer == 10 )
         {
-            // Debug.Log("LOLOLOLO");
+            
             if (Input.GetMouseButtonDown(0) && !isPicked)
             {
+
                 armHold.SetActive(true);
                 GAME_MANAGER._GAME_MANAGER.isPicked = true;
                 arm.SetActive(false);
@@ -340,8 +341,32 @@ public class PickUpSystem : MonoBehaviour
                 isPicked = true;
                 EnterInspectionMode();
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+                itemPicked.transform.localScale = scaledScale;
+                originaPosition = evidenceOriginalPosition.transform.position;
+            }
 
+        }
+        if (other.gameObject.layer == 11)
+        {
+            Debug.Log("papapapap");
+
+            if (Input.GetMouseButtonDown(0) && !isPicked)
+            {
+                originaPosition = rulesOriginalPosition.transform.position;
+                armHold.SetActive(true);
+                GAME_MANAGER._GAME_MANAGER.isPicked = true;
+                arm.SetActive(false);
+                itemPicked = other.gameObject.GetComponent<Rigidbody>();
+                isPicked = true;
+                originalScale = itemPicked.transform.localScale;
+                scaledScale = originalScale * 1f;
+                itemPicked.transform.localScale = scaledScale;
                 
+               
+                EnterInspectionMode();
+                GAME_MANAGER._GAME_MANAGER.isInspecting = true;
+
+
             }
 
         }
