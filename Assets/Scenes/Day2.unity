@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1938,8 +1938,8 @@ MonoBehaviour:
     NPC_1: {fileID: 2006948384}
     NPC_2: {fileID: 976181844}
     evidence2: {fileID: 0}
-    dialogueLines_1: Dialogo npc1
-    dialogueLines_2: Dialogo2 npc1
+    dialogueLines_1: This bastard stole the skull of my dead grandmother
+    dialogueLines_2: Judge, I'm a collector, and it was an excellent specimen
     characterName: Abrahim Pezlo
     characterID: 44312862A
     sentenceIndex: -1
@@ -1961,8 +1961,8 @@ MonoBehaviour:
     NPC_1: {fileID: 544515933}
     NPC_2: {fileID: 1137988883}
     evidence2: {fileID: 0}
-    dialogueLines_1: Dialogo npc2
-    dialogueLines_2: Dialogo2 npc2
+    dialogueLines_1: This sick bastard stole my red dildo
+    dialogueLines_2: She didn't even know what color is it, She is obviously lying
     characterName: Humberto Triste
     characterID: 33442163R
     sentenceIndex: -1
@@ -1984,8 +1984,31 @@ MonoBehaviour:
     NPC_1: {fileID: 1218867743}
     NPC_2: {fileID: 1420143167}
     evidence2: {fileID: 0}
-    dialogueLines_1: Dialogo npc3
-    dialogueLines_2: Dialogo2 npc3
+    dialogueLines_1: Look what she did to me, I'm a MONSTER
+    dialogueLines_2: That's exactly what she demanded
+    characterName: "\"Rogira\" Zarzg\xF6za"
+    characterID: 33442163R
+    sentenceIndex: -1
+    diactivateCount: 0
+    currentDialogueEnded: 0
+    evidence1HasSpawned: 0
+    evidence2HasSpawned: 0
+    npc1IsActive: 0
+    npc2IsActive: 0
+    caseStarted: 0
+    caseOver: 0
+  - sentence_1: {fileID: 110141458}
+    sentence_2: {fileID: 226526282}
+    nameText: {fileID: 790026092}
+    idText: {fileID: 0}
+    textBox_1: {fileID: 16961331}
+    textBox_2: {fileID: 414641857}
+    evidence: {fileID: 2142511143}
+    NPC_1: {fileID: 1218867743}
+    NPC_2: {fileID: 1420143167}
+    evidence2: {fileID: 0}
+    dialogueLines_1: This son of a bitch stole my hairbruhs
+    dialogueLines_2: He's lying, look at him, he's bold
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
     sentenceIndex: -1
