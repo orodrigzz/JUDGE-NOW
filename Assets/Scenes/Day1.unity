@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1581,8 +1581,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.58, y: 25}
-  m_SizeDelta: {x: 487.1731, y: 72.266}
+  m_AnchoredPosition: {x: 24.210005, y: 19.359985}
+  m_SizeDelta: {x: 502.4332, y: 63.546}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565080188
 MonoBehaviour:
@@ -3646,8 +3646,8 @@ MonoBehaviour:
     NPC_1: {fileID: 33764575}
     NPC_2: {fileID: 1469263701}
     evidence2: {fileID: 0}
-    dialogueLines_1: b
-    dialogueLines_2: x
+    dialogueLines_1: This asshole stole and ate my lunch
+    dialogueLines_2: I was hungry, I couldn't resist Judge
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
     sentenceIndex: -1
@@ -3669,8 +3669,31 @@ MonoBehaviour:
     NPC_1: {fileID: 319219650}
     NPC_2: {fileID: 1127938632}
     evidence2: {fileID: 0}
-    dialogueLines_1: s
-    dialogueLines_2: s
+    dialogueLines_1: Judge, this man went without paying after eating 12 burgers
+    dialogueLines_2: That's a lie, I never went to that restaurant in my life
+    characterName: "\"Rogira\" Zarzg\xF6za"
+    characterID: 33442163R
+    sentenceIndex: -1
+    diactivateCount: 0
+    currentDialogueEnded: 0
+    evidence1HasSpawned: 0
+    evidence2HasSpawned: 0
+    npc1IsActive: 0
+    npc2IsActive: 0
+    caseStarted: 0
+    caseOver: 0
+  - sentence_1: {fileID: 565080188}
+    sentence_2: {fileID: 906637855}
+    nameText: {fileID: 963476744}
+    idText: {fileID: 0}
+    textBox_1: {fileID: 1297240262}
+    textBox_2: {fileID: 1276023892}
+    evidence: {fileID: 1914366362}
+    NPC_1: {fileID: 319219650}
+    NPC_2: {fileID: 1127938632}
+    evidence2: {fileID: 0}
+    dialogueLines_1: This man burn down the city hall
+    dialogueLines_2: He's lying, he's the real criminal, here is the proof, his lighter
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
     sentenceIndex: -1
