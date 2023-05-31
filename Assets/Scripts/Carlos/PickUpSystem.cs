@@ -117,25 +117,23 @@ public class PickUpSystem : MonoBehaviour
 
                                     if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
                                     {
+                                        if (GAME_MANAGER._GAME_MANAGER.initDialogue == true)
+                                        {
                                             if (!hasPlayedJudgability)
                                             {
                                                 judgalityAudio.Play();
                                                 hasPlayedJudgability = true;
                                             }
-                                                GAME_MANAGER._GAME_MANAGER.decisionMode = true;
-                                                judgality.SetActive(true);
-                                                StartCoroutine(FJudgality());
+                                            GAME_MANAGER._GAME_MANAGER.decisionMode = true;
+                                            judgality.SetActive(true);
+                                            StartCoroutine(FJudgality());
+                                        }
                                     }
-
                             }
                     }
                 }
-                
             }
         
-
-        
-
         if (Input.GetKeyUp(KeyCode.Space) && GAME_MANAGER._GAME_MANAGER.isInspecting == false && GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
         {
             if (throwableObject != null)
