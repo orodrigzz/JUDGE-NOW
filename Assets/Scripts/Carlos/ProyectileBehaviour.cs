@@ -5,6 +5,13 @@ using UnityEngine;
 public class ProyectileBehaviour : MonoBehaviour
 {
     public SphereCollider colliderTomatoe;
+    Rigidbody rigidbody;
+
+    void Start()
+    {
+        rigidbody = GetComponent<Rigidbody>();
+    }
+
     private void Update()
     {
         Destroy(this, 3f);
@@ -25,14 +32,9 @@ public class ProyectileBehaviour : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if (collision.gameObject.layer == 7 ||collision.gameObject.layer == 11 || collision.gameObject.layer == 10)
+        if (collision.gameObject.tag == "Hammer")
         {
-            
-                Physics.IgnoreCollision(collision.collider,  colliderTomatoe);
-            
+            rigidbody.AddForce(transform.up *200);
         }
     }
-    
-   
-
 }
