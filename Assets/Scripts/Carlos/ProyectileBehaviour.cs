@@ -32,7 +32,7 @@ public class ProyectileBehaviour : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if (collision.gameObject.tag == "Hammer")
+        if (collision.gameObject.tag == "Hammer" || collision.gameObject.tag == "ObjectDetector")
         {
             rigidbody.AddForce(transform.up *200);
         }
