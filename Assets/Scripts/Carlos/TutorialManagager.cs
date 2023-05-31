@@ -59,6 +59,8 @@ public class TutorialManagager : MonoBehaviour
     public ShootR shootR;
     public float shootTimerR;
     public float shootTimeL;
+    public GameObject exclamationL;
+    public GameObject exclamationR;
 
 
     void Start()
@@ -219,28 +221,37 @@ public class TutorialManagager : MonoBehaviour
         if (!hasShootedL)
         {
             shootTimeL -= Time.deltaTime;
+            if (shootTimeL <= 2)
+            {
+                exclamationL.SetActive(true);
+            }
             if (shootTimeL <= 0)
             {
                 shootL.ShootLeft();
                 hasShootedL = true;
-                shootTimeL = 0;
+                shootTimeL = 555;
             }
         }
         if (hasShootedL && !hasShootedR)
         {
             shootTimerR -= Time.deltaTime;
+            exclamationL.SetActive(false);
+            if (shootTimerR <= 2)
+            {
+                exclamationR.SetActive(true);
+            }
             if (shootTimerR <= 0)
             {
                 shootR.ShootRight();
                 hasShootedR = true;
-                shootTimerR = 0;
-
+                shootTimerR = 555;
             }
 
 
         }
         if (hasShootedR && hasShootedL)
         {
+            exclamationR.SetActive(false);
             dodgeCompleted = true;
         }
     }
@@ -278,6 +289,7 @@ public class TutorialManagager : MonoBehaviour
         npc2.SetActive(true);
         richard.SetActive(false);
 
+
         if (GAME_MANAGER._GAME_MANAGER.caseEnded == true)
         {
             decisionCompleted = true;
@@ -287,7 +299,7 @@ public class TutorialManagager : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1);
-        GAME_MANAGER._GAME_MANAGER.canDecision = false;
+        //GAME_MANAGER._GAME_MANAGER.canDecision = false;
         GAME_MANAGER._GAME_MANAGER.noise = 0;
         GAME_MANAGER._GAME_MANAGER.noiseAudio.volume = 0f;
         SceneManager.LoadScene("Day1");

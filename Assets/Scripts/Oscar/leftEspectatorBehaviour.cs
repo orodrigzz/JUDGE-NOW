@@ -7,6 +7,8 @@ public class leftEspectatorBehaviour : MonoBehaviour
     [SerializeField] private Animator animator;
     public Shoot shoot;
 
+    public TutorialManagager tutorialManagager;
+
     private void Awake()
     {
         if (animator != null)
@@ -26,6 +28,19 @@ public class leftEspectatorBehaviour : MonoBehaviour
                 StartCoroutine(Wait());
             }
         }
+
+        if (tutorialManagager != null)
+        {
+            if (tutorialManagager.shootTimeL <= 3)
+            {
+                if (animator != null)
+                {
+                    animator.SetBool("StandUp", true);
+                    StartCoroutine(Wait());
+                }
+            }
+        }
+
     }
 
     IEnumerator Wait()

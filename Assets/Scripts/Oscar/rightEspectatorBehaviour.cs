@@ -7,6 +7,8 @@ public class rightEspectatorBehaviour : MonoBehaviour
     [SerializeField] private Animator animator;
     public ShootR shootR;
 
+    public TutorialManagager tutorialManagager;
+
     private void Awake()
     {
         if (animator != null)
@@ -24,6 +26,19 @@ public class rightEspectatorBehaviour : MonoBehaviour
             {
                 animator.SetBool("StandUp", true);
                 StartCoroutine(Wait());
+            }
+        }
+
+
+        if (tutorialManagager != null)
+        {
+            if (tutorialManagager.shootTimerR <= 3)
+            {
+                if (animator != null)
+                {
+                    animator.SetBool("StandUp", true);
+                    StartCoroutine(Wait());
+                }
             }
         }
     }
