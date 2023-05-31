@@ -7,7 +7,7 @@ public class LightBehaviour : MonoBehaviour
 {
     public Light Light;
     public Light pointLight;
-    
+    public Light[] pointLights;
     public float timerLightOff;
     public float time;
     private void Start()
@@ -25,6 +25,10 @@ public class LightBehaviour : MonoBehaviour
                 Light.intensity = 0.5f;
                 pointLight.intensity = 1;
             }
+            for(int i =0; i < pointLights.Length; i++)
+            {
+                pointLights[i].intensity = 1;
+            }
         }
 
         if (GAME_MANAGER._GAME_MANAGER.lightsOn == false)
@@ -33,6 +37,10 @@ public class LightBehaviour : MonoBehaviour
             {
                 Light.intensity = 0f;
                 pointLight.intensity = 0;
+            }
+            for (int i = 0; i < pointLights.Length; i++)
+            {
+                pointLights[i].intensity = 0;
             }
         }
 

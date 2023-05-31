@@ -160,12 +160,12 @@ public class NewDialogueSystem : MonoBehaviour
             
 
 
-        }if(caseIndex == 0 && dialogues[0].npc1IsActive == false)
+        }if(caseIndex == 0 && dialogues[0].npc1IsActive == false && dialogues[0].NPC_1 != null)
         {
             dialogues[0].NPC_1.SetActive(true);
             dialogues[0].npc1IsActive = true;
         }
-        if (caseIndex == 0 && dialogues[0].npc2IsActive == false)
+        if (caseIndex == 0 && dialogues[0].npc2IsActive == false && dialogues[0].NPC_2 != null)
         {
             dialogues[0].NPC_2.SetActive(true);
             dialogues[0].npc2IsActive = true;

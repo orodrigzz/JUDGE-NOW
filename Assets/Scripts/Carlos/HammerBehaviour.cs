@@ -89,7 +89,7 @@ public class HammerBehaviour : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.isPicked)
             {
                 GAME_MANAGER._GAME_MANAGER.Order();
-                Debug.Log("PUM");
+                
                 mazazos++;
             }
         }
@@ -151,9 +151,15 @@ public class HammerBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door" || collision.gameObject.tag == "Atril")
         {
             //AudioMazo.Play();
-            if(GAME_MANAGER._GAME_MANAGER.isPicked == false)
+            if (GAME_MANAGER._GAME_MANAGER.isPicked == false)
             {
-                StartCoroutine(WaitForDestroy(1));
+                GAME_MANAGER._GAME_MANAGER.objectVel = 800f;
+                if (GAME_MANAGER._GAME_MANAGER.decisionMode)
+                {
+                    GAME_MANAGER._GAME_MANAGER.decisionMode = false;
+                }
+
+                Destroy(this.gameObject);
             }
         }
 
