@@ -656,8 +656,8 @@ MonoBehaviour:
     NPC_1: {fileID: 0}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
-    dialogueLines_1: Dialogo npc1
-    dialogueLines_2: Dialogo2 npc1
+    dialogueLines_1: This priest it's a pedophile, he tried to molest me
+    dialogueLines_2: Look a him judge, he's almost 40
     characterName: Abrahim Pezlo
     characterID: 44312862A
     sentenceIndex: -1
@@ -679,8 +679,9 @@ MonoBehaviour:
     NPC_1: {fileID: 0}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
-    dialogueLines_1: Dialogo npc2
-    dialogueLines_2: Dialogo2 npc2
+    dialogueLines_1: Judge, this priest told all my confesion secrets and now they're
+      everywhere
+    dialogueLines_2: I promise I only told it to my wife, Judge, I swear to god
     characterName: Humberto Triste
     characterID: 33442163R
     sentenceIndex: -1
@@ -702,8 +703,8 @@ MonoBehaviour:
     NPC_1: {fileID: 0}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
-    dialogueLines_1: Dialogo npc3
-    dialogueLines_2: Dialogo2 npc3
+    dialogueLines_1: This sinner has tainted the sacred sheets
+    dialogueLines_2: I'm sorry, I was very bored at the ceremony
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
     sentenceIndex: -1
@@ -725,8 +726,9 @@ MonoBehaviour:
     NPC_1: {fileID: 0}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
-    dialogueLines_1: Dialogo npc3
-    dialogueLines_2: Dialogo2 npc3
+    dialogueLines_1: This bad priest said the name of god in vain, here is a recording
+    dialogueLines_2: I thought I was alone, I burned myself with a candle and I couldn't
+      help it
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
     sentenceIndex: -1
