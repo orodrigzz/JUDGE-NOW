@@ -198,11 +198,10 @@ public class HammerBehaviour : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.TurnUpLights();
                 GAME_MANAGER._GAME_MANAGER.lightsOn = true;
+                GAME_MANAGER._GAME_MANAGER.noise -= 0.2f;
+                GAME_MANAGER._GAME_MANAGER.noiseAudio.volume -= 0.2f;
             }
-            else
-            {
-                GAME_MANAGER._GAME_MANAGER.lightsOn = false;
-            }
+           
         }
     }
 

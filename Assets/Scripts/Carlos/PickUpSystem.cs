@@ -29,6 +29,9 @@ public class PickUpSystem : MonoBehaviour
     [SerializeField] GameObject rulesOriginalPosition;
     [SerializeField] Vector3 originalScale;
     [SerializeField] Vector3 scaledScale;
+    [SerializeField] float scaleTime;
+    [SerializeField] bool isScaling;
+    float timer = 0f;
     public bool isInspecting = false;
 
     #endregion
@@ -194,6 +197,21 @@ public class PickUpSystem : MonoBehaviour
         }
         if (isInspecting)
         {
+            if (isScaling)
+            {
+                timer += Time.deltaTime;
+
+                // Scale the object over time
+                if (timer <= scaleTime)
+                {
+                    float t = timer / scaleTime;
+                    itemPicked.transform.localScale = Vector3.Lerp(originalScale, scaledScale, t);
+                }
+            }
+            else
+            {
+                isScaling = false;
+            }
             if(GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
             {
                 InspectObject();
@@ -216,6 +234,14 @@ public class PickUpSystem : MonoBehaviour
             {
                 GAME_MANAGER._GAME_MANAGER.isPickingHammer = false;
                 
+            }
+            if(itemPicked.tag == "Rules1"|| itemPicked.tag == "Rules2"|| itemPicked.tag == "Rules3"||itemPicked.tag == "TutoRules")
+            {
+                GAME_MANAGER._GAME_MANAGER.isPickingRules = true;
+            }
+            else
+            {
+                GAME_MANAGER._GAME_MANAGER.isPickingRules = false;
             }
         }
 
@@ -251,9 +277,10 @@ public class PickUpSystem : MonoBehaviour
                 cameraOriginaPosition = camera.transform.position;
                 camera.transform.position = cameraOriginaPosition;
                 camera.transform.eulerAngles = cameraOriginalRotation;
-                scaledScale = originalScale * 2f;
+            //scaledScale = originalScale * 2f;
+                ScaleObject();
                 itemPicked.transform.position = (startedCameraPosition + xOfsset) + (camera.transform.forward * offset);
-                itemPicked.transform.localScale = scaledScale;
+                //itemPicked.transform.localScale = scaledScale;
                 
                 armHold.SetActive(false);
                 arm.SetActive(false);
@@ -268,8 +295,10 @@ public class PickUpSystem : MonoBehaviour
     {
         if (GAME_MANAGER._GAME_MANAGER.isInspecting)
         {
+            
             itemPicked.GetComponent<Collider>().enabled = true;
             itemPicked.transform.localScale = originalScale;
+            
             itemPicked.transform.position = originaPosition;
             itemPicked.transform.eulerAngles = originalRotation;
             camera.transform.position = cameraOriginaPosition;
@@ -289,7 +318,14 @@ public class PickUpSystem : MonoBehaviour
         }
 
     }
+    public void ScaleObject()
+    {
+        scaledScale = originalScale * 2f;
+        isScaling = true;
+        timer = 0f;
+    }
 
+   
     void InspectObject()
     {
         float xAxis = Input.GetAxis("Mouse X") * rotationSpeed;
@@ -354,7 +390,7 @@ public class PickUpSystem : MonoBehaviour
         }
         if (other.gameObject.layer == 11)
         {
-            Debug.Log("papapapap");
+            
 
             if (Input.GetMouseButtonDown(0) && !isPicked)
             {
@@ -368,7 +404,7 @@ public class PickUpSystem : MonoBehaviour
                 originalScale = itemPicked.transform.localScale;
                 scaledScale = originalScale * 1f;
                 itemPicked.transform.localScale = scaledScale;
-                
+               
                
                 EnterInspectionMode();
                 GAME_MANAGER._GAME_MANAGER.isInspecting = true;

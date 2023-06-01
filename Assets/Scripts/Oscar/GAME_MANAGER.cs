@@ -38,12 +38,13 @@ public class GAME_MANAGER : MonoBehaviour
     public bool isHoldingSpace;
     public bool isDoneInspecting;
     public bool isPickingHammer;
+    public bool isPickingRules;
     public bool areOrder;
     public bool iscaseOver;
     public bool canDecision;
     public float timeHolding;
     public float objectVel;
-     float fillBackUpNoiseTargetTime;
+    float fillBackUpNoiseTargetTime;
     public float fillBackUpTime;
     public bool noiseTuto;
     #endregion
