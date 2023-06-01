@@ -1560,6 +1560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 617042290}
   shootR: {fileID: 1341881018}
+  tutorialManagager: {fileID: 0}
 --- !u!4 &617042292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c85f9b2e8f41f2941b3553df7020b040, type: 3}
@@ -3546,6 +3547,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1741704788}
     - target: {fileID: 829463813145439450, guid: 7259233fc6f5eff45bde7daa4176107c, type: 3}
+      propertyPath: scaleTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 829463813145439450, guid: 7259233fc6f5eff45bde7daa4176107c, type: 3}
       propertyPath: colliderDetector
       value: 
       objectReference: {fileID: 1248374708}
@@ -4194,6 +4199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1859256710}
   shoot: {fileID: 1519258702}
+  tutorialManagager: {fileID: 0}
 --- !u!4 &1859256713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3104321243413430546, guid: 8da14a836ea471d4cbe932fe7f15932c, type: 3}
