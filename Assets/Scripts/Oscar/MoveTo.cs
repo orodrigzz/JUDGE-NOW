@@ -54,7 +54,7 @@ public class MoveTo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hammer")
         {
-            if (GAME_MANAGER._GAME_MANAGER.decisionMode)
+            if (GAME_MANAGER._GAME_MANAGER.decisionMode || GAME_MANAGER._GAME_MANAGER.tutorialStarted)
             {
                 speed = -50;
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, judgalityTargetPos, Time.deltaTime * -speed);
