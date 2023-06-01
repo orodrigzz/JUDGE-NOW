@@ -117,7 +117,7 @@ public class PickUpSystem : MonoBehaviour
 
                                     if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
                                     {
-                                        if (GAME_MANAGER._GAME_MANAGER.initDialogue == true)
+                                        if (GAME_MANAGER._GAME_MANAGER.initDialogue == true && GAME_MANAGER._GAME_MANAGER.currentScene.name != "Tutorial")
                                         {
                                             if (!hasPlayedJudgability)
                                             {
@@ -125,6 +125,15 @@ public class PickUpSystem : MonoBehaviour
                                                 hasPlayedJudgability = true;
                                             }
                                             GAME_MANAGER._GAME_MANAGER.decisionMode = true;
+                                            judgality.SetActive(true);
+                                            StartCoroutine(FJudgality());
+                                        }
+                                        else {
+                                            if (!hasPlayedJudgability)
+                                            {
+                                                judgalityAudio.Play();
+                                                hasPlayedJudgability = true;
+                                            }
                                             judgality.SetActive(true);
                                             StartCoroutine(FJudgality());
                                         }
