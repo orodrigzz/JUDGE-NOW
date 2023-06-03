@@ -114,7 +114,11 @@ public class MoveTo : MonoBehaviour
     IEnumerator DesapearNPCs()
     {
         yield return new WaitForSeconds(1);
-        GAME_MANAGER._GAME_MANAGER.SetCaseStatus(true);
-        GAME_MANAGER._GAME_MANAGER.isDialoging = false;
+
+        if(GAME_MANAGER._GAME_MANAGER.currentScene.name != "Tutorial")
+        {
+            GAME_MANAGER._GAME_MANAGER.SetCaseStatus(true);
+            GAME_MANAGER._GAME_MANAGER.isDialoging = false;
+        }
     }
 }
