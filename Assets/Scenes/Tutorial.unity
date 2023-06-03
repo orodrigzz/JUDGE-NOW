@@ -353,7 +353,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5371468134333616735, guid: 44942127ec5b99d4fb27cc66d1e866f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44942127ec5b99d4fb27cc66d1e866f6, type: 3}
 --- !u!1 &71146728 stripped
 GameObject:
@@ -3714,7 +3715,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Flecha
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4779699671582298750, guid: e75f7615feb346c44bdcc68c4379a6d7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e75f7615feb346c44bdcc68c4379a6d7, type: 3}
 --- !u!1 &1558096761 stripped
 GameObject:
