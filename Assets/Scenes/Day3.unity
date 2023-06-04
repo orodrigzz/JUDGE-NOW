@@ -657,7 +657,7 @@ MonoBehaviour:
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
     dialogueLines_1: This priest it's a pedophile, he tried to molest me
-    dialogueLines_2: Look a him judge, he's almost 40
+    dialogueLines_2: Look at him judge, he's almost 40
     characterName: Abrahim Pezlo
     characterID: 44312862A
     sentenceIndex: -1
@@ -704,7 +704,7 @@ MonoBehaviour:
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
     dialogueLines_1: This sinner has tainted the sacred sheets
-    dialogueLines_2: I'm sorry, I was very bored at the ceremony
+    dialogueLines_2: I'm sorry I was very bored at the ceremony
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R
     sentenceIndex: -1
