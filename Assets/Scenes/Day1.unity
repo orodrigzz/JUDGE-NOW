@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3859,7 +3859,7 @@ MonoBehaviour:
     idText: {fileID: 0}
     textBox_1: {fileID: 1297240262}
     textBox_2: {fileID: 1276023892}
-    evidence: {fileID: 1914366362}
+    evidence: {fileID: 4116601332934677105, guid: 0619645518a4fa54fab4df2e69db198a, type: 3}
     NPC_1: {fileID: 319219650}
     NPC_2: {fileID: 1127938632}
     evidence2: {fileID: 0}

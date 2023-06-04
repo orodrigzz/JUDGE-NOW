@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1829,11 +1829,11 @@ MonoBehaviour:
     idText: {fileID: 0}
     textBox_1: {fileID: 16961331}
     textBox_2: {fileID: 414641857}
-    evidence: {fileID: 2142511143}
+    evidence: {fileID: 5682757316836053079, guid: 480c1d212bb364149af1554d5efbb16b, type: 3}
     NPC_1: {fileID: 1218867743}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
-    dialogueLines_1: This son of a bitch stole my hairbruhs
+    dialogueLines_1: This son of a bitch stole my hairbrush
     dialogueLines_2: He's lying, look at him, he's bold
     characterName: "\"Rogira\" Zarzg\xF6za"
     characterID: 33442163R

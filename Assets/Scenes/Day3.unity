@@ -652,7 +652,7 @@ MonoBehaviour:
     idText: {fileID: 0}
     textBox_1: {fileID: 2059829732}
     textBox_2: {fileID: 1770532950}
-    evidence: {fileID: 0}
+    evidence: {fileID: 5416725665876080688, guid: 562ac30d5c027464d845806d68b19b47, type: 3}
     NPC_1: {fileID: 0}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
@@ -675,7 +675,7 @@ MonoBehaviour:
     idText: {fileID: 0}
     textBox_1: {fileID: 2059829732}
     textBox_2: {fileID: 1770532950}
-    evidence: {fileID: 0}
+    evidence: {fileID: 2239486701896736523, guid: 0709ea33da255ce48b31c710c860dd34, type: 3}
     NPC_1: {fileID: 0}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
@@ -699,7 +699,7 @@ MonoBehaviour:
     idText: {fileID: 0}
     textBox_1: {fileID: 2059829732}
     textBox_2: {fileID: 1770532950}
-    evidence: {fileID: 0}
+    evidence: {fileID: 3092419950454035962, guid: 9e0d5137172448045897232a44ce972c, type: 3}
     NPC_1: {fileID: 0}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
@@ -722,7 +722,7 @@ MonoBehaviour:
     idText: {fileID: 0}
     textBox_1: {fileID: 2059829732}
     textBox_2: {fileID: 1770532950}
-    evidence: {fileID: 0}
+    evidence: {fileID: 20681134437582720, guid: 8a9b0e7f3a4ec7246b7c14be8a6d6493, type: 3}
     NPC_1: {fileID: 0}
     NPC_2: {fileID: 0}
     evidence2: {fileID: 0}
