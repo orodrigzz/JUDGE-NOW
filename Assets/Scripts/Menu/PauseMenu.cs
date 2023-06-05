@@ -32,6 +32,7 @@ public class PauseMenu : MonoBehaviour
     public void Settings()
     {
         settingsUI.SetActive(true);
+        pauseMenuUI.SetActive(false);
         
         GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
 
@@ -39,6 +40,8 @@ public class PauseMenu : MonoBehaviour
     public void Back()
     {
         settingsUI.SetActive(false);
+        pauseMenuUI.SetActive(true);
+
         GAME_MANAGER._GAME_MANAGER.isGamePaused = true;
         
     }
