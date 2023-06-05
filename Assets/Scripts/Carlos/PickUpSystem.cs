@@ -132,6 +132,7 @@ public class PickUpSystem : MonoBehaviour
                                             StartCoroutine(FJudgality());
                                         }
                                         else {
+                                            GAME_MANAGER._GAME_MANAGER.decisionMode = false;
                                             if (!hasPlayedJudgability)
                                             {
                                                 judgalityAudio.Play();

@@ -54,7 +54,7 @@ public class MoveTo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hammer")
         {
-            if (GAME_MANAGER._GAME_MANAGER.decisionMode || GAME_MANAGER._GAME_MANAGER.isDoneInspecting)
+            if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
                 speed = -50;
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, judgalityTargetPos, Time.deltaTime * -speed);
@@ -68,6 +68,14 @@ public class MoveTo : MonoBehaviour
                 animator.SetBool("dead", true);
                 StartCoroutine(StopAnimation());
             }
+            if (GAME_MANAGER._GAME_MANAGER.tutorialStarted)
+            {
+                 speed = -50;
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, judgalityTargetPos, Time.deltaTime * -speed);
+                animator.SetBool("Judgalitydead", true); 
+                StartCoroutine(DesapearNPCs());
+            }
+            
         }
     }
 
@@ -119,6 +127,7 @@ public class MoveTo : MonoBehaviour
         {
             GAME_MANAGER._GAME_MANAGER.SetCaseStatus(true);
             GAME_MANAGER._GAME_MANAGER.isDialoging = false;
+            GAME_MANAGER._GAME_MANAGER.decisionMode = false;
         }
     }
 }

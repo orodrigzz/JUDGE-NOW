@@ -154,10 +154,7 @@ public class HammerBehaviour : MonoBehaviour
             if (GAME_MANAGER._GAME_MANAGER.isPicked == false)
             {
                 GAME_MANAGER._GAME_MANAGER.objectVel = 800f;
-                if (GAME_MANAGER._GAME_MANAGER.decisionMode)
-                {
-                    GAME_MANAGER._GAME_MANAGER.decisionMode = false;
-                }
+               
 
                 Destroy(this.gameObject);
             }

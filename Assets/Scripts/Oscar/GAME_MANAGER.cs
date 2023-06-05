@@ -128,7 +128,10 @@ public class GAME_MANAGER : MonoBehaviour
         //        noise = noise + 0.000001f;
         //    }
         //}
-
+        if(currentScene.name != "Tutorial")
+        {
+            tutorialStarted = false;
+        }
         currentScene = SceneManager.GetActiveScene();
         if(currentScene.name != "CaseOver")
         {
