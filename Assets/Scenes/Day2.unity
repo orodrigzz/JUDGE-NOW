@@ -2844,6 +2844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 1272720176}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1704258004}
@@ -2853,6 +2854,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 1064066465}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &1064066465
 Animator:
   serializedVersion: 4
@@ -3210,6 +3213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 1348579708}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 894820079}
@@ -3219,6 +3223,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 1218867746}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &1218867746
 Animator:
   serializedVersion: 4
@@ -3413,6 +3419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 1064066464}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1043059502466576344}
@@ -3422,6 +3429,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 1272720177}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &1272720177
 Animator:
   serializedVersion: 4
@@ -3790,6 +3799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 1218867745}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1704258004}
@@ -3799,6 +3809,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 1348579709}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &1348579709
 Animator:
   serializedVersion: 4
@@ -4002,6 +4014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 2017711326}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1043059502466576344}
@@ -4011,6 +4024,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 1460518618}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &1460518618
 Animator:
   serializedVersion: 4
@@ -4138,6 +4153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 1894305187}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1704258004}
@@ -4147,6 +4163,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 1507167467}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &1507167467
 Animator:
   serializedVersion: 4
@@ -5323,6 +5341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 1507167466}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 894820079}
@@ -5332,6 +5351,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 1894305188}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &1894305188
 Animator:
   serializedVersion: 4
@@ -5735,6 +5756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 1460518617}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 1704258004}
@@ -5744,6 +5766,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 2017711327}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &2017711327
 Animator:
   serializedVersion: 4

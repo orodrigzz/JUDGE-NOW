@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveTo : MonoBehaviour
 {
+    public MoveTo moveto;
+
     [SerializeField] private Vector3 targetPos;
     [SerializeField] private Vector3 judgalityTargetPos;
     [SerializeField] private GameObject target;
@@ -14,7 +16,9 @@ public class MoveTo : MonoBehaviour
     [SerializeField] private float secs;
 
     [SerializeField] private Animator animator;
-    public bool dead;
+    [SerializeField] private bool dead;
+    [SerializeField] private bool isJudgality;
+    [SerializeField] private bool canFall;
 
     private void Awake()
     {
@@ -48,6 +52,12 @@ public class MoveTo : MonoBehaviour
             Vector3 newRotation = new Vector3(0, 0, 0);
             transform.eulerAngles = newRotation;
         }
+
+        if (moveto.isJudgality)
+        {
+            canFall = true;
+            animator.SetBool("isFalling", true);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,9 +66,10 @@ public class MoveTo : MonoBehaviour
         {
             if (GAME_MANAGER._GAME_MANAGER.decisionMode)
             {
+                isJudgality = true; 
                 speed = -50;
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, judgalityTargetPos, Time.deltaTime * -speed);
-                animator.SetBool("Judgalitydead", true); 
+                animator.SetBool("Judgalitydead", true);
                 StartCoroutine(DesapearNPCs());
             }
             else
