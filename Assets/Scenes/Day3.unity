@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1004,8 +1004,8 @@ MonoBehaviour:
     NPC_1: {fileID: 1596130384}
     NPC_2: {fileID: 1951155063497264276}
     evidence2: {fileID: 0}
-    dialogueLines_1: It's a pedophile, he tried to molest me!
-    dialogueLines_2: Look at him he's almost 40
+    dialogueLines_1: Look at him, he's almost 40
+    dialogueLines_2: It's a pedophile, he tried to molest me!
     characterName: Abrahim Pezlo
     characterID: 44312862A
     sentenceIndex: -1
@@ -1027,8 +1027,8 @@ MonoBehaviour:
     NPC_1: {fileID: 1645665698}
     NPC_2: {fileID: 2141150406}
     evidence2: {fileID: 0}
-    dialogueLines_1: This priest told all my confesion secrets and now they're everywhere
-    dialogueLines_2: ' I only told it to my wife. I swear to god'
+    dialogueLines_1: I only told my wife about it, I swear
+    dialogueLines_2: This priest told all my confesion secrets and now they're everywhere
     characterName: Humberto Triste
     characterID: 33442163R
     sentenceIndex: -1
