@@ -66,6 +66,13 @@ public class PickUpSystem : MonoBehaviour
         {
             throwableObject = itemPicked.GetComponent<ThrowableObject>();
         }
+
+        if (itemPicked == null)
+        {
+            armHold.SetActive(false);
+            arm.SetActive(true);
+        }
+
         #region InputsPickUp&Inspect
         if (Input.GetMouseButtonDown(1)  && !isInspecting  && GAME_MANAGER._GAME_MANAGER.isGamePaused == false)
         {

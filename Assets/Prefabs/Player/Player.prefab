@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489789547104795559}
-  m_LocalRotation: {x: -0.12122588, y: -0.64504886, z: -0.73382866, w: 0.17524803}
+  m_LocalRotation: {x: 0.73207855, y: -0.18415771, z: -0.13137175, w: -0.64256394}
   m_LocalPosition: {x: 0.064, y: 0.149, z: -0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 829463814725146934}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -81.572, y: -19.186, z: -136.545}
+  m_LocalEulerAnglesHint: {x: -81.572, y: -197.6, z: -136.545}
 --- !u!33 &76716240032690885
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489789547104795559}
-  m_Mesh: {fileID: 5060444177187149915, guid: da2ecd8ff2429434c9ac4c1473ad7b72, type: 3}
+  m_Mesh: {fileID: 5060444177187149915, guid: 6c31f6839b3a91242b4dd17fa6058c00, type: 3}
 --- !u!23 &61197720106065910
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -673,7 +673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5989361473622745155}
   m_LocalRotation: {x: -0.19215631, y: -0.6550329, z: -0.6886909, w: 0.24436189}
-  m_LocalPosition: {x: -0.0552, y: -0.0176, z: 0.0397}
+  m_LocalPosition: {x: -0.15, y: -0.13, z: 0.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -728,18 +728,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8750ee93c9dc9b4d960988e817ee302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayOrigins:
-  - {x: 0.1, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: -0.2, y: 0, z: 0}
-  - {x: -0.3, y: 0, z: 0}
-  - {x: -0.4, y: 0, z: 0}
   layer:
     serializedVersion: 2
     m_Bits: 128
   parent: {fileID: 5989361473622745155}
   armHold: {fileID: 489789547104795559}
   itemPicked: {fileID: 0}
+  colliderDetector: {fileID: 0}
   isPicked: 0
   arm: {fileID: 1452872408119790949}
   camera: {fileID: 7996515181606613933}
@@ -751,6 +746,12 @@ MonoBehaviour:
   startedCameraRotation: {x: 0, y: 0, z: 0}
   rotationSpeed: 15
   offset: 1
+  evidenceOriginalPosition: {fileID: 0}
+  rulesOriginalPosition: {fileID: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  scaledScale: {x: 0, y: 0, z: 0}
+  scaleTime: 0
+  isScaling: 0
   isInspecting: 0
   throwableObject: {fileID: 0}
   laserPointer: {fileID: 2523612200135011276}
