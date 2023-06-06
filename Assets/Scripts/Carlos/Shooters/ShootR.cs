@@ -38,7 +38,10 @@ public class ShootR : MonoBehaviour
 
             if (rightShooterTargetTime <= 2)
             {
-                exclamation.SetActive(true);
+                if (exclamation != null)
+                {
+                    exclamation.SetActive(true);
+                }
             }
 
             if (rightShooterTargetTime <= 0)
@@ -87,6 +90,9 @@ public class ShootR : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         GAME_MANAGER._GAME_MANAGER.hasShootedR = false;
-        exclamation.SetActive(false);
+        if (exclamation != null)
+        {
+            exclamation.SetActive(false);
+        }
     }
 }

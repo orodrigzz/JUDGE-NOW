@@ -38,7 +38,10 @@ public class Shoot : MonoBehaviour
 
             if (leftShooterTargetTime <= 2)
             {
-                exclamation.SetActive(true);
+                if (exclamation != null)
+                {
+                    exclamation.SetActive(true);
+                }
             }
 
             if (leftShooterTargetTime <= 0)
@@ -87,6 +90,9 @@ public class Shoot : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         GAME_MANAGER._GAME_MANAGER.hasShootedL = false;
-        exclamation.SetActive(false);
+        if (exclamation != null)
+        {
+            exclamation.SetActive(false);
+        }
     }
 }
