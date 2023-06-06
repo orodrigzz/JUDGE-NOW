@@ -247,6 +247,7 @@ public class GAME_MANAGER : MonoBehaviour
             noiseAudio.volume = 0;
             isGamePaused = true;
             areOrder = false;
+            initDialogue = false;
         }
         if (currentScene.name == "Fired" && reputationCanvas != null)
         {
@@ -257,6 +258,7 @@ public class GAME_MANAGER : MonoBehaviour
             isGamePaused = true;
             areOrder = false;
             endDialogue = false;
+            initDialogue = false;
         }
         if (currentScene.name == "Win" && reputationCanvas != null)
         {
@@ -276,6 +278,7 @@ public class GAME_MANAGER : MonoBehaviour
             noiseAudio.volume = 0;
             isGamePaused = false;
             areOrder = false;
+            initDialogue = false;
         }
         if (currentScene.name == "Scenario3" && reputationCanvas != null)
         {
@@ -285,10 +288,12 @@ public class GAME_MANAGER : MonoBehaviour
             noiseAudio.volume = 0;
             isGamePaused = false;
             areOrder = false;
+            initDialogue = false;
         }
 
         if (currentScene.name == "Game" || currentScene.name == "Tutorial" || currentScene.name == "Case2" || currentScene.name == "Case3" || currentScene.name == "Case4" || currentScene.name == "Case5" || currentScene.name == "Case6" && reputationCanvas != null)
         {
+            initDialogue = false;
             Cursor.visible = false;
             reputationCanvas.SetActive(true);
             if(isInspecting == false)

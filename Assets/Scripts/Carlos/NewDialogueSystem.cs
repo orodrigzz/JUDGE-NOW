@@ -114,6 +114,8 @@ public class NewDialogueSystem : MonoBehaviour
         else if(caseIndex >= 0 && dialogues[dialogues.Length - 1].caseOver == true)
         {
             GAME_MANAGER._GAME_MANAGER.NextLevel();
+            GAME_MANAGER._GAME_MANAGER.iscaseOver = false;
+           
         }
        
         if (GAME_MANAGER._GAME_MANAGER.initDialogue && !dialogueOn && dialogues[0].caseStarted == false)
