@@ -11210,8 +11210,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0.2}
+  m_Size: {x: 0.7, y: 0.7, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0.3}
 --- !u!4 &4332783641605132426
 Transform:
   m_ObjectHideFlags: 0
@@ -15553,8 +15553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c80882095bca645875c4afa95c73dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Light: {fileID: 0}
-  pointLight: {fileID: 0}
+  Light: {fileID: 2013766843156488423}
+  pointLight: {fileID: 3462384355261237491}
   pointLights: []
   timerLightOff: 0
   time: 30
