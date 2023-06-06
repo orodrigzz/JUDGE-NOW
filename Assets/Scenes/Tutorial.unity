@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6188537916081752325, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.304
+      objectReference: {fileID: 0}
     - target: {fileID: 6254933725464264638, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: m_Name
       value: Architect
@@ -839,11 +843,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4089728600c859749b6a57855294b152, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 6d17fa571a2a7a04480a633e00fea29d, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1550,6 +1554,10 @@ PrefabInstance:
       propertyPath: flechaDefendant
       value: 
       objectReference: {fileID: 614688197}
+    - target: {fileID: 9103305406705843185, guid: 7282b8694e9472047a8610222111ea49, type: 3}
+      propertyPath: pickup
+      value: 
+      objectReference: {fileID: 1986188164}
     m_RemovedComponents:
     - {fileID: 8407497707506590974, guid: 7282b8694e9472047a8610222111ea49, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7282b8694e9472047a8610222111ea49, type: 3}
@@ -3112,10 +3120,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To pick up an object use the right click
+  m_Text: 'To pick up an object use the left click
 
     to leave the object, click
-    the left click'
+    the right click'
 --- !u!222 &1367314396
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3362,8 +3370,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To inspect an evidence or the rules of the day, just right click it, to
-    stop inspecting click right click again
+  m_Text: To inspect an evidence or the rules of the day, just left click it, to
+    stop inspecting left click again
 --- !u!222 &1535284830
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4543,6 +4551,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bcb18a2eb2f31418b0c94a09735b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1986188164 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 829463813145439450, guid: 7259233fc6f5eff45bde7daa4176107c, type: 3}
+  m_PrefabInstance: {fileID: 1688163201}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8750ee93c9dc9b4d960988e817ee302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1993214382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4625,6 +4644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 252030015}
@@ -4634,6 +4654,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 1993214385}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &1993214385
 Animator:
   serializedVersion: 4
@@ -6419,6 +6441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 5371468134269357751}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 30048363}
@@ -6428,6 +6451,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 4779699673120667961}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &4779699673120667961
 Animator:
   serializedVersion: 4
@@ -6784,6 +6809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 4779699673120667960}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 30048362}
@@ -6793,6 +6819,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 5371468134269357753}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!95 &5371468134269357753
 Animator:
   serializedVersion: 4

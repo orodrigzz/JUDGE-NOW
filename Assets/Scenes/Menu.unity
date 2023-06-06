@@ -268,6 +268,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6188537916081752325, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.304
+      objectReference: {fileID: 0}
     - target: {fileID: 6254933725464264638, guid: d0e2a3e7986d0fb4590145f8c160ce13, type: 3}
       propertyPath: m_Name
       value: Architect (1)
@@ -806,6 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f82e6dac4d85a64e9ba82a1f1cecc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveto: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   judgalityTargetPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
@@ -815,6 +820,8 @@ MonoBehaviour:
   secs: 0
   animator: {fileID: 0}
   dead: 0
+  isJudgality: 0
+  canFall: 0
 --- !u!1 &659671855
 GameObject:
   m_ObjectHideFlags: 0

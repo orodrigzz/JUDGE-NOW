@@ -120,7 +120,7 @@ public class PickUpSystem : MonoBehaviour
 
                                     if (GAME_MANAGER._GAME_MANAGER.isPickingHammer)
                                     {
-                                        if (GAME_MANAGER._GAME_MANAGER.initDialogue == true && GAME_MANAGER._GAME_MANAGER.currentScene.name != "Tutorial")
+                                        if (GAME_MANAGER._GAME_MANAGER.initDialogue == true || GAME_MANAGER._GAME_MANAGER.currentScene.name == "Tutorial")
                                         {
                                             if (!hasPlayedJudgability)
                                             {
@@ -420,5 +420,6 @@ public class PickUpSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(6);
         judgality.SetActive(false);
+        GAME_MANAGER._GAME_MANAGER.decisionMode = false;
     }
 }

@@ -175,7 +175,10 @@ public class HammerBehaviour : MonoBehaviour
 
         if(collision.gameObject.tag == "Flecha")
         {
-            GAME_MANAGER._GAME_MANAGER.caseEnded = true;
+            if (GAME_MANAGER._GAME_MANAGER.decisionMode)
+            {
+                GAME_MANAGER._GAME_MANAGER.caseEnded = true;
+            }
         }
 
         if (collision.gameObject.tag == "Planta")

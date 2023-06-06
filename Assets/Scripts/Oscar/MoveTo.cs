@@ -53,10 +53,13 @@ public class MoveTo : MonoBehaviour
             transform.eulerAngles = newRotation;
         }
 
-        if (moveto.isJudgality)
+        if (moveto != null)
         {
-            canFall = true;
-            animator.SetBool("isFalling", true);
+            if (moveto.isJudgality)
+            {
+                canFall = true;
+                animator.SetBool("isFalling", true);
+            }
         }
     }
 
@@ -79,14 +82,6 @@ public class MoveTo : MonoBehaviour
                 animator.SetBool("dead", true);
                 StartCoroutine(StopAnimation());
             }
-            if (GAME_MANAGER._GAME_MANAGER.tutorialStarted)
-            {
-                 speed = -50;
-                transform.localPosition = Vector3.MoveTowards(transform.localPosition, judgalityTargetPos, Time.deltaTime * -speed);
-                animator.SetBool("Judgalitydead", true); 
-                StartCoroutine(DesapearNPCs());
-            }
-            
         }
     }
 
